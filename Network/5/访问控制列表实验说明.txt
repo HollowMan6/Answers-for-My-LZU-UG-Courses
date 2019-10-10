@@ -1,0 +1,65 @@
+1、各个小组自己规划ip地址并配置某一种路由选择协议，如：RIP1、RIP2；保证网络连通。
+   可能涉及的命令如下：
+   [quidway]interface Ethernet 0/0                 % 进入接口视图
+   [interface Ethernet 0/0]ip address ip-address   %参看帮助
+   [Quidway-Ethernet 0/0]rip version 2    % 配置rip2协议
+   [quidway]rip   %进入rip视图
+   [Quidway-rip-1]network network-address   % 按照自然网段书写即可
+2、学会使用基本访问控制列表：
+   实验1：AR28-11路由器的访问控制列表或者说防火墙的缺省过滤方式是允许通过还是禁止通过？
+   实验2：禁止特定主机PC3访问PC5所在网络内的主机。
+   实验3：禁止特定网络201.1.1.0/192(即PC3所在的网络)内的主机访问PC5所在网络内的主机。
+   
+   创建基本的访问控制列表可由下面三个步骤完成，涉及的命令如下：
+   (1) 创建一个编号从2000~2999的基本访问控制列表；
+   [Quidway] firewall enable           % 启动防火墙
+   [Quidway] firewall default permit   % 设置防火墙缺省过滤方式为许可任何用户数据包的通过
+   或
+   [Quidway] firewall default deny     % 使防火墙禁止任何IP包的通过
+
+   [Quidway] acl number 2000       % 创建编号为2000的基本访问控制列表
+   
+   [Quidway] display acl all         % 显示所有的访问控制列表
+   [Quidway] undo acl number 2000    % 删除该条访问控制列表
+   [Quidway] undo acl all            % 删除所有配置了的访问控制列表
+   (2) 在该访问控制列表中书写规则；
+   进入了基本访问控制列表视图：
+   [Quidway-acl-basic-2000] rule deny source 201.1.1.4 0   %填加一条拒绝主机访问的规则
+   [Quidway-acl-basic-2000] rule 0 deny logging      %为前面制定的规则添加日志，执行完该条后，前面的规则变为rule 0 deny source 201.1.1.4 0 logging
+   [Quidway-acl-basic-2000] undo rule 0 logging      %删除该条规则的日志功能
+   [Quidway-acl-basic-2000] undo rule 0              %删除该条规则
+   (3) 将该访问控制列表应用于路由器的某一个接口。
+   [Quidway-Ethernet 0/0] firewall packet-filter 2000 outbound  %将该条访问控制列表中的规则应用到接口上，inbound是对进入路由器的数据包进行过滤
+   [Quidway-Ethernet 0/0] undo firewall packet-filter 2000 outbound  %取消接口上过滤报文的规则
+3、学会使用高级访问控制列表：
+   实验1：FTP访问控制实验；
+     (1)、在PC5上搭建FTP server；
+     (2)、测试各个主机是否能打开ftp；
+     (3)、禁止特定主机PC3访问FTP；
+     (4)、禁止特定网络201.1.1.0/192的所有主机访问FTP；
+     (5)、改变FTP的端口为2121后，禁止特定网络201.1.1.0/192的所有主机访问FTP。
+   涉及的命令如下：
+   [Quidway] acl number 3000   %创建一个编号从3000~3999的高级访问控制列表
+   [Q-a-a-3000] rule deny tcp source 201.1.1.4 0 destination 201.1.1.67 0 destinaton-port eq 21
+   [Quidway-Ethernet 0/0] firewall packet-filter 3000 outbound
+   [Quidway-Ethernet 0/0] undo firewall packet-filter 3000 outbound
+
+   对于禁止特定网络内所有主机访问的ACL：
+   [Q-a-a-3001] rule deny tcp source 201.1.1.0 0.0.0.63 destination 201.1.1.67 0 destinaton-port eq 21
+
+   实验2：禁止使用QQ实验(假设PC5为QQ服务器，禁止网络上的主机访问QQ，即访问到特定主机PC5)。
+     (1)、禁止特定主机PC3访问PC5：
+     (2)、禁止特定网络201.1.1.0/192中的主机访问PC5
+   涉及的命令如下：
+   [Quidway] acl number 3000
+   [Q-a-a-3000] rule deny icmp source 201.1.1.4 0 destination 201.1.1.67 0
+   [Quidway-Ethernet 0/0] firewall packet-filter 3000 outbound
+   [Quidway-Ethernet 0/0] undo firewall packet-filter 3000 outbound
+
+   对于禁止特定网络内所有主机访问的ACL：
+   [Q-a-a-3004] rule deny icmp source 201.1.1.0 0.0.0.63 destination 201.1.1.67 0
+
+注意：1、接口标号与物理拓扑图上的对应关系： 
+         Ethernet 0/0 <---> e0     Ethernet 0/1 <---> e1    Ethernet 1/0 <---> e2                 
+      2、不需要配置s0、s1等串口的ip地址，以及相应网络上的数据链路层协议。  
+      3、其他命令参照vrp文件夹下的“安全操作.pdf”中的访问控制列表配置说明。

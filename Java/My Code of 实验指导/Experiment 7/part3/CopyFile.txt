@@ -1,0 +1,23 @@
+1:    import java.io.*;
+2:    class CopyFile{
+3:        public static void main(String[] args)throws IOException {
+4:            FileInputStream fis=new FileInputStream("CopyFile.java");
+5:            InputStreamReader isr=new InputStreamReader(fis, "UTF-8");
+6:            BufferedReader br = new BufferedReader(isr);
+7:            FileOutputStream fos = new FileOutputStream(new File("CopyFile.txt"));
+8:            OutputStreamWriter osw = new OutputStreamWriter(fos, "UTF-8");
+9:            BufferedWriter bw = new BufferedWriter(osw);
+10:            String line="";
+11:            int count=1;
+12:            while ((line=br.readLine())!=null) {
+13:                bw.write(count+":    "+line+"\n");
+14:                count++;
+15:            }
+16:            br.close();
+17:            isr.close();
+18:            fis.close();
+19:            bw.close();
+20:            osw.close();
+21:            fos.close();
+22:        }
+23:    }
