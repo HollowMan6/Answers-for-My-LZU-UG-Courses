@@ -1,0 +1,425 @@
+select distinct department
+from student
+
+select top 10 grade
+from sc
+
+
+insert into sc(sno,cno,grade)
+select sno,cno,grade
+from sc_new
+
+
+insert into sc(sno,cno,grade)
+values('001','111',90)
+
+
+delete from sc
+where grade<60
+
+update sc
+set grade=grade*1.2, room='a202'
+where grade<35
+
+
+
+=========================================================
+
+
+use northwind
+go
+
+declare @customerid nchar(5), @phone nvarchar(24)
+                            -- @customerid nvarchar(5)也可以
+set @customerid = N'ALFKI'  --加N表示unicode字符
+
+select @phone = phone
+from customers
+where customerid = @customerid
+
+print @phone
+
+---------------------------------------
+
+--二进制
+declare @x binary
+set @x = 0x123
+print @x
+
+---------------------------------------
+
+--数字
+declare @x int, @y money
+set @x = 12
+set @y = $19.5
+print @x
+print cast(@y as varchar(20))
+
+---------------------------------------
+
+--日期和时间
+declare @x datetime, @y datetime, @z datetime
+set @x = '2005/11/23 12:00'
+set @y = '11/23/2005'
+set @z = '11 23, 2005'
+print @x
+print @y
+print @z
+
+---------------------------------------
+
+--算术运算符
+declare @x float, @y float
+select @x = avg(freight)
+from orders
+where employeeid = 2
+select @y = avg(freight)
+from orders
+where employeeid = 3
+print @x-@y
+
+---------------------------------------
+
+--if...else...
+declare @x float, @y float
+select @x = avg(freight)
+from orders
+where employeeid = 2
+select @y = avg(freight)
+from orders
+where employeeid = 3
+
+if @x > @y
+begin
+	print @x-@y
+end
+else
+begin
+	print @y-@x
+end
+
+---------------------------------------
+
+--while
+eclare @start smallint, @end smallint
+set @end = round(rand()*10, 0)
+set @start = 1
+while @start < @end
+begin
+	select @start number
+	set @start = @start + 1
+end
+
+---------------------------------------
+
+--continue and break
+declare @s smallint, @end smallint
+set @s = 1
+set @end = round(rand()*10, 0)
+while @s < @end
+begin
+	set @s = @s + 1
+	if @s = 3
+		break
+	else
+		continue
+end
+print @s
+
+---------------------------------------
+
+--exec
+declare @tablename sysname
+set @tablename = N'orders'
+while @@fetch_status <> -1
+begin
+	if @@fetch_status <> -2
+	begin
+		--select @tablename = rtrim(upper(@tablename))
+		print rtrim(upper(@tablename))
+		exec ('select '+@tablename+'=count(*) from '+@tablename)
+	end
+end
+
+---------------------------------------
+
+--error
+declare @id int
+set @id = 10248
+
+insert into orders(orderid,shipname)
+values(@id, 'adf')
+
+if @@error <> 0
+begin
+	print 'error occur'
+end
+
+---------------------------------------
+
+--error
+declare @id int
+set @id = 10248
+
+begin try
+	insert into orders(orderid,shipname)
+	values(@id, 'adf')
+end try
+begin catch
+	print 'error occur'
+end catch
+
+---------------------------------------
+
+--日期格式设置
+set dateformat ymd
+select convert(datetime, '2005/11/12')
+go
+select convert(smalldatetime, getdate(), 101)
+select convert(varchar(10), getdate(), 101)
+
+select datename(m,getdate())
+select datename(dw,getdate())	-- 星期
+select datename(q,getdate())	-- 季度
+
+select dateadd("M",1,getdate())   -- 一月后
+select dateadd("ww",-1,getdate()) -- 一周前
+select dateadd("yy",1,getdate())
+
+---------------------------------------
+
+--本月最后一天和下月第一天
+declare @lastdatethismonth datetime, @nextmonthdayone datetime
+set @lastdatethismonth = dateadd("m", 1, getdate())-day(getdate())
+set @nextmonthdayone = @lastdatethismonth + 1
+print @lastdatethismonth
+print @nextmonthdayone
+
+---------------------------------------
+
+--round()
+declare @num decimal(9,2)
+set @num = 23.6789
+select @num
+go
+
+select round(23.6789,0)
+select round(23.6789,1)
+select round(23.6789,2)
+select round(23.6789,3)
+
+
+
+
+=========================================================
+
+
+
+
+--自动编号的插入 及 获取刚产生的自动编号
+use pubs
+go
+set identity_insert student on
+go
+insert into student(sno, sname, sex)
+values(3, 'sd', 'm')
+
+print @@identity
+
+---------------------------------------
+
+--sysobjects表的使用
+if exists(select * 
+          from sysobjects
+          where id=object_id(N'student') and objectproperty(id, N'isusertable')=1)
+begin
+	print N'table exists'
+end
+else
+	print N'not exists'
+go
+
+---------------------------------------
+
+--添加和删除列
+alter table student 
+add beizhu varchar(500)
+go
+alter table student 
+drop column beizhu
+
+---------------------------------------
+
+--添加带精度的列
+alter table student 
+add score decimal(9,2) not null default 60
+
+---------------------------------------
+
+--修改数据类型
+alter table student
+alter column sex nchar(10)
+
+---------------------------------------
+
+--创建和删除表
+if exists(select * 
+          from sysobjects
+          where id=object_id(N'teacher') and objectproperty(id, N'isusertable')=1)
+begin
+	drop table teacher
+end
+create table teacher
+(
+    tno int identity(1,2) not null primary key,
+    tname nvarchar(50) not null unique nonclustered, --unique clustered
+    tsex char(2) not null default 'm',
+    salary money check(salary>2000 and salary<5000), -- check not for replication (...)
+    stuAssis int not null foreign key(stuAssis) references student(sno)
+    	on delete no action  --on delete cascade
+    	on update no action  --on update cascade
+        not for replication
+)
+go
+drop table teacher
+
+---------------------------------------
+
+--添加和删除主键
+alter table teacher
+drop constraint PK__teacher__619B8048
+go
+alter table teacher
+add constraint PK__teacher primary key clustered (tno) --nonclustered
+
+---------------------------------------
+
+--添加和删除外键
+alter table teacher
+drop constraint FK__teacher__stuAssi__656C112C
+go
+alter table teacher
+add constraint FK__teacher foreign key(stuAssis) references student(sno)
+	on delete no action  --on delete cascade
+    	on update no action  --on update cascade
+        not for replication
+
+---------------------------------------
+
+--添加和删除唯一性约束
+alter table teacher
+drop constraint UQ__teacher__628FA481
+go
+alter table teacher
+add constraint UQ__teacher unique nonclustered (tno, tname)
+
+---------------------------------------
+
+--添加和删除检查约束
+alter table teacher
+drop constraint CK__teacher
+go
+alter table teacher
+add constraint CK__teacher check not for replication (salary>2000 and salary<5000)
+
+
+---------------------------------------
+
+--添加和删除默认值
+alter table student
+add constraint df_student default 60 for score
+go
+alter table student
+drop constraint df_student
+
+
+---------------------------------------
+
+
+alter database sales modify name=salesDB
+exec sp_renamedb 'sales', 'salesDB'
+
+drop database sales
+
+alter table customers add birthdate datatime null
+go
+alter table customers drop column birthdate
+
+ 
+use sales
+if exists(select name
+          from sysindexs
+          where name='ix_customers')
+   drop index customers.ix_customers
+go
+use sales
+create nonclustered index ix_customers_phone
+on customers(phone) with fillfactor = 10
+--fillfactor表示内部编写索引时执行页的最大百分比，在1-100之间，常更新则值小
+
+
+alter table orders
+add foreign key(custID) references customers(custID)
+on delete no action --在customers删除记录时，不要在orders执行任何操作
+
+
+use sales
+alter table customers drop constraint ck_customers
+go
+alter table customers with check add constraint ck_customers check((phone like '[0-9][1-9][1-9]%'))
+
+
+create rule qty_rule
+as
+@range>=10 and @range<50
+exec sp_bindrule 'qty_rule', 'orders.qty','futureonly'
+exec sp_unbindrule 'orders.qty','futureonly'
+
+
+
+create default df_date as getdate()
+exec sp_unbindefault 'df_date', 'customers.birthdate'
+exec sp_unbindefault 'df_date', 'customers.birthdate'
+
+
+alter table customers
+drop constraint pk_customers
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
