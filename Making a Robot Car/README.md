@@ -1,6 +1,6 @@
 # 基于机器人的实践方法 论文
 
-[![last-commit](https://img.shields.io/github/last-commit/HollowMan6Answers-for-LZU-CS-UG-Courses)](../../../graphs/commit-activity)
+[![last-commit](https://img.shields.io/github/last-commit/HollowMan6/Answers-for-LZU-CS-UG-Courses)](../../../graphs/commit-activity)
 
 [![Followers](https://img.shields.io/github/followers/HollowMan6?style=social)](https://github.com/HollowMan6?tab=followers)
 [![watchers](https://img.shields.io/github/watchers/HollowMan6/Answers-for-LZU-CS-UG-Courses?style=social)](../../../watchers)
