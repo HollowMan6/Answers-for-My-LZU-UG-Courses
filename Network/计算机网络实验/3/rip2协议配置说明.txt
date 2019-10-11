@@ -1,0 +1,34 @@
+1、各个小组自己规划设计ip地址，需要进行子网划分但子网掩码的长度一致；为各个网段、路由器的各个接口设置ip地址、各个主机设置ip地址和缺省网关（注意此时是对第二个网卡设置）。
+   涉及的命令如下：
+   [quidway]interface Ethernet 0/0                 % 进入接口视图
+   [interface Ethernet 0/0]ip address ip-address   %参看帮助
+   [interface Ethernet 0/0]mtu 1492
+2、配置rip2，并使能各个网段。
+   涉及的命令有：
+   在接口视图下配置rip2:
+   [Quidway-Ethernet 0/0]rip version 2    % 配置rip2协议
+   在系统视图下： 
+   [quidway]rip   %进入rip视图
+   [Quidway-rip-1]network network-address   % 按照自然网段书写即可
+3、会在系统视图下查看路由表信息，会在rip视图下查看路由表信息。（可以使用？，查看rip视图下的所有命令，就可以看到）
+4、测试网络的连通性：各个路由器之间，各个主机之间，主机与路由器之间使用ping、tracert命令进行测试，如果出现问题，学会逐层地进行调试并发现问题。
+5、RIP2的报文认证实验：
+   对哪个路由的接口设置报文认证，就在相应路由器的相应接口试图下，进行如下配置可启动报文认证：
+   [Quidway-Ethernet 0/0]rip authentication-mode simple password
+   或者
+   [Quidway-Ethernet 0/0]rip authentication-mode md5 usual key-string
+   取消该接口上的报文认证：
+   [Quidway-Ethernet 0/0]undo rip authentication-mode
+   查看路有表中的信息，有什么变化。
+6、rip1和rip2协议共存实验
+   为某个路由器的某个接口设置rip1协议，为其对端的路由器设置rip2协议，等待一段时间后观察路由表的变化。
+   涉及的命令如下：
+   [Quidway-Ethernet 0/0]undo rip version
+   [Quidway-Ethernet 0/0]rip version 1
+7、VLSM实验：各个小组自己规划设计ip地址，需要进行子网划分且子网掩码的长度可以不等；为各个网段、路由器的各个接口设置ip地址、各个主机设置ip地址和缺省网关（注意此时是对第二个网卡设置）。
+8、重复2-6的所有操作和过程，需要注意的是对前面所有的操作和过程可以通过逐步地反向地使用undo命令即可，比如：可通过undo network network-addres取消该网段使能rip协议。
+
+注意：1、接口标号与物理拓扑图上的对应关系： 
+         Ethernet 0/0 <---> e0     Ethernet 0/1 <---> e1    Ethernet 1/0 <---> e2                 
+      2、不需要配置s0、s1等串口的ip地址，以及相应网络上的数据链路层协议。  
+      3、其他命令参照vrp文件夹下的路由协议.pdf中的rip配置。

@@ -76,6 +76,11 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
     * 学分 Credit：1.0
     * 总学时 Total school hours：36.0
 
+* [计算机网络(Computer Network)](Network)
+    * 课程号 Course No.：2043013
+    * 学分 Credit：3.0
+    * 总学时 Total school hours：54.0
+
 * [数据结构课程设计(Course Exercise for Data Structures)](Data%20Structures)
     * 课程号 Course No.：4043024
     * 学分 Credit：1.0

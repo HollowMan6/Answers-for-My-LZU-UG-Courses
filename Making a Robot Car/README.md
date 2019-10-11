@@ -13,6 +13,8 @@
 
 这是我在兰州大学选修课“基于机器人的实践方法”的期末论文，仅供参考。
 
+此仓库还包含了[机器人比赛培训——Arduino](Material)材料。
+
 * 这是这门课的主讲老师:[周庆国 老师的GitHub](https://github.com/kinggolzu) 
 
 * 这门课的教材:[点击访问 GitBook](https://kinggolzu.gitbooks.io/introduction-to-computer)
@@ -22,6 +24,8 @@
 # Making a Robot Car
 
 This is a report of my course at Lanzhou University named "Making a Robot Car"
+
+This Repository also includes [Training Course for Arduino](Material)
 
 * Here is the teacher of this course:[Mr Zhou's GitHub](https://github.com/kinggolzu) 
 
