@@ -13,10 +13,14 @@
 
 [这里](计算机网络实验)是我的兰州大学“计算机网络实验”实验课的实验报告和材料。
 
+其中[我们组的拓扑](计算机网络实验/6.topo)和[实验室拓扑](计算机网络实验/all.topo)请使用华为eNSP打开。
+
 [这里](计算机网络)是我的兰州大学“计算机网络课程的报告，课程设计请见[这里](https://github.com/HollowMan6/Analysis-of-Recruitment-Posts-for-Lanzhou)
 
 # Answers for my Lab Course for Computer Network
 
 [Here](计算机网络实验) are my reports for the LZU Lab Course for Computer Network.
+
+Please use Huawei eNSP to open [our Team's Topo](计算机网络实验/6.topo) and [Lab's Topo](计算机网络实验/all.topo)请使用华为eNSP打开。
 
 [Here](计算机网络) are my reports for the LZU Computer Network, Course design is [here](https://github.com/HollowMan6/Analysis-of-Recruitment-Posts-for-Lanzhou)
