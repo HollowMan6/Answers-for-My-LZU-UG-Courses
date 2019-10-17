@@ -32,7 +32,6 @@ int getcount(int m, int n)
     }
     p1->next = head; //形成环状列表
     free(p);
-    temp = p1;
     i = 1; //记录将要删除节点数
     while (i < m)
     {

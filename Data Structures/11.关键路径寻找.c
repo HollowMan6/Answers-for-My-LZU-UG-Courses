@@ -1,7 +1,8 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define LEN sizeof(struct Enode)
-typedef struct Vexnode //顶点表
+//顶点表
+typedef struct Vexnode 
 {
     int adjvex; //邻接域
     int dut;    //记录权值
@@ -48,14 +49,16 @@ int toposort(enode dig[], int e_n, int stacktp[])
     vexnode *q;
     for (i = 1; i <= e_n; i++)
     {
-        if (dig[i].indegree == 0) // 入度为 0 则进栈
+         // 入度为 0 则进栈
+        if (dig[i].indegree == 0)
         {
             stacktp[top] = i;
             top++;
         }
         len = top;
     }
-    while (top > bottom) //拓扑排序
+    //拓扑排序
+    while (top > bottom) 
     {
         i = stacktp[bottom];
         q = dig[i].link;
@@ -63,10 +66,12 @@ int toposort(enode dig[], int e_n, int stacktp[])
         while (q != NULL)
         {
             j = q->adjvex;
-            dig[j].indegree--;                  //入度 --
-            if (dig[i].ee + q->dut > dig[j].ee) //求一下最早开始时间
+            dig[j].indegree--;                  //入度 -1
+            //求一下最早开始时间
+            if (dig[i].ee + q->dut > dig[j].ee) 
                 dig[j].ee = dig[i].ee + q->dut;
-            if (dig[q->adjvex].indegree == 0) //入度为 0 则进栈
+            //入度为 0 则进栈
+            if (dig[q->adjvex].indegree == 0) 
             {
                 stacktp[top] = q->adjvex;
                 top++;
@@ -74,14 +79,17 @@ int toposort(enode dig[], int e_n, int stacktp[])
             q = q->next;
         }
     }
-    if (top == e_n) // 表示没有环存在，则求出最迟结束时间
+    // 表示没有环存在，则求出最迟结束时间
+    if (top == e_n) 
     {
         for (i = 1; i <= e_n; i++)
             dig[i].el = dig[stacktp[top - 1]].ee; //先初始化一下
         bottom = 0;
-        while (top > bottom) //栈非空
+        //栈非空
+        while (top > bottom) 
         {
-            top--; // 从最后的一个事件开始倒推
+            // 从最后的一个事件开始倒推
+            top--; 
             i = stacktp[top];
             q = dig[i].link;
             while (q != NULL)
@@ -108,7 +116,8 @@ int main()
     printf("------------ 关键路径 ------------\n\n");
     printf(" 请输入顶点个数和边的条数： ");
     scanf("%d%d", &e_n, &v_n);
-    for (i = 1; i <= e_n; i++) //初始化
+    //初始化
+    for (i = 1; i <= e_n; i++) 
     {
         dig[i].indegree = 0;
         dig[i].link = NULL;
@@ -133,7 +142,6 @@ int main()
     {
         printf(" 需要各点明细查询吗 [y/n]");
         scanf("\n%c", &ch);
-        ;
         if (ch == 'y' || ch == 'Y')
             for (i = 0; i < e_n; i++)
                 printf("%d (%d %d) \n", stacktp[i], dig[stacktp[i]].ee, dig[stacktp[i]].el);

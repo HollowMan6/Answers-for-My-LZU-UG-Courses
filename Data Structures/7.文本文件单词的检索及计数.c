@@ -1,38 +1,44 @@
 #include <stdio.h>
 #include <stdlib.h>
-#include <malloc.h>
 #include <string.h>
 #define N 250
-typedef struct Cstring //定义结构体 (字符长串）
+//定义结构体 (字符长串）
+typedef struct Cstring 
 {
     char string[N];
 } Cstring;
-typedef struct File // 定义结构体（文件）
+// 定义结构体（文件）
+typedef struct File 
 {
     Cstring filename[N];  // 文件数组
     FILE *in, *out;       //文件指针（入 /出）
     int line[N], filenum; //行编号，文件编号
 } File;
-typedef struct Line //结构体（行）
+//结构体（行）
+typedef struct Line 
 {
     int pos[N], counter; // 所在行号，计数器
 } Line;
-int Length(char *a) // 函数（判断单词是否结束）返回单词长度
+// 函数（判断单词是否结束）返回单词长度
+int Length(char *a) 
 {
     int i = 0;
     while (a[i] != '\0' && a[i] != '\n')
         i++;
     return i;
 }
-int Index(Cstring a, Cstring b, Line *l) // 索引（字符总串，单词，要查找的字符总串第几行）
+// 索引（字符总串，单词，要查找的字符总串第几行）
+int Index(Cstring a, Cstring b, Line *l) 
 {
     int i, k, j, p = 1, num = 0;
     l->counter = 0;
     Cstring temp;
-    while (p <= a.string[0]) //sring[0] 用于存字符串大小
+    //sring[0] 用于存字符串大小
+    while (p <= a.string[0]) 
     {
         i = 1;
-        while (a.string[p] != ' ' && a.string[p] != '\0' && a.string[p] != ',' && a.string[p] != '.') // 将字符总串的一个单词放到 temp 中，并没进行一次， num++
+        // 将字符总串的一个单词放到 temp 中，并没进行一次， num++
+        while (a.string[p] != ' ' && a.string[p] != '\0' && a.string[p] != ',' && a.string[p] != '.')
         {
             temp.string[i] = a.string[p];
             i++;
@@ -56,17 +62,21 @@ int Index(Cstring a, Cstring b, Line *l) // 索引（字符总串，单词，要
                     break;
             }
         }
-        if (j > b.string[0]) // 说明 2 个单词相同
+        // 说明 2 个单词相同
+        if (j > b.string[0]) 
         {
-            l->pos[l->counter] = num; // 该行第 l->counter 的单词所在位置 (即该单词为该行第几个单词 )
-            l->counter++;             // 行计数器加 1
+            // 该行第 l->counter 的单词所在位置 (即该单词为该行第几个单词 )
+            l->pos[l->counter] = num; 
+            // 行计数器加 1
+            l->counter++;             
         }
         while (a.string[p] == ' ' || a.string[p] == ',' || a.string[p] == '.')
             p++;
     }
     return 1;
 }
-int Equal(Cstring a, Cstring b) // 是否相同，相同返回 1
+// 是否相同，相同返回 1
+int Equal(Cstring a, Cstring b) 
 {
     int i = 1, j = 1;
     if (a.string[0] != b.string[0])
@@ -83,21 +93,27 @@ int Equal(Cstring a, Cstring b) // 是否相同，相同返回 1
     }
     return 1;
 }
-int CreateFile(File *F) // 创建文件
+// 创建文件
+int CreateFile(File *F) 
 {
     Cstring s;
     char c;
     printf(" 请输入文件名 \n");
-    scanf("%s", &(F->filename[F->filenum].string[1]));                                // 名字放置区
-    F->filename[F->filenum].string[0] = Length(&(F->filename[F->filenum].string[1])); // 文 件 名字符串长度
-    if (!(F->in = fopen(&(F->filename[F->filenum].string[1]), "w")))                  // 以写的方式打开文件，文件指针 F->in
+    // 名字放置区
+    scanf("%s", &(F->filename[F->filenum].string[1]));      
+    // 文件名的字符串长度                          
+    F->filename[F->filenum].string[0] = Length(&(F->filename[F->filenum].string[1])); 
+    // 以写的方式打开文件，文件指针 F->in
+    if (!(F->in = fopen(&(F->filename[F->filenum].string[1]), "w")))                  
     {
         printf(" 不能打开文件 \n");
         exit(0);
     }
-    F->line[F->filenum] = 0; // 该文件行数初始为 0
+    // 该文件行数初始为 0
+    F->line[F->filenum] = 0; 
     printf(" 请输入文件内容 (结束符为 '#')\n");
-    while (gets(&(s.string[1]))) // 每次输一行时就会执行一次循环
+    // 每次输一行时就会执行一次循环
+    while (gets(&(s.string[1]))) 
     {
         s.string[0] = Length(&s.string[1]);
         c = s.string[s.string[0]];
@@ -105,17 +121,24 @@ int CreateFile(File *F) // 创建文件
         {
             if (c == '#')
                 s.string[s.string[0]] = '\n';
-            fputs(&(s.string[1]), F->in); // 将所有字符存到文件中
-            fputc('\n', F->in);           // 存入一个换行符F->line[F->filenum]++;// 该文件行数加 1
+            // 将所有字符存到文件中
+            fputs(&(s.string[1]), F->in); 
+            // 存入一个换行符
+            fputc('\n', F->in);  
+            // 该文件行数加 1         
+            F->line[F->filenum]++;
         }
         if (c == '#')
             break;
     }
-    fclose(F->in); // 关闭文件
-    F->filenum++;  // 文件数组下标加 1，指向下一个文件编号
+    // 关闭文件
+    fclose(F->in); 
+    // 文件数组下标加 1，指向下一个文件编号
+    F->filenum++;  
     return 1;
 }
-int CountString(File *F) // 计数
+// 计数
+int CountString(File *F) 
 {
     Cstring b, a, s;
     int k, counter = 0, line = 0, i;
@@ -123,7 +146,8 @@ int CountString(File *F) // 计数
     printf(" 请输入检索的文件名 :");
     scanf("%s", &(b.string[1]));
     b.string[0] = Length(&(b.string[1]));
-    for (k = 0; k < F->filenum; k++) //找到该文件名
+    //找到该文件名
+    for (k = 0; k < F->filenum; k++) 
     {
         if (Equal(F->filename[k], b))
             break;
@@ -142,14 +166,17 @@ int CountString(File *F) // 计数
     printf(" 请输入搜索的单词： ");
     scanf("%s", &(s.string[1]));
     s.string[0] = Length(&(s.string[1]));
-    while (line < F->line[k]) // 行数小于 k 文件的总行数
+    // 行数小于 k 文件的总行数
+    while (line < F->line[k]) 
     {
-        fgets(&(a.string[1]), N, F->out); // 从文件中将内容读取到 a 地址处
+        // 从文件中将内容读取到 a 地址处
+        fgets(&(a.string[1]), N, F->out); 
         a.string[0] = Length(&(a.string[1]));
         Index(a, s, &l[line]); // 索引
         line++;                // 进入下一行
     }
-    for (i = 0; i < line; i++) // 通过每行的计数器，算出单词出现的总次数，计入 counter
+    // 通过每行的计数器，算出单词出现的总次数，计入 counter
+    for (i = 0; i < line; i++) 
     {
         if (l[i].counter != 0)
             counter += l[i].counter;
@@ -159,7 +186,8 @@ int CountString(File *F) // 计数
     fclose(F->out); // 关闭文件
     return 1;
 }
-int PotString(File *F) // 单词定位
+// 单词定位
+int PotString(File *F) 
 {
     Cstring b, s, a;
     Line l[N];
@@ -167,7 +195,8 @@ int PotString(File *F) // 单词定位
     printf(" 请输入检索的文件名 :");
     scanf("%s", &(b.string[1]));
     b.string[0] = Length(&(b.string[1]));
-    for (k = 0; k < F->filenum; k++) //找到该文件编号
+    //找到该文件编号
+    for (k = 0; k < F->filenum; k++) 
     {
         if (Equal(F->filename[k], b))
             break;
@@ -186,9 +215,11 @@ int PotString(File *F) // 单词定位
     printf(" 请输入要定位的单词： ");
     scanf("%s", &(s.string[1]));
     s.string[0] = Length(&(s.string[1]));
-    while (line < F->line[k]) // 行数小于 k 文件的总行数
+    // 行数小于 k 文件的总行数
+    while (line < F->line[k]) 
     {
-        fgets(&(a.string[1]), N, F->out); // 从文件中将内容读取到 a 地址处
+        // 从文件中将内容读取到 a 地址处
+        fgets(&(a.string[1]), N, F->out); 
         a.string[0] = Length(&(a.string[1]));
         Index(a, s, &l[line]); // 索引
         line++;
@@ -198,12 +229,12 @@ int PotString(File *F) // 单词定位
     {
         if (l[i].counter > 0)
         {
-            printf(" 行号： ");
-            printf("%-3d", i + 1);
+            printf(" 行号：");
+            printf(" %-3d ", i + 1);
             printf(" 所在位置： ");
             for (j = 0; j < l[i].counter; j++)
             {
-                printf(" 第");
+                printf(" 第 ");
                 printf("%d", l[i].pos[j]);
                 printf(" 个单词 ");
             }
@@ -218,8 +249,7 @@ int main()
     int i;
     File F;
     F.filenum = 0;
-    printf("----------------- 文本文件单词的检索及计数 ------------------- \n");
-    printf("\n 1. 创建文件 \n 2. 单词计数 \n3. 单词定位 \n 4. 退出 \n");
+    printf("\n 1. 创建文件 \n 2. 单词计数 \n 3. 单词定位 \n 4. 退出 \n");
     printf(" 请选择操作 :\n");
     while (scanf("%d", &i) && i != 4)
     {

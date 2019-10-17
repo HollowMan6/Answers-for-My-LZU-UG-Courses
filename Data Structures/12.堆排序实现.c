@@ -1,24 +1,25 @@
 #include <stdio.h>
 #define MAX 255
 int A[MAX];
-void creatdui(int l, int m) /* 建初始堆过程函数 */
+// 建初始堆过程函数
+void creatdui(int l, int m) 
 {
     int i, j, x;
     i = l;
-    j = 2 * i; /*R[j] 是 R[i] 的左孩子 */
+    j = 2 * i; //R[j] 是 R[i] 的左孩子
     x = A[i];
     while (j <= m)
     {
         if (j < m && A[j] < A[j + 1])
-            j++; /* 若左孩子较大，则把 j 修改为右孩子的下标 */
+            j++; // 若左孩子较大，则把 j 修改为右孩子的下标
         if (x < A[j])
         {
-            A[i] = A[j]; /* 将 A[j] 调到父亲的位置上 */
-            i = j;       /* 修改 i 和 j 的值，以便继续向下筛选 */
+            A[i] = A[j]; // 将 A[j] 调到父亲的位置上
+            i = j;       // 修改 i 和 j 的值，以便继续向下筛选
             j = 2 * i;
         }
         else
-            j = m + 1; /* 起结束作用 */
+            j = m + 1; // 起结束作用
     }
     A[i] = x; /* 被筛结点的值存入最终的位置 */
 }

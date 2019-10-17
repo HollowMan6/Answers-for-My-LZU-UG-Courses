@@ -1,28 +1,34 @@
 #include <stdio.h>
 #include <stdlib.h>
 #define M 100
-typedef struct node // 定义二叉树结点
+// 定义二叉树结点
+typedef struct node 
 {
     char data;
     struct node *lchild, *rchild;
 } BTNode;
-BTNode *CreatBTree() // 创建二叉树 (先序递归 )
+// 创建二叉树 (先序递归 )
+BTNode *CreatBTree() 
 {
     char ch;
     BTNode *b;
     scanf("%c", &ch);
-    if (ch == '#') // 递归结束控制符
+    // 递归结束控制符
+    if (ch == '#') 
         b = NULL;
     else
     {
         b = (BTNode *)malloc(sizeof(BTNode));
         b->data = ch;
-        b->lchild = CreatBTree(); // 递归先序建立左子树
-        b->rchild = CreatBTree(); // 递归先序建立右子树
+        // 递归先序建立左子树
+        b->lchild = CreatBTree(); 
+        // 递归先序建立右子树
+        b->rchild = CreatBTree(); 
     }
     return b;
 }
-void PreOrder(BTNode *b) // 递归先序遍历二叉树函数
+// 递归先序遍历二叉树函数
+void PreOrder(BTNode *b) 
 {
     if (b != NULL)
     {
@@ -31,7 +37,8 @@ void PreOrder(BTNode *b) // 递归先序遍历二叉树函数
         PreOrder(b->rchild);
     }
 }
-void InOrder(BTNode *b) // 非递归中序遍历二叉树函数
+// 非递归中序遍历二叉树函数
+void InOrder(BTNode *b) 
 {
     BTNode *stack[M], *p;
     int top = -1;
@@ -40,7 +47,8 @@ void InOrder(BTNode *b) // 非递归中序遍历二叉树函数
         p = b;
         while (top > -1 || p != NULL)
         {
-            while (p != NULL) // 扫描 p 的所有左结点并入栈
+            // 扫描 p 的所有左结点并入栈
+            while (p != NULL) 
             {
                 top++;
                 stack[top] = p;
@@ -48,16 +56,19 @@ void InOrder(BTNode *b) // 非递归中序遍历二叉树函数
             }
             if (top > -1)
             {
-                p = stack[top]; // 出栈访问结点
+                // 出栈访问结点
+                p = stack[top]; 
                 top--;
                 printf("%c ", p->data);
-                p = p->rchild; // 扫描 p 的右结点
+                // 扫描 p 的右结点
+                p = p->rchild; 
             }
         }
         printf("\n");
     }
 }
-void PostOrder(BTNode *b) // 非递归后序遍历二叉树函数
+// 非递归后序遍历二叉树函数
+void PostOrder(BTNode *b) 
 {
     BTNode *stack[M], *p;
     int sign, top = -1;
@@ -65,18 +76,23 @@ void PostOrder(BTNode *b) // 非递归后序遍历二叉树函数
     {
         do
         {
-            while (b != NULL) // b 所有左结点入栈
+            // b 所有左结点入栈
+            while (b != NULL) 
             {
                 top++;
                 stack[top] = b;
                 b = b->lchild;
             }
-            p = NULL; // p 指向栈顶前一个已访问结点
-            sign = 1; //置 b 为已访问
+            // p 指向栈顶前一个已访问结点
+            p = NULL; 
+            //置 b 为已访问
+            sign = 1; 
             while (top != -1 && sign)
             {
-                b = stack[top];     // 取出栈顶结点
-                if (b->rchild == p) // 右孩子不存在或右孩子已访问则访问 b
+                // 取出栈顶结点
+                b = stack[top];     
+                // 右孩子不存在或右孩子已访问则访问 b
+                if (b->rchild == p) 
                 {
                     printf("%c ", b->data);
                     top--;
@@ -92,32 +108,38 @@ void PostOrder(BTNode *b) // 非递归后序遍历二叉树函数
         printf("\n");
     }
 }
-void change(BTNode *b) //左右子树交换 (递归 )
+//左右子树交换 (递归 )
+void change(BTNode *b) 
 {
     BTNode *r;
     r = (BTNode *)malloc(sizeof(BTNode));
     int f1 = 0, f2 = 0;
+    //树为空时，跳出
     if (b == 0)
-        return; //树为空时，跳出
+        return; 
+    //有左子树，符号位不为空
     if (b->lchild)
     {
         change(b->lchild);
         r->lchild = b->lchild;
-        f1++; //有左子树，符号位不为空
+        f1++; 
     }
+    //有右子树，符号位不为空
     if (b->rchild)
     {
         change(b->rchild);
         r->rchild = b->rchild;
-        f2++; //有右子树，符号位不为空
+        f2++; 
     }
+    //否则，给中间变量赋空值
     if (f1 == 0)
-        r->lchild = NULL; //否则，给中间变量赋空值
+        r->lchild = NULL; 
     if (f2 == 0)
         r->rchild = NULL;
+    //左右子树交换
     if (f1 || f2)
     {
-        b->rchild = r->lchild; //左右子树交换
+        b->rchild = r->lchild; 
         b->lchild = r->rchild;
     }
 }
@@ -128,7 +150,8 @@ int maxn(int m, int n)
     else
         return n;
 }
-int count(BTNode *b) //计算树高 (递归 )
+//计算树高 (递归 )
+int count(BTNode *b) 
 {
     if (b == NULL)
         return 0;
@@ -138,7 +161,6 @@ int count(BTNode *b) //计算树高 (递归 )
 int main()
 {
     BTNode *root = NULL;
-    printf("----------------- 二叉树的遍历 -----------------\n\n");
     printf(" 请按先序递归顺序创建二叉树 (结束符 #):\n");
     root = CreatBTree();
     printf("\n 递归先序遍历结果 :\n");
