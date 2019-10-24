@@ -18,7 +18,7 @@ typedef struct hotel_level
 {
     int lv_num;               //等级数目
     struct hotel_level *next; //该结构体指针 指向下一个等级
-    struct room *next_r;      //定义房间指针 指向下一个房间（等级划分下的房间指针）
+    struct room *next_r;      //定义房间指针 指向等级划分下的房间链表指针
 } hotel_lv;
 typedef struct room //房间结构体
 {
@@ -34,7 +34,7 @@ void Init(hotel_lv *L)
     int i, j, k, l;
     hotel_lv *p, *q;
     room *p1, *p2, *p3;
-    printf(" 请输入房间分为几个等级 : ");
+    printf("\n请输入房间分为几个等级 : ");
     scanf("%d", &j);
     //等级设置了头结点
     q = L;
@@ -47,7 +47,7 @@ void Init(hotel_lv *L)
         //给房间等级赋值
         p->lv_num = i;
         //输入该等级的房间数目
-        printf(" 请输入 %d 等级的房间个数 : ", p->lv_num);
+        printf("\n请输入 %d 等级的房间个数 : ", p->lv_num);
         scanf("%d", &l);
         if (l == 0)
             continue;
@@ -111,20 +111,20 @@ void press(customer *p, room *q)
 {
     if (p->sex = 1)
     {
-        printf("______________________________________________________________________________|\n");
-        printf("| 姓 名 | 性别 | 年龄 | 等级号 | 房间号 | 床位号 | 入 住 时 间 |\n");
-        printf("|-----------------------------------------------------------------------------|\n");
+        printf("___________________________________________________________\n");
+        printf("| 姓 名 | 性别 | 年龄 | 等级号 | 房间号 | 床位号 | 入 住 时 间| \n");
+        printf("|----------------------------------------------------------|\n");
         printf("| %6s | 男 | %2d | %2d | %2d | %2d | %s", p->name, p->age, p->level, q->r_num, p->bed_num, p->date);
-        printf("|_____________________________________________________________________________|\n");
+        printf("|__________________________________________________________|\n");
         printf("\n");
     }
     else if (p->sex = 0)
     {
-        printf("______________________________________________________________________________|\n");
-        printf("| 姓 名 | 性别 | 年龄 | 等级号 | 房间号 | 床位号 | 入 住 时 间 |\n");
-        printf("|-----------------------------------------------------------------------------|\n");
+        printf("___________________________________________________________\n");
+        printf("| 姓 名 | 性别 | 年龄 | 等级号 | 房间号 | 床位号 | 入 住 时 间|\n");
+        printf("|----------------------------------------------------------|\n");
         printf("| %6s | 女 | %2d | %2d | %2d | %2d | %s", p->name, p->age, p->level, q->r_num, p->bed_num, p->date);
-        printf("|_____________________________________________________________________________|\n");
+        printf("|__________________________________________________________|\n");
         printf("\n");
     }
 }
@@ -144,16 +144,16 @@ void input(hotel_lv *L)
     printf("\n 旅客信息 : ");
     printf("\n 请输入旅客姓名 :");
     scanf("%s", s->name);
-    printf("请输入旅客年龄 :");
+    printf(" 请输入旅客年龄 :");
     scanf("%d", &(s->age));
-    printf("请输入旅客性别 (男 1 女 0):");
+    printf(" 请输入旅客性别 (男 1 女 0):");
     scanf("%d", &(s->sex));
     time(&rawtime);
     timeinfo = localtime(&rawtime);
     strcpy(s->date, asctime(timeinfo));
     if (full(L))
     {
-        printf(" 旅店客满 ，不能入住。 \n");
+        printf("\n 旅店客满 ，不能入住。 \n");
     }
     else
     {
@@ -179,7 +179,7 @@ void input(hotel_lv *L)
                         if (p1 == NULL)
                         {
                             getchar();
-                            printf(" 此等级为 %d 的所有房间均无空位 \n是否愿意更换等级 [y/n]", lv);
+                            printf(" 此等级为 %d 的所有房间均无空位 \n请更换等级！ [y/n]", lv);
                             //做出选择
                             scanf("%c", &c);
                             if (c == 'y')
@@ -309,11 +309,12 @@ customer *Delete(hotel_lv *L)
                             //因为床位没有设置头结点，所以对于第一个结点要特别判断
                             if (bed_num == 1)
                             { //直接打印旅客信息
+                                printf("\n");
                                 printf(" 此等级、此房间、此床位旅客的信息为：\n");
                                 printf(" 该名顾客的信息 :\n");
                                 printf(" 姓名\t 性别\t 年龄 \t 入住时间 \n");
                                 printf("%s\t%d\t%d\t%s\n", q->name, q->sex, q->age, q->date);
-                                printf(" 是 否 与 要 退 房 人 信 息 相 符 ？[y/n]\n");
+                                printf(" 确认是否与要退房人信息相符？[y/n]\n");
                                 scanf("%c", &c);
                                 //做出是否退房的选择
                                 if (c == 'y')
@@ -323,7 +324,10 @@ customer *Delete(hotel_lv *L)
                                     return (q);
                                 }
                                 else
+                                {
+                                    printf(" 退房失败！ \n");
                                     return NULL;
+                                }      
                             }
                             //如果床位不为 1
                             else
@@ -332,35 +336,41 @@ customer *Delete(hotel_lv *L)
                                 while (p->next != q)
                                     //打印旅客信息
                                     p = p->next;
+                                printf("\n");
                                 printf(" 此等级、此房间、此床位旅客的信息为：\n");
                                 printf(" 该名顾客的信息 :\n");
                                 printf(" 姓名\t 性别\t 年龄 \t 入住时间 \n");
                                 printf("%s\t%d\t%d\t%s\n", q->name, q->sex, q->age, q->date);
-                                printf(" 是 否 与 要 退 房 人 信 息 相 符 ？[y/n]\n");
+                                printf(" 确认是否与要退房人信息相符？[y/n]\n");
                                 scanf("%c", &c);
                                 //做出是否退房的选择
                                 if (c == 'y')
                                 {
                                     p->next = q->next;
                                     r->member_num--;
+                                    printf("\n");
                                     printf(" 退房成功！ \n");
                                     return (q);
                                 }
                                 else
+                                {
+                                    printf("\n");
+                                    printf(" 退房失败！ \n");
                                     return NULL;
+                                }
                             }
                         }
                     }
                     if (q == NULL) //如果该房间内床位为空
-                        printf(" 未找到该床位号，请核实信息后重新输入。 \n");
+                        printf("\n 未找到该床位号，请核实信息后重新输入。 \n");
                 }
             }
             if (r == NULL) // 如果该等级的房间为空
-                printf(" 未找到该房间号，请核实信息后重新输入。 \n");
+                printf("\n 未找到该房间号，请核实信息后重新输入。 \n");
         }
     }
     if (l == NULL) // 如果等级链表为空
-        printf(" 未找到该房间等级，请核实信息后重新输入。 \n");
+        printf("\n 未找到该房间等级，请核实信息后重新输入。 \n");
 }
 //查询旅客信息函数
 void cx_customer(hotel_lv *L)
@@ -370,7 +380,7 @@ void cx_customer(hotel_lv *L)
     room *r;
     customer *t;
     int flag = 0; //设置标志量
-    printf(" 请输入要查询的旅客姓名： \n");
+    printf("\n 请输入要查询的旅客姓名： \n");
     scanf("%s", s); //输入要查找旅客的姓名
     getchar();
     l = L->next;
@@ -401,7 +411,7 @@ void cx_customer(hotel_lv *L)
         l = l->next;
     }
     if (!flag) //标志量为零， 则未查找到
-        printf(" 未找到该旅客，请核实后再输入。 \n");
+        printf("\n 未找到该旅客，请核实后再输入。 \n");
 }
 //统计函数与查询旅客信息函数基本类似
 void Tongji_cus(hotel_lv *L) //统计旅店当前住宿人数函数
@@ -433,11 +443,11 @@ void Tongji_cus(hotel_lv *L) //统计旅店当前住宿人数函数
                 r = r->next;
             }
         }
-        printf(" 等级为 %d 的房间入住人数为 %d\n", i, flag);
+        printf("\n 等级为 %d 的房间入住人数为 %d\n", i, flag);
         l = l->next;
     }
     if (!j)
-        printf(" 此时无人住宿。 \n");
+        printf("\n 此时无人住宿。 \n");
 }
 int main()
 {
@@ -445,11 +455,11 @@ int main()
     customer *p;
     int c;
     L = (hotel_lv *)malloc(sizeof(hotel_lv));
-    printf(" 初始化旅店信息： \n");
+    printf("\n 初始化旅店信息： \n");
     Init(L);
     while (1)
     { // 进入菜单选项
-        printf("\n\n\n");
+        printf("\n");
         printf(" 1. 录入旅客信息 \n");
         printf(" 2. 旅客退房 \n");
         printf(" 3. 查询旅客信息 \n");

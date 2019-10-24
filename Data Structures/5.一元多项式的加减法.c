@@ -7,28 +7,6 @@ struct Link
     int e;//指数
     struct Link *next;
 };
-struct Link *creat(char ch)
-{
-    struct Link *head, *inpt;
-    int x;
-    int y;
-    head = (struct Link *)malloc(LEN); // 创建链表头
-    head->next = NULL;
-    printf("请输入一元多项式 %c(X)的第一项:(以 0 0 结束)\n", ch);
-    scanf("%d %d", &x, &y);
-    while (x != 0)
-    {
-        inpt = (struct Link *)malloc(LEN);
-        inpt->c = x;
-        inpt->e = y;
-        inpt->next = NULL;
-        //将这个结点插到有序链表中
-        insert(head, inpt); 
-        printf(" 请输入一元多项式 %c(X)的下一项 :(以 0 0 结束)\n", ch);
-        scanf("%d %d", &x, &y);
-    }
-    return head;
-}
 void insert(struct Link *head, struct Link *inpt)
 {
     struct Link *pre, *now;
@@ -41,7 +19,7 @@ void insert(struct Link *head, struct Link *inpt)
         now = pre->next;
         while (signal == 0)
         {
-            // 当新链节小于现在的连接时向后移一个链节
+            // 当新结点小于现在的连接时向后移一个结点
             if ((inpt->e) < (now->e)) 
             {
                 if (now->next == NULL)
@@ -55,14 +33,14 @@ void insert(struct Link *head, struct Link *inpt)
                     now = pre->next;
                 }
             }
-            // 如果发现比现在的链节大了就插入到这个连接的前面
+            // 如果发现比现在的结点大了就插入到这个结点的前面
             else if ((inpt->e) > (now->e)) 
             {
                 inpt->next = now;
                 pre->next = inpt;
                 signal = 1;
             }
-            // 如果发现和现在的节点相等则合并
+            // 如果发现和现在的结点相等则合并
             else
             {
                 now->c = now->c + inpt->c;
@@ -159,56 +137,48 @@ void print(struct Link *p)
     }
     printf("\n");
 }
+
+struct Link *creat(char ch)
+{
+    struct Link *head, *inpt;
+    int x;
+    int y;
+    head = (struct Link *)malloc(LEN); // 创建链表头
+    head->next = NULL;
+    printf(" 请输入一元多项式 %c(X)的第一项:(以 0 0 结束)\n", ch);
+    scanf("%d %d", &x, &y);
+    while (x != 0)
+    {
+        inpt = (struct Link *)malloc(LEN);
+        inpt->c = x;
+        inpt->e = y;
+        inpt->next = NULL;
+        //将这个结点插到有序链表中
+        insert(head, inpt); 
+        printf(" 请输入一元多项式 %c(X)的下一项 :(以 0 0 结束)\n", ch);
+        scanf("%d %d", &x, &y);
+    }
+    return head;
+}
 int main()
 {
     struct Link *a, *b;
-    int sign = 0; 
-    printf(" 请选择操作 :\n");
-    printf("1. 两个一元多项式相加 \n");
-    printf("2. 两个一元多项式相减 \n");
-    scanf("%d", &sign);
-    switch (sign)
-    {
-        case 1:
-        {
-            printf(" 你选择的操作是多项式相加 :\n");
-            //输入多项式 A(X)
-            a = creat('A'); 
-            printf("A(X) = ");
-            print(a);
-            //输入多项式 B(X)
-            b = creat('B'); 
-            printf("B(X) = ");
-            print(b);
-            //两个多项式相加
-            printf("C(X) = A(X) + B(X) = ");
-            a = addLink(a, b); 
-            print(a);
-            break;
-        }
-        case 2:
-        {
-            printf(" 你选择的操作是多项式相减 :\n");
-            //输入多项式 A(x)
-            a = creat('A'); 
-            printf("A(X) = ");
-            print(a);
-            //输入多项式 B(x)
-            b = creat('B'); 
-            printf("B(X) = ");
-            print(b);
-            printf("C(X) = A(X) - B(X) =");
-            //两个多项式相减
-            a = cutLink(a, b); 
-            print(a);
-            break;
-        }
-        default:
-        {
-            // 选择错误 ,返回选择界面
-            printf(" 输入有误!将退出程序\n"); 
-            break;
-        }
-    }
+    //输入多项式 A(X)
+    a = creat('A'); 
+    printf("A(X) = ");
+    print(a);
+    //输入多项式 B(X)
+    b = creat('B'); 
+    printf("B(X) = ");
+    print(b);
+    //两个多项式相加
+    printf("C(X) = A(X) + B(X) = ");
+    a = addLink(a, b); 
+    print(a);
+    printf("D(X) = A(X) - B(X) =");
+    //两个多项式相减
+    a = cutLink(a, b); 
+    a = cutLink(a, b); 
+    print(a);
     system("pause");
 }
