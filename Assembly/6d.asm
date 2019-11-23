@@ -4,14 +4,6 @@ stack ends
 code segment
     assume cs: code, ss: stack
 start:
-    mov ah,6
-    mov al,0
-    mov ch,0
-    mov cl,0
-    mov dh,24
-    mov dl,79
-    mov bh,14
-    int 10h
     mov dl, 0dh
     mov ah, 2
     int 21h
