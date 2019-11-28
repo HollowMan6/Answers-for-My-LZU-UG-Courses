@@ -1,4 +1,4 @@
-# 浅谈人工智能及其应用
+# 几种不同的机器学习方法预测泰坦尼克号幸存者
 
 [![last-commit](https://img.shields.io/github/last-commit/HollowMan6/Answers-for-LZU-CS-UG-Courses)](../../../graphs/commit-activity)
 
@@ -11,8 +11,8 @@
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
 [![Repo-Size](https://img.shields.io/github/repo-size/HollowMan6/Answers-for-LZU-CS-UG-Courses.svg)](../../../archive/master.zip)
 
-这是我的兰州大学任超老师主讲的“计算机科学导论”的课程论文。
+这是我的兰州大学任超老师主讲的“人工智能导论”的课程论文。
 
-# A Scratch Introduction and Application of AI
+# Several different machine learning methods for predicting Titanic survivors
 
-My report for the course “The foundation of Computer Science” teached by Ren Chao of Lanzhou University.
+My report for the course “Introducation to Artificial Intelligence” teached by Ren Chao of Lanzhou University.

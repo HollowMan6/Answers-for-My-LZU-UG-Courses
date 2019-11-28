@@ -85,3 +85,8 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
     * 课程号 Course No.：4043024
     * 学分 Credit：1.0
     * 总学时 Total school hours：36.0
+
+* [人工智能导论(Introducation to Artificial Intelligence)](Introducation%20to%20Artificial%20Intelligence)
+    * 课程号 Course No.：2043106
+    * 学分 Credit：2.0
+    * 总学时 Total school hours：36.0
