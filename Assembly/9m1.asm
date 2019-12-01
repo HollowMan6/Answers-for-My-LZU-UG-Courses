@@ -21,8 +21,8 @@ ASSUME CS:CODE,DS:DATA
 START:MOV AX,DATA
       MOV DS,AX
       MOV SI,OFFSET RESULT
-      MOV CX,20 ;Ñ­»·¶þÊ®´Î
-;±È½ÏºóÌø×ªµ½ÏàÓ¦±êºÅ´¦
+      MOV CX,20 ;å¾ªçŽ¯äºŒåæ¬¡
+;æ¯”è¾ƒåŽè·³è½¬åˆ°ç›¸åº”æ ‡å·å¤„
  COMP:MOV AL,[SI]
       CMP AL,60
       JB FIVE
@@ -37,7 +37,7 @@ START:MOV AX,DATA
       CMP AL,100
       JE TEN
       JMP NEXT
-;¼ÆÊý£¬Ê¹µÃÏàÓ¦µÄ±äÁ¿Ôö¼Ó1
+;è®¡æ•°ï¼Œä½¿å¾—ç›¸åº”çš„å˜é‡å¢žåŠ 1
  FIVE:MOV AL,[S5]
       ADD AL,01
       DAA
@@ -67,136 +67,136 @@ EIGHT:MOV AL,[S8]
       ADD AL,01
       DAA
       MOV [S10],AL
- NEXT:MOV AL,[TOTAL]	;TOTAL´¦µÄ±äÁ¿Ôö¼Ó1
-      ADD AL,01		;¼Ó·¨Ð£Õý
+ NEXT:MOV AL,[TOTAL]	;TOTALå¤„çš„å˜é‡å¢žåŠ 1
+      ADD AL,01		;åŠ æ³•æ ¡æ­£
       DAA
       MOV [TOTAL],AL
       INC SI
       LOOP COMP
 
-      MOV DX,OFFSET MES1	;ÏÔÊ¾MES1
+      MOV DX,OFFSET MES1	;æ˜¾ç¤ºMES1
       MOV CX,17
       MOV AH,09H
-      MOV BL, 100B	;ÉèÖÃÏÂÃæÊä³öµÄ17¸ö×Ö·ûÏÔÊ¾ºìÉ«
+      MOV BL, 100B	;è®¾ç½®ä¸‹é¢è¾“å‡ºçš„17ä¸ªå­—ç¬¦æ˜¾ç¤ºçº¢è‰²
       INT 10H
       MOV AH,09H
       INT 21H
       MOV AL,[S5]
       MOV CX,2
       MOV AH,09H
-      MOV BL, 111B	;»Ö¸´
+      MOV BL, 111B	;æ¢å¤
       INT 10H
       CALL DISP
-      MOV DX,OFFSET MES2	;ÏÔÊ¾MES2
+      MOV DX,OFFSET MES2	;æ˜¾ç¤ºMES2
       MOV CX,17
       MOV AH,9H
-      MOV BL, 010B	;ÉèÖÃÏÂÃæÊä³öµÄ17¸ö×Ö·ûÏÔÊ¾ÂÌÉ«
+      MOV BL, 010B	;è®¾ç½®ä¸‹é¢è¾“å‡ºçš„17ä¸ªå­—ç¬¦æ˜¾ç¤ºç»¿è‰²
       INT 10H
       MOV AH,09H
       INT 21H
       MOV AL,[S6]
       MOV CX,2
       MOV AH,09H
-      MOV BL, 111B	;»Ö¸´
+      MOV BL, 111B	;æ¢å¤
       INT 10H
 
       CALL DISP
-      MOV DX,OFFSET MES3	;ÏÔÊ¾MES3
+      MOV DX,OFFSET MES3	;æ˜¾ç¤ºMES3
       MOV CX,17
       MOV AH,9H
-      MOV BL, 001B	;ÉèÖÃÏÂÃæÊä³öµÄ17¸ö×Ö·ûÏÔÊ¾À¶É«
+      MOV BL, 001B	;è®¾ç½®ä¸‹é¢è¾“å‡ºçš„17ä¸ªå­—ç¬¦æ˜¾ç¤ºè“è‰²
       INT 10H
       MOV AH,09H
       INT 21H
       MOV AL,[S7]
       MOV CX,2
       MOV AH,09H
-      MOV BL, 111B	;»Ö¸´
+      MOV BL, 111B	;æ¢å¤
       INT 10H
       CALL DISP
-      MOV DX,OFFSET MES4	;ÏÔÊ¾MES4
+      MOV DX,OFFSET MES4	;æ˜¾ç¤ºMES4
       MOV CX,17
       MOV AH,9H
-      MOV BL, 011B	;ÉèÖÃÏÂÃæÊä³öµÄ17¸ö×Ö·ûÏÔÊ¾ÇàÉ«
+      MOV BL, 011B	;è®¾ç½®ä¸‹é¢è¾“å‡ºçš„17ä¸ªå­—ç¬¦æ˜¾ç¤ºé’è‰²
       INT 10H
       MOV AH,09H
       INT 21H
       MOV AL,[S8]
       MOV CX,2
       MOV AH,09H
-      MOV BL, 111B	;»Ö¸´
+      MOV BL, 111B	;æ¢å¤
       INT 10H
 
       CALL DISP
-      MOV DX,OFFSET MES5	;ÏÔÊ¾MES5
+      MOV DX,OFFSET MES5	;æ˜¾ç¤ºMES5
       MOV CX,17
       MOV AH,9H
-      MOV BL, 110B	;ÉèÖÃÏÂÃæÊä³öµÄ17¸ö×Ö·ûÏÔÊ¾»ÆÉ«
+      MOV BL, 110B	;è®¾ç½®ä¸‹é¢è¾“å‡ºçš„17ä¸ªå­—ç¬¦æ˜¾ç¤ºé»„è‰²
       INT 10H
       MOV AH,09H
       INT 21H
       MOV AL,[S9]
       MOV CX,2
       MOV AH,09H
-      MOV BL, 111B	;»Ö¸´
+      MOV BL, 111B	;æ¢å¤
       INT 10H
       CALL DISP
-      MOV DX,OFFSET MES6	;ÏÔÊ¾MES6
+      MOV DX,OFFSET MES6	;æ˜¾ç¤ºMES6
       MOV CX,17
       MOV AH,9H
-      MOV BL, 101B	;ÉèÖÃÏÂÃæÊä³öµÄ17¸ö×Ö·ûÏÔÊ¾·ÛÉ«
+      MOV BL, 101B	;è®¾ç½®ä¸‹é¢è¾“å‡ºçš„17ä¸ªå­—ç¬¦æ˜¾ç¤ºç²‰è‰²
       INT 10H
       MOV AH,09H
       INT 21H
       MOV AL,[S10]
       MOV CX,2
       MOV AH,09H
-      MOV BL, 111B	;»Ö¸´
+      MOV BL, 111B	;æ¢å¤
       INT 10H
       CALL DISP
-      MOV DX,OFFSET MES7	;ÏÔÊ¾MES7
+      MOV DX,OFFSET MES7	;æ˜¾ç¤ºMES7
       MOV CX,17
       MOV AH,9H
-      MOV BL, 01110000B	;ÉèÖÃÏÂÃæÊä³öµÄ17¸ö×Ö·ûÎª°×µ×ºÚ×Ö
+      MOV BL, 01110000B	;è®¾ç½®ä¸‹é¢è¾“å‡ºçš„17ä¸ªå­—ç¬¦ä¸ºç™½åº•é»‘å­—
       INT 10H
       MOV AH,09H
       INT 21H
       MOV AL,[TOTAL]
       MOV CX,2
       MOV AH,09H
-      MOV BL, 111B	;»Ö¸´
+      MOV BL, 111B	;æ¢å¤
       INT 10H
       CALL DISP
       MOV AX,4C00H
       INT 21H
-;×Ó³ÌÐòDISPÓÃÓÚÏÔÊ¾ALÖÐ¼ÇÂ¼µÄ´ÎÊý£¨¸ßËÄÎ»ÎªÊ®Î»£¬µÍËÄÎ»Îª¸öÎ»£©
+;å­ç¨‹åºDISPç”¨äºŽæ˜¾ç¤ºALä¸­è®°å½•çš„æ¬¡æ•°ï¼ˆé«˜å››ä½ä¸ºåä½ï¼Œä½Žå››ä½ä¸ºä¸ªä½ï¼‰
  DISP PROC NEAR
-      PUSH CX	;±£´æCX
+      PUSH CX	;ä¿å­˜CX
       MOV BL,AL
-      AND AL,0F0H	;µÍËÄÎ»ÖÃ0
+      AND AL,0F0H	;ä½Žå››ä½ç½®0
       MOV CL,04
-      ROR AL,CL	;ÓÒÒÆËÄÎ»
-      ADD AL,30H	;×ª»»ÎªASCIIÂë
+      ROR AL,CL	;å³ç§»å››ä½
+      ADD AL,30H	;è½¬æ¢ä¸ºASCIIç 
       CMP AL,30H
       JNE output
       MOV AL,20H
 output:MOV DL,AL
       MOV AH,02H
-      INT 21H	;Êä³öÊ®Î»
+      INT 21H	;è¾“å‡ºåä½
       MOV AL,BL
-      AND AL,0FH	;¸ßËÄÎ»ÖÃ0
-      ADD AL,30H	;×ª»»ÎªASCIIÂë
+      AND AL,0FH	;é«˜å››ä½ç½®0
+      ADD AL,30H	;è½¬æ¢ä¸ºASCIIç 
       MOV DL,AL
       MOV AH,2
-      INT 21H	;Êä³ö¸öÎ»
+      INT 21H	;è¾“å‡ºä¸ªä½
       MOV DL,0DH
       MOV AH,2
       INT 21H
       MOV DL,0AH
       MOV AH,2
-      INT 21H	;Êä³ö»»ÐÐ
-      POP CX	;»Ö¸´CX
-      RET		;·µ»Øµ÷ÓÃ´¦
+      INT 21H	;è¾“å‡ºæ¢è¡Œ
+      POP CX	;æ¢å¤CX
+      RET		;è¿”å›žè°ƒç”¨å¤„
   DISP ENDP
 CODE ENDS
 END START
