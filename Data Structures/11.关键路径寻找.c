@@ -113,7 +113,6 @@ int main()
     vexnode *q;    //邻接点链表
     char ch;
     int e_n, v_n, m, i, j, u, v, stacktp[20];
-    printf("------------ 关键路径 ------------\n\n");
     printf(" 请输入顶点个数和边的条数： ");
     scanf("%d%d", &e_n, &v_n);
     //初始化

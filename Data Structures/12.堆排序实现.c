@@ -35,7 +35,7 @@ void sortdui(int n)
     // 建立初始堆，遍布所有的根结点
     for (i = n / 2; i >= 1; i--)
         creatdui(i, n); 
-    // 筛选 A[1] 结点，得到 i-1 个结点的堆，仅有 A[1] 可能违反堆性质
+    // 筛选 A[1] 结点，得到 i-1 个结点的堆，因为 A[1] 可能违反堆的性质
     for (i = n; i >= 2; i--)
     { //进行 n-1 次循环完成堆排序
         m = A[i];
@@ -48,13 +48,12 @@ void sortdui(int n)
 int main()
 {
     int i, n;
-    printf("--------------------- 堆排序 ---------------------\n\n");
     printf(" 输入整型一维数组 A 中数字总数 :");
     scanf("%d", &n);
     if (n <= 0 || n > MAX)
     {
         printf("\n 输入的数据有误 !!!");
-        return;
+        return 0;
     }
     printf("\n 请输入整型无序序列 :\n");
     for (i = 1; i <= n; i++)
@@ -64,13 +63,14 @@ int main()
     printf("\n 该序列为 :\n");
     for (i = 1; i <= n; i++)
     {
-        printf("%4d", A[i]);
+        printf("%d ", A[i]);
     }
     sortdui(n);
     printf("\n 堆排序后的序列为 :\n");
     for (i = 1; i <= n; i++)
     {
-        printf("%4d", A[i]);
+        printf("%d ", A[i]);
     }
     printf("\n");
+    system("pause");
 }
