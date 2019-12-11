@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UNICODE" ?>
+<topo version="1.3.00.100">
+    <devices>
+        <dev id="3FE28B72-C744-4e97-AC9C-F831887E77F0" name="PC1" poe="0" model="PC" settings=" -simpc_ip 192.168.1.62  -simpc_mask 255.255.255.192  -simpc_gateway 192.168.1.1  -simpc_mac 54-89-98-B2-76-59  -simpc_mc_dstip 0.0.0.0  -simpc_mc_dstmac 00-00-00-00-00-00  -simpc_dns1 0.0.0.0  -simpc_dns2 0.0.0.0  -simpc_ipv6 ::  -simpc_prefix 128  -simpc_gatewayv6 ::  -simpc_dhcp_state 1  -simpc_dhcpv6_state 1  -simpc_dns_auto_state 1  -simpc_igmp_version 1  -simpc_group_ip_start 0.0.0.0  -simpc_src_ip_start 0.0.0.0  -simpc_group_num 0  -simpc_group_step 0  -simpc_src_num 0  -simpc_src_step 0  -simpc_type MODE_IS_INCLUDE " system_mac="54-89-98-B2-76-59" com_port="0" bootmode="0" cx="297.000000" cy="237.000000" edit_left="324" edit_top="291">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="Ethernet" count="1" />
+            </slot>
+        </dev>
+        <dev id="552A105E-BFBC-47c5-88EF-3D59EBC62031" name="AR1" poe="0" model="AR2220" settings="" system_mac="00-E0-FC-76-59-E9" com_port="2000" bootmode="0" cx="538.000000" cy="238.000000" edit_left="565" edit_top="292">
+            <slot number="slot17" isMainBoard="1">
+                <interface sztype="Ethernet" interfacename="GE" count="1" />
+                <interface sztype="Ethernet" interfacename="GE" count="2" />
+            </slot>
+        </dev>
+    </devices>
+    <lines>
+        <line srcDeviceID="3FE28B72-C744-4e97-AC9C-F831887E77F0" destDeviceID="552A105E-BFBC-47c5-88EF-3D59EBC62031">
+            <interfacePair lineName="Copper" srcIndex="0" srcBoundRectIsMoved="0" srcBoundRect_X="367.183380" srcBoundRect_Y="264.179199" srcOffset_X="0.000000" srcOffset_Y="0.000000" tarIndex="0" tarBoundRectIsMoved="0" tarBoundRect_X="521.816589" tarBoundRect_Y="264.820801" tarOffset_X="0.000000" tarOffset_Y="0.000000" />
+        </line>
+    </lines>
+    <shapes />
+    <txttips />
+</topo>
