@@ -50,17 +50,22 @@ Please discuss the current situation and trend of intelligent driving (requireme
 The topics of other teachers in the first semester of 2019-2020 are as follows:
 
 ```text
-Du Chenwei: a comparative study on the development of shared cars and bicycles.
+Du Chenwei: A comparative study on the development of shared cars and bicycles.
 
-Zhan Jian: 1) it entrepreneurship path design and preparation (students' personal perspective). 2) Case sharing from campus to company.
+Zhan Jian: 1) IT entrepreneurship path design and preparation (students' personal perspective).
+           2) Case sharing from campus to company.
 
-Yang Yu: according to hobbies, professional knowledge, make a self-made innovation and entrepreneurship project, and write a 200 word project introduction, to make clear what to do, why to do, and how to do it.
+Yang Yu: According to hobbies, professional knowledge, make a self-made innovation and entrepreneurship project, 
+        and write a 200 word project introduction, to make clear what to do, why to do, and how to do it.
 
-Zheng Guang: Based on academic ethics, it technology and data quality, this paper discusses the impact on the development of bioinformatics of traditional Chinese medicine.
+Zheng Guang: Based on academic ethics, it technology and data quality, this paper discusses the impact 
+            on the development of bioinformatics of traditional Chinese medicine.
 
-Zhu Jing: the development trend of Internet Finance and its influence on traditional financial theory.
+Zhu Jing: The development trend of Internet Finance and its influence on traditional financial theory.
 
-Li zepeng: let's talk about your understanding of complex networks based on practical problems.
+Li zepeng: Let's talk about your understanding of complex networks based on practical problems.
 
-Yuan Yongna: talk about your understanding of interdisciplinary (or the application of computer technology in other fields)(Requirements: examples can be used in writing, about 1000 words + references.)
+Yuan Yongna: talk about your understanding of interdisciplinary
+            (or the application of computer technology in other fields)
+            (Requirements: examples can be used in writing, about 1000 words + references.)
 ```
