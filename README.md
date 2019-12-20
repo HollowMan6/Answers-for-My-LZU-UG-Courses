@@ -91,8 +91,12 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
     * 学分 Credit：2.0
     * 总学时 Total school hours：36.0
 
-* [	数字逻辑(数字电路)(Digital logic)](Digital%20logic)
+* [数字逻辑(数字电路)(Digital logic)](Digital%20logic)
     * 课程号 Course No.：2043022
     * 学分 Credit：3.0
     * 总学时 Total school hours：54.0
 
+* [创新创业课程(Innovative Entrepreneurship Courses)](Innovative%20Entrepreneurship%20Courses)
+    * 课程号 Course No.：2043284
+    * 学分 Credit：2.0
+    * 总学时 Total school hours：36.0
