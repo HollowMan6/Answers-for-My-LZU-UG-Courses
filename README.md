@@ -1,17 +1,19 @@
-# 兰州大学计算机本科课程 我的代码及答案
+# 兰州大学我的计算机本科课程和选修课 我的代码及答案
 
-[![last-commit](https://img.shields.io/github/last-commit/HollowMan6/Answers-for-LZU-CS-UG-Courses)](../../graphs/commit-activity)
+[![last-commit](https://img.shields.io/github/last-commit/HollowMan6/Answers-for-My-LZU-UG-Courses)](../../graphs/commit-activity)
 
 [![Followers](https://img.shields.io/github/followers/HollowMan6?style=social)](https://github.com/HollowMan6?tab=followers)
-[![watchers](https://img.shields.io/github/watchers/HollowMan6/Answers-for-LZU-CS-UG-Courses?style=social)](../../watchers)
-[![stars](https://img.shields.io/github/stars/HollowMan6/Answers-for-LZU-CS-UG-Courses?style=social)](../../stargazers)
-[![forks](https://img.shields.io/github/forks/HollowMan6/Answers-for-LZU-CS-UG-Courses?style=social)](../../network/members)
+[![watchers](https://img.shields.io/github/watchers/HollowMan6/Answers-for-My-LZU-UG-Courses?style=social)](../../watchers)
+[![stars](https://img.shields.io/github/stars/HollowMan6/Answers-for-My-LZU-UG-Courses?style=social)](../../stargazers)
+[![forks](https://img.shields.io/github/forks/HollowMan6/Answers-for-My-LZU-UG-Courses?style=social)](../../network/members)
 
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://hollowman6.github.io/fund.html)
 [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/)
-[![Repo-Size](https://img.shields.io/github/repo-size/HollowMan6/Answers-for-LZU-CS-UG-Courses.svg)](../../archive/master.zip)
+[![Repo-Size](https://img.shields.io/github/repo-size/HollowMan6/Answers-for-My-LZU-UG-Courses.svg)](../../archive/master.zip)
 
 这个仓库提供的内容旨在帮助那些在学习过程中遇到困难的课程学习者。作业和答案由本人做出。
+
+网络共享选修课来源为[兰州大学网络教学平台](http://lzu.fanya.chaoxing.com/portal) 上由兰州大学自拥有的课程。
 
 测验和课程内容属于兰州大学及其创建的老师们。
 
@@ -19,9 +21,11 @@
 
 **请 ***不要*** 将本仓库中的内容用于任何其他目的，否则后果自负！**
 
-# Answers for LZU Computer Science Undergraduate Courses
+# Answers for My LZU Computer Science and Elective Undergraduate Courses
 
 The content provided by this repository is intended to help learners who encounter difficulties in their learning process. Homework and answers are made by myself.
+
+Most of the LZU Electives MOOC are on Chaoxing Erya(超星尔雅) and owned by Lanzhou University on [Lanzhou University Network Teaching Platform](http://lzu.fanya.chaoxing.com/portal).
 
 The test and course content belong to Lanzhou University and its teachers.
 
@@ -40,6 +44,21 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
     * 课程号 Course No.：2043264
     * 学分 Credit：2.0
     * 总学时 Total school hours：36.0
+
+* [高级阅读与写作(Advanced Reading and Writing)](Advanced%20Reading%20and%20Writing)
+    * 课程号 Course No.：1038172
+    * 学分 Credit：3.0
+    * 总学时 Total school hours：54.0
+
+* [程序设计基础(The foundation of the programming design)](C)
+    * 课程号 Course No.：2043265
+    * 学分 Credit：3.0
+    * 总学时 Total school hours：54.0
+
+* [托福辅导(TOEFL Training)](TOEFL%20Training)
+    * 课程号 Course No.：1038151
+    * 学分 Credit：3.0
+    * 总学时 Total school hours：54.0
 
 * [程序设计基础实验(Programming Basic Experiment)](C)
     * 课程号 Course No.：1087204
@@ -100,3 +119,84 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
     * 课程号 Course No.：2043284
     * 学分 Credit：2.0
     * 总学时 Total school hours：36.0
+
+**网络共享选修课 Electives MOOC**:
+
+* 算法与程序的奥秘(Arcanum of Algorithms and Programs)
+    * 课程号 Course No.：2040610
+    * 学分 Credit：2.0
+    * 总学时 Total school hours：36.0
+
+* 大学生心理健康（网络共享课）(College Students'Mental Health (Network Sharing Course))
+    * 课程号 Course No.：1087203
+    * 学分 Credit：2.0
+    * 总学时 Total school hours：36.0
+
+* 室内花草栽培技术与装饰布景（网络共享课）(Indoor Flower and Grass Cultivation Techniques and Decorative Settings (Network Sharing Course))
+    * 课程号 Course No.：1087204
+    * 学分 Credit：2.0
+    * 总学时 Total school hours：36.0
+
+* [算法与程序的奥秘](./算法与程序的奥秘)
+  * [课程资料](./算法与程序的奥秘/Materials)
+  * [1.1 数学的三大危机](./算法与程序的奥秘/1.1数学的三大危机.pdf)
+  * [1.2 算法的作用（上）](./算法与程序的奥秘/1.2算法的作用（上）.pdf)
+  * [1.3 算法的作用（下）](./算法与程序的奥秘/1.3算法的作用（下）.pdf)
+  * [2.1 数字的美（上）](./算法与程序的奥秘/2.1数字的美（上）.pdf)
+  * [2.2 数字的美（下）](./算法与程序的奥秘/2.2数字的美（下）.pdf)
+  * [2.3 洛书](./算法与程序的奥秘/2.3洛书.pdf)
+  * [2.4 幻方的构造](./算法与程序的奥秘/2.4幻方的构造.pdf)
+  * [2.5 八卦](./算法与程序的奥秘/2.5八卦.pdf)
+  * [3.1 Matlab简介](./算法与程序的奥秘/3.1Matlab简介.pdf)
+  * [3.2 MATLAB基础(上)](./算法与程序的奥秘3.2MATLAB基础(上).pdf)
+  * [3.3 MATLAB基础(中)](./算法与程序的奥秘/3.3MATLAB基础(中).pdf)
+  * [3.4 MATLAB基础(下)](./算法与程序的奥秘/3.4MATLAB基础(下).pdf)
+  * [4.1 自上而下的程序设计](./算法与程序的奥秘/4.1自上而下的程序设计.pdf)
+  * [4.2 分支和循环（上）](./算法与程序的奥秘/4.2分支和循环（上）.pdf)
+  * [4.3 分支和循环（下）](./算法与程序的奥秘/4.3分支和循环（下）.pdf)
+  * [4.4 绘图（上）](./算法与程序的奥秘/4.4绘图（上）.pdf)
+  * [4.5 绘图（下）](./算法与程序的奥秘/4.5绘图（下）.pdf)
+  * [5.1 数值计算的可靠性](./算法与程序的奥秘/5.1数值计算的可靠性.pdf)
+  * [5.2 拉格朗日多项式](./算法与程序的奥秘/5.2拉格朗日多项式.pdf)
+  * [5.3 拉格朗日插值函数及算例](./算法与程序的奥秘/5.3拉格朗日插值函数及算例.pdf)
+  * [5.4 Neville多项式](./算法与程序的奥秘/5.4Neville多项式.pdf)
+  * [5.5 样条函数](./算法与程序的奥秘/5.5样条函数.pdf)
+  * [5.6 Chebyshev多项式](./算法与程序的奥秘/5.6Chebyshev多项式.pdf)
+  * [6.1 数值微分](./算法与程序的奥秘/6.1数值微分.pdf)
+  * [6.2 数值积分（上）](./算法与程序的奥秘/6.2数值积分（上）.pdf)
+  * [期末考试](./算法与程序的奥秘/期末考试.pdf)
+
+* [大学生心理健康（网络共享课）](./大学生心理健康（网络共享课）)
+  * [章节测验1](./大学生心理健康（网络共享课）/章节测验1.pdf)
+  * [章节测验2](./大学生心理健康（网络共享课）/章节测验2.pdf)
+  * [章节测验3](./大学生心理健康（网络共享课）/章节测验3.pdf)
+  * [章节测验4](./大学生心理健康（网络共享课）/章节测验4.pdf)
+  * [章节测验5](./大学生心理健康（网络共享课）/章节测验5.pdf)
+  * [章节测验6](./大学生心理健康（网络共享课）/章节测验6.pdf)
+  * [章节测验7](./大学生心理健康（网络共享课）/章节测验7.pdf)
+  * [章节测验8](./大学生心理健康（网络共享课）/章节测验8.pdf)
+  * [章节测验9](./大学生心理健康（网络共享课）/章节测验9.pdf)
+  * [章节测验10](./大学生心理健康（网络共享课）/章节测验10.pdf)
+  * [章节测验11](./大学生心理健康（网络共享课）/章节测验11.pdf)
+  * [章节测验12](./大学生心理健康（网络共享课）/章节测验12.pdf)
+  * [章节测验13](./大学生心理健康（网络共享课）/章节测验13.pdf)
+  * [章节测验14](./大学生心理健康（网络共享课）/章节测验14.pdf)
+  * [章节测验15](./大学生心理健康（网络共享课）/章节测验15.pdf)
+  * [章节测验16](./大学生心理健康（网络共享课）/章节测验16.pdf)
+  * [章节测验17](./大学生心理健康（网络共享课）/章节测验17.pdf)
+  * [章节测验18](./大学生心理健康（网络共享课）/章节测验18.pdf)
+  * [期末论文：论大学生与恋爱](./大学生心理健康（网络共享课）/期末论文_论大学生与恋爱.pdf)
+  * [期末论文文本复制检测报告单：论大学生与恋爱](./大学生心理健康（网络共享课）/文本复制检测报告单_论大学生与恋爱.pdf)
+  
+* [室内花草栽培技术与装饰布景（网络共享课）](./室内花草栽培技术与装饰布景（网络共享课）)
+  * [1.2 室内花草装饰的基本概念](./室内花草栽培技术与装饰布景（网络共享课）/1.2室内花草装饰的基本概念.pdf)
+  * [1.3 中国人对花的认识及花的雅号与内涵](./室内花草栽培技术与装饰布景（网络共享课）/1.3中国人对花的认识及花的雅号与内涵.pdf)
+  * [1.5 中国的十大名花](./室内花草栽培技术与装饰布景（网络共享课）/1.5中国的十大名花.pdf)
+  * [1.6 节日民俗活动中的花卉文化](./室内花草栽培技术与装饰布景（网络共享课）/1.6节日民俗活动中的花卉文化.pdf)
+  * [1.7 不同城市的市花](./室内花草栽培技术与装饰布景（网络共享课）/1.7不同城市的市花.pdf)
+  * [2.1 花卉养护的基本知识](./室内花草栽培技术与装饰布景（网络共享课）/2.1花卉养护的基本知识.pdf)
+  * [2.2 室内盆栽花卉的栽培技能（一）](./室内花草栽培技术与装饰布景（网络共享课）/2.2室内盆栽花卉的栽培技能（一）.pdf)
+  * [2.3 室内盆栽花卉的栽培技能（二）](./室内花草栽培技术与装饰布景（网络共享课）/2.3室内盆栽花卉的栽培技能（二）.pdf)
+  * [2.4 常见花卉的栽培与管理（一）](./室内花草栽培技术与装饰布景（网络共享课）/2.4常见花卉的栽培与管理（一）.pdf)
+  * [2.5 常见花卉的栽培与管理（二）](./室内花草栽培技术与装饰布景（网络共享课）/2.5常见花卉的栽培与管理（二）.pdf)
+  * [2.6 常见花卉的栽培与管理（三）](./室内花草栽培技术与装饰布景（网络共享课）/2.6常见花卉的栽培与管理（三）.pdf)

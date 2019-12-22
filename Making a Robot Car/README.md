@@ -1,19 +1,17 @@
-# 基于机器人的实践方法 论文
+# 基于机器人的实践方法 论文 + Blockly代码
 
-[![last-commit](https://img.shields.io/github/last-commit/HollowMan6/Answers-for-LZU-CS-UG-Courses)](../../../graphs/commit-activity)
+[![last-commit](https://img.shields.io/github/last-commit/HollowMan6/Answers-for-My-LZU-UG-Courses)](../../../graphs/commit-activity)
 
 [![Followers](https://img.shields.io/github/followers/HollowMan6?style=social)](https://github.com/HollowMan6?tab=followers)
-[![watchers](https://img.shields.io/github/watchers/HollowMan6/Answers-for-LZU-CS-UG-Courses?style=social)](../../../watchers)
-[![stars](https://img.shields.io/github/stars/HollowMan6/Answers-for-LZU-CS-UG-Courses?style=social)](../../../stargazers)
-[![forks](https://img.shields.io/github/forks/HollowMan6/Answers-for-LZU-CS-UG-Courses?style=social)](../../../network/members)
+[![watchers](https://img.shields.io/github/watchers/HollowMan6/Answers-for-My-LZU-UG-Courses?style=social)](../../../watchers)
+[![stars](https://img.shields.io/github/stars/HollowMan6/Answers-for-My-LZU-UG-Courses?style=social)](../../../stargazers)
+[![forks](https://img.shields.io/github/forks/HollowMan6/Answers-for-My-LZU-UG-Courses?style=social)](../../../network/members)
 
 [![Open Source Love](https://badges.frapsoft.com/os/v1/open-source.svg?v=103)](https://hollowman6.github.io/fund.html)
 [![MIT Licence](https://badges.frapsoft.com/os/mit/mit.svg?v=103)](https://opensource.org/licenses/mit-license.php)
-[![Repo-Size](https://img.shields.io/github/repo-size/HollowMan6/Answers-for-LZU-CS-UG-Courses.svg)](../../../archive/master.zip)
+[![Repo-Size](https://img.shields.io/github/repo-size/HollowMan6/Answers-for-My-LZU-UG-Courses.svg)](../../../archive/master.zip)
 
-这是我在兰州大学选修课“基于机器人的实践方法”的期末论文，仅供参考。
-
-此仓库还包含了[机器人比赛培训——Arduino](Material)材料。
+这是我在兰州大学选修课“基于机器人的实践方法”的期末论文和一些培训时练习用的Blockly代码(导出的XML文件)，仅供参考。
 
 * 这是这门课的主讲老师:[周庆国 老师的GitHub](https://github.com/kinggolzu) 
 
@@ -24,8 +22,6 @@
 # Making a Robot Car
 
 This is a report of my course at Lanzhou University named "Making a Robot Car"
-
-This Repository also includes [Training Course for Arduino](Material)
 
 * Here is the teacher of this course:[Mr Zhou's GitHub](https://github.com/kinggolzu) 
 

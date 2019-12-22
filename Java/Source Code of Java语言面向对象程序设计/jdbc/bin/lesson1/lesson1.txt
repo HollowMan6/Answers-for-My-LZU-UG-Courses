@@ -1,4 +1,0 @@
-1.java连接数据库
-  1.1 加载驱动类，导入jar
-     oracle.jdbc.driver.OracleDriver
-     "jdbc:oracle:thin:@localhost:1521:ORCL","",""

@@ -1,1 +1,0 @@
-java -cp .;lib/mp3spi-1.9.4.jar;lib/jlayer-1.0.jar;lib/tritonus_share-1.0.jar test wls.mp3
