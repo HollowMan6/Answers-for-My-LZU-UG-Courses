@@ -15,7 +15,9 @@
 
 其中[我们组的拓扑](Lab/6.topo)和[实验室拓扑](Lab/all.topo)请使用华为eNSP打开。
 
-[这里](Course)是我的兰州大学“计算机网络课程的报告，课程设计请见[这里](Design)
+[这里](Course)是我的兰州大学“计算机网络”课程的报告，课程设计请见[这里](Design)。
+
+[这里](Exam)是我的兰州大学“计算机网络”课程的期末上机测试报告和拓扑。
 
 # Answers for my Lab Course for Computer Network
 
@@ -23,4 +25,6 @@
 
 Please use Huawei eNSP to open [our Team's Topo](Lab/6.topo) and [Lab's Topo](Lab/all.topo) Please open by using Huawei eNSP.
 
-[Here](Course) are my reports for the LZU Computer Network, Course design is [here](Design)
+[Here](Course) are my reports for the LZU Computer Network, Course design is [here](Design).
+
+[Here](Exam) is my report and topology for the LZU Computer Network Final Exam in practice.
