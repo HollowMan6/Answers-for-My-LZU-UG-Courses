@@ -19,7 +19,9 @@
 
 某些诸如小论文之类的答案，请不要抄袭，抄袭在兰州大学是一种很严重的行为，可能导致课程零分！本人也对此类答案保留一切权利！
 
-**请 ***不要*** 将本仓库中的内容用于任何其他目的，否则后果自负！**
+* ***[这里](马克思主义基本原理概论问答题要点.pdf)是我整理的马克思主义基本原理概论问答题要点。***
+
+**请 ***不要*** 将本仓库中的内容用于任何其他商业目的，否则后果自负！**
 
 # Answers for My LZU Computer Science and Elective Undergraduate Courses
 
@@ -31,7 +33,7 @@ The test and course content belong to Lanzhou University and its teachers.
 
 Please don't just copy the answers. Copying in Lanzhou University is a very serious behavior, which may lead to zero marks in the course. I also reserve all rights to some  of my answers!
 
-**Please ***DO NOT*** Use the contents of this repository for any other Purpose, otherwise the Consequences will be at your own EXPENSE!**
+**Please ***DO NOT*** Use the contents of this repository for any other Commercial Purpose, otherwise the Consequences will be at your own EXPENSE!**
 
 # 相关课程 Course introduction:
 
