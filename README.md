@@ -122,6 +122,11 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
     * 学分 Credit：2.0
     * 总学时 Total school hours：36.0
 
+* [操作系统(Operating System)](OS)
+    * 课程号 Course No.：2043060
+    * 学分 Credit：3.0
+    * 总学时 Total school hours：54.0
+
 **网络共享选修课 Electives MOOC**:
 
 * 算法与程序的奥秘(Arcanum of Algorithms and Programs)
