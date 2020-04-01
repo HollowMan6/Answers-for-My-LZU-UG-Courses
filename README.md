@@ -169,7 +169,7 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
     * 学分 Credit：2.0
     * 总学时 Total school hours：36.0
 
-* [人生悟理——透过物理看人生》《网络共享课](人生悟理-透过物理看人生（网络共享课）)
+* [人生悟理——透过物理看人生（网络共享课）](人生悟理-透过物理看人生（网络共享课）)
   * [绪论](人生悟理-透过物理看人生（网络共享课）/绪论.pdf)
   * [第一章测试](人生悟理-透过物理看人生（网络共享课）/第一章测试.pdf)
   * [第二章测试](人生悟理-透过物理看人生（网络共享课）/第二章测试.pdf)
@@ -236,6 +236,7 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
   * [第一次作业](漫画创业（网络共享课）/第一次作业.pdf)
   * [第二次作业](漫画创业（网络共享课）/第二次作业.pdf)
   * [第三次作业](漫画创业（网络共享课）/第三次作业.pdf)
+  * [第四次作业](漫画创业（网络共享课）/第四次作业.pdf)
 
 * [文科物理（网络共享课）](文科物理（网络共享课）)
   * [2.1地心说](文科物理（网络共享课）/2.1地心说.pdf)
@@ -286,6 +287,7 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
   * [第一次作业](文科物理（网络共享课）/第一次作业.pdf)
   * [第二次作业](文科物理（网络共享课）/第二次作业.pdf)
   * [第三次作业](文科物理（网络共享课）/第三次作业.pdf)
+  * [第四次作业](文科物理（网络共享课）/第四次作业.pdf)
 
 * [算法与程序的奥秘](./算法与程序的奥秘)
   * [课程资料](./算法与程序的奥秘/Materials)
