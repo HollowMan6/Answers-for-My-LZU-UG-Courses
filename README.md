@@ -361,6 +361,7 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
   * [第三次作业](文科物理（网络共享课）/第三次作业.pdf)
   * [第四次作业](文科物理（网络共享课）/第四次作业.pdf)
   * [第五次作业](文科物理（网络共享课）/第五次作业.pdf)
+  * [第六次作业](文科物理（网络共享课）/第六次作业.pdf)
 
 * [算法与程序的奥秘](./算法与程序的奥秘)
   * [课程资料](./算法与程序的奥秘/Materials)
