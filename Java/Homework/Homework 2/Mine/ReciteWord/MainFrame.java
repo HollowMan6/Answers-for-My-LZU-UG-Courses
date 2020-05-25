@@ -111,7 +111,7 @@ public class MainFrame {
 		pgwr = new JLabel("已背错词：" + word.getwrongLine() + "/" + word.getwrongTotalLine());
 		pgmk = new JLabel("已背收藏词：" + word.getmarkLine() + "/" + word.getmarkTotalLine());
 		tm = new JLabel("时间剩余：15 秒");
-		f = new JFrame("Hollow 智能背单词软件 V1.0");
+		f = new JFrame("单词助手");
 		tf1 = new JTextField();
 		tf1.setHorizontalAlignment(JTextField.CENTER);
 		en.setFont(new Font(null, Font.PLAIN, 32));
