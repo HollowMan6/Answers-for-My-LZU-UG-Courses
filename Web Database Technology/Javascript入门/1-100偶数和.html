@@ -1,0 +1,26 @@
+<html>
+
+<head>
+    <title>1-100偶数和</title>
+</head>
+
+<body>
+    <p id="show"></p>
+    <script>
+        var showing = document.getElementById('show');
+        showing.innerText = calculate(100);
+
+        function calculate(num) {
+            var sum = 0;
+            for (var i = 0; i <= num; i++) {
+                if (i % 2 == 0) {
+                    sum = sum + i;
+                }
+            }
+            return sum;
+        }
+
+    </script>
+</body>
+
+</html>

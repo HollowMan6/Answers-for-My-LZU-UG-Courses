@@ -142,6 +142,11 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
     * 学分 Credit：4.0
     * 总学时 Total school hours：72.0
 
+* [Web数据库技术(Web Database Technology)](Web%20Database%20Technology)
+    * 课程号 Course No.：2043183
+    * 学分 Credit：2.0
+    * 总学时 Total school hours：36.0
+
 **网络共享选修课 Electives MOOC**:
 
 * 《人生悟理——透过物理看人生》《网络共享课》(Life Understanding-Seeing Life through Physics)

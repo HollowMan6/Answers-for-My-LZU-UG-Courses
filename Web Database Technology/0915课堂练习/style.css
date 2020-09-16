@@ -1,0 +1,40 @@
+body {
+    background-color: #cdcdfe;
+    color: #000066;
+    margin: 0;
+}
+
+li,p {
+    font-size: 10.5pt;
+    color: green;
+    text-align:center;
+    font-family:"楷体","Times New Roman";
+    font-weight: bold;
+}
+
+.web {
+    font-size: 12pt;
+    color: yellow;
+    text-align: right;
+    font-weight: bold;
+}
+
+a:link {
+    color:#333; 
+    text-decoration:none;
+}
+
+a:visited {
+    color:#333; 
+    text-decoration:none;
+}
+
+a:hover {
+    text-decoration:underline;
+    color:#000
+}
+
+a:visited {
+    text-decoration:underline;
+    color:#000
+}
