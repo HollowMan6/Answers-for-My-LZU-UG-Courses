@@ -147,6 +147,11 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
     * 学分 Credit：2.0
     * 总学时 Total school hours：36.0
 
+* [大学日语1/4(College Japanese 1/4)](College%20Japanese%201)
+    * 课程号 Course No.：13070996（1）
+    * 学分 Credit：3.0
+    * 总学时 Total school hours：54.0
+
 **网络共享选修课 Electives MOOC**:
 
 * 《人生悟理——透过物理看人生》《网络共享课》(Life Understanding-Seeing Life through Physics)
