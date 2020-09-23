@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+
+<head>
+	<title>简单计算器</title>
+	<script>
+		function calculate() {
+			var firstNumber = parseInt(document.getElementById("first").value);
+			var secondNumber = parseInt(document.getElementById("second").value);
+			var operator = document.getElementById("operator").value;
+			var result;
+
+			switch (operator) {
+				case '+': result = firstNumber + secondNumber;
+					break;
+
+				case '-': result = firstNumber - secondNumber;
+					break;
+
+				case '*': result = firstNumber * secondNumber;
+					break;
+
+				case '/': result = firstNumber / secondNumber;
+					break;
+
+				default: result = "错误";
+					break;
+			}
+
+			document.getElementById("result").value = result;
+		}
+	</script>
+</head>
+
+<body>
+	<div>
+		<input type="text" id="first" />
+		<select id="operator">
+			<option value="+">+</option>
+			<option value="-">-</option>
+			<option value="*">*</option>
+			<option value="/">/</option>
+		</select>
+		<input type="text" id="second" /> =
+		<input type="text" id="result" />
+		</br></br>
+	</div>
+	<button onclick="calculate()">计算</button>
+</body>
+
+</html>
