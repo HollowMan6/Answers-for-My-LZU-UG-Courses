@@ -152,6 +152,11 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
     * 学分 Credit：3.0
     * 总学时 Total school hours：54.0
 
+* [前端交互设计技术(Front-end Interaction Design)](Front-end%20Interaction%20Design)
+    * 课程号 Course No.：2043308
+    * 学分 Credit：2.0
+    * 总学时 Total school hours：36.0
+
 **网络共享选修课 Electives MOOC**:
 
 * 《人生悟理——透过物理看人生》《网络共享课》(Life Understanding-Seeing Life through Physics)
