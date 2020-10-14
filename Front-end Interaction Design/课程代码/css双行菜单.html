@@ -1,0 +1,53 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>横排二级下拉菜单</title>
+<style type="text/css">
+* { margin:0; padding:0;}
+ul, li { list-style:none;}
+a { text-decoration:none;}
+.nav { border:2px solid #ccc; border-right:none; overflow:hidden; float:left; margin:100px 0 0 300px;}
+.nav ul li { float:left;}
+.nav ul li a { width:120px; height:40px; text-align:center; line-height:40px; display:block; border-right:2px solid #ccc; background:#eee; color:#666;}
+.nav ul li a:hover{ color:#f00; }
+.nav ul li ul { position:absolute; display:none;}
+.nav ul li ul li { float:none;}
+.nav ul li ul li a { border-right:none; border-top:1px dotted #ccc; background:#f5f5f5;}
+.nav ul li:hover ul{ display:block; }
+</style>
+</head>
+<body>
+<div class="nav">
+  <ul>
+    <li><a href="#">栏目一</a>
+      <ul>
+        <li><a href="#">二级栏目</a></li>
+        <li><a href="#">二级栏目</a></li>
+        <li><a href="#">二级栏目</a></li>
+        <li><a href="#">二级栏目</a></li>
+      </ul>
+    </li>
+    <li><a href="#">栏目二</a>
+      <ul>
+        <li><a href="#">二级栏目</a></li>
+        <li><a href="#">二级栏目</a></li>
+        <li><a href="#">二级栏目</a></li>
+        <li><a href="#">二级栏目</a></li>
+      </ul>
+    </li>
+    <li><a href="#">栏目三</a>
+      <ul>
+        <li><a href="#">二级栏目</a></li>
+        <li><a href="#">二级栏目</a></li>
+        <li><a href="#">二级栏目</a></li>
+        <li><a href="#">二级栏目</a></li>
+        <li><a href="#">二级栏目</a></li>
+      </ul>
+    </li>
+    <li><a href="#">栏目四</a></li>
+    <li><a href="#">栏目五</a></li>
+  </ul>
+</div>
+</body>
+</html>

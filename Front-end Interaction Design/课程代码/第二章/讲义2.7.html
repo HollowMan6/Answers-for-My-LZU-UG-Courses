@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2.7新的布局元素(4)</title>
+	<link rel="stylesheet" type="text/css" href="">
+	<style type="text/css">
+
+	</style>
+</head>
+<body bgcolor="SeaShell">
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="50PX">第二章：HTML5新特性1：新的布局</h1>
+	<h2 align="center">2.7新的布局元素(4)-time</h2>
+	<h3 align="right">主讲老师：吉延鹏</h3> <hr>
+	<h3>学习要点</h3>
+	<ol>
+		<li>了解微格式的概念</li>
+		<li>掌握time元素的用法</li>
+	</ol>
+</header>
+	<article>
+		<ol>
+			<li>微格式的概念</li>
+				<ul>
+					<li>
+						HTML5中的微格式，是一种利用HTML5中的新标签对网页添加附加信息的方法，附加信息例如新闻事件发生的日期和时间，文章发表的日期等。
+					</li>
+					<li>
+						HTML5中的微格式是为了简化浏览器对数据的提取，方便搜索引擎的搜索.
+					</li>
+				</ul><br>
+			<li>time元素</li>
+				<ul>
+					<li>time是HTML5新增的元素</li>
+					<li>
+						time元素代表24小时中的某个时刻或某个日期，表示时刻时允许带时差。它可以定义很多格式的日期和时间
+					</li>
+					<li>
+						datetime属性中日期与时间之间要用"T"文字分隔，"T"表示时间。请注意倒数第二行，时间加上Z文字表示给机器编码时使用UTC标准时间，表示向机器编码另一地区时间，如果是编码本地时间，则不需要添加时差。
+					</li>	
+					<li>
+						pubdate属性是个可选标签，加上它搜索引擎/浏览器就可以很方便的识别出那个日期是文章、新闻的发表日期。
+					</li>				
+				</ul>
+				<br>
+			<li>time元素示例</li>
+				<ul>
+					<li>
+						&lttime datetime="2015-10-22"&gt2015年10月12日&lt/time&gt
+					</li>
+					<li>
+						&lttime datetime="2015-10-22T20:00"&gt2015年10月12日晚上8点&lt/time&gt
+					</li>
+					<li>
+						&lttime datetime="2015-10-22T20:00Z"&gt2015年10月12日晚上8点&lt/time&gt
+					</li>
+					<li>
+						&lttime datetime="2015-10-22T20:00+09:00"&gt美国时间2015年10月12日8点&lt/time&gt
+					</li>
+				</ul><br>
+		</ol>
+		<hr>
+	</article>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

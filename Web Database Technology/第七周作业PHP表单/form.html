@@ -1,0 +1,94 @@
+<html>
+
+<head>
+    <title>学校食堂调查问卷</title>
+    <meta charset="utf-8">
+    <style>
+    div{
+        width: 400px;
+        height: 100px;
+        position: absolute;
+        left: 42%;
+        top: 15%;
+        margin: -20px 0 0 -20px;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>学校食堂调查问卷</h1>
+        <form  name="form1" action="show.php" method="POST" onSubmit="return FormCheck()"> 
+            <span style="color:red"><small>* </small></span><strong>姓名</strong>：
+            <input type="text" name="username"/> 
+            <br /><br /> 
+            <span style="color:red"><small>* </small></span><strong>性别</strong>：
+            <input type="radio" name="gender" value="男"/> 男 
+            <input type="radio" name="gender" value="女"/> 女 
+            <br /><br /> 
+            <span style="color:red"><small>* </small></span><strong>年级</strong>：
+            <select name="grade">
+                <option value ="请选择">--请选择--</option>
+                <option value ="大一">大一</option>
+                <option value ="大二">大二</option>
+                <option value ="大三">大三</option>
+                <option value ="大四">大四</option>
+            </select>
+            <br /><br /> 
+            <strong>最满意的食品</strong>：
+            <br />
+            <input type="checkbox" name="favorfood[]" value="平桥豆腐羹"/> 平桥豆腐羹
+            <input type="checkbox" name="favorfood[]" value="大煮干丝"/> 大煮干丝
+            <input type="checkbox" name="favorfood[]" value="松仁玉米"/> 松仁玉米
+            <br />
+            <input type="checkbox" name="favorfood[]" value="松鼠桂鱼"/> 松鼠桂鱼
+            <input type="checkbox" name="favorfood[]" value="扬州狮子头"/> 扬州狮子头
+            <input type="checkbox" name="favorfood[]" value="扬州炒饭"/> 扬州炒饭
+            <br /><br /> 
+            <strong>最不满意的食品</strong>：
+            <br />
+            <input type="checkbox" name="unfavorfood[]" value="豆汁"/> 豆汁
+            <input type="checkbox" name="unfavorfood[]" value="炒肝"/> 炒肝
+            <input type="checkbox" name="unfavorfood[]" value="麻豆腐"/> 麻豆腐
+            <br />
+            <input type="checkbox" name="unfavorfood[]" value="油炒面"/> 油炒面
+            <input type="checkbox" name="unfavorfood[]" value="焦圈"/> 焦圈
+            <input type="checkbox" name="unfavorfood[]" value="芥末堆儿"/> 芥末堆儿
+            <br /><br /> 
+            <span style="color:red"><small>* </small></span><strong>意见和建议</strong>：
+            <br />
+            <textarea rows="5" cols="30" name="feedback"></textarea> 
+            <br /><br /> 
+            <small>注：标<span style="color:red">*</span>的为必填项</small>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="submit" value="提交"/> 
+        </form>
+    </div>
+    <script language=javascript type="text/javascript">
+        function FormCheck()
+        {
+            if(!document.form1.elements["username"].value){
+                alert("请填写您的姓名！");
+                document.form1.elements["username"].focus();
+                return false;
+            }
+            else if(!document.form1.elements["gender"].value){
+                alert("请选择您的性别！");
+                return false;
+            }
+            else if(document.form1.elements["grade"].value=="请选择"){
+                alert("请选择您的年级！");
+                document.form1.elements["grade"].focus();
+                return false;
+            }
+            else if(!document.form1.elements["feedback"].value){
+                alert("请留下您宝贵的建议！");
+                document.form1.elements["feedback"].focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>

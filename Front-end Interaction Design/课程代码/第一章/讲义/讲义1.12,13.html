@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>1.12表格元素（上）</title>
+</head>
+<body bgcolor="MistyRose">
+<h1><img src="../lesson3/HTML5LOGO.png" alt="" width="50PX">HTML5入门实例课程</h1>
+<h2 align="center">1.12 表格元素（下）</h2>
+<h3 align="right"></h3> <hr>
+<p>学习要点：</p>
+<p style="color: #FF7F50"> <b>表格的基本构成</b><br><b>表格的属性</b><br><b>表格的合并</b><br></p> <hr>
+<h4>1.表格构成三个基本要素</h4>
+table：表格的范围，外框；用来定义表格，表格的其他元素包含在table标签里面；<br>
+tr: 表格的行；<br>
+td:表格的单元格
+<h4>2.一点说明：关于表格的属性</h4>
+<p>HTML5中删除了HTML4中table的大部分属性，HTML5中推荐使用CSS设定原来table属性实现的效果。对于HTNL5中已经废弃的大部分属性不在对其讲解</p>
+<h4>3.th元素:为表格添加标题行</h4>
+<p>th元素用来定义表格的标题单元格，他是tr元素的子元素，必须放在tr标签里边；tr元素的内容会自动居中对齐并加粗文字</p>
+<h4>4.colspan元素:横向合并单元格</h4>
+<p>属性值为正整数，表示该单元格合横向合并的列数，语法为 &lttd&gt &ltcolspan&gt="3" &lt/td&gt</p>
+<h4>5.rowspan元素:纵向向合并单元格</h4>
+<p>属性值为正整数，表示该单元格合纵向向合并的行数数，语法为 &lttd&gt &ltcolspan&gt="3" &lt/td&gt</p>
+<h4>6.caption元素:给表格添加标题</h4>
+<p>用来制定表格的标题或者说明；是table的子元素，必须放在table中使用<br>
+	caption的align属性可以设置标题的位置，但是，在HTML5中已经被废弃，不推荐使用，建议使用CSS样式设置，后边课程会讲到。
+</p>
+<h4>7.thead\tfoot\tbaody元素</h4>
+<p>
+thead元素：表格的表头；tfoot元素:表格的页脚；tbaody元素：表格的主体；表格规范的写法应该包含这三部分内容<br>
+注：这三个主要结合CSS、javaScript来使用
+</p>
+<h4>8.colgroup元素</h4>
+<p>
+colgroup元素用来组合列，他的span属性可以设置组合列的数目；它可以包含一个子元素 col; <br>
+colgroup元素为table元素的子元素，必须放在caption元素之后，thead元素之前。
+</p>
+<h4>9.col元素</h4>
+<p>
+col元素用来设定列的属性，他也可以使用span属性； <br>
+col元素一般作为colgroup元素的子元素配合使用。
+</p>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>table布局示例</title>
+	<style type="text/css">
+	tr{vertical-align: text-top;}
+		#tb{background: DarkGray;width: 100%;height: 708px;padding: 0px}
+		#td1{height: 10%;background: green}
+		#td2{height: 80%;width: 20%; background: Aquamarine;}
+		#td3{height: 80%;width: 80%}
+		#td4{height: 10%;background: blue}
+	</style>
+</head>
+<body style="margin: 0">
+	<table id="tb" cellspacing="0">
+		<tr><td colspan="2" id="td1">我是头部</td> </tr>
+		<tr><td id="td2">我是侧边栏</td><td id="td3">我是主体内容</td></tr>
+		<tr><td colspan="2" id="td4">我是底部内容</td></tr>
+	</table>
+</body>
+</html>
