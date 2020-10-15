@@ -1,4 +1,4 @@
-# 数字逻辑(数字电路) FPGA大作业
+# 数字逻辑(数字电路) 实验报告+FPGA大作业
 
 [![last-commit](https://img.shields.io/github/last-commit/HollowMan6/Answers-for-My-LZU-UG-Courses)](../../../graphs/commit-activity)
 
@@ -13,6 +13,10 @@
 
 [这里](FPGA%20Work)是我的兰州大学“数字逻辑(数字电路)”的FPGA大作业源程序，电路图和报告。
 
+[这里](实验)是我的兰州大学“数字逻辑实验”的实验报告。
+
 # Digital logic FPGA Work
 
 [Here](FPGA%20Work) are my reports, Source codes and schematics of FPGA Work for the LZU Digital logic.
+
+[Here](实验) are my reports for the LZU Digital logic Lab Class.
