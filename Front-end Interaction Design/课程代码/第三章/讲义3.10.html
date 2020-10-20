@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>3.10 input元素(8)</title>
+	<link rel="stylesheet" type="text/css" href="">
+	<style type="text/css">
+
+	</style>
+</head>
+<body bgcolor="SeaShell">
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="50PX">第三章：HTML5新特性2：增强的表单</h1>
+	<h2 align="center">3.10 input元素(9)</h2>
+	<h3 align="right">主讲老师：吉延鹏</h3> <hr>
+	<h3>学习要点</h3>
+	<ul>
+	    <li>input元素及其属性</li>
+	</ul>
+</header>
+ <section>
+  <h4>input元素</h4>
+  	<ul>
+  		<li>用来设置表单中的内容项，比如输入内容的文本框，按钮等<br>
+  		<li>不仅可以布置在表单中，也可以在表单之外的元素使用<br>
+  	</ul>
+  <h4>input元素的属性</h4>
+  	<ul>
+  		<li>type属性：指定输入内容的类型，默认为text:单行文本框</li><br>
+  		<li>name属性:输入内容的识别名称，传递参数时候的参数名称</li><br>
+      <li>value属性:默认值</li><br>
+      <li>maxlength:输入的最大字数</li>
+      <li>readonly属性：只读属性，设置内容不可变更，提交时会以前发送至服务器</li>
+      <li>disabled属性：设置为不可用（不可操作）</li>
+      <li>required属性：设置该内容为必须填写项，否则无法提交</li>
+      <li>placeholder属性：设置默认值，当文本框获得焦点时被清空，对text/url/tel/email//password/search有效</li>
+      <li style="color: red">autofocus属性：自动获得焦点</li>
+      <li style="color: red">accesskey属性：指定快捷键windows中，指定快捷键后，按Alt+“快捷键”,便会获得焦点</li>
+      <li style="color: red">tabindex属性：指定按Tab键时，项目间的移动顺序</li>
+      <li style="color: red">autocomplet属性：  <b style="color:  blue">HTML5新增属性</b>属性值为on/off,定义是否开启浏览器自动记忆功能</li>
+  	</ul>
+   <p>input的其他属性还有很多，我们放在案例中逐步讲解，暂时先了解这三个</p>
+   <h4>type属性z值</h4>
+  	<ul>
+  		<li>默认为text</li><br>
+  		<li>password：密码状态输入</li><br>
+      <li>submit:提交按钮，点击将数据发送至服务器</li>
+      <li>reset:重置按钮</li>
+      <li>button:普通按钮</li>
+      <li>imge：图片式提交按钮</li>
+      <li >hidden；隐藏字段</li>
+        <ul>
+          <li>该内容不会显示页面上</li>
+          <li>一般为网页设计者设置的变量数据，提交时，隐藏内容会提交到服务器</li>
+          <li>关于hidden暂时只了解这么多，以后用到的时候再详细说</li>
+        </ul>
+      <li>email:表示要输入一个电子邮箱</li>
+        <ul>
+            <li>这是HTML5新增的元素</li>
+            <li>他会对输入内容进行验证，在之前需要编写大段的JS代码来进行这项工作</li>
+            <li>浏览器版本比较低的话有可能不支持，不同的浏览器提示的效果可能有差异</li>
+        </ul>
+      <li>url:表示要输入一个网址</li>
+          <ul>
+              <li>这是HTML5新增的</li>
+              <li>他会对输入内容进行验证，在之前需要编写大段的JS代码来进行这项工作</li>
+              <li>浏览器版本比较低的话有可能不支持，不同的浏览器提示的效果可能有差异</li>
+          </ul>
+        <li>tel:表示输入的内容是一个电话号码</li>
+           <ul>
+              <li>这是HTML5新增的</li>
+              <li><i>他不会</i>对输入内容进行验证</li>
+              <li>浏览器版本比较低的话有可能不支持，不同的浏览器提示的效果可能有差异</li>
+            </ul>
+        <li>number:</li>
+            <ul>
+              <li>这是HTML5新增的</li>
+              <li>可以配合input的max/min/step/value规定允许输入的最大值/最小值/步长/默认值</li>
+              <li>浏览器版本比较低的话有可能不支持，不同的浏览器提示的效果可能有差异</li>
+            </ul>
+        <li>range(活动条)</li>
+            <ul>
+              <li>这是HTML5新增的；与number类型类似，也是表示一定范围的数值输入，但是以一个活动条的状态显示</li>
+              <li>可以配合input的max/min/step/value规定的最大值/最小值/步长/默认值</li>
+              <li>浏览器版本比较低的话有可能不支持，不同的浏览器提示的效果可能有差异</li>
+            </ul>
+        <li>时间类</li>
+            <ul>
+              <li>这是HTML5新增的；</li>
+              <li>包括datetime/datetime-local/date/month/week/time</li>
+              <li>浏览器版本比较低的话有可能不支持，不同的浏览器支持程度不同</li>
+            </ul>
+          <li>color</li>
+            <ul>
+              <li>这是HTML5新增的；</li>
+              <li>可以建立一个颜色的选择输入框</li>
+              <li>浏览器版本比较低的话有可能不支持，不同的浏览器支持程度不同</li>
+            </ul>
+          <li>seacrch</li>
+            <ul>
+              <li>这是HTML5新增的；</li>
+              <li>用于建立一个搜索框，用来供用户输入搜素的关键词</li>
+              <li>浏览器版本比较低的话有可能不支持，不同的浏览器支持程度不同</li>
+            </ul>
+          <li>file</li>
+            <ul>
+              <li>用来创建一个文件选取的输入框</li>
+              <li>可通过accept属性规定选取文件的类型，比如图片/视频</li>
+              <li>multipe属性可以设定一次允许选择多个文件</li>
+            </ul>
+          <li style="color: red">checkbox/复选框</li>
+            <ul>
+              <li>用来创建一个复选框（可以多项选择）</li>
+              <li>通过checked属性可讲某个选项设为默认的选取状态，再次单击取消选取</li>
+            </ul>
+          <li style="color: red">radio/单选框</li>
+            <ul>
+              <li>用来创建一个单选框（可以多项选择）</li>
+              <li>通过checked属性可讲某个选项设为默认的选取状态，再次单击取消选取</li>
+              <li>必须将同一组单选项设置一个相同的name属性值</li>
+            </ul>
+      </ul>
+ </section>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

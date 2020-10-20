@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>表单综合实例</title>
+	<style type="text/css">
+		body{background: #A9A9A9}
+		form{width: 500px;background: #9370D8;padding: 10px;margin-top: 10%;margin-left: 30%}
+		input{padding: 5px;background: #f8f8f8}
+		button{padding: 8px; background: #f8f8f8;border-radius: 5px}
+		button:hover{padding: 10px; background: #2F4F4F}
+		input:focus{background: #FFC0CB}
+	</style>
+</head>
+<body>
+<form action="">
+	<div id="zc">
+		<fieldset>
+		<legend>注册用户</legend>
+			<p>
+				<label for="user">账号</label>
+		 		<input type="text" name="user" id="user" placeholder="账号" required="">			
+			</p>
+	 		<p>
+				<label for="password">密码</label>		
+				<input type="password" name="password" id="password" placeholder="密码">
+	 		</p>
+			<p>
+				<label for="tel">电话号码</label>
+				<input type="tel" name="tel" id="tel" placeholder="电话">				
+			</p>
+			<p>
+				<label for="email">电子邮件</label>
+				<input type="email" name="email" id="email" placeholder="电子邮箱">				
+			</p>
+				<button type="submit" value="注册" title="加入会员">注册用户</button>
+				<!-- <input type="submit" value="注册" title="加入会员"> -->
+		</fieldset>		
+	</div>
+</form>
+</body>
+</html>
