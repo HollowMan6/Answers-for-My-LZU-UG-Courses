@@ -1,0 +1,75 @@
+<html>
+
+<head>
+    <title>用户注册</title>
+    <meta charset="utf-8">
+    <style>
+    div{
+        width: 400px;
+        height: 100px;
+        position: absolute;
+        left: 42%;
+        top: 15%;
+        margin: -20px 0 0 -20px;
+    }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>用户注册</h1>
+        <form  name="form1" action="show.php" method="POST" onSubmit="return FormCheck()"> 
+            <span style="color:red"><small>* </small></span><strong>用户名</strong>：
+            <input type="text" name="username"/> 
+            <br /><br /> 
+            <span style="color:red"><small>* </small></span><strong>密码</strong>：
+            <input type="password" name="password"/> 
+            <br /><br /> 
+            <span style="color:red"><small>* </small></span><strong>性别</strong>：
+            <input type="radio" name="gender" value="男"/> 男 
+            <input type="radio" name="gender" value="女"/> 女 
+            <br /><br /> 
+            <span style="color:red"><small>* </small></span><strong>年龄</strong>：
+            <input type="number" name="age"/> 
+            <br /><br /> 
+            <span style="color:red"><small>* </small></span><strong>Email</strong>：
+            <input type="email" name="email"/> 
+            <br /><br /> 
+            <small>注：标<span style="color:red">*</span>的为必填项</small>
+            &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <input type="submit" value="注册"/> 
+        </form>
+    </div>
+    <script language=javascript type="text/javascript">
+        function FormCheck()
+        {
+            if(!document.form1.elements["username"].value){
+                alert("请填写您的用户名！");
+                document.form1.elements["username"].focus();
+                return false;
+            }
+            else if(!document.form1.elements["gender"].value){
+                alert("请选择您的性别！");
+                return false;
+            }
+            else if(!document.form1.elements["password"].value){
+                alert("请填写您的密码！");
+                document.form1.elements["password"].focus();
+                return false;
+            }
+            else if(!document.form1.elements["age"].value){
+                alert("请填写您的年龄！");
+                document.form1.elements["age"].focus();
+                return false;
+            }
+            else if(!document.form1.elements["email"].value){
+                alert("请填写您的Email！");
+                document.form1.elements["email"].focus();
+                return false;
+            }
+            return true;
+        }
+    </script>
+</body>
+
+</html>
