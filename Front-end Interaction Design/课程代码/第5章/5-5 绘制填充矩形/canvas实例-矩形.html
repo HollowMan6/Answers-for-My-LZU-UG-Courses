@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>canvas实例2-绘制矩形</title>
+	<style type="text/css">
+		canvas{background: #a9a9a9}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="600">
+		很抱歉，您的浏览器暂不支持HTML5的canvas
+	</canvas>
+	<script type="text/javascript">
+		var canvas=document.getElementById('canvas'); //定义变量获取画布DOM
+		var context=canvas.getContext('2d');//设置绘图环境为2d
+		//以上两句为固定写法，暂时记住即可，后续课程讲完JavaScript还会详细讲解
+		context.lineWidth=5
+		context.strokeStyle="green"
+		context.moveTo(300,50);
+		context.lineTo(380,50);
+		context.lineTo(380,130);
+		context.lineTo(300,130);
+		// context.lineTo(300,50);
+		context.closePath();
+		context.stroke();
+		context.moveTo(300,50);
+		context.lineTo(380,50);
+		context.strokeRect(50,50,80,80)
+		context.fillStyle="blue"
+		context.fillRect(150,50,80,80)
+	</script>
+</body>
+</html>

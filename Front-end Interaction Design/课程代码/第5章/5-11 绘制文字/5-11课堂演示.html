@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>5-11 课堂演示</title>
+	<style type="text/css">
+		canvas{background: #A9A9A0}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="600">
+		您浏览器暂不支持HTML5的canvas元素
+	</canvas>
+	<script type="text/javascript">
+		var canvas=document.getElementById('canvas'); 
+		var c=canvas.getContext('2d');
+		 c.lineWidth=2;
+		 c.strokeStyle="green";
+		 c.fillStyle="red";
+		 c.font="50px 隶书"
+		 c.strokeText("HTML5的canvas元素",200,200)
+		 c.fillText("HTML5的canvas元素",200,300)
+
+
+   		 c.fillText("HTML5的canvas元素",200,500)
+		 c.strokeText("HTML5的canvas元素",200,500)
+	 
+
+
+
+	</script>
+</body>
+</html>

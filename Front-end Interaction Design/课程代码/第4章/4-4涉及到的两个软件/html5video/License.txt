@@ -1,0 +1,24 @@
+FREE WEBM ENCODER
+END USER LICENSE AGREEMENT
+
+NOTICE TO USER: THIS IS AN END USER LICENSE AGREEMENT ("AGREEMENT") WHICH SETS OUT THE TERMS AND CONDITIONS UNDER WHICH YOU ARE ENTITLED TO USE THE LICENSED SOFTWARE PRODUCT ("SOFTWARE"). PLEASE READ THE TERMS AND CONDITIONS OF THIS AGREEMENT CAREFULLY BEFORE YOU INSTALL AND USE THE SOFTWARE. BY INSTALLING OR BY USING THE SOFTWARE YOU AGREE TO BE BOUND BY THE TERMS AND CONDITIONS OF THIS AGREEMENT. IF YOU DO NOT AGREE TO THE TERMS AND CONDITIONS OF THIS AGREEMENT, DO NOT INSTALL OR USE THE SOFTWARE.
+
+THE SOFTWARE IS PROTECTED BY COPYRIGHT LAWS AND INTERNATIONAL COPYRIGHT TREATIES, AS WELL AS OTHER INTELLECTUAL PROPERTY LAWS AND TREATIES. THE SOFTWARE IS LICENSED, NOT SOLD.
+
+ANY COMMERCIAL OR PROFESSIONAL USE OF THE SOFTWARE CONSTITUTES A MATERIAL BREACH OF THIS AGREEMENT.
+
+1. LICENSE GRANT. PolySoft Solutions hereby grants to you as an individual a non-exclusive and non-transferable license to use the SOFTWARE free of charge on as many computers as you wish.
+
+2. RESTRICTIONS. The freeware version of the SOFTWARE may be used only by private home users. The SOFTWARE may not be used for commercial or professional purposes. You may not sell, rent or lease the SOFTWARE. You agree not to modify, adapt, translate, reverse engineer, decompile, disassemble or otherwise attempt to discover the source code of the SOFTWARE.
+
+3. OWNERSHIP. PolySoft Solutions reserves all rights not expressly granted by this AGREEMENT. All copyrights, trademarks and other intellectual property rights to the SOFTWARE are owned by PolySoft Solutions. The SOFTWARE is protected by United States and foreign copyright laws, international treaties and other applicable laws.
+
+4. TECHNICAL SUPPORT. PolySoft Solutions provides NO technical support for the freeware version of the SOFTWARE.
+
+5. DISTRIBUTION. You may freely distribute the SOFTWARE, so long as the restrictions noted above are met.
+
+6. NO WARRANTY. THE SOFTWARE IS PROVIDED "AS IS". POLYSOFT SOLUTIONS DISCLAIMS ALL WARRANTIES WITH RESPECT TO THE SOFTWARE, WHETHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, OR NON-INFRINGEMENT. POLYSOFT SOLUTIONS DOES NOT WARRANT THAT THE OPERATION OF THE SOFTWARE WILL BE UNINTERRUPTED OR ERROR FREE.
+
+7. LIMITATION OF LIABILITY. TO THE MAXIMUM EXTENT PERMITTED BY APPLICABLE MANDATORY LAW, IN NO EVENT SHALL POLYSOFT SOLUTIONS BE LIABLE TO YOU OR ANY THIRD PARTY FOR ANY INCIDENTAL, INDIRECT, SPECIAL OR CONSEQUENTIAL DAMAGES, INCLUDING LOSS OF DATA, LOST PROFITS, SAVINGS OR REVENUES OF ANY KIND.
+
+8. TERM. This AGREEMENT will enter into force upon installation of the SOFTWARE. You may terminate this AGREEMENT at any time by uninstalling the SOFTWARE. This AGREEMENT will also terminate if you fail to comply with the terms and conditions of this AGREEMENT. In such event, you must uninstall the SOFTWARE.

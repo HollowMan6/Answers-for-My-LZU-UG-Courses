@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>5-9 绘制扇形</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第五章 Canvsas基础--HTML5中功能最强大的元素</h1>
+	<h1 align="center">5-9 绘制扇形</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>综合运用已经学过的知识绘制一个扇形</li>
+	</ul> <hr>
+</header>
+<details>
+	<summary>矩形的绘制方法</summary>
+	<ul>
+		<ol>
+			<li>rect(x,y,w,h)创建一个矩形</li>
+			<li>strokeRect(x,y,w,hx,y,w,h)  绘制矩形（无填充）</li>
+			<li>fillRect(x,y,w,h)	绘制"被填充"的矩形</li>
+			<li>stroke() 绘制已定义的路径</li>
+			<li>fill()绘制一个实心的（带填充的图形）</li>
+		</ol>
+	</ul>
+</details><br>
+<details>
+	<summary>Canvas的路径方法</summary>
+	<ul>
+		<ol>
+			<li>moveTo() 定义绘制路径的起点(在直线中就是定义直线的起点)</li>
+			<li>lineTo() 添加一个新点，(在我们的直线案例中就是定义直线的终点，但是后边继续绘制的话，它就变成中间点)</li>
+			<li>stroke() 绘制已定义的路径</li>
+			<li>fill()绘制一个实心的（带填充的图形）</li>
+			<li>beginPath() 用来创建新的路径</li>
+			<li>closePath() 从当前点回到起始点的来封闭路径</li>
+			<li>arc(x,y,r,开始角度，结束角度，true/false)	：创建圆弧/曲线（用于创建圆形或部分圆）</li/ol>
+	
+</details>
+<br>
+<details>
+	<summary>绘制直线段流程:</summary>
+	<ul>
+		<ol>
+			<li>在HTML5文档中添加canvas元素，并且设置的宽高和ID</li>
+			<li>在canvas元素中添加提示语句，让不支持canvas的浏览器能够显示友好的提示语句</li>
+			<li>添加script元素</li>
+			<li>获取画布/设置绘图绘图环境：此为固定语句，暂时记住、了解即可，后续课程还会继续讲解</li>
+				<ol>
+					<li>指定线宽:lineWidth= 数值 </li>
+					<li>指定颜色：strokeStyle=颜色值（只适用用轮廓，线段等，填充色用：fillStyle=颜色值</li>
+				</ol>
+			<li>设定起点：moveTo(x坐标,y坐标)</li>
+			<li>设定终点：lineTo(x坐标,y坐标)</li>
+			<li>开始绘制：stroke()</li>
+		</ol>		
+	</ul>
+</details> <br>
+<details>
+		<summary>绘制矩形流程：</summary>
+		<ul>
+			<ol>
+			<li>在HTML5文档中添加canvas元素，并且设置的宽高和ID</li>
+			<li>在canvas元素中添加提示语句，让不支持canvas的浏览器能够显示友好的提示语句</li>
+			<li>添加script元素</li>
+			<li>获取画布/设置绘图绘图环境：此为固定语句，暂时记住、了解即可，后续课程还会继续讲解</li>
+				<ul>
+					<li>绘制空心矩形</li>
+						<ol>
+							<li>指定线宽:lineWidth= 数值 </li>
+							<li>指定轮廓颜色：strokeStyle=颜色值（只适用用轮廓，线段等，填充色用：fillStyle=颜色值</li>
+							<li>设定矩形的基本参数：strokeRect(x,y;width,height)</li>
+						</ol>
+					<li>绘制填充矩形</li>
+						<ol>
+							<li>指定填充颜色：fillStyle=颜色值（只适用用轮廓，线段等，填充色用：fillStyle=颜色值</li>
+							<li>设定矩形的基本参数：fillRect(x,y;width,height)</li>
+						</ol>
+				</ul>
+			</ol>				
+     </ul>
+  </details> <br>
+  <details>
+		<summary>绘制圆</summary>
+		<ol>
+			<li>在HTML5文档中添加canvas元素，并且设置的宽高和ID</li>
+			<li>在canvas元素中添加提示语句</li>
+			<li>添加script元素</li>
+			<li>获取画布/设置绘图绘图环境</li>
+		
+					<li>指定线宽:lineWidth= 数值 </li>
+					<li>指定颜色：fill/strokeStyle=颜色值（只适用用轮廓，线段等，填充色用：fillStyle=颜色值</li>
+			
+			<li>设定圆的基本参数：</li>
+					<ul>
+						<li>圆心的坐标:x,y</li>
+						<li>圆的半径：数值</li>
+						<li>起始弧度和终止弧度：角度值1，角度值2</li>
+						<li>绘制方向：true（逆时针）/false（顺时针）</li>
+					</ul>
+			<li>开始绘制：stroke()/fill（）</li>
+		</ol>		
+	</details> <hr>
+	<a href="扇形.html"><input type="button" value="下节课预告！" style="padding: 10px;background: #DC143C"></a>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

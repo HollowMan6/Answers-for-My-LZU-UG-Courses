@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>5-1 Canvsas基础</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第五章 Canvsas基础--HTML5中功能最强大的元素</h1>
+	<h1 align="center">5-1 了解canvas元素</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>如何在HTML5文档中添加canvas元素</li>
+		<li>canvas的属性</li>
+		<li>了解canvas坐标系</li>
+		<li>了解script元素</li>
+		<li>绘制一条直线（准确的说是线段）</li>
+	</ul> <hr>
+</header>
+<details>
+	 <summary>什么是canvas</summary>
+		<p style="color: red">
+		<ul>
+			<li>
+				HTML5的canvas元素是HTML5技术标准中最令人振奋的功能之一。它提供了一套强大的图形API，拥有多种绘制路径、矩形、圆形、字符以及添加图像的方法。让开发者能够制作从文字处理到电子游戏的各类应用程序。由与canvas的操作需要用到JavaScript知识，而我们现在还没有讲到JavaScript，所以本章中我们只是学习canvas的基础操作。但是再后续课程中我们讲完JavaScript之后仍然会对canvas进行进一步的深入学习 
+			</li>
+		</ul>
+
+		</p>
+</details>
+
+
+	<details>
+		<summary>绘制直线段流程:</summary>
+		<ul>
+			<ol>
+				<li>在HTML5文档中添加canvas元素，并且设置的宽高和ID</li>
+				<li>在canvas元素中添加提示语句，让不支持canvas的浏览器能够显示友好的提示语句</li>
+				<li>添加script元素</li>
+				<li>获取画布/设置绘图绘图环境：此为固定语句，暂时记住、了解即可，后续课程还会继续讲解</li>
+					<ol>
+						<li>指定线宽:lineWidth= 数值 </li>
+						<li>指定颜色：strokeStyle=颜色值（只适用用轮廓，线段等，填充色用：fillStyle=颜色值</li>
+					</ol>
+				<li>设定起点：moveTo(x坐标,y坐标)</li>
+				<li>设定终点：lineTo(x坐标,y坐标)</li>
+				<li>开始绘制：stroke()</li>
+			</ol>		
+		</ul>
+
+	</details>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>5-3 给直线添加样式</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第五章 Canvsas基础--HTML5中功能最强大的元素</h1>
+	<h1 align="center">5-3 给直线添加样式</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>strokeStyle属性：设置颜色、渐变或模式（本节课只涉及到颜色）</li>
+		<li>lineWidth属性：--设置线宽</li>
+	</ul> <hr>
+</header>
+<details>
+	<summary>Canvas的路径方法</summary>
+	<ul>
+		<ol>
+			<li>moveTo() 定义绘制路径的起点(在直线中就是定义直线的起点)</li>
+			<li>lineTo() 添加一个新点，(在我们的直线案例中就是定义直线的终点，但是后边继续绘制的话，它就变成中间点)</li>
+			<li>stroke() 绘制已定义的路径</li>
+		</ol>
+	</ul>
+</details>
+<br>
+<details>
+	<summary>绘制直线段流程:</summary>
+	<ul>
+		<ol>
+			<li>在HTML5文档中添加canvas元素，并且设置的宽高和ID</li>
+			<li>在canvas元素中添加提示语句，让不支持canvas的浏览器能够显示友好的提示语句</li>
+			<li>添加script元素</li>
+			<li>获取画布/设置绘图绘图环境：此为固定语句，暂时记住、了解即可，后续课程还会继续讲解</li>
+				<ol>
+					<li>指定线宽:lineWidth= 数值 </li>
+					<li>指定颜色：strokeStyle=颜色值（只适用用轮廓，线段等，填充色用：fillStyle=颜色值</li>
+				</ol>
+			<li>设定起点：moveTo(x坐标,y坐标)</li>
+			<li>设定终点：lineTo(x坐标,y坐标)</li>
+			<li>开始绘制：stroke()</li>
+		</ol>		
+	</ul>
+
+</details>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

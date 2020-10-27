@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>心</title>
+	<style type="text/css">
+		canvas{background: #A9A9A0}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="500" height="500">
+		您浏览器暂不支持HTML5的canvas元素
+	</canvas>
+	<script type="text/javascript">
+		var canvas=document.getElementById('canvas'); 
+		var c=canvas.getContext('2d');
+		 c.lineWidth=10;
+		 c.strokeStyle="#A52A2A"
+		 c.moveTo(200,107);
+		 c.lineTo(150,50);
+		 c.lineTo(100,100);
+		 c.lineTo(200,200);
+		 c.lineTo(300,100);
+		 c.lineTo(250,50);
+		 c.lineTo(200,100);
+		 c.stroke();
+
+	</script>
+</body>
+</html>

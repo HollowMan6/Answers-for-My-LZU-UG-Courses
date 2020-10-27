@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>5-15 课堂演示</title>
+	<style type="text/css">
+		canvas{background: #A9A9A0}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="600">
+		您浏览器暂不支持HTML5的canvas元素
+	</canvas>
+	<script type="text/javascript">
+		var canvas=document.getElementById('canvas'); 
+			c=canvas.getContext('2d');
+			c.shadowOffsetX=8;
+			c.shadowOffsetY=8;
+			c.shadowBlur=8;
+			c.shadowColor="green";
+			c.fillStyle="Brown";
+			c.font="60px 隶书";
+			c.fillText("大众创业，万众创新",100,200)
+			c.beginPath();
+			c.strokeRect(80,100,600,150)
+
+
+
+
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>5-6 课堂演示</title>
+	<style type="text/css">
+		canvas{background: #A9A9A0}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="600">
+		您浏览器暂不支持HTML5的canvas元素
+	</canvas>
+	<script type="text/javascript">
+		var canvas=document.getElementById('canvas'); 
+		var c=canvas.getContext('2d');
+		 c.lineWidth=6;
+		 c.strokeStyle="green";
+		 c.fillStyle="red";
+		 c.arc(100,50,30,0,Math.PI*2);
+		 c.stroke();
+		 c.beginPath();
+		 c.arc(100,150,30,0,Math.PI*2)
+		 c.fill()
+		 
+ 
+	</script>
+</body>
+</html>

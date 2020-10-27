@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>放射渐变</title>
+	<style type="text/css">
+		canvas{background: #A9A9A0}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="600">
+		您浏览器暂不支持HTML5的canvas元素
+	</canvas>
+	<script type="text/javascript">
+		var canvas=document.getElementById('canvas'); 
+		var c=canvas.getContext('2d');
+	   g=c.createRadialGradient(0,300,200,800,300,20)
+	   g.addColorStop(0,'blue')
+       g.addColorStop(0.25,'white')
+       g.addColorStop(0.5,'Peru')
+       g.addColorStop(0.7,'red')
+       g.addColorStop(1,'yellow')
+	   c.fillStyle=g;
+	   c.fillRect(0,0,800,600)
+	</script>
+</body>
+</html>

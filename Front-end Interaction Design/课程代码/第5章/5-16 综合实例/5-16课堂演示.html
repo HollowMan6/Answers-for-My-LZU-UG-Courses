@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>5-15 课堂演示</title>
+	<style type="text/css">
+		canvas{background: #A9A9A0}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="600">
+		您浏览器暂不支持HTML5的canvas元素
+	</canvas>
+	<script type="text/javascript">
+		var canvas=document.getElementById('canvas'); 
+			c=canvas.getContext('2d');
+			c.shadowOffsetX=0;
+			 c.shadowOffsetY=8;
+			 c.shadowBlur=8;
+			 c.shadowColor="Black";
+			 c.fillStyle="Black";
+             c.font="50px 隶书"
+             c.fillText("绘制饼图",50,50);
+             c.beginPath();
+             c.fillStyle="Brown";
+             c.moveTo(400,300);
+             c.arc(400,300,160,0,Math.PI/3);
+             c.fill()
+ 	         c.fillStyle="Black";
+             c.font="20px 隶书"
+             c.fillText("15%",480,370);
+             c.beginPath();
+             c.fillStyle="blue";
+             c.moveTo(400,300);
+             c.arc(400,300,160,Math.PI/3,Math.PI);
+             c.fill()
+             c.fillStyle="Black";
+             c.fillText("33.3%",350,370);
+	         c.beginPath();
+	         c.fillStyle="Gold";
+	         c.moveTo(400,300)
+	         c.arc(400,300,160,Math.PI,Math.PI*1.6);
+	         c.fill()
+	         c.fillStyle="Black";
+	         c.fillText("33.3%",300,250);
+	         c.beginPath();
+	         c.fillStyle="Orange";
+	         c.moveTo(400,300)
+	         c.arc(400,300,160,Math.PI*1.6,Math.PI*2);
+	         c.fill()
+	         c.fillStyle="Black";
+             c.fillText("15%",480,270);
+	</script>
+</body>
+</html>

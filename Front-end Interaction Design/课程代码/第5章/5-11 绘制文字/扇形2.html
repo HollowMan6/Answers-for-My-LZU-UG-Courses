@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>绘制扇形</title>
+	<style type="text/css">
+		canvas{background: #A9A9A0;margin-left: 200px}
+	</style>
+</head>
+<body>
+	<canvas id="canvas" width="800" height="600">
+		您浏览器暂不支持HTML5的canvas元素
+	</canvas>
+	<script type="text/javascript">
+		var canvas=document.getElementById('canvas'); 
+		var c=canvas.getContext('2d');
+      g=c.createLinearGradient(200,500,700,200)
+       g.addColorStop(0,'#FF0000')
+       g.addColorStop(0.2,'#8B0000')
+       g.addColorStop(0.5,'#F0FFFF')
+       g.addColorStop(0.6,'#FF8C00')
+       g.addColorStop(0.8,'#4B0082')
+       g.addColorStop(1,'#800000')
+		 c.lineWidth=6;
+		 c.strokeStyle="FFA500";
+		 c.fillStyle=g;
+         c.moveTo(400,500)
+         c.arc(400,500,300,Math.PI*7/6,Math.PI*1.5,false)
+         //c.stroke();
+         c.beginPath();
+         c.moveTo(400,500);
+         c.arc(400,500,300,Math.PI*11/6,Math.PI*7/6,true);
+         //c.stroke();
+         c.fill()
+         c.beginPath();
+         c.fillStyle="#A9A9A0"
+         c.arc(400,500,150,Math.PI*7/6,Math.PI*1.5,false)
+         //c.stroke();
+         c.beginPath();
+         c.moveTo(400,500);
+         c.arc(400,500,150,Math.PI*11/6,Math.PI*7/6,true);
+         //c.stroke();
+         c.fill()
+         c.beginPath();
+         c.fillStyle="#000000";
+         c.font="55px 隶书"
+         c.fillText("纵",350,275);
+         c.beginPath();
+         c.strokeStyle="#800000";
+         c.lineWidth=2
+         c.font="55px 隶书"
+         c.strokeText("横",380,330);
+         
+
+		 
+  
+	</script>
+</body>
+</html>
