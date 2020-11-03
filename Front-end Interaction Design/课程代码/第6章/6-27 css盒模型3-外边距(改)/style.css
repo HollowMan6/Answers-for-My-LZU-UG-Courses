@@ -1,0 +1,25 @@
+@charset="UTF-8";
+*{
+	padding: 0px;
+	margin: 0px;
+}
+div{
+	background: green;
+	width: 60%;
+	/*height: auto;*/
+/*	max-width: 200px;*/
+/*	padding-top:10px;
+	padding-right: 20px;
+	padding-bottom:30px;
+	padding-left:40px;*/
+	padding: 10px 20px 30px;
+	border: 3px solid red;
+	/*margin:30px;*/
+  }
+
+  #div1{
+  	margin:30px;
+  }
+    #div2{
+  	margin:50px;
+  }

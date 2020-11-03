@@ -1,0 +1,21 @@
+@charset="UTF-8";
+p{
+	background: green;
+	font-size: 30px;
+}
+/*#p1{
+	white-space:pre;
+}
+#p2{
+	width: 600px;
+	white-space: pre-wrap;
+}
+#p3{
+	width: 600px;
+	white-space: pre-line;
+}*/
+
+#p1{
+	direction:rtl;
+	unicode-bidi:bidi-override;
+}

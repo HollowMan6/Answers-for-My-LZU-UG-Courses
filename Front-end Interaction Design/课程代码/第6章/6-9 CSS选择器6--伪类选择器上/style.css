@@ -1,0 +1,6 @@
+@charset="UTF-8";
+/*:root{background: green}*/
+/*li:first-child{color: red}*/
+/*li:last-child{color: red}*/
+/*li:only-child{color: green}*/
+p:only-of-type{color: red}

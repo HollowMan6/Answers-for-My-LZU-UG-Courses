@@ -1,0 +1,28 @@
+@charset="UTF-8";
+div{
+	margin: 20px;
+	width: 300px;
+	height: 150px;
+	background: rgb(122,60,30);
+	border:5px solid black;
+	background-image: url(../img/秦.jpg);
+}
+#div1{
+	border-radius: 3em;
+}
+
+#div2{
+	border-radius: 3em 1em;
+}
+#div3{
+	border-top-left-radius:2em;
+	
+}
+
+#div4{
+	border-top-left-radius:2em 4em;
+}
+
+#div5{
+	border-radius: 3em 2em/1em 4em;
+}

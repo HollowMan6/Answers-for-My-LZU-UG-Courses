@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>6-64 justify-content</title>
+	<style>
+		div{
+			font-size: 2em;
+		}
+		#diva,#divb,#divc,#divd,#dive{
+			width: 500px;
+			height: 200px;
+			background: rgba(10,10,10,0.6);
+		}
+		.div1{
+			width: 100px;
+			height: 100px;
+			background: green;
+		}
+
+		.div2{
+			width: 100px;
+			height: 60px;
+			background: orange;
+		}
+
+		.div3{
+			width: 60px;
+			height: 100px;
+			background: red;
+		}
+		.div4{
+			width: 60px;
+			height: 60px;
+			background: blue;
+		}
+		#diva,#divb,#divc,#divd,#dive{
+			display: flex;
+		}
+		#diva{
+			justify-content:flex-start;
+		}
+		#divb{
+			justify-content:flex-end;
+		}
+		#divc{
+			justify-content:center;
+		}
+		#divd{
+			justify-content:space-between;
+		}
+		#dive{
+			justify-content:space-around;
+		}
+	</style>
+</head>
+<body>
+<h2>flex-start</h2>
+<div id="diva">
+	<div class="div1">1</div>
+	<div class="div2">2</div>
+	<div class="div3">3</div>
+	<div class="div4">4</div>
+</div>
+
+<h2>justify-content:flex-end</h2>
+<div id="divb">
+	<div class="div1">1</div>
+	<div class="div2">2</div>
+	<div class="div3">3</div>
+	<div class="div4">4</div>
+</div>
+
+<h2>justify-content:center</h2>
+<div id="divc">
+	<div class="div1">1</div>
+	<div class="div2">2</div>
+	<div class="div3">3</div>
+	<div class="div4">4</div>
+</div>
+
+<h2>justify-content:space-between</h2>
+<div id="divd">
+	<div class="div1">1</div>
+	<div class="div2">2</div>
+	<div class="div3">3</div>
+	<div class="div4">4</div>
+</div>
+
+<h2>justify-content:space-around</h2>
+<div id="dive">
+	<div class="div1">1</div>
+	<div class="div2">2</div>
+	<div class="div3">3</div>
+	<div class="div4">4</div>
+</div>
+
+</body>
+</html>

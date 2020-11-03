@@ -1,0 +1,5 @@
+@charset="UTF-8";
+/*input[value][style]{background: green}*/
+/*input[value='vip1']{background: red}*/
+/*input[style~='15px']{background: red}*/
+p[lang|="en"]{color: red}

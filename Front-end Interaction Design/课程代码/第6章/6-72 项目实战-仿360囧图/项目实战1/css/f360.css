@@ -1,0 +1,107 @@
+@charset="UTF-8";
+*{
+	margin:0;
+	padding:0;
+}
+
+body{
+	background: rgba(20,20,20,0.2);
+}
+
+ul{
+	list-style-type: none;
+}
+
+a{
+	color:  #fff;
+	text-decoration: none;
+}
+/*header部分*/
+header{
+	height: 50px;
+	width: 100%;
+	background: url(../img/bj.png) repeat-x;
+}
+
+
+nav{
+	width: 1000px;
+	height: 50px;
+	margin: 0 auto;
+}
+
+h1{
+	color: #fff;
+	font:bold 40px 隶书;
+	float: left;
+	margin-left: 50px;
+
+
+}
+
+nav li{
+	float: left;
+	font-size: 20px;
+	height: 50px;
+	line-height: 50px;
+	letter-spacing: 5px;
+	margin-right: 5px;
+	width: 100px;
+	text-align: center;
+}
+
+/*左浮动部分*/
+aside {
+	position:fixed;
+	left: 50px;
+	top: 100px;
+}
+
+/*图片轮播部分*/
+.switch{
+	width: 1000px;
+/*	height: 310px;*/
+	margin: 0 auto;
+	background: #fff;
+    overflow: hidden;
+    margin-top: 15px;
+
+}
+/*.switch:after{
+	content: "";display: block; clear: both;
+}*/
+
+.swi{
+	width: 1000px;
+	float: left;
+}
+.swi1{
+	text-align: center;
+	float: left;
+	margin: 10px 15px 10px 15px;
+}
+
+.swi1:hover,.swi1:active{
+	color: orange;
+}
+
+.sw{
+	width: 4000px;
+	position: relative;
+	animation:swimg 9s linear infinite normal;
+}
+
+@keyframes swimg{
+	0% {left: 0px}
+	5% {left: 0px}
+
+	30% {left: -1000px}
+	40% {left: -1000px}
+
+	60%{left: -2000px;}
+	70% {left: -2000px}
+
+	95%{left:-3000px;}
+	100%{left:-3000px;}
+}
+

@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>6-21 CSS3中的文字与字体</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第六章 零基础精讲CSS3</h1>
+	<h1 align="center" style="font-family:jin_mei_mxplzx562402">6-21 CSS3中的文字与字体</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>掌握文字与字体的设置</li>
+	</ul> <hr>
+</header>
+<details>
+<summary>颜色值查询方法：</summary>
+	<ul>
+		<li>百度查询，很多网站有提供</li>
+		<li>下载相关手册等需要时查表</li>
+		<li>运用绘图工具中的拾色器</li>
+	</ul>
+</details><br>
+<details>
+		<summary>CSS中常用的字体属性设置</summary>
+	<ul>
+		<li>font-size 规定文本的字体尺寸</li>
+			<ul>
+				<li style="color: blue">通常使用px,百分比，em来设置字体的大小</li>
+					<ul><li>em是css中的相对单位，是相对于当前对象内的字体尺寸，若没有制定文字大小尺寸，则为浏览器默认字体大小</li></ul>
+				<li>xx-small、x-small、small、medium、large、x-large、xx-large把字体的尺寸设置为不同的尺寸，默认值：medium。</li>
+				<li>smaller	把 font-size 设置为比父元素更小的尺寸。</li>
+				<li>arger	把 font-size 设置为比父元素更大的尺寸。</li>
+			</ul>
+		<li>font-variant:规定是否以小型大写字母的字体显示文本。</li>
+			<ul>
+				<li>normal	默认值。浏览器会显示一个标准的字体。</li>
+				<li>small-caps	浏览器会显示小型大写字母的字体。</li>
+			</ul>
+		<li>font-style:规定文本的字体样式。</li>
+			<ul>
+				<li>normal	默认值。浏览器会显示一个标准的字体。</li>
+				<li style="color: blue">italic	浏览器会显示一个斜体的字体样式。</li>
+				<li>oblique	浏览器会显示一个倾斜的字体样式。暂时不作讲解，了解即可</li>
+			</ul>
+		<li>font-weight:规定字体的粗细。</li>
+			<ul>
+				<li>normal	默认值。定义标准的字符。</li>
+				<li style="color: blue">bold	定义粗体字符。</li>
+				<li>bolder	定义更粗的字符。lighter	定义更细的字符。</li>
+				<li>100-900;定义由粗到细的字符。400 等同于 normal，而 700 等同于 bold。</li>
+			</ul>
+		<li>font-family:规定文本的字体系列。</li>
+		<li style="color: blue">font:在一个声明中设置所有字体属性。</li>
+			<ul>
+				<li>这个简写属性用于一次设置元素字体的两个或更多方面。</li>
+				<li>至少要指定字体大小和字体系列</li>
+				<li>可以按顺序设置如下属性：font-style/font-variant/font-weight/font-size/font-family</li>
+			</ul>
+		<li style="color: blue">@font-face:嵌入字体</li>
+		<li style="color: red"> 注：字体的设置还有其他几个很少的用到的属性，比如font-size-adjust为元素规定 aspect 值；font-stretch	收缩或拉伸当前的字体系列。都很少用到或者多数浏览器不支持，就不作讲解</li>
+	</ul>
+</details><br>
+<details>
+		<summary>CSS中常用的文本属性设置</summary>
+		<p style="color: red">温馨提示：对于一些目前浏览器支持度不是太好或者极不常用属性不进行讲解</p>
+		<details>
+			<summary>掌握</summary>
+			<ul style="color: blue">
+				<li>color	设置文本颜色</li>
+				<li>text-align 规定元素中的文本的水平对齐方式。</li>
+					<ul>
+						<li>left 默认值/right/center/justify两端对齐</li>
+						<li>CSS3中新增了start和end属性值，在通常情况下，start相当于left，end相当于right</li>
+					</ul>
+				<li>line-height	设置行高。</li>
+					<ul>
+						<li>normal/数字/百分比/px/em</li>
+					</ul>
+				<li>text-indent 设置文本的首行缩进</li>
+					<ul>
+						<li>常用单位像素/百分比/em</li>
+					</ul>
+				<li>text-decoration	向文本添加修饰。</li>
+					<ul>
+						<li>none 默认值。显示标准的文本。</li>
+						<li>underline	定义文本下划线。</li>
+						<li>overline	定义文本上划线。</li>
+						<li>line-through	定义穿过文本下的一条线。</li>
+						<li>blink	定义闪烁的文本。</li>
+						<li>CSS3中还有一些新增加的属性值但是目前浏览器多不支持，不再介绍</li>
+					</ul>
+				<li>letter-spacing 设置字符间距。</li>
+					<ul>
+						<li>定义字符间的固定空间</li>
+						<li>normal	默认。/像素：（允许使用负值）</li>
+					</ul>
+				<li>word-spacing 设置字/单词间距。</li>
+					<ul>
+						 <li>增加或减少单词间的空白</li>
+						<li>normal 就等同于设置为 0。/如果指定为长度值，会调整字之间的通常间隔；（允许使用负值）。</li>
+					</ul>
+				<li>text-transform	设置对象中的文本的大小写</li>
+					<ul><li>none默认。标准的文本。/capitalize每个单词以大写字母开头。/uppercase	转换为大写字母。/lowercase转换为小写字母</li></ul>
+				<li>text-shadow	向文本添加阴影。</li>
+				</ul>
+			</details>
+			<details>		
+				<summary>熟悉</summary>
+				<ul style="color: green">
+					<li>white-space	设置元素中空白的处理方式。</li>
+							<ul>
+								<li>normal	默认。空白会被浏览器忽略</li>
+								<li>pre	空白会被浏览器保留。其行为方式类似 HTML 中的pre标签。</li>
+								<li>nowrap	文本不会换行，文本会在在同一行上继续，直到遇到br标签为止。</li>
+								<li>pre-wrap 保留空白符，但是正常地进行换行。</li>
+								<li>pre-line 合并空白符，但是正常地进行换行。</li>
+							</ul>
+					<li>direction 设置文本方向</li>
+						<ul>
+							<li>ltr默认。文本方向从左到右。/rtl	文本方向从右到左。</li>
+						</ul>
+						<li>text-wrap	规定文本的换行规则。</li>
+						<li>word-break	规定非中日韩文本的换行规则。</li>
+						<li>word-wrap	允许对长的不可分割的单词进行分割并换行到下一行。</li>
+						<li>text-fill-color 文本填充颜色，指定文字填充部分的颜色</li>
+						<li>text-stroke 文本边框颜色，指定文字描边部分的颜色</li>
+							<ul>
+								<li>text-stroke-width文字的描边宽度</li>
+								<li>text-stroke-color文字的描边颜色</li>
+								<li>备注:使用该属性需要使用浏览器私有前缀</li>
+							</ul>
+						<li>text-overflow	规定当文本溢出包含元素时发生的事情。</li>
+						<li>text-overflow 设置是否使用一个省略标记（...）标示对象内文本的溢出</li>
+							<ul>
+								<li>clip： 默认值当对象内文本溢出时不显示省略标记（...），而是将	溢出的部分裁切掉。</li>
+								<li>ellipsis：当对象内文本溢出时显示省略标记（...）。</li>
+								<li>温馨提示:该属性需要和over-flow:hidden属性、white-space:nowrap配合使用，放到后边章节再讲解</li>
+							</ul>
+				</ul>
+			</details>
+			<details>		
+				<summary>了解</summary>
+				<ul>
+					<li>text-outline	规定文本的轮廓</li>
+					<li>text-justify	规定当 text-align 设置为 "justify" 时所使用的对齐方法。</li>
+					<li>text-align-last	设置如何对齐最后一行或紧挨着强制换行符之前的行。</li>
+					<li>text-emphasis	向元素的文本应用重点标记以及重点标记的前景色。</li>
+					<li>unicode-bidi 用于同一个页面里存在从不同方向读进的文本显示。与direction属性一起使用</li>
+						<ul>
+							<li>normal/embed/bidi-override</li>
+							<li>不常用，了解即可</li>
+						</ul>
+					<li>hanging-punctuation	规定标点字符是否位于线框之外。</li>
+					<li>punctuation-trim	规定是否对标点字符进行修剪。</li>
+					<li>tab-size:设定一个tab在页面中的显示长度</li>
+				</ul>
+		</details>
+</details>
+
+
+
+
+<!-- 	<a href="绘制太极图.html"><input type="button" value="课后练习" style="padding: 10px;background: #DC143C"></a> -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

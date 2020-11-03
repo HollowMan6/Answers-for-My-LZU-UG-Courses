@@ -1,0 +1,28 @@
+div{
+	width: 600px;
+	height: 800px;
+	padding: 40px;
+	font-size: 12px;
+	line-height: 24px;
+	border:20px ridge rgba(200,60,30,0.6);
+
+	background-image:
+					 url(../img/xzsc/sc16.png),	
+					 url(../img/xzsc/sc17.png),
+					 url(../img/xzsc/sc5.png),
+					 url(../img/xzsc/sc18.png);	
+					 
+	background-repeat:no-repeat,no-repeat,repeat, repeat;
+	background-position: left top,right bottom,left top,left top;
+	background-size: 25%,25%,auto 96px,15%;
+	background-origin: border-box,border-box,content-box,border-box;
+	background-clip: border-box,border-box,content-box,border-box;
+}
+
+p{
+	margin: 0;
+	padding:0;
+	text-indent: 4em;
+}
+
+	background-clip:border-box,border-box,content-box;

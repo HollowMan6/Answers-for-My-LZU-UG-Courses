@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>6-64 布局</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+		p{color: blue; font-size: 18px;text-indent: 2em}
+		li{
+			margin-left: 2em;
+		}
+		details>details{
+			text-indent: 2em;
+			line-height: 2em;
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第六章 零基础精讲CSS3</h1>
+	<h1 align="center" style="font-family:jin_mei_mxplzx562402">6-64 布局4-弹性布局</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>掌握传统布局与CSS3新增弹性布局方式的实现和应用</li>
+	</ul> <hr>
+</header>
+
+	<details>
+			<summary>弹性布局(弹性伸缩布局)</summary>
+			<p>事实上它是一种新类型的盒子模型，也有书上称作弹性伸缩盒布局。</p>
+			<p>比较新的布局方式：旨在提供一个更加有效的方式来布置，对齐和分布在容器之间的各项内容，即使它们的大小是未知或者动态变化的。</p>
+			<p>弹性布局的主要思想是让容器有能力来改变项目的宽度和高度，以填满可用空间（主要是为了容纳所有类型的显示设备和屏幕尺寸）的能力。</p>
+			<h4>优点：</h4>
+				<ol>
+					<li>应用恰当的弹性布局对用户十分友好。页面中所有元素可以随着用户的偏好缩放。</li>
+					<li>对于同时喜欢流动和定宽布局的设计师来说，弹性布局是完美的，因为前两种布局的优点在弹性布局中都能找到。</li>
+				</ol>
+			<h4>缺点：</h4>
+				<ol>
+					<li>需要花更多时间理解和测试，让布局适合所有用户。</li>
+					<li>这种布局类型相对于其他两个更难制作</li>
+				</ol>
+	</details>
+
+<br><br>
+	<details>
+			<summary>弹性布局属性：</summary>
+							<details>
+										<summary>display: flex | inline-flex; (适用于父类容器元素上)</summary>
+
+											<ul>
+												<li>box：将对象作为弹性伸缩盒显示。（伸缩盒最老版本）</li>
+												<li>inline-box：将对象作为内联块级弹性伸缩盒显示。（伸缩盒最老版本）（CSS3）</li>
+												<li>flexbox：将对象作为弹性伸缩盒显示。（伸缩盒过渡版本）</li>
+												<li>inline-flexbox：将对象作为内联块级弹性伸缩盒显示。（伸缩盒过渡版本）</li>
+												<li>flex：将对象作为弹性伸缩盒显示。</li>
+												<li>inline-flex：将对象作为内联块级弹性伸缩盒显示。</li><br><br>
+												<li style="color: red">float, clear and vertical-align 在flex项目中不起作用</li>
+												<li style="color: red">css 多列（CSS columns）在弹性盒子中不起作用</li>
+											</ul>
+							</details>
+
+							<details>
+										<summary>flex-flow (适用于父类容器上)复合属性。</summary>
+										<p>设置或检索伸缩盒对象的子元素排列方式。可以同时设置 flex-direction/flex-wrap</p>
+										<ul>
+											<li>
+											<summary>flex-direction (适用于父类容器的元素上):设置或检索伸缩盒对象的子元素在父容器中的位置。</summary>
+												<ul>
+													<li>row：横向从左到右排列（左对齐），默认的排列方式。</li>
+													<li>row-reverse：反转横向排列（右对齐，从后往前排，最后一项排在最前面。</li>
+													<li>column：纵向排列。</li>
+													<li>column-reverse:反转纵向排列，从后往前排，最后一项排在最上面。</li>
+												</ul>
+											</li>			
+											<li>flex-wrap (适用于父类容器上) 设置或检索伸缩盒对象的子元素超出父容器时是否换行。
+													<ul>
+														<li>nowrap：当子元素溢出父容器时不换行。</li>
+														<li>wrap：当子元素溢出父容器时自动换行。</li>
+														<li>wrap-reverse：当子元素溢出父容器时自动换行,方向同 wrap反转排列。</li>
+													</ul>
+											</li>
+										</ul>
+							</details>
+
+							<details>
+										<summary>justify-content (适用于父类容器上) 设置或检索弹性盒子元素在主轴（横轴）方向上的对齐方式。</summary>
+										<h4>注：主轴与侧轴的概念</h4>
+										<ul>
+											<li>主轴就是弹性盒子子元素沿着排列的轴；与主轴垂直的轴称为侧轴。</li>
+											<li>如果你有 row ,则主轴是水平方向，侧轴是垂直方向。</li>
+											<li>如果你有 column,则主轴是垂直方向，侧轴是水平方向。</li>
+										</ul>
+										<ul>
+											<li>flex-start：弹性盒子元素将向行起始位置对齐。</li>
+											<li>flex-end：弹性盒子元素将向行结束位置对齐。</li>
+											<li>center：弹性盒子元素将向行中间位置对齐。</li>
+											<li>space-between:弹性盒子元素会平均地分布在行里。</li>
+											<li>space-around:弹性盒子元素会平均地分布在行里，两端保留子元素与子元素之间间距大小的一半。</li>
+											<li></li>
+										</ul>
+							</details>
+
+							<details>
+									<summary>align-items (适用于父类容器上) 设置或检索弹性盒子元素在侧轴（纵轴）方向上的对齐方式。</summary>
+										<ul>
+											<li>flex-start：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴起始边界。</li>
+											<li>flex-end：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴结束边界。</li>
+											<li>center：弹性盒子元素在该行的侧轴（纵轴）上居中放置。</li>
+											<li>baseline：如弹性盒子元素的行内轴与侧轴为同一条，则该值与'flex-start'等效。其它情况下，该值将参与基线对齐。</li>
+											<li>stretch：如果指定侧轴大小的属性值为'auto'，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸，但同时会遵照'min/max-width/height'属性的限制。</li>
+										</ul>
+							</details>
+
+							<details>
+								<summary>align-self (适用于弹性盒模型子元素)设置或检索弹性盒子元素自身在侧轴（纵轴）方向上的对齐方式。</summary>
+								<ul>
+									<li>auto：如果'align-self'的值为'auto'，则其计算值为元素的父元素的'align-items'值，如果其没有父元素，则计算值为'stretch'。</li>
+									<li>flex-start：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴起始边界。</li>
+									<li>flex-end：弹性盒子元素的侧轴（纵轴）起始位置的边界紧靠住该行的侧轴结束边界。</li>
+									<li>center：弹性盒子元素在该行的侧轴（纵轴）上居中放置。（如果该行的尺寸小于弹性盒子元素的尺寸，则会向两个方向溢出相同的长度）。</li>
+									<li>baseline：如弹性盒子元素的行内轴与侧轴为同一条，则该值与'flex-start'等效。其它情况下，该值将参与基线对齐。</li>
+									<li>stretch：如果指定侧轴大小的属性值为'auto'，则其值会使项目的边距盒的尺寸尽可能接近所在行的尺寸。</li>
+								</ul>
+							</details>
+
+							<details>
+									<summary>align-content (适用于父类容器上) 设置或检索弹性盒堆叠伸缩行的对齐方式。</summary>
+										<ul>
+											<li>flex-start：各行向弹性盒容器的起始位置堆叠。弹性盒容器中第一行的侧轴起始边界紧靠住该弹性盒容器的侧轴起始边界，之后的每一行都紧靠住前面一行。</li>
+											<li>flex-end：各行向弹性盒容器的结束位置堆叠。弹性盒容器中最后一行的侧轴起结束界紧靠住该弹性盒容器的侧轴结束边界，之后的每一行都紧靠住前面一行。</li>
+											<li>center：各行向弹性盒容器的中间位置堆叠。各行两两紧靠住同时在弹性盒容器中居中对齐，保持弹性盒容器的侧轴起始内容边界和第一行之间的距离与该容器的侧轴结束内容边界与第最后一行之间的距离相等。</li>
+											<li>space-between：各行在弹性盒容器中平均分布。</li>
+											<li>space-around：各行在弹性盒容器中平均分布，两端保留子元素与子元素之间间距大小的一半。</li>
+											<li>stretch：各行将会伸展以占用剩余的空间。</li>
+										</ul>
+							</details>
+
+							<details>
+										<summary> order (适用于弹性盒模型容器子元素) 用整数值来定义排列顺序，数值小的排在前面。可以为负值。</summary>
+							</details>
+
+							<details>
+										<summary>flex (适用于弹性盒模型子元素) 复合属性。设置或检索伸缩盒对象的子元素如何分配空间。</summary> 
+										<ul>
+											<li>none：none关键字的计算值为: 0 0 auto</li>
+											<li> flex-grow flex-shrink  flex-basis </li>
+											<li>
+												<li>
+													flex-grow (适用于弹性盒模型容器子元素) 根据弹性盒子元素所设置的扩展因子作为比率来分配剩余空间。
+												</li>
+												<li>
+													lex-shrink (适用于弹性盒模型容器子元素) 设置或检索弹性盒的收缩比率（根据弹性盒子元素所设置的收缩因子作为比率来收缩空间。）
+												</li>
+												<li>
+													flex-basis (适用于弹性盒模型容器子元素)
+													<ul>
+														<li>auto：无特定宽度值，取决于其它属性值</li>
+														<li>用长度值/百分比来定义宽度。不允许负值</li>
+													</ul>
+												</li>
+										</ul>
+							</details>
+
+			</details>
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

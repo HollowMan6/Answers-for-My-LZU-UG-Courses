@@ -1,0 +1,28 @@
+@charset="UTF-8";
+#div1{
+	background: rgba(255,0,0,0.5);
+	width: 250px;
+	height: 250px;
+	float: right;
+}
+#div2{
+	background: rgba(0,255,0,0.5);
+	width: 250px;
+	height: 200px;
+	float: right;
+}
+
+#div3{
+	background: rgba(0,0,255,0.5);
+	width: 250px;
+	height: 175px;
+	float: right;
+	/*clear: both;*/
+}
+
+#div0{
+	width: 600px;
+}
+
+
+

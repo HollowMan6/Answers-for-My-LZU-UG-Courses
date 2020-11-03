@@ -1,0 +1,9 @@
+@charset="UTF-8";
+/*input[value][style]{background: green}*/
+/*input[value='vip1']{background: red}*/
+/*input[style~='15px']{background: red}*/
+/*p[lang|="en"]{color: red}*/
+/*input[value^="vip"]{background: green}
+a[href^="http"]{color: green}*/
+/*a[href$=".cn"]{color: red}*/
+input[value*='vip']{background: red}

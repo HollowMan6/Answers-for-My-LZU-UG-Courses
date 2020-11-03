@@ -1,0 +1,51 @@
+@charset="UTF-8";
+*{
+	margin:0;
+	padding:0;
+}
+
+ul{
+	list-style-type: none;
+}
+
+a{
+	color:  #fff;
+	text-decoration: none;
+}
+
+ a:hover,a:active{
+	color: orange;
+}
+
+
+header{
+	height: 50px;
+	width: 100%;
+	background: url(../img/bj.png) repeat-x;
+}
+
+
+nav{
+	width: 1000px;
+	height: 50px;
+	margin: 0 auto;
+}
+
+h1{
+	color: #fff;
+	font:bold 40px 隶书;
+	float: left;
+	margin-left: 50px;
+
+}
+
+nav li{
+	float: left;
+	font-size: 20px;
+	height: 50px;
+	line-height: 50px;
+	letter-spacing: 5px;
+	margin-right: 5px;
+	width: 100px;
+	text-align: center;
+}

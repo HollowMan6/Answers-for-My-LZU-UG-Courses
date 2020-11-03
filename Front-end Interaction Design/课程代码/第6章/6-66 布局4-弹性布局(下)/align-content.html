@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>6-66 align-content</title>
+	<style>
+		div{
+			font-size: 2em;
+		}
+		#diva,#divb,#divc,#divd,#dive,#divf{
+			width: 500px;
+			height: 400px;
+			background: rgba(10,10,10,0.6);
+			display: flex;
+			flex-wrap:wrap
+		}
+		.div1,.div2,.div3,.div4{
+			padding: 25px ;
+		}
+		.div1{
+			background: green;
+		}
+
+		.div2{
+			background: orange;
+		}
+
+		.div3{
+			background: red;
+		}
+		.div4{
+			background: blue;
+		}
+		#diva{
+			align-content:flex-start;
+		}
+		#divb{
+			justify-content:flex-start;
+
+		}
+		#divc{
+			align-content:center;
+
+		}
+		#divd{
+			align-content:space-between;
+
+		}
+		#dive{
+			align-content:space-around
+
+		}
+		#divf{
+			align-content:stretch;
+
+		}
+
+	</style>
+</head>
+<body>
+<h2>align-content:flex-start</h2>
+<div id="diva">A
+	<div class="div1">1</div>
+	<div class="div2">2</div>
+	<div class="div3">3</div>
+	<div class="div4">4</div>
+	<div class="div1">5</div>
+	<div class="div2">6</div>
+	<div class="div3">7</div>
+	<div class="div4">8</div>
+</div>
+
+<h2>align-content:flex-end</h2>
+<div id="divb">B
+	<div class="div1">1</div>
+	<div class="div2">2</div>
+	<div class="div3">3</div>
+	<div class="div4">4</div>
+	<div class="div1">5</div>
+	<div class="div2">6</div>
+	<div class="div3">7</div>
+	<div class="div4">8</div>
+</div>
+<h2>align-content:center</h2>
+<div id="divc">C
+	<div class="div1">1</div>
+	<div class="div2">2</div>
+	<div class="div3">3</div>
+	<div class="div4">4</div>
+	<div class="div1">5</div>
+	<div class="div2">6</div>
+	<div class="div3">7</div>
+	<div class="div4">8</div>
+</div>
+
+<h2>align-content:baseline</h2>
+<div id="dive">E
+	<div class="div1">1</div>
+	<div class="div2">2</div>
+	<div class="div3">3</div>
+	<div class="div4">4</div>
+	<div class="div1">5</div>
+	<div class="div2">6</div>
+	<div class="div3">7</div>
+	<div class="div4">8</div>
+</div>
+
+<h2>align-content:stretch</h2>
+<div id="divf">F
+	<div class="div1">1</div>
+	<div class="div2">2</div>
+	<div class="div3">3</div>
+	<div class="div4">4</div>
+	<div class="div1">5</div>
+	<div class="div2">6</div>
+	<div class="div3">7</div>
+	<div class="div4">8</div>
+</div>
+</body>
+</html>

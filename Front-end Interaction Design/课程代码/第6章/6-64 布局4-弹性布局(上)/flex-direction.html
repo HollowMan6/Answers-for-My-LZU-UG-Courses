@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>6-64 flex-direction</title>
+	<style>
+		div{
+			width: 300px;
+			height: 300px;
+			font-size: 2em;
+		}
+		.div1{
+			background: green;
+		}
+
+		.div2{
+			background: orange;
+		}
+
+		.div3{
+			background: red;
+		}
+		.div4{
+			background: blue;
+		}
+
+		#diva,#divb,#divc,#divd{
+			display: flex;
+		}
+		#diva{	
+			flex-direction:row;
+		}
+		#divb{
+			flex-direction:row-reverse;
+		}
+		#divc{
+			flex-direction:column;
+		}
+		#divd{
+
+			flex-direction:column-reverse;
+		}
+	</style>
+</head>
+<body>
+<h2>flex-direction:row</h2>
+<div id="diva">
+	<div class="div1">1</div>
+	<div class="div2">2</div>
+	<div class="div3">3</div>
+	<div class="div4">4</div>
+</div>
+
+
+<h2>flex-direction:row-reverse</h2>
+<div id="divb">
+	<div class="div1">1</div>
+	<div class="div2">2</div>
+	<div class="div3">3</div>
+	<div class="div4">4</div>
+</div>
+
+<h2>flex-direction:column</h2>
+<div id="divc">
+	<div class="div1">1</div>
+	<div class="div2">2</div>
+	<div class="div3">3</div>
+	<div class="div4">4</div>
+</div>
+
+
+<h2>flex-direction:column-reverse</h2>
+<div id="divd">
+	<div class="div1">1</div>
+	<div class="div2">2</div>
+	<div class="div3">3</div>
+	<div class="div4">4</div>
+</div>
+</body>
+</html>
+

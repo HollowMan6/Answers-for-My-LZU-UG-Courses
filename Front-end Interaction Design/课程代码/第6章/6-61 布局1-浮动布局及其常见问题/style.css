@@ -1,0 +1,35 @@
+@charset="UTF-8";
+*{
+	margin:0;
+	padding:0;	
+}
+
+header{
+	height: 80px;
+	background: rgba(25,25,25,0.25);
+}
+
+aside{
+	width: 30%;
+	height: 500px;
+	background: orange;
+	float: left;
+	border: 1px solid green;
+	box-sizing:border-box;
+}
+
+section{
+	width: 70%;
+	height: 500px;
+	background: rgba(180,90,45,0.6);
+	float: right;
+
+		border: 1px solid green;
+	box-sizing:border-box;
+}
+
+footer{
+	height: 120px;
+	background: rgba(60,60,60,0.6);
+	clear: both;
+}

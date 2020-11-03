@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>6-14 CSS3中的颜色</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第六章 零基础精讲CSS3</h1>
+	<h1 align="center">6-14 CSS3中的颜色表示方式</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>掌握选择器的优先级问题</li>
+		<li>掌握CSS3中新增的颜色表示方式</li>
+	</ul> <hr>
+</header>
+<details>
+		<summary>选择器的优先级问题</summary>
+	<ul>
+		<li>原则上：元素选择器<类选择器< ID选择器<行内样式</li>
+		<li>谁指向精确谁的优先级高</li>
+		<li>并列的话谁在后边谁优先级高</li>
+	</ul>
+</details><br>
+<details>
+	<summary>CSS2时代的颜色表示方法</summary>
+	<h3>关于颜色的小知识</h3>
+	<p>颜色是通过对红、绿和蓝光的组合来显示的。早期的电脑只支持最多 256 种颜色时，但是现在大多数电脑都能显示数百万种颜色。</p>
+	<ul>
+		<ol>
+			<li>颜色名称</li>
+				<ul>
+					<li>优点：方便快捷而且特定颜色比较准确</li>
+					<li>缺点：表示颜色数量有限，英文不好的不容易记住，不支持透明度的表示</li>
+				</ul>
+			<li>十六进制方式</li>
+				<ul>
+					<li>优点：表示颜色种类多，使用较方便</li>
+					<li>缺点：不支持透明颜色。</li>
+				</ul>
+			<li>RGB方式	三原色配色方式</li>
+				<ul>
+					<li>优点：表示颜色种类多，使用较方便</li>
+					<li>缺点：不支持透明颜色。</li>
+					<li>每个参数 (red、green 以及 blue) 定义颜色的强度，可以是介于 0 与 255 之间的整数，或者是百分比值（从 0% 到 100%）。</li>
+				</ul>
+		</ol>
+	</ul>
+</details><br>
+<details>
+	<summary>CSS3新增的颜色表示方法</summary>
+	<ul>
+		<ol>
+			<li>RGBA方式三原色配色方式</li>
+				<ul>
+					<li>在RGB模式上新增了Alpha透明度。</li>
+					<li>alpha 参数是介于 0.0（完全透明）与 1.0（完全不透明）的数字。</li>
+				</ul>
+			<li>HSL模式</li>
+				<ul>
+					<li>语法:HSL(H,S,L)，HSL分别表示色调，饱和度，亮度</li>
+						<ul>
+							<li>H:0(或360)表示红色，120表示绿色，240表示蓝色，也可取其他数值来指定颜色。取值为：0 - 360 </li>
+							<li>S:(饱和度)。取值为：0.0% - 100.0%</li>
+							<li>L:(亮度)。取值为：0.0% - 100.0%</li>
+						</ul>
+				</ul>
+			<li>HSLA模式</li>
+				<ul>
+					<li>HSL模式上新增了Alpha透明度。</li>
+				</ul>
+
+		</ol>
+	</ul>
+</details><br>
+
+
+
+<!-- 	<a href="绘制太极图.html"><input type="button" value="课后练习" style="padding: 10px;background: #DC143C"></a> -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

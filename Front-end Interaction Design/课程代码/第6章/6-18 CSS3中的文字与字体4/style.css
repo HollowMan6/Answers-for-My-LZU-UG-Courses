@@ -1,0 +1,17 @@
+/*@font-face{
+	font-family: "abc";
+	src:url('telefono.ttf')
+}
+p{font-family: abc;font-size: 50px}*/
+@font-face {
+font-family: 'abc';
+src: url('demo/winmantun23001.eot');
+src: url('demo/winmantun23001.eot?#iefix') format('embedded-opentype'),
+     url('demo/winmantun23001.woff') format('woff'),
+     url('demo/winmantun23001.ttf') format('truetype'),
+     url('demo/winmantun23001.svg#winmantun23001') format('svg');
+    font-weight: normal;
+    font-style: normal;
+   }
+
+   p{font-family: abc}

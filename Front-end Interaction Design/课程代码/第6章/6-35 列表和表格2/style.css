@@ -1,0 +1,14 @@
+@charset="UTF-8";
+ul{
+	width: 150px;
+/*	list-style-type: circle;
+	list-style-position: outside;
+	list-style-image: url(../img/pen.png);*/
+	list-style: circle inside url(../img/pen.png);
+}
+
+ol{
+	list-style-type: upper-alpha;
+}
+
+

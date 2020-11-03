@@ -1,0 +1,44 @@
+@charset="UTF-8";
+ul{
+	margin-top: 30px;
+	list-style: none;
+	font-size:24px;
+	font-weight: bold;
+}
+
+li{
+	width: 150px;
+	margin:5px;
+	padding:10px 10px; 
+	background: linear-gradient(to left,orange, red);
+	transform-origin: left top;
+	border-radius: 5px;
+}
+
+#ul1 li{
+		float: left;
+}
+
+a{
+	text-decoration: none;
+}
+
+li:hover{
+	background:linear-gradient(to right,orange, red);
+	transform: rotate(15deg);
+}
+
+hr{
+	clear: both;
+	border:  3px dotted green;
+	margin-top: 50px;
+}
+#ul2 a{
+
+}
+
+	background: linear-gradient(to left,orange, red);
+	width: 150px;
+	margin:5px;
+	padding:10px 10px; 
+	border-radius: 5px;

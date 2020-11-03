@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>项目实战1</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+		details ol{
+			margin-left: 2em;
+		}
+
+		h3{
+			text-indent: 1em;
+		}
+		summary>*{
+			text-indent: 2em;
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第六章 零基础精讲CSS3</h1>
+	<h1 align="center" style="font-family:jin_mei_mxplzx562402">项目实战-仿天猫（移动端页面）</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>综合运用我们之前学过的知识来构建一个移动端的web页面。</li>
+		<li>了解测试工具</li>
+		<li>了解分别率有关的几个基本概念</li>
+		<li>meta标签viewport的使用</li>	
+	</ul> <hr>
+</header>
+
+<details>
+	<summary style="color: rgba(100,0,200,0.9);">了解几个基本概念</summary>
+		<h3>物理分辨率、逻辑分辨率、倍率与像素密度</h3>
+		<ol>
+			<li>物理分辨率和逻辑分辨率，物理分辨率是硬件所支持的，逻辑分辨率是软件可以达到的。</li>
+			<li>倍率与像素密度：以iPhone 5s为例，屏幕的分辨率是640x1136，倍率是2。浏览器会认为屏幕的分辨率是320x568，仍然是基准倍率的尺寸。所以在制作页面时，只需要按照基准倍率来就行了。无论什么样的屏幕，倍率是多少，都按逻辑像素尺寸来设计和开发页面。</li>
+			<li>iPhone的屏幕尺寸各不相同，从市场占有率数据来看，目前最多的是iPhone5/5s的屏幕。倍率为2，逻辑像素320x568。上升势头最猛，未来有望登上第一的是iPhone 6的屏幕。倍率为2，逻辑像素375x667。</li>
+			<li>都说Android碎片化严重，但它现在反而比iOS好处理。因为如今的Android屏幕逻辑像素已经趋于统一了：360x640，只是倍率不同。</li>
+			<li>手机端网页没有统一标准了，比较流行的做法是按照iPhone5的尺寸来设计。倍率2，逻辑像素320x568。倍率2的屏幕无论在iOS还是Android方面都是主流，而且又是2倍屏幕中逻辑像素最小的。</li>
+		</ol>
+</details><br><br>
+
+<details>
+<summary style="color: rgba(60,180,60,0.8);">meta标签viewport的使用</summary>
+	<h3></h3>
+		<ol>
+			<li>width、height 可以定义值，或者 device-width | device-height 设备的宽高。<br>如width=device-width：宽度定义为设备宽度</li>
+			<li>initial-scale 初始缩放比例，即页面第一次 load 的时候缩放比例。这是一个浮点值，是页面大小的一个乘数。例如，如果你设置初始缩放为“1.0”，那么，web页面在展现的时候就会以target density分辨率的1:1来展现。如果你设置为“2.0”，那么这个页面就会放大为2倍。</li>
+			<li>maximum-scale：允许用户缩放到的最大比例。</li>
+			<li>minimum-scale：允许用户缩放到的最小比例。</li>
+			<li>user-scalable：用户是否可以手动缩放，如果设置为yes则是允许用户对其进行改变，反之为no。默认值是yes。</li>
+		</ol>
+</details><br><br>
+
+<details>
+<summary style="color: rgba(250,50,100,1);">小技巧</summary>
+		<ol>
+			<li>清除浮动的技巧：消除子元素浮动对父元素背景/边框/不能被子元素撑开的方法：</li>
+				<ul>
+					<li>建议将LOGO放在h1标签里面，方便搜索引擎抓取关键字。同时一个页面只建议使用一个h1标签。</li>
+					<li>父元素结尾处增加一空元素 div；并清除其浮动。缺点：如果布局复杂需要增加许多空标签</li>
+					<li>在父元素定义overflow:hidden（浏览器会自动检查浮动区域的高度，注.不必理会原理，知道用法即可。缺点：超出部分会被隐藏</li>
+					<li>利用伪类：after 父元素内容后增加空元素，并清除浮动。</li>
+				</ul>
+			<li>将代码重用部分比如header footer分离出来，其他需要的文件重复引用即可</li>
+			<li>图片自适应:将图片设为"display: block;max-width:100%"  </li>
+		</ol>
+</details><br><br>
+
+<details>
+<summary style="color: rgba(250,150,100,1);">未完，待续...........</summary>
+		<ol>
+			<li>...</li>
+		</ol>
+</details><br><br>
+
+
+<details>
+<summary>代码优化</summary>
+		<p>优化代码使更加符合HTML5大纲算法.步骤如下</p>
+		<ol>
+			<li>查看页面目录结构，逐项修改有问题部分。
+				<ol>
+					<li>nav中添加标题并将它隐藏。</li>
+				</ol>
+			</li>
+		</ol>
+</details><br><br>
+<!-- 
+<details>
+<summary>小技巧</summary>
+		<ol>
+			<li>当width为100%时。可用用min-width来规定一个最小宽度，防止缩放时变形，尤其是背景图片。</li>
+			<li>将定位和外边距结合让图片以中心点居中。</li>
+			<li>用opcity设置半透明遮罩层。</li>
+			<li>inline-block可以使用text-align 居中；</li>
+			<li>可以给background同时设置半透明渐变和背景图片，来增加背景图片的模糊度来突出背景上的文字。</li>
+		</ol>
+</details><br><br> -->
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

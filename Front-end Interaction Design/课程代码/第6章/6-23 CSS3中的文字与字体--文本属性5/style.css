@@ -1,0 +1,20 @@
+@charset="UTF-8";
+p{
+	background: green;
+	width: 200px;
+}
+#p1{
+	word-wrap:break-word;
+}
+#p2{
+	word-break:break-all;
+}
+#p3{
+	word-break: keep-all;
+}
+
+h1{
+	font-size: 50px;
+	-webkit-text-stroke:2px red;
+	-webkit-text-fill-color:green;
+}

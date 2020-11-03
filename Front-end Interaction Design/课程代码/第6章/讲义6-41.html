@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>6-41 CSS背景</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第六章 零基础精讲CSS3</h1>
+	<h1 align="center" style="font-family:jin_mei_mxplzx562402">6-41 CSS背景</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>掌握CSS背景属性的使用</li>
+	</ul> <hr>
+</header>
+<details>
+<summary>元素的背景属性：</summary>
+	<ul>
+		<li>background	简写属性，作用是将背景属性设置在一个声明中。</li>
+		<ul>
+			<li>background-attachment	背景图像是否固定或者随着页面的其余部分滚动。scroll	默认值。/fixed	当页面的其余部分滚动时，背景图像不会移动。</li>
+			<li>background-color	设置元素的背景颜色。</li>
+			<li>background-image	把图像设置为背景。</li>
+
+			<li>background-position	设置背景图像的起始位置。</li>
+				<ul>
+					<li>left/right/center/bottom/top这几个属性值可以两两组合使用，如果只规定了一个关键词，那么第二个值将是"center"。</li>
+					<li>x% y%	第一个值是水平位置，第二个值是垂直位置;左上角是 0% 0%。右下角是 100% 100%;如果仅规定了一个值，另一个值将是 50%。</li>
+					<li>x y 左上角是 0 0。单位是像素 (0px 0px) 或任何其他的 CSS 单位。如果仅规定了一个值，另一个值将是50%。</li>
+					<li></li>
+				</ul>
+			<li>background-repeat	设置背景图像是否及如何重复。repeat/repeat-x/repeat-y/no-repeat</li>
+		</ul>
+	</ul>
+</details><br>
+<details>
+<summary>CSS3新增的背景属性：</summary>
+		<ul>
+		<li>background-size	规定背景图片的尺寸。</li>
+			<ul>
+				<li>像素/百分比设置宽高</li>
+				<li>cover:把背景图像扩展至足够大，以使背景图像完全覆盖背景区域。</li>
+				<li>contain	把图像图像扩展至最大尺寸，以使其宽度和高度完全适应内容区域</li>
+			</ul>
+		<li>background-clip	规定背景的绘制区域。</li>
+				<ul>
+					<li>border-box	背景被裁剪到边框盒</li>
+					<li>padding-box	背景被裁剪到内边距框。</li>
+					<li>content-box	背景被裁剪到内容框。</li>
+				</ul>
+		<li>background-origin	规定背景图片的定位区域。</li>
+			<ul>
+				<li>padding-box	背景图像相对于内边距框来定位。</li>
+				<li>border-box	背景图像相对于边框盒来定位。</li>
+				<li>content-box	背景图像相对于内容框来定位。</li>
+			</ul>
+			
+		</ul>
+</details>
+
+<!-- 	<a href="绘制太极图.html"><input type="button" value="课后练习" style="padding: 10px;background: #DC143C"></a> -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

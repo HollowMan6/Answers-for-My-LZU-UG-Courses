@@ -1,0 +1,17 @@
+@charset="UTF-8";
+p{
+	width: 30%;
+	background: green;
+	color: red;
+/*	text-align: end;*/
+	line-height: 2;
+	text-indent: 30px;
+	text-decoration:none;
+	letter-spacing:1em;
+/*word-spacing:1em;*/
+}
+
+a{text-decoration:none;}
+
+
+

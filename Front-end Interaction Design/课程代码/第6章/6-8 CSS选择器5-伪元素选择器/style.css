@@ -1,0 +1,12 @@
+@charset="UTF-8";
+p::first-letter{font-size: 50px}
+p::first-line{color: green}
+/*a::before{
+	content: "点击"
+}*/
+
+a::after{
+	content: url(../img/ss.png)
+}
+
+p::selection{background: red}

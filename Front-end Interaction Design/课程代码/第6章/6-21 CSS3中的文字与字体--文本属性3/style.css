@@ -1,0 +1,5 @@
+@charset="UTF-8";
+p{text-transform: capitalize;};
+h2{text-shadow: 5px 5px 5px green,8px 8px 5px rgba(255,0,0,0.5)};
+
+

@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>6-54 动画效果-关键帧动画</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+		p{color: blue; font-size: 18px;text-indent: 2em}
+		li:nth-child(2n){background: rgba(0,0,0,0.1);}
+		li{
+			margin-left: 2em;
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第六章 零基础精讲CSS3</h1>
+	<h1 align="center" style="font-family:jin_mei_mxplzx562402">6-54 动画效果-关键帧动画</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>掌握动画的实现和应用</li>
+	</ul> <hr>
+</header>
+
+<details>
+<summary>CSS3 动画属性：</summary>
+<p>通过 CSS3，我们能够创建动画，这可以在许多网页中取代动画图片、Flash 动画以及 JavaScript。</p>
+	<ol>
+		<li>
+			<details>
+			<summary>@keyframes	设定动画规则。可以近似理解为动画的剧本。</summary>
+				<ul>
+					<li>name	必需。定义动画的名称。</li>
+					<li>0-100%/from...to... 必需。动画时长的百分比。</li>
+					<li>需要变化的 CSS 样式属性:必需。</li>
+				</ul>
+			</details>
+		</li><br>
+		<li>animation	所有动画属性的简写属性，用于设置六个动画属性：animation-name/animation-duration/animation-timing-function/animation-delay/animation-iteration-count/animation-direction</li><br><br>
+		<li>animation-name 属性为 @keyframes 动画规定名称。若设置为none则覆盖已有的动画效果。</li><br><br>
+		<li>animation-duration	规定动画完成一个周期所花费的秒或毫秒。默认是 0。</li><br><br>
+		<li>
+		<details>
+			<summary>animation-timing-function	规定动画的速度曲线。默认是 "ease"。</summary>
+				<ul>
+					<li>linear	规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。</li>
+					<li>ease	规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。</li>
+					<li>ease-in	规定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。</li>
+					<li>ease-out	规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。</li>
+					<li>ease-in-out	规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。</li>
+					<li>cubic-bezier(n,n,n,n)	在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。</li>
+				</ul>
+			</details>
+		</li><br><br>
+		<li>animation-delay	规定动画何时开始。默认是 0。</li><br><br>
+		<li>animation-iteration-count	规定动画被播放的次数。默认是 1。infinite为无限次播放。</li><br><br>
+		<li>animation-direction	规定动画是否在下一周期逆向地播放。默认是 "normal 顺向播放"。/ alternate	动画应该轮流反向播放。</li><br><br>
+		<li>animation-play-state	规定动画是否正在运行或暂停。默认是 "running 规定动画正在播放。"。/paused	规定动画暂停。</li>
+		<li>
+			<details>
+			<summary>animation-fill-mode	规定对象动画时间之外的状态。</summary>
+				<ul>
+					<li>none	不改变默认行为。</li>
+					<li>forwards	当动画完成后，保持最后一个属性值（在最后一个关键帧中定义）。</li>
+					<li>backwards	在 animation-delay 所指定的一段时间内，在动画显示之前，应用开始属性值（在第一个关键帧中定义）。</li>
+					<li>both	向前和向后填充模式都被应用。</li>
+				</ul>
+			</details>
+		</li><br>
+	</ol>
+</details><br>
+
+
+
+<!-- 	<a href="绘制太极图.html"><input type="button" value="课后练习" style="padding: 10px;background: #DC143C"></a> -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

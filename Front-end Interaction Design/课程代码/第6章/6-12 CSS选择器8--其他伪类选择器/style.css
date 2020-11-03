@@ -1,0 +1,12 @@
+@charset="UTF-8";
+input:focus{background: green}
+p:lang(en){color: red}
+input:checked{width: 60px;height: 60px}
+input:enabled{background: #e6e6fa}
+input:disabled{background: #808080}
+:not(input){color: green}
+
+
+
+
+

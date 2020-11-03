@@ -1,0 +1,17 @@
+@charset="UTF-8";
+
+td{
+/*	width: 150px;
+	height: 60px;*/
+	padding: 10px;
+	text-align: center;
+}
+table{
+	width: 500px;
+	border-collapse: collapse;
+	border-spacing: 3px;
+	caption-side: bottom;
+	table-layout: fixed;
+	empty-cells: hide;
+
+}

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>6-59 其他常用CSS属性</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+		p{color: blue; font-size: 18px;text-indent: 2em}
+		li:nth-child(2n){background: rgba(0,0,0,0.1);}
+		li{
+			margin-left: 2em;
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第六章 零基础精讲CSS3</h1>
+	<h1 align="center" style="font-family:jin_mei_mxplzx562402">6-59 其他常用CSS属性</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>了解opacity属性：透明度设定</li>
+		<li>了解cursor属性：自定义鼠标样式</li>
+		<li>了解CSS新单位rem和em的区别</li>
+		<li>了解轮廓outline的设置</li>
+		<li>掌握display 属性常用属性值：</li>
+	</ul> <hr>
+</header>
+
+<details>
+<summary>opacity：透明度设定</summary>
+	<p>IE9, Firefox, Chrome, Opera 和 Safari 使用属性 opacity 来设定透明度。opacity 属性能够设置的值从 0.0 到 1.0。值越小，越透明。</p>
+	<p>E8 以及更早的版本使用滤镜 filter:alpha(opacity=x)。x 能够取的值从 0 到 100。值越小，越透明。对于滤镜本套课程不作讲解。</p>
+	<p>opacity与通过rgba()设定透明度的区别：前者同时作用于元素的标签内容，后者只是作用于元素本身</p>
+</details><br>
+
+<details>
+<summary>鼠标的样式 cursor：</summary>
+<p>我们可以通过cursor属性改变浏览器默认的鼠标样式，可改变的样式很多，这里仅仅列出几种相对常用的</p>
+	<ol>
+		<li>hand是手型</li>
+		<li>pointer也是手型，推荐使用这种。</li>
+		<li>crosshair是十字型 </li>
+		<li>text是移动到文本上的那种效果 </li>
+		<li>wait是等待的那种效果</li>
+		<li>default是默认效果 </li>
+		<li>e-resize是向右的箭头 </li>
+		<li>ne-resize是向右上的箭头 </li>
+		<li>n-resize是向上的箭头</li>
+		<li>nw-resize是向左上的箭头</li>
+		<li>w-resize是向左的箭</li>
+		<li>sw-resize是左下的箭头</li>
+		<li>s-resize是向下的箭头 </li>
+		<li>se-resize是向右下的箭头 </li>
+		<li>auto是由系统自动给出效果 </li>
+	</ol>
+</details><br>
+
+<details>
+<summary>rem:根元素字体的大小</summary>
+	<p>浏览器默认字体大小为16px</p>
+	<p>em是以父元素字体为基准的</p>
+	<p>rem是以根元素字体大小为基准的</p>
+</details><br>
+
+<details>
+<summary>轮廓（outline）</summary>
+<p>轮廓（outline）是绘制于元素周围的一条线，位于边框边缘的外围，可起到突出元素的作用。</p>
+	<ol>
+		<li>
+			<details>
+			<summary>outline	在一个声明中设置所有的轮廓属性。</summary>
+				<ul>
+					<li>outline-color	设置轮廓的颜色。</li>
+					<li>outline-style	设置轮廓的样式。</li>
+					<li>outline-width	设置轮廓的宽度。</li>
+					<li style="color: red">outline-offset 设置轮廓到边框的距离。 注：css新增属性,不可以写到符合属性里。</li>
+				</ul>
+			</details>
+		</li>
+	</ol>
+</details><br>
+
+<details>
+<summary>display 属性常用属性值：</summary>
+<p>display的属性值很多，有些目前支持度不好，有些会放到以后课程或综合实例中讲解，这里介绍几种常用的情况。</p>
+	<ul>
+		<li>none	此元素不会被显示。</li>	
+		<li>block 此元素将显示为块级元素。特征：换行，可设置宽高尺寸。</li>	
+		<li>inline	行内元素，默认。特征:大小自适应；不换行。</li>
+		<li>inline-block	行内块元素。特征:可以设置大小，但是不可以换行。</li>
+		<li>其他：list-item/table/inline-table/table-cell/table-caption......</li>
+	</ul>
+</details><br>
+
+
+
+
+
+<!-- 	<a href="绘制太极图.html"><input type="button" value="课后练习" style="padding: 10px;background: #DC143C"></a> -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

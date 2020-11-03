@@ -1,0 +1,10 @@
+@charset="UTF-8";
+h1{
+	font-size: 50px;
+	text-stroke:2px red;
+	text-fill-color:green;	
+	-webkit-text-stroke:2px red;
+	-webkit-text-fill-color:green;
+	-ms-text-stroke:2px red;
+	-ms-text-fill-color:green;
+}

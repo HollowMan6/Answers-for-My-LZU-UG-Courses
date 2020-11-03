@@ -1,0 +1,11 @@
+@charset="UTF-8";
+div{
+	background: green;
+	width: 60%;
+	/*height: auto;*/
+/*	max-width: 200px;*/
+/*	padding-top:10px;
+	padding-right: 20px;
+	padding-bottom:30px;
+	padding-left:40px;*/
+	padding: 10px 20px 30px

@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>6-64 align-items</title>
+	<style>
+		div{
+			font-size: 2em;
+		}
+		#diva,#divb,#divc,#divd,#dive,#divf{
+			width: 600px;
+			height: 300px;
+			display: flex;
+			background: rgba(10,10,10,0.6);
+		}
+		.div1{
+			padding: 50px 50px;
+			background: green;
+		}
+
+		.div2{
+			padding: 50px 30px;
+			background: orange;
+		}
+
+		.div3{
+			padding: 30px 50px;
+			background: red;
+		}
+		.div4{
+			padding: 30px 30px;
+			background: blue;
+		}
+		#diva{
+			align-items:flex-start;
+		}
+		#divb{
+			align-items:flex-end;
+		}
+		#divc{
+			align-items:center;
+		}
+		#dive{
+			align-items:baseline;
+		}
+		#divf{
+			align-items:stretch;
+		}
+	</style>
+</head>
+<body>
+<h2>align-items:flex-start</h2>
+<div id="diva">A
+	<div class="div1">1</div>
+	<div class="div2">2</div>
+	<div class="div3">3</div>
+	<div class="div4">4</div>
+</div>
+
+<h2>align-items:flex-end</h2>
+<div id="divb">B
+	<div class="div1">1</div>
+	<div class="div2">2</div>
+	<div class="div3">3</div>
+	<div class="div4">4</div>
+</div>
+<h2>justify-content:center</h2>
+<div id="divc">C
+	<div class="div1">1</div>
+	<div class="div2">2</div>
+	<div class="div3">3</div>
+	<div class="div4">4</div>
+</div>
+
+<h2>align-items:baseline</h2>
+<div id="dive">E
+	<div class="div1">1</div>
+	<div class="div2">2</div>
+	<div class="div3">3</div>
+	<div class="div4">4</div>
+</div>
+
+<h2>align-items:stretch</h2>
+<div id="divf">F
+	<div class="div1">1</div>
+	<div class="div2">2</div>
+	<div class="div3">3</div>
+	<div class="div4">4</div>
+</div>
+</body>
+</html>

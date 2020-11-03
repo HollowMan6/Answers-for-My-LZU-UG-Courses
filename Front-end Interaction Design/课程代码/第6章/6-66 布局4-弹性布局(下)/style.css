@@ -1,0 +1,34 @@
+@charset="UTF-8";
+p{
+	text-indent: 2em;
+	line-height: 2em;
+	width: 200px;
+	margin-left: 5px;
+	padding: 5px;
+	border: 2px solid rgba(50,5,5,0.8)
+}
+
+p:nth-child(1){
+	background: rgba(100,10,10,0.4);
+	order: 3;
+}
+
+p:nth-child(2){
+	background: rgba(10,100,10,0.4);
+	align-self:center;
+	order: 1;
+}
+
+p:nth-child(3){
+	background: rgba(10,10,100,0.4);
+	order: 2;
+	
+}
+
+div{
+	display: flex;
+	/*flex-wrap: wrap-reverse;*/
+	flex-flow:row wrap;
+	justify-content:space-around;
+	/*align-items:center;*/
+}

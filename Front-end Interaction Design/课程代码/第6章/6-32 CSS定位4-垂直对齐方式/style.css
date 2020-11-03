@@ -1,0 +1,21 @@
+@charset="UTF-8";
+*{
+	padding: 0px;
+	margin: 0px;
+}
+
+#div2{
+	background: green;
+	padding: 15px;
+	width: 200px;
+	display: inline-block;
+	/* vertical-align: top; */
+	/*vertical-align: middle;*/
+	vertical-align: -100%;
+	font-size: 50px;
+}
+#img1{
+	vertical-align: -10px;
+}
+
+

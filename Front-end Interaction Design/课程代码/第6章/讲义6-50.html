@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>6-50 动画效果-变形</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+		p{color: blue; font-size: 18px;text-indent: 2em}
+		li:nth-child(2n){background: rgba(0,0,0,0.1);}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第六章 零基础精讲CSS3</h1>
+	<h1 align="center" style="font-family:jin_mei_mxplzx562402">6-50 动画效果-变形</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>掌握2D变形动画</li>
+		<li>了解3D变形动画</li>
+	</ul> <hr>
+</header>
+<details>
+<summary>transform：2D变形：</summary>
+ 	<p>通过 CSS3 转换，我们能够对元素进行移动、缩放、转动、拉长或拉伸。转换方法：translate()/rotate()/scale()/skew()/matrix()</p>
+	<ul>
+		<li>none	定义不进行转换。</li>
+		<li>translate(x,y)	定义 2D 平移转换。</li>
+		<li>translateX(x)	定义转换，只是用 X 轴的值。
+		<li>translateY(y)	定义转换，只是用 Y 轴的值。</li><br><br>
+
+		<li>scale(x,y)	定义 2D 缩放转换。</li>
+		<li>scaleX(x)	通过设置 X 轴的值来定义缩放转换。</li>
+		<li>scaleY(y)	通过设置 Y 轴的值来定义缩放转换。</li><br><br>
+
+		<li>rotate(angle)	定义 2D 旋转，在参数中规定角度。</li>
+		<p>补充1.角度也可以使用弧度单位：rad</p><br>
+
+		<li>skew(x-angle,y-angle)	定义沿着 X 和 Y 轴的 2D 倾斜转换。</li>
+		<li>kewX(angle)	定义沿着 X 轴的 2D 倾斜转换。</li>
+		<li>skewY(angle)	定义沿着 Y 轴的 2D 倾斜转换。</li><br><br>
+
+		<li>matrix(n,n,n,n,n,n)	定义 2D 转换，使用六个值的矩阵。</li>
+			<p>变形矩阵功能很强大，但是相对比较复杂，涉及到复杂的数学计算，在本章中暂不作详细讲解。</p><br>
+		<li>transform-origin:改变元素变形的基准点</li>
+			<ul>
+				<li>像素/百分比</li>
+				<li>X轴：left/right/center</li>
+				<li>Y轴：top/bottom/center/</li>
+			</ul>
+	</ul>
+
+</details><br>
+
+<details>
+<summary>transform：3D变形：</summary>
+	<p>transform：3D变形可以近似理解为沿着Z轴移动元素，使得元素更加靠近或者远离你，从而使元素看起来变得更大或更小。</p>
+	<ul>
+		<li>transform：3D变形函数
+			<ul>
+				<li>translate3d(x,y,z)	定义 3D 转换。</li>
+				<li>translateY(y)	定义转换，只是用 Y 轴的值。</li>
+				<li>translateX(x)	定义转换，只是用 X 轴的值。</li>
+				<li>translateZ(z)	定义 3D 转换，只是用 Z 轴的值。</li><br><br>
+
+				<li>rotate3d(x,y,z,angle)	定义 3D 旋转。</li>
+				<li>rotateX(angle)	定义沿着 X 轴的 3D 旋转。</li>
+				<li>rotateY(angle)	定义沿着 Y 轴的 3D 旋转。</li>
+				<li>rotateZ(angle)	定义沿着 Z 轴的 3D 旋转。</li><br><br>
+
+				<li>scale3d(x,y,z)	定义 3D 缩放转换。</li>
+				<li>scaleZ(z)	通过设置 Z 轴的值来定义 3D 缩放转换。</li>
+				<li>scaleX(x)	通过设置 X 轴的值来定义缩放转换。</li>
+				<li>scaleY(y)	通过设置 Y 轴的值来定义缩放转换。</li><br><br>
+
+
+				<li>matrix3d(n,n,n,n,n,n,n,n,n,n,n,n,n,n,n,n)	定义 3D 转换，使用 16 个值的 4x4 矩阵。</li><br><br>
+			</ul>
+		</li>
+		<li>transform-origin	允许你改变被转换元素的位置。2D 转换元素能够改变元素 x 和 y 轴。3D 转换元素还能改变其 Z 轴。</li><br><br>
+		<li>perspective(n)	为 3D 转换元素定义透视视图。</li><br><br>
+		<li>transform-style	规定被嵌套元素如何在 3D 空间中显示。</li>
+		<ul>
+			<li>flat	子元素将不保留其 3D 位置。</li>
+			<li>preserve-3d	子元素将保留其 3D 位置。</li>
+		</ul><br><br>
+		<li style="color: blue">perspective-origin	规定 3D 元素的底部位置。目前浏览器都不支持 perspective-origin 属性，暂不讲解</li>
+		<li style="color: blue">backface-visibility	定义元素在不面对屏幕时是否可见。浏览器支持度不好，暂不讲解</li>
+	</ul>
+
+</details>
+
+
+<!-- 	<a href="绘制太极图.html"><input type="button" value="课后练习" style="padding: 10px;background: #DC143C"></a> -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

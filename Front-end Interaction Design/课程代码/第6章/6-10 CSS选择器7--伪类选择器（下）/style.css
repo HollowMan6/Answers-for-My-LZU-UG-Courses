@@ -1,0 +1,9 @@
+@charset="UTF-8";
+/*tr:nth-child(ogg){background:red}*/
+div:empty{width: 300px;height: 400px;background: red}
+/*#div1>h3:nth-child(2){color:red}*/
+/*tr:nth-child(even){background:red}*/
+/*tr:nth-last-child(3){background:green}*/
+/* p:first-of-type{color: red}*/
+/*p:nth-of-type(2){color: red}*/
+div:empty{width:300px;height:200px;background: red}

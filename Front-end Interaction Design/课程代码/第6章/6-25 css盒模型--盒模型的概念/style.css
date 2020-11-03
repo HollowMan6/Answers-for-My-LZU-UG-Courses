@@ -1,0 +1,7 @@
+@charset="UTF-8";
+div{
+	background: green;
+	width: 60%;
+	height: auto;
+	max-width: 200px
+}

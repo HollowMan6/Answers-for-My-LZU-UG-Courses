@@ -1,0 +1,35 @@
+@charset="UTF-8";
+ul{
+	list-style: none;
+	font-size:24px;
+	font-weight: bold;
+}
+
+a{
+	text-decoration: none;
+}
+
+li{
+	background: linear-gradient(to left,orange, red);
+	width: 150px;
+	margin:5px;
+	padding:10px 10px; 
+	border-radius: 5px;
+}
+
+#ul1 li{
+	float: left;
+}
+
+li:hover{
+		background:linear-gradient(to right,orange, red);
+		transform: rotate(15deg);
+		transform-origin: left top;
+}
+
+hr{
+	clear: both;
+	margin-top: 50px;
+	/*width: 3px;*/
+	border: 3px dotted green;
+}

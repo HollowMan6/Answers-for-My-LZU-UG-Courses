@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>6-62 布局</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+		p{color: blue; font-size: 18px;text-indent: 2em}
+		li{
+			margin-left: 2em;
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第六章 零基础精讲CSS3</h1>
+	<h1 align="center" style="font-family:jin_mei_mxplzx562402">6-62 布局</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>掌握传统布局与CSS3新增布局方式的实现和应用</li>
+		<li>掌握CSS3新增属性box-sizing</li>
+	</ul> <hr>
+</header>
+
+<details>
+<summary>常用布局方式</summary>
+	<ul>
+		<li>
+			<details style="color: rgb(200,30,100);">
+			<summary>固定布局与流体布局的优缺点</summary>
+			<h4>固定布局</h4>
+				<p>
+					注：设置了固定宽度的外包裹，里面的各个模块也是固定宽度而非百分比。<br>大多数设计者选择960或760px的固定宽度。960px最适合1024×768或者更高的分辨率，有一点空间设置margin。如果设计者想让布局适应800×600分辨率的用户，可以使	用760px的宽度，它仍然适用于更大的分辨率。
+				</p>
+			   <h4>优点：</h4>
+				<ol>
+					<li>固定宽度布局更容易使用，在设计方面更容易定制。</li>
+					<li>在所有浏览器中宽度一样,不设置min-width和max-width，来防止内容缩放引起的布局混乱。</li>
+				</ol>
+			   <h4>缺点：</h4>
+				<ol>
+					<li>对于使用高分辨率的用户，固定宽度布局会留下很大的空白。</li>
+					<li>屏幕分辨率过小时需要垂直滚动条。</li>
+				</ol>
+				<h4>流体布局</h4>
+				<p>流体布局，主体部分都是用了百分比宽度，因此可以自适应用户的分辨率。</p>
+			   <h4>优点：</h4>
+				<ol>
+					<li>流动布局页面对用户更友好，因为它能自适应用户的设置。</li>
+					<li>页面周围的空白区域在所有分辨率和浏览器下都是相同的，在视觉上更美观。</li>
+				</ol>
+			   <h4>缺点：</h4>
+				<ol>
+					<li>设计者更难控制用户所见，并可能忽略掉一些错误，因为在特定的分辨率下看起来好的。</li>
+					<li>视频以及其他设置了宽度的内容可能需要多种宽度以适应不同分辨率的用户。</li>
+				</ol>
+			</details>
+		</li><br>
+		<li>
+			<details>
+			<summary>浮动布局</summary>
+			<p>根据内容是固定尺寸还是百分比有可以划分为：</p>
+				<ol>
+					<li>流体浮动布局</li>
+					<li>固定浮动布局</li>
+				</ol>
+			</details>
+		</li>
+		<li>
+			<details>
+			<summary>定位布局</summary>
+			<p>根据内容是固定尺寸还是百分比有可以划分为：</p>
+				<ol>
+					<li>流体定位布局</li>
+					<li>固定定位布局</li>
+				</ol>
+			<p>使用定位布局的重要知识点---设置参照基准点：</p>
+			<ol>
+				<li>将父元素设为相对定位，且不设置坐标</li>
+				<li>如果父元素设置了相对定位，子元素的决定定位将以父元素的基准点为参照基准点</li>
+			</ol>
+			</details>
+		</li>
+		<li>
+			<details>
+			<summary>弹性布局</summary>
+			<p>比较新的布局方式：</p>
+			<h4>优点：</h4>
+				<ol>
+					<li>应用恰当的弹性布局对用户十分友好。页面中所有元素可以随着用户的偏好缩放。</li>
+					<li>对于同时喜欢流动和定宽布局的设计师来说，弹性布局是完美的，因为前两种布局的优点在弹性布局中都能找到。</li>
+				</ol>
+			<h4>缺点：</h4>
+				<ol>
+					<li>正是因为第一个优点，这种布局会产生一个巨大的可用性问题。需要花更多时间理解和测试，让布局适合所有用户。</li>
+					<li>这种布局类型相对于其他两个更难制作</li>
+				</ol>
+			</details>
+		</li>
+	</ul>
+</details><br>
+
+<details>
+	<summary>CSS3新增属性box-sizing</summary>
+
+	<ul>
+		<li>box-sizing:属性值content-box(默认值：元素的宽高包含边框和内边距)/border-box(元素的宽高包含边框和内边距)</li>
+		<li>为了适应低版本浏览器需要加前缀。</li>
+	</ul>
+</details><br>
+
+
+<!-- 	<a href="绘制太极图.html"><input type="button" value="课后练习" style="padding: 10px;background: #DC143C"></a> -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

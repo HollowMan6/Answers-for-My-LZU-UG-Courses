@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>6-52 动画效果-过渡</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+		p{color: blue; font-size: 18px;text-indent: 2em}
+		li:nth-child(2n){background: rgba(0,0,0,0.1);}
+		li{
+			margin-left: 2em;
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第六章 零基础精讲CSS3</h1>
+	<h1 align="center" style="font-family:jin_mei_mxplzx562402">6-52 动画效果-过渡</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>掌握过渡动画的实现和应用</li>
+	</ul> <hr>
+</header>
+<details>
+<summary>过渡动画：</summary>
+	<ol>
+		<li>通过 CSS3，我们可以在不使用 Flash 动画或 JavaScript 的情况下，当元素从一种样式变换为另一种样式时为元素添加效果。</li>
+		<li>CSS3 过渡是元素从一种样式逐渐改变为另一种的效果。要实现这一点，必须规定两项内容：把效果添加到哪个 CSS 属性上/规定效果的时长</li>
+	</ol>
+</details><br>
+<details>
+<summary>过渡动画的属性：</summary>
+	<ol>
+		<li>transition	简写属性，用于在一个属性中设置四个过渡属性。</li><br><br>
+		<li>
+			<details>
+			<summary>transition-property	规定应用过渡的 CSS 属性的名称。</summary>
+				<ul>
+					<li>none 没有属性会获得过渡效果。</li>
+					<li>all	所有属性都将获得过渡效果。</li>
+					<li>属性名称</li>
+				</ul>
+			</details>
+		</li><br>
+		<li>transition-duration	定义过渡效果花费的时间。默认是 0。单位是秒或毫秒</li><br>
+		<li>
+		<details>
+			<summary>transition-timing-function	规定过渡效果的时间曲线。默认是 "ease"。</summary>
+				<ul>
+					<li>linear	规定以相同速度开始至结束的过渡效果（等于 cubic-bezier(0,0,1,1)）。</li>
+					<li>ease	规定慢速开始，然后变快，然后慢速结束的过渡效果（cubic-bezier(0.25,0.1,0.25,1)）。</li>
+					<li>ease-in	规定以慢速开始的过渡效果（等于 cubic-bezier(0.42,0,1,1)）。</li>
+					<li>ease-out	规定以慢速结束的过渡效果（等于 cubic-bezier(0,0,0.58,1)）。</li>
+					<li>ease-in-out	规定以慢速开始和结束的过渡效果（等于 cubic-bezier(0.42,0,0.58,1)）。</li>
+					<li>cubic-bezier(n,n,n,n)	在 cubic-bezier 函数中定义自己的值。可能的值是 0 至 1 之间的数值。</li>
+				</ul>
+			</details>
+		</li><br>
+		<li>transition-delay	规定过渡效果何时开始。默认是 0。</li>
+	</ol>
+</details><br>
+
+
+
+<!-- 	<a href="绘制太极图.html"><input type="button" value="课后练习" style="padding: 10px;background: #DC143C"></a> -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

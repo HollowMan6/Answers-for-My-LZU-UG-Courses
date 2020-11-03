@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>6-32 CSS定位4-垂直对齐方式</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第六章 零基础精讲CSS3</h1>
+	<h1 align="center" style="font-family:jin_mei_mxplzx562402">6-32 CSS定位4-垂直对齐方式</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>了解CSS定位和浮动的运用</li>
+	</ul> <hr>
+</header>
+<details>
+<summary>了解CSS定位的概念：</summary>
+	<ul>
+		<li>CSS 定位属性允许对元素进行定位改变其在页面的位置。</li>
+		<li>CSS 有三种基本的定位机制：普通流、浮动和绝对定位。</li>
+		<li>普通流中的元素的位置由元素在HTML中的位置决定。</li>
+	</ul>
+</details><br>
+<details>
+<summary>元素定位的属性：</summary>
+	<ul>	
+		<li>position	把元素放置到一个静态的、相对的、绝对的、或固定的位置中。</li>
+			<ul>
+				<li>static	默认值。没有定位。</li>
+				<li>absolute  绝对定位，相对于(static 定位以外的第一个) 父元素进行定位。通过绝对定位，元素可以放置到页面上的任何位置。元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。<small style="color: blue">(注：static 定位以外的第一个父元素：相对与最接近的一个最有定位设置的父级对象进行绝对定位，如果对象的父级没有设置定位属性，则依据 body 对象左上角作为参考进行定位。)</small></li>
+				<li>relative  相对定位，相对于其正常位置进行定位。元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。</li>
+				<li>fixed	  绝对定位，相对于浏览器窗口进行定位。元素的位置通过 "left", "top", "right" 以及 "bottom" 属性进行规定。</li>
+				<li>绝对定位和相对定位的区别</li>
+					<ul>
+						<li>绝对定位对象可以层叠,相对定位的对象不可以</li>
+						<li>相对定位对象会占据它原来位置,绝对定位不会</li>
+					</ul>	
+			</ul>
+		<li>top	定义了一个定位元素的上外边距边界与其包含块上边界之间的偏移。注：如果 "position" 属性的值为 "static"，那么设置 "top" 属性不会产生任何效果。</li>
+		<li>right	定义了定位元素右外边距边界与其包含块右边界之间的偏移。注：如果 "position" 属性的值为 "static"，那么设置 "right" 属性不会产生任何效果。</li>
+		<li>bottom	定义了定位元素下外边距边界与其包含块下边界之间的偏移。注：如果 "position" 属性的值为 "static"，那么设置 "bottom" 属性不会产生任何效果。</li>
+		<li>left	定义了定位元素左外边距边界与其包含块左边界之间的偏移。注：如果 "position" 属性的值为 "static"，那么设置 "left" 属性不会产生任何效果。</li>
+		<li>clip	设置元素的形状。元素被剪入这个形状之中，然后显示出来。</li>
+			<ul>
+				<li> 语法 clip: rect(top, right, bottom, left);目前裁切形状只有矩形可以使用</li>
+				<li>rect()需要设置四个值：top, right, bottom和left。他们之间需要用逗号隔开，而且rect()属性值和margin、padding一样的标准，遵循顺时针旋转的规则。</li>
+				<li>注意：clip属性只能在元素设置了“position:absolute”或者“position:fixed”属性起作用。</li>
+				<li>auto：这是一个默认值，clip设置auto值和没有进行剪切是一样的效果;</li>		
+			</ul>
+		<li>vertical-align	设置元素的垂直对齐方式。</li>
+			<ul>
+				<li>baseline	默认。元素放置在父元素的基线上。</li>
+				<li>top	把元素的顶端与行中最高元素的顶端对齐</li>
+				<li>middle	把此元素放置在父元素的中部。</li>
+				<li>bottom	把元素的顶端与行中最低的元素的顶端对齐。</li>
+				<li>数值（像素）/百分比</li>
+				<li>text-top	把元素的顶端与父元素字体的顶端对齐</li>
+				<li>text-bottom	把元素的底端与父元素字体的底端对齐。</li>
+				<li>sub	垂直对齐文本的下标。</li>
+				<li>super	垂直对齐文本的上标</li>
+			</ul>
+		<li>z-index	设置元素的堆叠顺序。</li>
+		<li>overflow	设置当元素的内容溢出其区域时发生的事情。</li>
+		<li>float 浮动：定义元素在哪个方向浮动。</li>
+			<ul>
+				<li>left	元素向左浮动。</li>
+				<li>left	元素向左浮动。</li>
+				<li>none	默认值。元素不浮动，并会显示在其在文本中出现的位置。</li>
+				<li></li>
+			</ul>
+	</ul>
+</details><br>
+
+
+
+<!-- 	<a href="绘制太极图.html"><input type="button" value="课后练习" style="padding: 10px;background: #DC143C"></a> -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

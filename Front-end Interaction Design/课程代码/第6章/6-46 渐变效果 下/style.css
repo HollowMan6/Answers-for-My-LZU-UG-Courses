@@ -1,0 +1,37 @@
+@charset="UTF-8";
+div{
+	width: 300px;
+	height: 100px;
+	margin:50px;
+	padding:50px; 
+	border:5px groove rgba(200,60,30,0.8);
+}
+
+#div1{
+	background: radial-gradient(red ,blue,orange)
+}
+
+#div2{
+	background: radial-gradient( circle,red ,blue,orange)
+}
+
+#div3{
+	background: radial-gradient( circle at top,red ,blue,orange)
+}
+
+#div4{
+	background: radial-gradient( circle at right top,red ,blue,orange)
+}
+
+#div5{
+	background: radial-gradient( circle 50px,red ,blue,orange)
+}
+
+#div6{
+	background: radial-gradient( circle closest-side,red ,blue,orange)
+}
+
+#div7{
+	background: orange;
+	background: repeating-radial-gradient( circle 50px,red ,orange)
+}

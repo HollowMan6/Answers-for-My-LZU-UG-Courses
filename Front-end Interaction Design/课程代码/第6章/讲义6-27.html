@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>6-27 css盒模型</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第六章 零基础精讲CSS3</h1>
+	<h1 align="center" style="font-family:jin_mei_mxplzx562402">6-27 css盒模型3</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>了解盒模型</li>
+		<li>元素内容、内边距、边框 和 外边距 </li>
+	</ul> <hr>
+</header>
+<details>
+<summary>了解盒模型的概念：</summary>
+	<ul>
+		<li>CSS 盒模型规定了处理元素内容、内边距、边框 和 外边距 的方式。</li>
+		<li>最内部分是元素内容，直接包围内容的是内边距。内边距呈现了元素的背景。内边距的边缘是边框。边框以外是外边距。</li>
+	</ul>
+</details><br>
+<details>
+<summary>元素的尺寸:</summary>
+	<ul>
+		<li>height	设置元素的高度。属性值：auto：默认。/px、cm 等单位定义高度。/百分比</li>
+		<li>width	设置元素的宽度属性值：auto：默认。/px、cm 等单位定义高度。/百分比</li>
+		<li>max-height	设置元素的最大高度。属性值：auto：默认。/px、cm 等单位定义高度。/百分比</li>
+		<li>max-width	设置元素的最大宽度。属性值：auto：默认。/px、cm 等单位定义高度。/百分比</li>
+		<li>min-height	设置元素的最小高度。属性值：auto：默认。/px、cm 等单位定义高度。/百分比</li>
+		<li>min-width	设置元素的最小宽度。属性值：auto：默认。/px、cm 等单位定义高度。/百分比</li>
+		<li style="color: red">当属性值用百分比时是相对于父元素的尺寸来说的。</li>
+		<li style="color: red">最大最小宽高主要用于动态控制缩放等情况下，这里暂做了解。</li>
+	</ul>
+</details><br>
+<details>
+<summary>padding 属性：元素的内边距:</summary>
+	<ul>
+		<li>padding-top 属性设置元素的上内边距（空间）。</li>
+		<li>padding-right 属性设置元素右内边距（空白）。</li>
+		<li>padding-bottom 属性设置元素的下内边距（底部空白）。</li>
+		<li>padding-left 属性设置元素左内边距（空白）。</li>
+		<li>padding 属性接受长度值或百分比值，但不允许使用负值。</li>
+			<ul>
+				<li>padding * 同时设定四个边距</li>
+				<li>padding ** 分别设定上下、左右边距</li>
+				<li>padding *** 分别设定上、左右、下边距</li>
+				<li>padding **** 分别设定上、右、下、左边距</li>
+			</ul>
+	</ul>
+</details><br>
+<details>
+<summary>border属性：元素的边框，是围绕元素内容和内边距的一条或多条线。</summary>
+	<ul>
+		<li>border属性：</li>可以按顺序设置如下属性：
+			<ul>
+				<li>border-width</li>
+				<li>border-style</li>
+				<ul>
+					<li>solid	定义实线。/dotted	定义点状边框/double	定义双线......</li>
+				</ul>
+				<li>border-color</li>		
+			</ul>
+		<li>关于元素的边框后边课程还会详细讲解，暂时先简单了解。</li>	
+	</ul>
+</details><br>
+<details>
+<summary>margin 属性：元素的外边距:</summary>
+	<ul>
+		<li>围绕在元素边框的空白区域是外边距。设置外边距会在元素外创建额外的“空白”。</li>
+		<li>margin-top 属性设置元素的上外边距（空间）。</li>
+		<li>margin-right 属性设置元素外内边距（空白）。</li>
+		<li>margin-bottom 属性设置元素的下外边距（底部空白）。</li>
+		<li>margin-left 属性设置元素左外边距（空白）。</li>
+		<li>margin 属性接受长度值或百分比值，允许使用负值。</li>
+			<ul>
+				<li>margin * 同时设定四个外边距</li>
+				<li>margin ** 分别设定上下、左右外边距</li>
+				<li>margin *** 分别设定上、左右、下外边距</li>
+				<li>margin **** 分别设定上、右、下、左外边距</li>
+			</ul>
+	</ul>
+</details><br>
+<details>
+<summary>外边距的合并</summary>
+	<ul>
+		<li>外边距合并指的是，当两个垂直外边距相遇时，它们将形成一个外边距。</li>
+		<li>合并后的外边距的高度等于两个发生合并的外边距的高度中的较大者。</li>
+	</ul>
+</details><br>
+<details>
+<summary>溢出的处理</summary>
+	<ul>
+		<li>overflow 如果内容溢出了元素内容区域，是否对内容的边缘进行裁剪。</li>
+		<li>overflow-x	如果内容溢出了元素内容区域，是否对内容的左/右边缘进行裁剪。</li>
+		<li>overflow-y	如果内容溢出了元素内容区域，是否对内容的上/下边缘进行裁剪。</li>	
+		<ul>
+			<li>visible	不裁剪内容，可能会显示在内容框之外。</li>
+			<li>hidden	裁剪内容 - 不提供滚动机制。</li>
+			<li>scroll	裁剪内容 - 提供滚动机制。</li>
+			<li>auto	如果溢出框，则应该提供滚动机制。</li>
+		</ul>
+	</ul>
+</details><br>
+
+<!-- 	<a href="绘制太极图.html"><input type="button" value="课后练习" style="padding: 10px;background: #DC143C"></a> -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

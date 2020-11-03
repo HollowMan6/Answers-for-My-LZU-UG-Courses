@@ -1,0 +1,11 @@
+@charset="UTF-8";
+*{
+	padding: 0px;
+	margin: 0px;
+}
+img{
+	position: absolute;
+	clip:rect(200px,500px,500px,200px); 
+}
+
+

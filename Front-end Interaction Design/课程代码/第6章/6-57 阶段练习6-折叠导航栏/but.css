@@ -1,0 +1,36 @@
+@charset="UTF-8";
+*{
+	margin:0;
+	padding:0;
+}
+
+h3+div{
+	height: 0;
+	overflow: hidden;
+
+	
+	transition: all 1s ease;
+}
+
+a{
+	text-decoration: none;
+}
+
+.se{
+	width: 500px;
+	margin-top:3px;
+	margin-left: 20px;
+	background: rgba(180,60,30,0.3);
+}
+
+h3{
+	background: rgba(180,80,30,0.8);
+	padding: 5px 25px;
+	border-radius: 20px;
+}
+
+.se:hover h3+div{
+	height: 380px;
+	overflow: auto;
+}
+

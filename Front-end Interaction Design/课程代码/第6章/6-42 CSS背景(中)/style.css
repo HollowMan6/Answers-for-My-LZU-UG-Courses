@@ -1,0 +1,22 @@
+@charset="UTF-8";
+div{
+	width: 500px;
+	height: 400px;
+	margin:50px;
+	padding: 50px;
+	border:5px groove rgba(200,60,30,0.8);
+}
+
+#div1{
+	background: url(../img/p1.png) no-repeat;
+	/*background-position: left;*//*=left center*/
+	/*background-position: right bottom ;*/
+	/*background-position: 30% 30%;*/
+	background-position: 250px 200px;
+	background-size: 25%;
+}
+/*body{
+	background: url(../img/p1.png) no-repeat;
+	background-attachment:fixed;
+
+}*/

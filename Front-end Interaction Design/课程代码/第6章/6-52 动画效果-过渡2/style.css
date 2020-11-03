@@ -1,0 +1,63 @@
+@charset="UTF-8";
+div{
+	width: 300px;
+	height: 150px;
+	margin: 30px;
+	font-size: 28px;
+
+}
+#div1{
+	background: red;
+	transition-property: width;
+	transition-duration: 1s;
+	transition-timing-function: ease;
+}
+#div1:hover{
+	background: green;
+	width: 150px;	
+}
+
+#div2{
+	background: orange;
+	transition-property: width;
+	transition-duration: 1s;
+	transition-timing-function: cubic-bezier(0.2,0.4,0.5,1);
+	transition-delay:1s;
+}
+#div2:hover{
+	background: green;
+	width: 150px;	
+}
+
+
+
+#div3{
+	background: blue;
+	transition: all 2s ease-in-out 0s;
+}
+#div3:hover{
+	background: green;
+	width: 150px;	
+}
+
+
+#div4{
+	background: rgba(120,60,30,0.8);
+	transition: width 1s ease ,
+				background 2s linear;
+}
+#div4:hover{
+	background: green;
+	width: 150px;	
+}
+
+#div5{
+	background: rgba(20,60,130,0.8);
+	transition: all 1s ease 0.5s;
+
+}
+#div5:hover{
+	background: green;
+	width: 150px;
+	transform: rotate(360deg);
+}

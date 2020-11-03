@@ -1,0 +1,44 @@
+@charset="UTF-8";
+#div0{
+	width: 300px;
+	margin: 30px;
+	border: 2px solid red;
+	perspective:1000px;
+	background: red;
+
+}
+#div1,#div2,#div3{
+	width: 200px;
+	height: 150px;
+	font-size: 50px;
+	margin: 30px auto;
+	background: green;
+}
+
+#div1:hover{
+/*	transform: translate3d(0,0,-300px);*/
+	transform:translateZ(-500px);
+}
+#div2:hover{
+	transform: rotate3d(0,1,0,45deg);
+	transform-origin:right;
+}
+
+#div3:hover{
+	transform: scaleZ(2) rotateX(60deg);
+	transform-origin:top;
+
+}
+
+body{
+		perspective:1000px;
+}
+
+#div0:hover{
+		transform:rotateX(45deg);
+	-webkit-transform:rotateX(45deg);
+	-moz-transform:rotateX(45deg);
+	-o-transform:rotateX(45deg);
+	-ms-transform:rotateX(45deg);
+
+}

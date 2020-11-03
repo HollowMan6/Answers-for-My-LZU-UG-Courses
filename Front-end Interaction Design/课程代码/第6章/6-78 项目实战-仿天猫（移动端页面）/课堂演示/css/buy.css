@@ -1,0 +1,21 @@
+.cart-top{
+	height: 25px;
+	line-height: 25px;
+	background-image:
+	linear-gradient(to bottom,#FFF0F5,#FF7F50 80%,#D2691E);
+	padding: 8px;
+	font-size: 14px;
+	font-weight: bold;
+	color: #eee;
+	text-shadow: 0 1px 1px rgba(0,0,0,0.8);
+	border-bottom: 1px solid #FF7F50;
+	border-radius: 3px 3px 0 0;
+}
+
+.cart-fl{
+	display: inline-block;
+	font-size: 14px;
+}
+.cart-fr{
+	float: right;
+}

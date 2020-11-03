@@ -1,0 +1,10 @@
+@font-face {
+font-family: 'LiDeBiao-Xing3555394';
+src: url('LiDeBiao-Xing3.eot');
+src: url('LiDeBiao-Xing3.eot?#iefix') format('embedded-opentype'),
+     url('LiDeBiao-Xing3.woff') format('woff'),
+     url('LiDeBiao-Xing3.ttf') format('truetype'),
+     url('LiDeBiao-Xing3.svg#LiDeBiao-Xing3') format('svg');
+    font-weight: normal;
+    font-style: normal;
+   }

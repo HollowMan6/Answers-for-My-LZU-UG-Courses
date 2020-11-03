@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>6-66 flex-grow</title>
+	<style>
+		div{
+			font-size: 2em;
+		}
+		#div0{
+			width: 800px;
+			height: 400px;
+			background: rgba(10,10,10,0.6);
+			display: flex;
+			flex-wrap:wrap;
+			padding: 0;
+		}
+		.div1,.div2,.div3,.div4{
+			width: 100px;
+		}
+		.div1{
+			background: green;
+			flex-basis:100px;
+
+		}
+
+		.div2{
+			background: orange;
+			flex-grow: 2;
+
+		}
+
+		.div3{
+			background: red;
+			flex-grow: 2;
+	
+		}
+		.div4{
+			background: blue;
+			flex-grow: 1;
+	
+		}
+
+	</style>
+</head>
+<body>
+<h2>flex-grow</h2>
+<div id="div0">
+	<div class="div1">1</div>
+	<div class="div2">2</div>
+	<div class="div3">3</div>
+	<div class="div4">4</div>
+</div>
+</body>
+</html>

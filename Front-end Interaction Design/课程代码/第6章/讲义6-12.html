@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>6-12 CSS选择器8</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第六章 零基础精讲CSS3</h1>
+	<h1 align="center">6-12 CSS选择器8--伪类选择器</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		 <li>掌握常用的CSS选择器</li>
+		 <li>了解不太常用的CSS选择器</li>
+	</ul> <hr>
+</header>
+	<h4>什么是选择器</h4>
+	<p>	当我们定义一条样式时候，这条样式会作用于网页当中的某些元素，所谓选择器就是样式作用的对象.</p> 
+<details>
+	<summary>插入样式的三种方法</summary>
+	<ul>
+		<ol>
+			<li>内联样式表（行内）</li>
+			<li>内部样式表（style中）</li>
+			<li>外部样式表</li>
+				<ul>
+					<li>创建一个外部样式表</li>
+					<li>在head中使用link元素插入样式表</li>
+				</ul>
+		</ol>
+	</ul>
+</details><br>
+<details>
+	<summary>CSS语法</summary>
+	<ul>
+			<li>单一元素的多个属性之间用分号隔开；若只有一个可以省略</li>
+			<li>多个元素之间用逗号隔开</li>
+			<li style="color: blue">如果值为若干单词，则要给值加引号;除了这种情况外其他时候不可以加引号</li>
+			<li>css代码的注释</li>
+			<li>样式的优先顺序:</li>
+				<ul>
+					<li>设计者设计的样式>浏览器用户自定义的样式>浏览器自设的样式</li>
+					<li>强制优先级：！important</li>
+				</ul>
+				<ol>
+					<li>行内（内联）样式</li>
+					<li>内部样式：style中的样式</li>
+					<li>外部样式</li>
+				</ol>
+			<li>层叠、继承、冲突</li>
+				<ul>
+					<li>外观样式--比如字体、颜色可以继承;而布局有关的样式不可以继承，比如边框等</li>
+				</ul>
+			<li>可以在同一个 HTML 文档内部引用多个外部样式表。</li>
+	</ul>
+</details><br>
+<details>
+	<summary>CSS选择器</summary>
+	<ul>
+		<li>
+			<details>
+				<summary>常用选择器</summary>
+				<ol>
+					<li>通用选择器：“*”</li>
+					<li>元素选择器</li>
+					<li>id选择器:前面有一个 # 号</li>
+					<li>类选择器:前面加符号 .</li>
+						<ul>
+							<li>给一个元素加上多个类名</li>
+							<li>指定某一特定的类</li>
+						</ul>
+					<li>
+				</ol>
+			</details>
+		</li><br>
+		<li>
+			<details>
+			   <summary>属性选择器</summary>
+					<ul>
+						<li>E[att] :选择具有att属性的E元素。需要选择有某个属性的元素，而不论属性值是什么，可以使用简单属性选择器。</li>
+						  <p>可以根据多个属性进行选择，只需将属性选择器链接在一起即可。</p>
+						<li>E[att="val"]：选择具有att属性且属性值等于val的E元素。进一步缩小选择范围，（只选择有特定属性值的元素。）</li>
+						<li>E[att~="val"]:选择具有att属性且属性值有多个，其中一个的值等于val的E元素。</li>
+						<li>E[att|="val"]:选择具有att属性且属性值为以val开头并用连接符"-"分隔的字符串的E元素。</li>
+					</ul>
+					<ul style="color: red">
+						<li>E[att^="val"]:选择具有att属性且属性值为以val开头的字符串的E元素。</li>
+						<li>E[att$="val"]:选择具有att属性且属性值为以val结尾的字符串的E元素。</li>
+						<li>E[att*="val"]:选择具有att属性且属性值为包含val的字符串的E元素。</li>
+					</ul>
+				</details><br>		
+		</li>
+		<li>
+				<details>
+			   		<summary>关系选择器</summary>
+			   		<ul>
+			   			<li>后代选择器（包含选择器）ul li{}:后代选择器又称为包含选择器。后代选择器可以选择作为某元素后代的元素。</li>
+			   			<li>子元素选择器ul>li:与后代选择器相比，子元素选择器只能选择作为某元素子元素的元素,缩小了选择范围</li>
+			   			<li>相邻选择符：E+F:选择紧贴在E元素之后F元素。</li>
+			   			<li style="color: red">兄弟选择器E~F:选择E元素所有兄弟元素F。(只可以选择到之后的元素)</li>
+			   		</ul>	
+			   </details><br>			
+		</li>
+		<li>
+			<details>
+		   		<summary>伪元素选择器</summary>
+		   		<ul>
+					<li>E:first-letter/E::first-letter 设置元素内的第一个字符的样式。</li>
+					<li>E:first-line/E::first-line设置元素内的第一行的样式。</li>
+					<li>E:before/E::before在每个 E元素的内容之前插入内容。用来和content属性一起使用</li>
+					<li>E:after/E::after在每个E元素的内容之后插入内容。用来和content属性一起使用</li>
+					<li style="color: red">E::selection设置对象被选择时的颜色。</li>
+		   		</ul>
+		   </details><br>			
+		</li>
+		<li>
+			<details>
+		   		<summary>伪类选择器</summary>
+		   		<details>
+		   			<summary>结构伪类选择器</summary>
+		   	
+		   		<ul style="color: red">
+					<li style="color: #000000">E:first-child 父元素的第一个子元素E。</li>
+					<li>:root:选择文档的根元素。</li>
+					<li>E:last-child:最后一个子元素E。</li>
+					<li>E:only-child:仅有的一个子元素E。</li>
+					<li>E:only-of-type:只有一种类型的子元素。</li>
+					<li>E:nth-child(n):元素的第n个子元素E。</li>
+						<ul>
+							<li>可以直接用数值：比如2</li>
+							<li>可以用奇数（odd）偶数(even)</li>
+							<li>可以用公式3n</li>
+						</ul>
+					<li>E:nth-last-child(n):匹配父元素的倒数第n个子元素E。</li>
+					<li>E:first-of-type	:匹配同类型中的第一个同级元素E。</li>
+					<li>E:last-of-type:匹配同类型中的最后一个同级元素E。</li>
+					<li>E:nth-of-type(n):匹配同类型中的第n个同级兄弟元素E。</li>
+					<li>E:nth-last-of-type(n):匹配同类型中的倒数第n个同级兄弟元素E。</li>
+					<li>E:empty	:匹配没有任何子元素（包括text节点）的元素E。</li>
+		   		</ul>
+		   		</details>
+		   		<details>
+		   			<summary>UI伪类及其他选择器</summary>
+		   		<ul>
+					<li>E:active 向被激活的元素添加样式。</li>
+					<li>E:hover 当鼠标悬浮在元素上方时，向元素添加样式。</li>
+					<li>E:link 向未被访问的链接添加样式</li>
+					<li>E:visited 向已被访问的链接添加样式。</li>
+					<li>E:focus 向拥有键盘输入焦点的元素添加样式。</li>
+					<li>E:lang向带有指定 lang 属性的元素添加样式。</li>
+					<li style="color: red">input:checked 选择每个被选中的input元素。</li>
+					<li style="color: red">input:disabled	选择每个禁用的input元素</li>
+					<li style="color: red">input:enabled 选择每个启用的input元素。</li>
+					<li style="color: red">input:disabled	选择每个禁用的input元素</li>
+					<li style="color: red">#E:target 选择当前活动的元素(某个被链接的元素)。</li>
+					<li style="color: red">:not(E)	选择E元素之外的每个元素。</li>
+		   		</ul>			
+		</li>
+	</ul>
+</details><br>
+<br>
+<!-- 	<a href="绘制太极图.html"><input type="button" value="课后练习" style="padding: 10px;background: #DC143C"></a> -->
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

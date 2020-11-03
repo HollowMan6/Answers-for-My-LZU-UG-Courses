@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>项目实战1</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+		details ol{
+			margin-left: 2em;
+		}
+
+		h3{
+			text-indent: 1em;
+		}
+		summary>*{
+			text-indent: 2em;
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第六章 零基础精讲CSS3</h1>
+	<h1 align="center" style="font-family:jin_mei_mxplzx562402">项目实战-仿360囧图</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>常用快捷方式</li>
+		<li>清除浮动的技巧</li>
+		<li>利用css3的动画实现图片轮播。</li>
+		<li>综合运用我们之前学过的知识来构建一个完整的web页面。</li>
+	</ul> <hr>
+</header>
+
+<details>
+	<summary style="color: rgba(100,0,200,0.9);">更换你的装备</summary>
+		<h3>常用快捷方式</h3>
+		<ol>
+			<li>乘法*: ul>li*5 在编辑器中输入缩写代码：ul>li*5 ，然后按下拓展键（默认为tab），即可得到代码片段：</li>
+			<li>后代 >：nav>ul>li</li>
+			<li>兄弟 +:div+h3+p*3</li>
+			<li>缩写：(div>dl>(dt+dd)*3)+footer>p</li>
+			<li>自增符号：$: ul>li.item$*5</li>
+			<li>缩写：#header</li>
+			<li>缩写：p.class1.class2.class3</li>
+			<li>缩写：ul>.class</li>
+			<li>其他还有很多，大家可以自己去百度下</li>
+		</ol>
+</details><br><br>
+
+<details>
+<summary style="color: rgba(60,180,60,0.8);">内功心法</summary>
+	<h3>学习技巧：高手是怎样炼成的</h3>
+		<ol>
+			<li>观摩优秀的网站，可以F12键查看它的源代码。</li>
+			<li>分析优秀作品的页面结构。</li>
+			<li>模仿优秀的作品,尝试着自己去做一下。</li>
+			<li>尝试着创新，在模仿作品中加入自己的创意思路。</li>
+			<li>反复进行以上四个步骤，直到你自己可以创作出优秀的作品，把自己变成高手</li>
+		</ol>
+</details><br><br>
+
+<details>
+<summary style="color: rgba(250,50,100,1);">江湖经验</summary>
+	<h3>网站开发流程</h3>
+		<p>网站的基本开发流程如下，明白流程，可以明确自己的职责和项目环节，有重点的学习。</p>
+		<ol>
+			<li>网站策划--交互设计--网页设计（视觉设计）- <b>前端开发（前端工程师）</b>-测试网页--网站发布--后期维护</li>
+			<li>沟通的重要性：多与后端技术，美工设计等协作人员沟通。</li>
+		</ol>
+
+	<h3 style="color: rgba(200,100,50,0.8);">小技巧</h3>
+			<p>清除浮动的技巧：消除子元素浮动对父元素背景/边框/不能被子元素撑开的方法：</p>
+					<ol>
+						<li>父元素结尾处增加一空元素 div；并清除其浮动。缺点：如果布局复杂需要增加许多空标签</li>
+						<li>在父元素定义overflow:hidden（浏览器会自动检查浮动区域的高度，注.不必理会原理，知道用法即可。缺点：超出部分会被隐藏</li>
+						<li>利用伪类：after 父元素内容后增加空元素，并清除浮动。</li>
+					</ol>
+				</li>
+</details><br><br>
+
+<details>
+<summary style="color: rgba(250,50,100,1);">战斗开始啦</summary>
+		<ol>
+			<li>创建项目文件夹存放相应的素材、文档等</li>
+			<li>对页面进行结构分析</li>
+			<li>准备素材</li>
+			<li>开始编写代码</li>
+			<li><img src="img/header.png" alt=""></li>
+		</ol>
+</details><br><br>
+
+<details>
+	<summary>项目实战</summary>
+		<p></p>
+		<ol>
+			<li>创新从模仿开始，咱们的第一综合实例就从模仿网页-360囧图开始，网址：http://xiaohua.360.cn/jiongtu</li>
+			<li>第一个项目采用固定浮动布局，单位为像素.</li>
+			<li>由于录制课程的时候使用1024*768的分别率；所以项目设定屏幕分辨率为：1024*768</li>
+
+<!-- 			<li>建议将LOGO放在h1标签里面，方便浏览器抓取关键字。同时一个页面只建议使用一个h1标签。
+			</li> -->
+
+		</ol>
+</details><br><br>
+
+<details>
+<summary style="color: rgba(250,150,100,1);">未完，待续...........</summary>
+		<ol>
+			<li>...</li>
+		</ol>
+</details><br><br>
+
+<!-- 
+<details>
+<summary>代码优化</summary>
+		<p>优化代码使更加符合HTML5大纲算法.步骤如下</p>
+		<ol>
+			<li>查看页面目录结构，逐项修改有问题部分。
+				<ol>
+					<li>nav中添加标题并将它隐藏。</li>
+				</ol>
+			</li>
+		</ol>
+</details><br><br>
+
+<details>
+<summary>小技巧</summary>
+		<ol>
+			<li>当width为100%时。可用用min-width来规定一个最小宽度，防止缩放时变形，尤其是背景图片。</li>
+			<li>将定位和外边距结合让图片以中心点居中。</li>
+			<li>用opcity设置半透明遮罩层。</li>
+			<li>inline-block可以使用text-align 居中；</li>
+			<li>可以给background同时设置半透明渐变和背景图片，来增加背景图片的模糊度来突出背景上的文字。</li>
+			<li>用ul列表做导航的好处:逻辑清楚，有条理。</li>
+		</ol>
+</details><br><br>
+
+<details>
+<summary>分离css代码</summary>
+		<ol>
+			<li>将代码重用部分比如header footer分离出来，其他需要的文件重复引用即可</li>
+		</ol>
+</details>
+ -->
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

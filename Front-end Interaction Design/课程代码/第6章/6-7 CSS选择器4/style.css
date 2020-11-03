@@ -1,0 +1,7 @@
+@charset="UTF-8";
+/*ul li{color: red;border: 1px solid}
+div p{color: green}*/
+/*ul>li{color: red}*/
+/*h2+p{color: green}*/
+/*h3~p{color: red}*/
+div,ul{color: red}

@@ -1,0 +1,43 @@
+@charset="UTF-8";
+div{
+	width: 300px;
+	height: 100px;
+	margin-top:50px;
+	margin-left:50px; 
+	padding:0px; 
+	background: red;
+}
+#div11,#div22,#div33,#div44,#div55,#div66{
+	margin-left: 0px;
+	background: blue;
+}
+
+#div11:hover{
+	transform:translate(30px,30px)
+}
+
+#div22:hover{
+	transform:scale(0.8,0.5);
+	transform-origin: left top;
+}
+
+#div33:hover{
+	transform:rotate(30deg);
+/*	transform-origin: left top;*/
+/*	transform-origin: 30px 30px;*/
+	transform-origin: 30% 30%;
+}
+
+#div44:hover{
+	/*transform: skewX(30deg);*/
+/*	transform: skewY(30deg);*/
+	transform: skew(30deg,45deg);
+}
+
+#div55:hover{
+	transform: matrix(1,0.3,0,1,0,0);
+}
+
+#div66:hover{
+	transform:scale(0.8,0.5) rotate(30deg);
+}

@@ -1,0 +1,11 @@
+@charset="UTF-8";
+p{
+	width: 30%;
+	background: green;
+	color: red;
+/*	text-align: end;*/
+	line-height: 2;
+}
+
+
+
