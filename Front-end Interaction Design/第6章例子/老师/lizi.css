@@ -1,0 +1,45 @@
+@charset "utf-8";
+.biao{
+	width: 80px;
+	height: 40px;
+	margin-left: 150px;
+	margin-top: 20px;
+	transition: all 0.5s ease 0s;
+	}
+.biao:hover{
+	transform: rotateY(359deg);
+	
+	}
+.nei{
+	width: 350px;
+	height: 180px;
+	transition: all 0.5s ease 0s;
+	}
+
+.nei:hover{
+	color: #575353;	
+	
+	
+	
+	
+	}
+
+.tu{
+	overflow-y: hidden;
+	overflow-x: hidden;
+	margin-top: 20px;
+	margin-left: 50px;
+	}
+.tu img {
+	width: 180px;
+	height: 140px;
+	transition: all 1s ease 0s;
+	margin-left: 50px;
+	
+}
+.tu img:hover {
+	transform: scale(1.5) translateZ(10px);
+	margin-left: 50px;
+	margin-top: 20px;
+	
+}

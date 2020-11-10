@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .ff{
+            margin: 0 auto;
+            width: 300px;
+            height: 500px;
+            border: 1px solid black;
+            transition: all 1s ease;
+        }
+        .title {
+            height: 100px;
+            width: 300px;
+            text-align: center;
+            line-height: 100px;
+            font-size: 20px;
+            background: pink;
+            margin-left: 1000px;
+            transition: all 1s ease;
+        }
+        .pic img{
+            width: 0px;
+            transition: all 1s ease;
+        }
+        .content {
+            transition: all 1s ease;
+        }
+        .ff:hover {
+            background: aqua;
+        }
+        .ff:hover .title{
+            margin-left: 0px;
+            transform: rotate(360deg);
+        }
+        .ff:hover .pic img{
+            width: 300px;
+        }
+        .ff:hover .content{
+            transform: rotate(360deg);
+        }
+    </style>
+
+</head>
+<body>
+    <div class="ff">
+        <div class="title">
+            Hello world!
+        </div>
+        <div class="pic">
+            <img src="img/logo.png" alt="">
+        </div>
+        <div class="content">
+            当地时间11月9日，美国“当选”总统拜登在特拉华州发表讲话，他在讲话中呼吁民众戴口罩，并称戴口罩仍是对抗新冠疫情的“最有力武器”而不是一个政治声明。
+        </div>
+        <div></div>
+    </div>
+
+</body>
+</html>
