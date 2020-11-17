@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #aaa {
+      width: 100px;
+      height: 100px;
+      background: blue;
+      transition: width 2s;
+      -moz-transition: width 2s; /* Firefox 4 */
+      -webkit-transition: width 2s; /* Safari and Chrome */
+      -o-transition: width 2s; /* Opera */
+    }
+  </style>
+  <script>
+    function big() {
+      document.getElementById("aaa").style.width = "300px";
+    }
+    function small() {
+      document.getElementById("aaa").style.width = "100px";
+    }
+  </script>
+</head>
+<body>
+  <button onclick="big()">Big</button>
+  <button onclick="small()">Small</button>
+  <div id="aaa"></div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+当元素本身为display：none 时，若此时我们想通过js先将其变为display:block 并且随后再触发其他想要的transition过渡效果，需要在 js改变其为display:block 后用setTimeout延迟100ms左右的时间再去设置其他过渡动画，否则该过渡动画不会触发。 另外，如样式写在html代码中，用js设置className 是没有动画效果的。
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title></title>
+    </head>
+    <style type="text/css">
+        #ondiv{
+            background: #000;
+            width: 200px;
+            height: 50px;
+        }
+        .test{
+            background: red;
+            width: 100px;
+            height: 100px;
+            transition: all 1s;
+            -moz-transition: all 1s;
+            -webkit-transition: all 1s;
+            -o-transition:all 1s;
+        }
+       .test-hover{
+            background: red;
+            width: 200px;
+            height: 200px;
+        }
+    </style>
+    <body>
+        <div id="ondiv">JS transition</div><p></p>
+        <div id="div" class="test"></div>
+        <script type="text/javascript">
+            //onmouseover
+            document.getElementById("ondiv").onclick=function(){
+                document.getElementById("div").className = 'test test-hover';
+                //document.getElementById("div").style.width="200px"
+                //document.getElementById("div").style.height="200px"
+            }
+            document.getElementById("ondiv").onmouseleave=function(){
+                document.getElementById("div").className = 'test';
+                //document.getElementById("div").style.width="200px"
+                //document.getElementById("div").style.height="200px"
+            }
+        </script>
+    </body>
+</html>

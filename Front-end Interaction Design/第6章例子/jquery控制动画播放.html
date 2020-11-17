@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>animation控制动画暂停/播放</title>
+    <script src="jquery.min.js"></script>
+</head>
+<body>
+    <style>
+    .box{width: 200px;height: 120px;border: 1px solid #f00;}
+    .animate{-webkit-animation: changebg 2s ease infinite alternate;}
+    @-webkit-keyframes changebg{
+        0{background-color: orange;}
+        25%{background-color: yellow;}
+        50%{background-color: green;}
+        75%{background-color: pink;}
+        100%{background-color: blue;}
+    }
+    </style>
+    <div class="box animate"></div>
+    
+    <button class="control" type="button">暂停动画</button>
+
+    <script>
+    var btnSelector = document.querySelector('.control'),
+        animateSelector = document.querySelector('.animate');
+    btnSelector.addEventListener('click', function() {
+        if(this.textContent == '暂停动画') {
+            this.textContent = '播放动画';
+            animateSelector.style.webkitAnimationPlayState = 'paused';
+        } else {
+            this.textContent = '暂停动画';
+            animateSelector.style.webkitAnimationPlayState = 'running';
+        }
+    });
+    </script>
+</body>
+</html>
+
+
+动画事件
+animateSelector.addEventListener('animationstart', function() {
+    console.log('动画开始');
+});
+animateSelector.addEventListener('animationend', function() {
+    console.log('动画结束');
+});
+animateSelector.addEventListener('animationiteration', function() {
+    console.log('动画迭代');
+});
+过渡事件
+transitionSelector.addEventListener('transitionend', function() {
+    console.log('过渡结束了');
+});

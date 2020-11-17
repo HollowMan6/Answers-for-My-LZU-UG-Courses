@@ -1,0 +1,84 @@
+<!-- webkfa.com -->
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="apple-touch-fullscreen" content="YES" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="format-detection" content="telephone=no" />
+    <title>js直接操作css3属性transition和webkitTransform实现动画</title>
+  </head>
+   
+  <body>
+    <input type="button" value="往下" onclick="xia(100);"/>
+    <input type="button" value="往上" onclick="shang(0);"/>
+    <div style="width:50px;height:50px;background:red;" id="webkfaid"></div>
+    <script type="text/javascript">
+        function xia(sum){
+            var obj=document.getElementById("webkfaid");
+            obj.style.transition="-webkit-transform 500ms ease-out";
+            obj.style.webkitTransform="translate(0px,"+sum+"px) scale(1) translateZ(0px)";
+        }
+        function shang(sum){
+            var obj=document.getElementById("webkfaid");
+            obj.style.transition="-webkit-transform 500ms ease-out";
+            obj.style.webkitTransform="translate(0px,"+sum+"px) scale(1) translateZ(0px)";
+        }
+    </script>
+  </body>
+</html>
+
+
+而使用CSS创建动画的时候，写法如下：
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>CSS3 animation-duration属性</title>
+    <style type="text/css">
+        @-webkit-keyframes mytranslate
+        {
+            0%{}
+            100%{-webkit-transform:translateX(100px);}
+        }
+        div:not(#container)
+        {
+            width:40px;
+            height:40px;
+            border-radius:20px;
+            background-color:red;
+            -webkit-animation-name:mytranslate;
+            -webkit-animation-timing-function:linear;
+        }
+        #container
+        {
+            display:inline-block;
+            width:140px;
+            border:1px solid silver;
+        }
+        #div1{-webkit-animation-duration:2s;margin-bottom:10px;}
+        #div2{-webkit-animation-duration:4s;}
+    </style>
+</head>
+<body>
+    <div id="container">
+        <div id="div1"></div>
+        <div id="div2"></div>
+    </div>
+</body>
+</html>
+　CSS动画的几个属性，若是不需要任何行为触发动画，将在元素的样式中调用动画名称。代码如下：
+#div1
+       {
+           width:40px;
+           height:40px;
+           border-radius:20px;
+           background-color:red;
+           -webkit-animation-name:mytranslate;/*调用动画名称*/
+           -webkit-animation-timing-function:linear;/*动画变换方式*/
+           -webkit-animation-duration:2s;/*动画持续时间*/
+           -webkit-animation-iteration-count:infinite;/*若是将infinite改为n,n为整数，就是循环几次。*/
+         -webkit-animation-delay:.5s;/*动画延迟时间，表示动画延迟多少秒开始执行，默认为0*/
+         -webkit-animation-direction:reverse;/*动画播放方向，属性取值有3个，normal   每次循环都向正方向播放（默认值）
+           reverse每次循环都向反方向播放;alternate播放次数是奇数时，动画向原方向播放；播放次数是偶数时，动画向反方向播放*/<br>
+} @-webkit-keyframes mytranslate { 0%{} 100%{-webkit-transform:translateX(100px);} }<br> 

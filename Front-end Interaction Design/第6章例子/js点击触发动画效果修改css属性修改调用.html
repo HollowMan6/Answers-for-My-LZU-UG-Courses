@@ -1,0 +1,37 @@
+关键是首先指定动画效果的CSS属性名称，然后在Js中改变这个属性
+
+如果不使用Js触发，可以选择利用css的状态：hover，focus，active 来触发，也可以一开始就触发
+
+ 
+
+下例为Js点击触发过渡Transitions效果，指定的属性名称是width 
+
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #aaa {
+      width: 100px;
+      height: 100px;
+      background: blue;
+      transition: width 2s;
+      -moz-transition: width 2s; /* Firefox 4 */
+      -webkit-transition: width 2s; /* Safari and Chrome */
+      -o-transition: width 2s; /* Opera */
+    }
+  </style>
+  <script>
+    function big() {
+      document.getElementById("aaa").style.width = "300px";
+    }
+    function small() {
+      document.getElementById("aaa").style.width = "100px";
+    }
+  </script>
+</head>
+<body>
+  <button onclick="big()">Big</button>
+  <button onclick="small()">Small</button>
+  <div id="aaa"></div>
+</body>
+</html>
