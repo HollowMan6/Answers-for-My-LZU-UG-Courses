@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>7-79 课堂演示</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<h3> 标题2</h3>
+	<h2> 标题1</h2>
+
+	 <div class="content">　
+	 	<ul id="u1">　　　　
+			 <li>列表项1</li>　
+			 <li class="ll">列表项2</li>　　
+			 <li class="ll">列表项3</li>　
+			 <li class="ll">列表项4
+				<p>u1里的段落</p>
+			 </li>
+			 <li>列表项5</li>
+		 </ul>
+	 	　
+		 <ul id="u2">　　　　
+			 <li>列表项11</li>　　　
+			 <li class="bb">列表项12</li>　　　
+			 <li class="bb">列表项13</li>　　　
+			 <li class="bb">列表项14</li>
+			 <li>列表项15</li>
+		 </ul>
+	</div>
+	<script>
+		//快捷的通过class ID 元素名称查找元素
+		function myFun1(){
+			// document.querySelector("li").style.backgroundColor = "red";
+			// document.querySelector("#u2").style.backgroundColor = "blue";
+			document.querySelector(".bb").style.backgroundColor = "blue";
+		}
+		//结合CSS3的选择器进行更精确的查找
+		function myFun2(){
+			document.querySelector("#u2>li+li").style.backgroundColor = "red";
+			document.querySelector("#u1 li p").style.backgroundColor = "red";
+		}
+		//只匹配第一个符合条件的元素
+		function myFun3(){
+			document.querySelector("h2, h3").style.backgroundColor = "red"; 
+		}
+		myFun3()
+	</script>
+</body>
+</html>

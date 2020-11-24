@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>7-38 Math对象</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+		p{color: blue; font-size: 20px;margin-left: 4em}
+		li{
+			margin-left: 2em;
+			line-height: 2em;
+		}
+		details>details{
+			text-indent: 2em;
+			line-height: 2em;
+		}
+		b{
+			color: red
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第七章 零基础精讲JavaScript</h1>
+	<h1 align="center" style="font-size:1.5em;">7-38 Math对象</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>掌握常用的数学计算方法</li>
+	</ul> <hr>
+</header>
+	<details style="color: orange">
+			<summary>温馨提示：关于学习方法的建议</summary>
+		<ol>
+				<p>不要强求自己讲参考手册上所以的属性和方法都搞清楚，原因如下：</p>
+				<li>有些属性和方法非常生僻，很少用，甚至经过一段时间后会被废弃</li>
+				<li>JavaScript虽然只是一门计算机语言，但学习它和我们学习汉语英语一样，<br>我们并不能掌握认识所有的汉字，但是并不妨碍我们使用汉语，英语等其他语言亦是如此</li>
+				<li>在我们讲课过程中当然应该尽可能的讲的仔细，同时也要兼顾效率，如果所有的属性演示一遍，即使我有耐心讲，大家也绝没有耐心听，因为既没有意义也没有必要。</li>
+				<li>对于我没有讲过的属性和方法，如果真的用到了可以自己百度一下，或者参考一下手册。</li>
+		</ol>
+	</details><br><br> 
+	<details>
+			<summary>Math 对象</summary>
+		<ol>
+			<ol>
+				<li>Math 对象用于执行数学任务。</li>
+				<li>Math 对象并不像 Date 和 String 那样是对象的类，因此没有构造函数 Math()。</li>
+			</ol>
+		</ol>
+	</details><br><br> 
+
+	<details>
+	<summary>算数值</summary>
+	<p>JavaScript 提供 8 种可被 Math 对象访问的算数值：</p>
+			<ul>
+				<li>Math.PI 返回圆周率（约等于3.14159）。</li>
+				<li>Math.E 返回算术常量 e，即自然对数的底数（约等于2.718）。</li>
+				<li>Math.SQRT2 返回 2 的平方根（约等于 1.414）。</li>
+				<li>Math.SQRT1_2 返回返回 1/2 的平方根（约等于 0.707）。</li>
+				<li>Math.LN2 返回 2 的自然对数（约等于0.693）。</li>
+				<li>Math.LN10 返回 10 的自然对数（约等于2.302）。</li>
+				<li>Math.LOG2E 返回以 2 为底的 e 的对数（约等于 1.443）。</li>
+				<li>Math.LOG10E 返回以 10 为底的 e 的对数（约等于0.434）。</li>
+			</ul>		
+	</details><br><br> 
+	<details>
+	<summary>数值取整</summary>
+			<ul>
+				<li>ceil(x)	   对数进行上舍入。</li>
+				<li>floor(x)	对数进行下舍入。</li>
+				<li>round(x)	把数四舍五入为最接近的整数。</li>
+			</ul>		
+	</details><br><br> 
+	<details>
+	<summary>随机数</summary>
+			<ul>
+				<li>random()	返回 0 ~ 1 之间的随机数。</li>
+				<li>注意并不包括0和1</li>	
+			</ul>		
+	</details><br><br> 
+	<details>
+	<summary>三角函数</summary>
+			<ul>
+				<li>cos(x)	返回数的余弦。</li>
+				<li>acos(x)	返回 x 的反余弦值。</li>
+				<li>sin(x)	返回数的正弦。</li>
+				<li>asin(x)	返回 x 的反正弦值。</li>
+				<li>tan(x)	返回角的正切。</li>
+				<li>atan(x)	以介于 -PI/2 与 PI/2 弧度之间的数值来返回 x 的反正切值。</li>
+			</ul>		
+	</details><br><br> 
+	<details>
+	<summary>其他方法</summary>
+			<ul>
+				<li>max(x,y)	返回 x 和 y 中的最高值。</li>
+				<li>min(x,y)	返回 x 和 y 中的最低值。</li>
+				<li>abs(x)	返回 x 的绝对值。</li>
+				<li>atan2(y,x)	返回从 x 轴到点 (x,y) 的角度（介于 -PI/2 与 PI/2 弧度之间）。</li>	
+				<li>exp(x)	返回 e 的指数。</li>
+				<li>log(x)	返回数的自然对数（底为e）。</li>
+				<li>pow(x,y)	返回 x 的 y 次幂。</li>
+				<li>valueOf()	返回 Math 对象的原始值。</li>
+			</ul>		
+	</details><br><br> 
+	
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

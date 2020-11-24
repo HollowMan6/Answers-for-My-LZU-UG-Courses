@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>7-28 对象和数组</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+		p{color: blue; font-size: 20px;margin-left: 4em}
+		li{
+			margin-left: 2em;
+			line-height: 2em;
+		}
+		details>details{
+			text-indent: 2em;
+			line-height: 2em;
+		}
+		b{
+			color: red
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第七章 零基础精讲JavaScript</h1>
+	<h1 align="center" style="font-size:1.5em;">7-28 对象和数组</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>掌握Object对象的基本用法</li>
+		<li>掌握数组的常用操作</li>
+	</ul> <hr>
+</header>
+	<details style="color: orange">
+			<summary>学习方法和授课方式的一点说明：</summary>
+		<ol>
+			<li>我们假设听课对象是没有编程基础的初学者，有基础的可以有选择的听</li>
+			<li>教学采用循序渐进的方式，比如函数，后续课程还会讲解，采用分阶段的方式，逐步加深，而不是再一个点上过渡的展开深入的讲解</li>
+			<li>阶段练习会考虑复习回顾之前的知识点如canvas何CSS3等，避免大家对学过知识点的遗忘</li>
+		</ol>
+	</details><br><br> 
+	<details>
+		<summary>对象:Object</summary>
+			<ul>
+				<li>JavaScript 中的所有事物都是对象：字符串、数值、数组、函数...</li>
+				<li>对象是属性的集合，每个属性都有名字和值，对象可以通过属性的名字存取属性的值。</li>
+				<li>对象的属性既可以存放基本数据类型也可以存放其他对象的引用值或者函数的引用值，如果存储的是函数的的引用值则该属性称为方法</li>
+				<li>对象可以看做带有属性和方法的特殊数据类型。</li>
+				<li>对象包含两个基本要素：属性-值，也称作键-值/名-值;当属性值为方法时也称作：属性(字段)和方法(函数)</li>
+				<li>对象的创建方法
+					<ul>
+						<li>通过new运算符创建</li>
+						<li>new关键字可以省略</li>
+						<li>属性可以用引号包含也可以不用</li>
+					</ul>
+				</li>
+				<li>可以用点符号访问对象属性值也可以通过数组的方式，即用["属性名称"]</li>
+				<li>可以使用delete运算符删除对象的属性。</li>
+			</ul>		
+	</details><br><br> 
+	<details>
+			<summary>数组:Array</summary>
+			<h3>数组的声明(创建)方法:</h3>
+			<ul>
+				<li>new关键字创建空数组</li>
+				<li>new关键字创建包含元素的数组</li>
+				<li>new关键字创建指定元素个数的数组</li>
+				<li>也可以使用[]直接创建数组</li>
+				<li>可以使用length属性获取数组的长度;并且可以给一个数组赋值。</li>
+			</ul>
+			<h3>数组元素的基本操作</h3>
+			<p>程序运行时通常需要读取数组中的数据，有时候需要对数据进行修改。</p>
+			<ol>
+				<li>读取数据：可以使用索引查询获取数组元素和添加数组元素</li>
+				<li>添加数据：使用push方法将新元素添加到数组尾部.</li>
+				<li>删除数据：可以使用delete运算符删除指定的元素。</li>
+				<li>删除末尾元素(更新数据)pop()方法：该方法会返回删除的元素。</li>
+				<li>删除顶端的元素 shift方法：</li>
+				<li>在数组顶端添加元素 unshift方法：返回值为新数组的长度，但不建议使用，IE会出错。</li>
+				<li>字符转换：toString方法将数组表示为字符串，该方法从Object继承而来。</li>
+				<li>join方法输出数组元素。(输出结果会转换成字符串)</li>
+				<li>数组逆序reverse：颠倒数组元素的顺序;返回值为逆序后的新数组。</li>
+				<li>数组排序 sort：
+					<ul>
+						<li>语法 数组名.sort(sortfunction)</li>
+						<li>sortfunction若省略，默认为从按照ASII字符顺序进行升序排列</li>
+						<li>sortfunction必须返回：正值、零、负值三者之一。赋值表示第一个值大于第二个值，负值反之，零则相等。</li>
+					</ul>
+				</li>
+				<li>扩充数组 concat:将多个数组的元素合并为一个新的数组。</li>
+				<li>splice方法：删除、替换、插入元素
+					<ul>
+						<li>会更改原数组</li>
+						<li>第一参数为起始位置索引</li>
+						<li>第二参数为切取元素个数</li>
+						<li>第三个参数为插入元素，可选项</li>
+					</ul>
+				</li>
+				<li>切取数组的一段元素 slice：
+					<ul>
+						<ol>
+							<li>切取部分作为新数组返回，不会对原数组改变。</li>
+							<li>第一参数为起始位置索引</li>
+							<li>第二参数为结束位置索引，注意区分splice</li>
+							<li>若省略第二个参数则直接切取到结尾</li>
+						</ol>
+					</ul>
+			</ol>
+	</details><br><br> 
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

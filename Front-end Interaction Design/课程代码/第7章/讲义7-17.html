@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>7-17 控制语句</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+		p{color: blue; font-size: 20px;margin-left: 4em}
+		li{
+			margin-left: 2em;
+			line-height: 2em;
+		}
+		details>details{
+			text-indent: 2em;
+			line-height: 2em;
+		}
+		b{
+			color: red
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第七章 零基础精讲JavaScript</h1>
+	<h1 align="center" style="font-size:1.5em;">7-17 控制语句</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>掌握控制语句的特点和用法</li>
+	</ul> <hr>
+</header>
+	<p></p>
+	<details>
+			<summary>基本概念</summary>
+			<ul>
+				<li>单行语句</li>
+				<li>复合语句</li>
+				<li>代码块</li>
+				<li>复合语句也会被当做一条语句来处理</li>
+			</ul>		
+	</details><br><br> 
+	<details>
+			<summary>if选择语句</summary>
+			<p>条件语句用于基于不同的条件来执行不同的动作。</p>
+			<ul>
+				<li>if() 语句 - 只有当指定条件为 true 时，使用该语句来执行代码</li>
+				<li>if()...else 语句 - 当条件为 true 时执行代码，当条件为 false 时执行其他代码</li>
+				<li>if()...else if()....else 语句 - 使用该语句来选择多个代码块之一来执行</li>
+				<li>if语句()中的表达式会自动转换成布尔值。</li>
+			</ul>		
+	</details><br><br> 
+
+	<details>
+			<summary>switch多条件选择语句</summary>
+			<p>使用 switch 语句来选择要执行的多个代码块之一。</p>
+			<p>语法：<br>
+				switch(n)<br>
+				{<br>
+				case 1:<br>
+				  执行代码块 1<br>
+				  break;<br>
+				case 2:<br>
+				  执行代码块 2<br>
+				  break;<br>
+				case 3:<br>
+				  执行代码块 3<br>
+				  break;<br>
+				  ......<br>
+				default:<br>
+				  n 与 所有的case 都不同时执行的代码，相当于if里的else<br>
+				}
+			</p>
+			<ul>
+				<li>工作原理：首先设置表达式 n（通常是一个变量）。</li>
+				<li>随后表达式的值会与结构中的每个 case 的值做比较。</li>
+				<li>如果存在匹配，则与该 case 关联的代码块会被执行。</li>
+				<li>请使用 break 来阻止代码自动地向下一个 case 运行。</li>
+				<li>default 关键词来规定匹配不存在时做的事情;相当于if里的else</li>
+				
+			</ul>		
+	</details><br><br> 
+
+	<details>
+			<summary>for 循环语句</summary>
+			<p>在编程中有些指令需要执行很多遍，这时候就要用到循环语句。</p>
+			<p>
+				 for 循环的语法：<br>
+					for (语句 1; 语句 2; 语句 3)<br>
+					  {<br>
+					  	被执行的代码块<br>
+					  }<br>
+			</p>
+		<ul>
+			<li>语句 1 在循环（代码块）开始前执行</li>
+			<li>语句 2 定义运行循环（代码块）的条件,如果语句 2 返回 true，则循环再次开始，如果返回 false，则循环将结束。</li>
+			<li>语句 3 在循环（代码块）已被执行之后执行</li>
+			<li>语句 1 是可选的，也就是说不使用语句 1 也可以。</li>
+			<li>如果您省略了语句 2，那么必须在循环内提供 break。否则循环就无法停下来。这样有可能令浏览器崩溃。</li>
+			<li>语句 3 也是可选的。</li>
+		</ul>
+	</details><br><br> 
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

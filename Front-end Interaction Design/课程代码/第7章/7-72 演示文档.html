@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>7-72 课堂演示</title>
+	<style type="text/css">
+		div{
+			background: green;
+			padding: 20px;
+			width: 150px;
+			height: 150px;
+			left: 15px;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1"></div>
+	<script>
+		var div1=document.getElementById('div1');
+		function myFun1(){
+			alert(event.type+'\n'+event.target.tagName)
+		}
+
+		function myFun2(){
+			alert(event.screenY)
+		}
+  
+		div1.onclick=myFun1
+		document.onclick=myFun2
+
+	</script>
+</body>
+</html>

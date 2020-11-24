@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>7-50 课堂演示</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<script>
+		function clock(){
+			var today=new Date();
+			var hours=today.getHours();
+			var minutes=today.getMinutes();
+			var seconds=today.getSeconds();
+			var str="现在时间：";
+
+			if(hours<12){
+				str+='上午';
+			}else{
+				str+='下午'
+			}
+
+			str+=hours+'时'+minutes+'分'+seconds+'秒';
+
+			// document.write(str)
+			var clock=document.getElementById('clock')
+			clock.value=str
+			
+		}
+		var timeId=setInterval('clock()',1000)
+	</script>
+	<input type="text" id="clock" size="40">
+	<input type="button" id="clock" size="40"  value="停止时间" onclick="clearInterval(timeId) ">
+</body>
+</html>
+
+

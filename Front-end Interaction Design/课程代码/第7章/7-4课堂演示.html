@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>7-4 课堂演示</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		AlertDialog dialog = new AlertDialog.Builder(this).create();
+		dialog.show();
+		WindowManager.LayoutParams params = dialog.getWindow().getAttributes();
+		params.width = 200;
+		params.height = 200 ;
+		dialog.getWindow().setAttributes(params);
+	</style>
+</head>
+<body>
+<script>
+	// var n='hello';
+	// var name='先生,';
+	// var str="\\ "
+	// alert(str);
+</script>
+<script>
+	var str1="1.hello,我是使用换行符换行的\n";
+	var str2="2.hello,我是使用回车符换行的\r";
+	var str3="3.hello,我是..................";
+	var str=str1+str2+str3;
+	alert(str)
+</script>
+
+	
+</body>
+</html>

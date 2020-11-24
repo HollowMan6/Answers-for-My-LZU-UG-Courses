@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>7-35 日期和时间</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+		p{color: blue; font-size: 20px;margin-left: 4em}
+		li{
+			margin-left: 2em;
+			line-height: 2em;
+		}
+		details>details{
+			text-indent: 2em;
+			line-height: 2em;
+		}
+		b{
+			color: red
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第七章 零基础精讲JavaScript</h1>
+	<h1 align="center" style="font-size:1.5em;">7-35 日期和时间</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>创建Date对象的实例</li>
+		<li>Date实例的字符串表示</li>
+		<li>常用方法</li>
+	</ul> <hr>
+</header>
+	<details style="color: orange">
+			<summary>基本概念</summary>
+		<ol>
+			<ol>
+				<li>Date是JavaScript的内置对象，系统在Date对象中封装了与日期和时间相关的属性和方法。</li>
+				<li>Date使用UTC1970年1月1日0时开始经过的毫秒数来存储时间。</li>
+				<li>GMT 格林尼治时间</li>
+				<li>UTC 国际协调时间</li>
+			</ol>
+		</ol>
+	</details><br><br> 
+
+	<details>
+	<summary>创建Date对象四种方法：</summary>
+			<ul>
+				<li>var date= new Date();<p><br>无参数的情况下返回值为当前时间。<br>不同浏览器显示的时间格式会有细微差异</p></li>
+				<li>var date = new Date(milliseconds);</li>
+				<li>var date = new Date(dateString);</li>
+				<li>var date = new Date(year, month, day, hours, minutes, seconds, milliseconds);</li>
+			</ul>		
+	</details><br><br> 
+	<details>
+	
+	<summary>时间相关的两个方法(这两种方法了解一下就可以了)：</summary>
+			<ul>
+				<li>Date.parse()返回1970年1月1日午夜到指定日期（字符串）的毫秒数。</li>
+				<li>Date.parse()参数支持的时间格式如下：<p>1/24/2016;<br>January 24,2016；<br>Sun Jan 24 2016 10:10:10 GMT+0800 <br>格式不正确会返回NaN</p></li>
+				<li>Date.UTC()根据世界时返回 1970 年 1 月 1 日 到指定日期的毫秒数。</li>
+				<li>Date.UTC()参数支持的时间格式如下：<p>2016,1(前两个参数是必须的);<br>2016,1,24,10,10,10 <br>数值含义为年/月/日/时/分/秒；格式不正确会返回NaN <br>月份和日期是从0开始<br>注意UTC时间和时区的换算，如东八区和标准时间是八小时时差</p></li>
+			</ul>		
+	</details><br><br> 
+	<details>
+	<summary>Date实例相关的字符串表示方法(了解即可)：</summary>
+			<ul>
+				<li>toSting()获取Date实例的字符串表示</li>
+				<li>toDateSting()获取Dater的日期部分字符串表示</li>
+				<li>toTimeSting()获取Dater的时间部分字符串表示</li>
+				<li>toLocaleString()	据本地时间格式，把 Date 对象转换为字符串。</li>
+				<li>toLocaleDateString()	根据本地时间格式，把 Date 对象的日期部分转换为字符串。</li>
+				<li>toLocaleTimeString()	根据本地时间格式，把 Date 对象的时间部分转换为字符串。</li>
+				<li>valueOf():转换为毫秒数</li>
+			</ul>		
+	</details><br><br> 
+
+	<details>
+	<summary>Date 对象方法</summary>
+	<p>通过使用针对日期对象的方法，我们可以很容易地对日期进行操作。重点掌握蓝色字体的内容，其他了解即可。</p>
+			<ul>
+				<li style="color: blue">getDate()	从 Date 对象返回一个月中的某一天 (1 ~ 31)。</li>
+				<li style="color: blue">getDay()	从 Date 对象返回一周中的某一天 (0 ~ 6)。</li>
+				<li style="color: blue">getFullYear()	从 Date 对象以四位数字返回年份。</li>
+				<li style="color: blue">getHours()	返回 Date 对象的小时 (0 ~ 23)。</li>
+				<li style="color: blue">getMilliseconds()	返回 Date 对象的毫秒(0 ~ 999)。</li>
+				<li style="color: blue">getMinutes()	返回 Date 对象的分钟 (0 ~ 59)。</li>
+				<li style="color: blue">getMonth()	从 Date 对象返回月份 (0 ~ 11)。</li>
+				<li style="color: blue">getSeconds()	返回 Date 对象的秒数 (0 ~ 59)。</li>
+				<li style="color: blue">getTime()	返回 1970 年 1 月 1 日至今的毫秒数。
+				<li>getTimezoneOffset()	返回本地时间与格林威治标准时间 (GMT) 的分钟差</li>
+				<li>getUTCDate()	根据世界时从 Date 对象返回月中的一天 (1 ~ 31)。
+				<li>getUTCDay()	根据世界时从 Date 对象返回周中的一天 (0 ~ 6)。</li>
+				<li>getUTCFullYear()	根据世界时从 Date 对象返回四位数的年份。</li>
+				<li>getUTCHours()	根据世界时返回 Date 对象的小时 (0 ~ 23)。</li>
+				<li>getUTCMilliseconds()	根据世界时返回 Date 对象的毫秒(0 ~ 999)。</li>
+				<li>getUTCMinutes()	根据世界时返回 Date 对象的分钟 (0 ~ 59)。</li>
+				<li>getUTCMonth()	根据世界时从 Date 对象返回月份 (0 ~ 11)。</li>
+				<li>getUTCSeconds()	根据世界时返回 Date 对象的秒钟 (0 ~ 59)。</li>
+				<li>parse()	返回1970年1月1日午夜到指定日期（字符串）的毫秒数。</li>
+				<li style="color: blue">setDate()	设置 Date 对象中月的某一天 (1 ~ 31)。</li>
+				<li style="color: blue">setFullYear()	设置 Date 对象中的年份（四位数字）。</li>
+				<li style="color: blue">setHours()	设置 Date 对象中的小时 (0 ~ 23)。</li>
+				<li style="color: blue">setMilliseconds()	设置 Date 对象中的毫秒 (0 ~ 999)。</li>
+				<li style="color: blue">setMinutes()	设置 Date 对象中的分钟 (0 ~ 59)。</li>
+				<li style="color: blue">setMonth()	设置 Date 对象中月份 (0 ~ 11)。</li>
+				<li style="color: blue">setSeconds()	设置 Date 对象中的秒钟 (0 ~ 59)。</li>
+				<li style="color: blue">setTime()	setTime() 方法以毫秒设置 Date 对象。</li>
+				<li>setUTCDate()	根据世界时设置 Date 对象中月份的一天 (1 ~ 31)。</li>
+				<li>setUTCFullYear()	根据世界时设置 Date 对象中的年份（四位数字）。</li>
+				<li>setUTCHours()	根据世界时设置 Date 对象中的小时 (0 ~ 23)。</li>
+				<li>setUTCMilliseconds()	根据世界时设置 Date 对象中的毫秒 (0 ~ 999)。</li>
+				<li>setUTCMinutes()	根据世界时设置 Date 对象中的分钟 (0 ~ 59)。</li>
+				<li>setUTCMonth()	根据世界时设置 Date 对象中的月份 (0 ~ 11)。</li>
+				<li>setUTCSeconds()	setUTCSeconds() 方法用于根据世界时 (UTC) 设置指定时间的秒字段。</li>
+				<li>toDateString()	把 Date 对象的日期部分转换为字符串。</li>
+				<li>toGMTString()	已废弃。请使用 toUTCString() 方法代替。</li>
+				<li>toISOString()	使用 ISO 标准返回字符串的日期格式。</li>
+				<li>toJSON()	以 JSON 数据格式返回日期字符串。</li>
+				<li>toLocaleDateString()	根据本地时间格式，把 Date 对象的日期部分转换为字符串。</li>
+				<li>toLocaleTimeString()	根据本地时间格式，把 Date 对象的时间部分转换为字符串。</li>
+				<li>toLocaleString()	据本地时间格式，把 Date 对象转换为字符串。</li>
+				<li>toString()	把 Date 对象转换为字符串。</li>
+				<li>toTimeString()	把 Date 对象的时间部分转换为字符串。</li>
+				<li>toUTCString()	根据世界时，把 Date 对象转换为字符串。</li>
+				<li>UTC()	根据世界时返回 1970 年 1 月 1 日 到指定日期的毫秒数。</li>
+				<li>valueOf()	返回 Date 对象的原始值。</li>
+			</ul>		
+	</details><br><br> 
+	
+
+
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

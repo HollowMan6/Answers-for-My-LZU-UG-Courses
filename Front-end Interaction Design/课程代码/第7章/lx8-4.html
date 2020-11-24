@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>lx8-4 图片自动播放</title>
+	<style type="text/css">
+		img{
+			border-style: groove;
+			border-width: 5px;
+			border-color: orange;
+			display:none;
+		}
+		input[type='button']{
+			width: 60px;
+			height: 60px;
+			border-radius: 30px;
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+<input type="text" id="imgUrl" value=""> <br>
+<input type="button" value="播放" onclick="autoPlay()">
+<input type="button" value="添加图片" onclick="addImage()"> <br>
+<img src="" alt=""  height="300" id="img"><br>
+
+	<script>
+		var index=0;
+		var imageArr=new Array();
+		//'../img/sc1.png','../img/sc6.png','../img/sc17.png'
+
+		function autoPlay(){
+			var imgObj=document.getElementById('img');
+			imgObj.style.display='inline'
+			if(imageArr.length<=0){
+				imgObj.setAttribute('alt','图片木有了，请添加')
+			}else{
+				index=(index+1)%imageArr.length;
+				var imgId=imageArr[index]
+				imgObj.setAttribute('src',imgId)
+			}
+			// alert('123')
+			setTimeout('autoPlay()',1000)
+		}
+
+		function addImage(){
+			var imgUrl=document.getElementById('imgUrl').value
+			imageArr.push(imgUrl)
+		}
+
+		//autoPlay()
+	</script>
+</body>
+</html>

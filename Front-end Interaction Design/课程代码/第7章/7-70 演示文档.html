@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>7-70 课堂演示</title>
+	<style type="text/css">
+		div{
+			background: green;
+			padding: 20px;
+			width: 150px;
+			height: 150px;
+			left: 15px;
+			position: relative;
+		}
+	</style>
+</head>
+<body>	
+	<div id="div1"></div>
+	<hr>
+	<input type="button" id="btn1" value="myFun1" ondblclick="myFun1()">
+	<input type="button" id="btn2" value="myFun2" > 
+	<script>
+		var div1=document.getElementById('div1');
+		var btn1=document.getElementById('btn1');
+		var btn2=document.getElementById('btn2');
+
+		function myFun1(){
+			div1.innerHTML='<h2>鼠标双击事件</h2>'
+			div1.style.border='2px solid orange'
+		}
+		function myFun2(){
+			div1.innerHTML = "你在 div 中点击了鼠标右键!";
+		    div1.style.color = "orange";
+		}
+		function myFun3() {
+		    div1.innerHTML=('<h3>鼠标按下')
+		    div1.style.color='red'
+		}
+
+		function myFun4() {
+		    div1.innerHTML=('<h3>鼠标松开')
+		    div1.style.color='red'
+		}
+		function myFun5() {
+		    div1.innerHTML=('<h3>鼠标移入')
+		    div1.style.color='red'
+		}
+		function myFun6() {
+		    div1.innerHTML=('<h3>鼠标移开')
+		    div1.style.color='red'
+		}
+
+		//鼠标按下
+		div1.onmousedown=myFun3
+		//鼠标松开
+		div1.onmouseup=myFun4
+		//鼠标移入
+		div1.addEventListener('mouseover',myFun5)
+		//鼠标移开
+		div1.addEventListener('mouseout',myFun6)
+		//鼠标右键单击事件
+		div1.addEventListener('contextmenu',
+			function (){
+			div1.innerHTML = "你在 div 中点击了鼠标右键!";
+		    div1.style.color = "orange";
+		})
+	</script>
+</body>
+</html>

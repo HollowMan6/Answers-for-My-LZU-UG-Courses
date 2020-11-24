@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>7-73 课堂演示</title>
+	<style type="text/css">
+		div{
+			background: green;
+			width: 200px;
+			height: 200px;
+			left: 15px;
+			color: red;
+		}
+		input{
+			width: 200px;
+			height: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1"></div>
+	<input id="inp" type="text" size="40" onkeypress="myFunction(event)">
+	<script>
+	var inp=document.getElementById('inp')
+	var div1=document.getElementById('div1');
+		function myFun1(e){
+			var e=e?e:event //事件对象的兼容
+			// var e=e||event
+			// alert(e.screenY)
+			alert(event.clientY)
+		}
+  
+		// div1.onclick=myFun1
+		//document.onclick=myFun1
+
+		function myFun2(e) {
+			var e=e||event
+			// var x=e.keyCode
+			var x=e.which
+			// var x = event.which || event.keyCode;
+			if (x){div1.innerHTML = "您按键的Unicode编码为" + x +'<br>';}
+		}
+		inp.onkeydown=myFun2
+		// inp.onkeypress=myFun2
+
+	</script>
+	
+</body>
+</html>

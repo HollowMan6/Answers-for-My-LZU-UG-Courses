@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>lx9-4</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		div{
+			background: orange;
+			width: 100px;
+			height: 100px;
+			padding: 30px;
+			border-radius: 200px;
+			position: absolute;
+			background-image: url(../img/sc16.png);
+		}
+	</style>
+</head>
+<body>
+	<div id="ball" style="top:50px;left: 50px"></div>
+	<script>
+		var key={
+			W:87,
+			S:83,
+			A:65,
+			D:68
+		}
+		document.onkeydown=keymove
+		// document.onmousemove=keymove
+
+		function keymove(e){
+			var ball=document.getElementById('ball')
+			var top=parseInt(ball.style.top);
+			var left=parseInt(ball.style.left);
+			switch(e.keyCode){
+				case key.W:
+				ball.style.top=top-50+'px'
+				break;
+				case key.S:
+				ball.style.top=top+50+'px'
+				break;
+				case key.A:
+				ball.style.left=left-50+'px'
+				break;
+				case key.D:
+				ball.style.left=left+50+'px'
+				break;
+			}
+		}
+
+	</script>
+</body>
+</html>

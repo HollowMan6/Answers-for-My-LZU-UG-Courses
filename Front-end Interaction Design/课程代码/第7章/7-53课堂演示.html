@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>7-53 课堂演示</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<script>
+		var guojing=new Object();
+			guojing.name="郭靖"
+			guojing.HP=500;
+			guojing.gj=90;
+			guojing.sd=60;
+			guojing.skill=new Array('亢龙有悔','飞龙在天','见龙在田','鸿渐于陆','潜龙勿用')
+
+		var ouyang=new Object();
+			ouyang.name='欧阳锋';
+			ouyang.HP=800;
+			ouyang.gj=100;
+			ouyang.sd=40;
+			ouyang.skill=new Array('灵蛇棍法','凤凰神力','颠倒阴阳','逆转静脉','天蟾神功')
+
+		function whoGjwho(a,b){
+	  		return a.sd*Math.random()>b.sd*Math.random()?[a,b]:[b,a]
+	  	}
+
+	  	
+
+	  	// alert(Fight[0].name)
+
+	  	function game(){
+	  		var skillIndex=Math.floor(Math.random()*5)
+	  		var Fight=whoGjwho(guojing,ouyang);
+	  		var attacker=Fight[0]
+			var defender=Fight[1]
+			var damage=attacker.gj*Math.random()-defender.gj*Math.random();
+				if(damage<=0){
+						damage=0
+					}else{
+						damage=Math.ceil(damage);
+					}
+			defender.HP-=damage;
+
+			document.write(attacker.name+"使用了一招"+attacker.skill[skillIndex]+'<br>')
+			document.write(defender.name+"损失了"+damage+'点HP'+'<br>')
+
+			if (defender.HP>0) {
+				document.write(defender.name+"的HP:"+defender.HP+'<br>'+attacker.name+'的HP:'+attacker.HP+'<hr>')	
+			}else{
+				document.write(defender.name+'战败了'+'<br>'+attacker.name+'取得了胜利！'+'<br>')
+				alert(attacker.name+'取得了胜利！'+'Gmame Over!')
+				clearInterval(zd)
+			}
+
+	  	}
+	  var zd=setInterval('game()',50)
+	</script>
+</body>
+</html>
+
+

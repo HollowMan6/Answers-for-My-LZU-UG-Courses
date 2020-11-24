@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>7-64 课堂演示</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		div{
+			margin: 15px auto;
+			background: orange;
+			width: 300px;
+			height: 240px;
+			text-align: center;
+			padding: 15px;
+		}
+		input{
+			margin: 10px 10px;
+			padding: 5px;
+		}
+	</style>
+</head>
+<body>
+	<div>
+		<h3>计算圆的面积</h3>
+		 <label for="radius">半径:</label>
+		 <input type="text" id="radius" ><br>
+		 <label for="area">面积:</label>
+		 <input type="text" id="area" ><br><br>
+		 <input type="button" id="js" value="计算" onclick="show()">
+		 <input type="button" id="cl" value="清空" onclick="cl()">
+	</div>
+	<script>
+		function carea(r){
+			var s=Math.PI*r*r;
+			return s;
+		}
+
+		function show(){
+			var radius=document.getElementById('radius').value;
+			var area=carea(radius);
+
+			document.getElementById('area').value=area
+		}
+
+		function cl(){
+			document.getElementById('radius').value=''
+			document.getElementById('area').value=''
+		}
+	</script>
+</body>
+</html>
+
+

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>7-40 字符串对象</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+		p{color: blue; font-size: 20px;margin-left: 4em}
+		li{
+			margin-left: 2em;
+			line-height: 2em;
+		}
+		details>details{
+			text-indent: 2em;
+			line-height: 2em;
+		}
+		b{
+			color: red
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第七章 零基础精讲JavaScript</h1>
+	<h1 align="center" style="font-size:1.5em;">7-40 字符串对象</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>掌握字符串的常用操作方法</li>
+	</ul> <hr>
+</header>
+	<details style="color: orange">
+			<summary>字符串对象</summary>
+		<ol>
+				<li>字符串是非常重要的数据类型，除了基本字符串外，JavaScript还提供了字符串的引用类型--字符串对象。</li>
+				<li>字符串对象提供了字符串检索、替换、连接等方法...</li>
+				<li>可以通过new 关键字创建字符串对象<br> var str=new String()</li>
+				<li>length 属性返回字符串的长度(字符数)。</li>
+		</ol>
+	</details><br><br> 
+	<details>
+			<summary>字符串与数字的转换</summary>
+		<ol>
+			<li>toString()	返回字符串。可以将数值转换成字符串。</li>
+			<li>如果需要获取数值的二进制、八进制、十六进制的字符串表示，则可以给toString()传递一个表示进制的的整数</li>
+			<li>parseInt()函数可以将字符串转换成整数</li>
+			<li>parseFloat()函数可以将字符串转换浮点数</li>
+			<li>Number()函数可以将任意类型的值转换数值。</li>
+		</ol>
+	</details><br><br> 
+	<details>
+			<summary>字符串对象的常用方法</summary>
+		<ol>
+			<li>charAt()	返回在指定位置的字符。</li>
+			<li>charCodeAt()	返回在指定的位置的字符的 Unicode 编码。</li>
+			<li>concat()	连接字符串。</li>
+			<li>slice(n,m)	提取字符串n到m之间的片断(不包括m位置的字符串)，并在新的字符串中返回被提取的部分。</li>
+			<li>substring()	提取字符串中两个指定的索引号之间的字符。大多数情况和上一个作用相同，当参数为负值时会有不同，但这种情况较少用，不做讨论，有兴趣的话自己测试或查下资料</li>
+			<li>substr(n,m)	从起始索引号提取字符串中指定数目的字符。</li>
+			<li>split()	把字符串分割为字符串数组。</li>
+			<li>indexOf()	检索字符串,返回某个指定的字符串值在字符串中首次出现的位置。注意，如果查找不到会返回 -1</li>
+			<li>lastIndexOf()	从后向前搜索字符串。</li>
+			<li>toLowerCase()	把字符串转换为小写。</li>
+			<li>toUpperCase()	把字符串转换为大写。</li>
+			<li>match()	找到一个或多个正则表达式的匹配。(正则表达式后续课程会讲) <br>该方法会返回一个数组，数组中包含了所有符合条件的文本。</li>
+			<li>replace()	替换与正则表达式匹配的子串，并返回替换后的字符串，注意原字符串不会改变</li>
+			<li>search()	检索与正则表达式相匹配的值。查找与参数模式相匹配的文本，并返回该文本的位置。若无则返回null(indexOf()会返回-1).与indexOf()相似。</li>
+			<li>split()	    把字符串分割为字符串数组。</li>
+			<li style=" color: red ">......</li>
+
+			<p>需要注意的是，JavaScript 的字符串是不可变的（immutable），String 类定义的方法都不能改变字符串的内容。像 String.toUpperCase() 这样的方法，返回的是全新的字符串，而不是修改原始字符串。</p>
+		</ol>
+	</details><br><br> 
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

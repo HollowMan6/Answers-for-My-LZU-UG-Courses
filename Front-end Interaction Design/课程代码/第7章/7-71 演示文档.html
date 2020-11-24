@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>7-71 课堂演示</title>
+	<style type="text/css">
+		div{
+			background: green;
+			padding: 20px;
+			width: 150px;
+			height: 150px;
+			left: 15px;
+		}
+	</style>
+	<script type="text/javascript">
+		// window.onload=function (){
+		// 	myFun4()
+
+		// }
+	</script>
+</head>
+<body onload=myFun4()>
+	<div id="div1"></div>
+	<hr>
+	<input type="button" id="btn1" value="myFun1">
+	<input type="button" id="btn2" value="myFun2"> 
+	<input type="button" id="btn3" value="myFun3"> 
+	<script>
+		var div1=document.getElementById('div1');
+		var body=document.getElementsByTagName('body')[0]
+		function myFun1(){
+			div1.innerHTML="这是onkeydown事件"
+		}
+
+		function myFun2(){
+			div1.innerHTML="这是onkeyup事件"
+		}
+
+		function myFun3(){
+			div1.innerHTML="这是onkeypress事件"
+		}
+		function myFun4(){
+			// div1.innerHTML="页面加载完毕"
+			alert('页面加载完毕')
+		}
+		body.onkeydown=myFun1 
+		body.onkeyup=myFun2 
+		body.onkeypress=myFun3
+
+	</script>
+</body>
+</html>

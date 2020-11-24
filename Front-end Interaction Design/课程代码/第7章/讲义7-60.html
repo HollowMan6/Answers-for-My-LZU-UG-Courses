@@ -1,0 +1,179 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>7-60 HTML文档对象(DOM)</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		h4{
+			text-indent: 4em
+		}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+		p{color: blue; font-size: 20px;margin-left: 4em}
+		li{
+			margin-left: 2em;
+			line-height: 2em;
+		}
+		details>details{
+			text-indent: 2em;
+			line-height: 2em;
+		}
+		b{
+			color: red
+
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第七章 零基础精讲JavaScript</h1>
+	<h1 align="center" style="font-size:1.5em;">7-60 HTML文档对象(DOM)</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>掌握常用的浏览器对象操作方法</li>
+	</ul> <hr>
+</header>
+	<p></p>
+	<details style="color: orange">
+			<summary>基本概念</summary>
+			<ul>
+				<li>每个载入浏览器的 HTML 文档都会成为 Document 对象。</li>
+				<li>Document 对象使我们可以从脚本中对 HTML 页面中的所有元素进行访问。</li>
+				<li>Document 对象是 Window 对象的一部分</li>
+				<li>当浏览器打开一个HTML文档时，浏览器解析HTML文档的标记，并创建表示这些标记的对象，这些对象就是HTML文档对象。</li>
+				<li>文档对象即Document 对象，指的是一回事。</li>
+				<li>
+					<img src="../img/HTMLDOM.png" alt="">
+				</li>
+			</ul>
+	</details><br><br> 
+		
+	<details>
+			<summary>DOM常用方法</summary>
+			<h4>获取HTML文档对象的方法</h4>
+			<ul>
+				<li>getElementById()	返回对拥有指定 id 的第一个对象的引用。</li>
+				<li>getElementsByName()	返回带有指定名称的对象集合。</li>
+				<li>getElementsByTagName()	返回带有指定标签名的对象集合。</li>
+			</ul>
+			<h4>其他方法</h4>
+			<ul>
+				<li>write()	向文档写 HTML 表达式 或 JavaScript 代码。</li>
+				<li style="color: orange">温馨提示：文档加载之后使用docunment.write()会覆盖原文档. </li>
+			</ul>
+	</details><br><br> 
+
+	<details>
+			<summary> 改变 HTML 元素的样式</summary>
+			<p>在 HTML DOM 中，Element 对象表示 HTML 元素。</p>
+			<p>HTML DOM 允许 JavaScript 改变 HTML 元素的样式。</p>
+			<ul>
+				<li>获取元素的内容和标签名称
+					<ul>
+						<li>element.innerHTML	设置或返回元素的内容。</li>
+						<li>element.tagName	    返回元素的标签名。</li>
+					</ul>
+				</li>
+				<li>HTML属性的获取
+					<ul>
+						<li>element.id	设置或返回元素的 id。</li>
+						<li>element.className	设置或返回元素的 class 属性。</li>
+						<li>element.title	设置或返回元素的 title 属性。</li>
+						<li>......</li>
+					</ul>
+				</li>
+				<li><h4>改变CSS样式</h4>
+					<ul>
+						<li>通过style属性操作内联式<p>需要将下划线去掉并将第二个单词首字母大写，比如：<br> backgroundColor/backgroundImage/borderColormarginLeft......</p></li>
+						<li>通过className <p>先在样式表里class的样式，然后通过JS修改元素class</p></li>
+					</ul>
+				</li>
+				<li>
+					<h5>操作HTML文档对象的属性</h5>
+					<ul>
+						<li>element.getAttribute()	返回元素节点的指定属性值。</li>
+						<li>element.setAttribute()	把指定属性设置或更改为指定值。</li>
+						<li>element.removeAttribute()	从元素中移除指定属性。</li>
+					</ul>
+				</li>
+				
+			</ul>
+	</details><br><br> 
+
+	<details>
+			<summary>创建HTML文档对象</summary>
+			<p>javascript中可以通过createElement()方法创建一个元素(节点)。</p>
+			<ul>
+				<li>createElement()	创建元素节点。</li>
+				<li>element.appendChild()	向元素添加新的子节点，作为最后一个子节点。</li>
+				<li>element.removeChild()	从元素中移除子节点。</li>
+					
+			</ul>
+	</details><br><br> 
+
+	<details>
+			<summary>DOM节点</summary>
+			<p>将文档结构相像成一棵树，每一个部分（元素，属性，内容）都可以看做一个节点。<br>根据一个节点可以通过关系找到其他节点</p>
+			<ul>
+				<li>
+					<h4>节点的属性：(名称、类型、值)</h4>
+					<ol>
+						<li>element.nodeName	返回元素的名称。与element.tagName作用相同<br>
+							文本节点的名称为:#text;文档节点的名称为:#document.
+						</li>
+						<li>element.nodeType	返回元素的节点类型。
+							<p>如果节点是元素节点，则 nodeType 属性将返回 1。</p>
+							<p>如果节点是属性节点，则 nodeType 属性将返回 2。</p>
+							<p>如果节点是文本节点，则 nodeType 属性将返回 3。</p>
+						</li>
+						<li>element.nodeValue	设置或返回元素值。
+							<ul>
+								<li>文本节点的nodeValue为文本内容</li>
+								<li>属性节点的nodeValue为属性值</li>
+								<li>元素节点无nodeValue</li>
+							</ul>
+						</li>
+					</ol>
+				</li>
+				<li>
+					<h4>子元素相关(可以类别CSS中的虚拟类别选择器)</h4>
+					<ol>
+						<li>element.parentNode	返回元素的父节点。</li>
+						<li>element.childNodes	返回元素子节点的 NodeList。类似CSS中的子选择器</li>
+						<li>element.children   返回元素的子元素,该属性只返回元素节点。</li>
+						<li>element.firstChild和element.firstElementChild	返回元素的首个子元素。类似CSS中的：e:first-child</li>
+						<li>element.lastChild 和element.lastElementChild	返回元素的最后一个子元素。类似CSS中的： e:last-child</li>
+						<li>element.replaceChild()	替换元素中的子节点。</li>
+						<li>element.parentNode	返回元素的父节点。</li>
+					</ol>
+				</li>
+				
+				<li><h4>同级兄弟元素相关(可以类别CSS中的兄弟选择器)</h4>
+					<ol>
+						<li>element.nextSibling element.previousElementSibling	返回位于相同节点树层级的前一个元素。</li>
+						<li>element.nextSibling element.nextElementSibling	    返回位于相同节点树层级的下一个节点。类似CSS中的直接相邻选择器: h1+h2</li>
+					</ol>
+				</li>
+				<li><h4>属性节点(了解即可)</h4>
+					<ul>
+						<li>element.attributes 返回元素属性的 NamedNodeMap。</li>
+					</ul>
+				</li>
+				<li>element.insertBefore()	在指定的已有的子节点之前插入新节点。</li>
+				<li>element.replaceChild()	替换元素中的子节点。</li>
+				<li>.......</li>
+			</ul>
+	</details><br><br> 
+
+
+	
+
+	
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

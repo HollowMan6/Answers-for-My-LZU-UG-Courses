@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>7-8 数据类型</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+		p{color: blue; font-size: 18px;text-indent: 2em}
+		li{
+			margin-left: 2em;
+			line-height: 2em;
+		}
+		details>details{
+			text-indent: 2em;
+			line-height: 2em;
+		}
+		b{
+			color: red
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第七章 零基础精讲JavaScript</h1>
+	<h1 align="center" style="font-size:1.5em;">7-8 数据类型</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>掌握常用的数据类型</li>
+		<li>使用typeof运算符查询数据类型</li>
+	</ul> <hr>
+</header>
+	<p>数据类型包括:字符串、数字、布尔、数组、对象、Null、Undefined</p>
+	<p>
+		关于数据类型的分类，不同书籍的分类方法有所不同，有的划分为复杂数据类型和简单数据类型，也有的划分为原始数据类型和复合数据类型；
+	</p>
+	<p>
+		有的书籍将函数作为一种特殊的数据类型，有的认为函数不算是数据类型；
+	</p>
+	<p>
+		本节课程的讲解将重点介绍数值和字符串，要求大家掌握；布尔型的演示涉及的后边章节内容，暂时要求了解；至于数组和对象，暂时先做简要了解，知道即可，将在后续章节做进一步的深入学习。
+	</p>
+	<details>
+			<summary>typeof运算符</summary>
+			<ul>
+				<li>typeof运算符可以查询数据类型</li>
+				<li>其返回可能值有:undefined,boolean,number,string、object以及function.</li>	
+			</ul>		
+	</details><br><br>
+
+	<details>
+			<summary>字符串型数据String：字符串是存储字符的变量。</summary>
+			<ul>
+				<li>常量字符串：如 "JavaScript",'HTML5' </li>
+				<li>变量字符串：如：var text="HTML5视频教程"</li>
+				<li>可以使用"+"进行字符串的连接。</li>
+				<li>在 JavaScript 中，字符串使用单引号或者双引号来起始或者结束。那么如何输出单引号或者双引号呢？就要用到转义字符</li>
+				<li>
+					JavaScript中常用的转义字符
+					<ul>
+						<li>换行符：\n</li>
+						<li>回车符：\r</li>
+						<li>退格符: \b</li>
+						<li>反斜杠: \\</li>
+						<li>双引号: \"</li>
+						<li>......</li>
+					</ul>
+				</li>
+				<li>温馨提示：部分转义字符在输出为HTML文档流时不发生作用。<br>转义字符非常多，这里仅仅介绍几种常用的，其他的以后用到的时候再说，大家也可以自己查阅相关资料去了解。</li>	
+			</ul>		
+	</details><br><br>
+	<details>
+			<summary>数值型数据Number：</summary>
+			<ul>
+				<li>JavaScript 只有一种数字类型。数字可以带小数点，也可以不带。</li>
+				<li>极大或极小的数字可以通过科学（指数）计数法来书写：3e4</li>
+				<li>数值可以通过运算符进行计算。</li>
+				<li>浮点数值的最高精度是17位小数，但是在进行算术计算时其精度远远不如整数。例如，0.1加0.2的结果不是0.3，
+					而是0.30000000000000004。这个舍入误差会导致无法测试特定的浮点数值。
+				</li>
+				<li style="color: orange">数字可以写成十进制、八进制、十六进制。
+					<ul>
+						<li>八进制在js中表示是第一位一定要是0，后面就是八进制字数序列（0~7）</li>
+						<li>十六进制字面量前两位必须是0x,后面跟十六进制数字（0~9及A~F）。字母A~F不区分大小写。</li>
+				</li>
+					</ul>
+				<li>温馨提示：科学（指数）计数法、八进制、十六进制表示的数字在输出时统统会转换成十进制。</li>
+			</ul>		
+	</details><br><br>
+
+	<details>
+			<summary>布尔型数据Boolen:</summary>
+			<ul>
+				<li>布尔型数据boolen:只能有两个值：true 或 false。</li>
+				<li>将各种类型的值转化成Boolean类型的规则如下：
+					<ul>
+						<li>Number:任意非0的数值为true,0值和NaN为"false"。</li>
+						<li>String:所有的非空字符串转化为 true;""（空字符串）转化成false</li>
+						<li>Object的任何对象都会转化为 true;</li>
+						<li>在javascript中，只要逻辑表达式不返回undefined不返回null，就都是真的。</li>
+					</ul>
+				</li>
+			</ul>		
+	</details><br><br>
+
+	<details>
+			<summary>Undefined</summary>
+			<ul>
+				<li>这是一个很有意思的数据类型，因为它的值只有一个，那就是undefined。</li>
+				<li>在申明变量时如果没有将变量赋值的话这个变量也是属于Undefined类型的。。</li>
+				<li> 如果一个变量没有申明就直接去访问解释器会报错误信息，但是这样的变量如果使用typeof返回的结果也是"undefined"。。</li>
+			</ul>		
+	</details><br><br>
+
+	<details>
+			<summary>Null:空值</summary>
+			<ul>
+				<li>Null也是一个只有一个值得数据类型，它的值就是null，任何变量只要给其赋值为null的话这个变量的数据类型就是Null类型。</li>
+				<li>可以通过将变量的值设置为 null 来清空变量。</li>
+				<li>null和undefined的区别：<br> null 已定义，并初始化为null;undefined:未定义，或者未初始化 。</li>
+			</ul>		
+	</details><br><br>
+
+	<details>
+			<summary>数组Array:</summary>
+			<ul>
+			    <li>可以通过数组的下标来访问数组的元素。</li>
+			    <li>数组元素的顺序从0开始</li>
+			</ul>		
+	 </details><br><br>
+
+	 <details>
+			<summary>对象Object:</summary>
+			<ul>
+				<li>在javascript中，所有的对象都继承自Object对象。</li>
+				<li>对象由花括号分隔。在括号内部，对象的属性以名称和值对的形式 (name : value) 来定义。</li>
+				<li>对象没有赋值的属性，该属性的值为undefined。</li>
+				<li>对象对于初学者来说不是很容易理解，在后续课程中再详细讲解，这里大家先记住有这种数据类型即可。</li>
+			</ul>		
+	</details><br><br>
+
+<!-- 	<details>
+			<summary style="color: orange">温馨提示：注意事项</summary>
+			<ul>
+				<li>在一个HTML文档使用script标签嵌入多个JS语句的时候，这几个语句之间是相通的,或者说是有关联的。</li>
+				<li>命名规范:</li>
+					<ul>
+						<li>必须以字母、下划线或者美元符号开始，不能使用特殊符号。</li>
+						<li>命名不能是系统的关键字：比如new ,if,class......</li>
+						<li>区分大小写</li>
+						<li>命名最好用有意义的名称。比如说name,people......</li>
+					</ul>
+			</ul>		
+	</details><br><br> -->
+
+<!-- 	<details>
+			<summary>注意事项：</summary>
+			<ol>
+
+			</ol>		
+	</details> -->
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

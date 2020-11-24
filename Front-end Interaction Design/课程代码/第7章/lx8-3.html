@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>会员等级查询</title>
+</head>
+<style type="text/css">
+	section{
+		background: rgba(150,50,25,0.25);
+		width: 300px;
+		height: 250px;
+		margin: 100px auto;
+		font-size: 24px;
+		border-radius: 15px;
+		padding: 15px;
+	}
+
+	p{
+		font-size: 16px;
+		text-indent: 2em;
+		color: green;
+		text-align: 2em;
+		margin-top: 30px;
+	}
+</style>
+<body>
+	<section>
+	<h4>会员等级查询</h4>
+	<input type="number" id="point" placeholder="请入您的积分：">
+	<input type="button" value="会员等级查询" onclick="checkpoints()">
+	<p>
+		本俱乐部会员根据会员积分划分为不同的等级，享有相应的权限！
+	</p>
+	</section>
+
+	<script>
+		function check(points){
+			var res='',level=0;
+			if (points>=900) {
+				level=1
+			}else if(points<900&&points>=600){
+				level=2
+			}else if(points<600&&points>=400){
+				level=3
+			}else if(points<400&&points>=200){
+				level=4
+			}else if(points<200){
+				level=5
+			}
+			switch(level){
+				case 1:res='黄金会员';break;
+				case 2:res='专家会员';break;
+				case 3:res='资深会员';break;
+				case 4:res='普通会员';break;
+				case 5:res='新手会员';break;
+			}
+			return res;
+		}
+
+		function checkpoints(){
+		var x=document.getElementById('point').value
+		var str='';
+		if(x>=0){
+			res=check(x);
+			alert('您的会员等级为:'+res);
+		}else{
+			alert('请重新输入您的积分')
+		}
+	}
+
+	</script>
+
+</body>
+</html>

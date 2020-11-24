@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>乘法口诀</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<script>
+		var str="";
+		var arr=['一','二','三','四','五','六','七','八','九','十'];
+		for(var i=1;i<10;i++){
+			for(var j=1;j<=i;j++){
+				var str0='';
+				if(i*j<10){
+					str0='得'+arr[i*j-1]
+				}else if(i*j==10){
+					str0='一十'
+				}else if (i*j<20) {
+					str0='十'+arr[i*j%10-1]
+				}else if (i*j%10==0) {
+				 	str0=arr[Math.floor(i*j/10)-1]+'十'
+				}else{
+				 	str0=arr[Math.floor(i*j/10)-1]+'十'+arr[i*j%10-1]
+				 }
+				str+=arr[j-1]+arr[i-1]+str0+"&nbsp&nbsp&nbsp&nbsp"
+			}
+			str+='<br/><br/>'
+		}
+		document.write(str)
+	</script>
+	
+</body>
+</html>

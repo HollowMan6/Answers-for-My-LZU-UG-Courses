@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>第七章 零基础精讲JavaScript</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		h4{
+			text-indent: 4em
+		}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+		p{color: blue; font-size: 20px;margin-left: 4em}
+		li{
+			margin-left: 2em;
+			line-height: 2em;
+		}
+		details>details{
+			text-indent: 2em;
+			line-height: 2em;
+		}
+		b{
+			color: red
+
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第七章 零基础精讲JavaScript</h1>
+	<h1 align="center" style="font-size:1.5em;">7-81 课程小结</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>理解全局对象</li>
+		<li>变量的作用范围</li>
+	</ul> <hr>
+</header>
+	<details>
+			<summary>理解全局对象Global</summary>
+			<ul>
+				<li>全局属性和函数可用于所有内建的 JavaScript 对象。全局对象是所有全局方法的拥有者，用来统一管理全局方法，全局方法也就是全局函数。
+					<ul>
+						<li>parseInt() 函数可解析一个字符串，并返回一个整数。</li>
+						<li>parseFloat()	解析一个字符串并返回一个浮点数。
+							<p>注意:可以将数字开头的字符串转换成数值，但是不可以转换非数字开头的字符串<br>
+								如果指定的字符串中包含非数字字符，只要字符串开头的一部分符合整数的转换规则，则parseInt()函数会将这一部分字符串转化为整数(从字符串开头，直到遇到非数字字符为止)。如果字符串以非数字字符开头，则返回NaN。
+							</p>
+						</li>
+						<li>isNaN(x)函数用于检查其参数是否是非数字值。NaN 即 Not a Number 
+							<p>可用于判断其参数是否是 NaN，该值表示一个非法的数字</p>
+							<p>如果 x 是特殊的非数字值 NaN（或者能被转换为这样的值），返回的值就是 true。如果 x 是其他值,则返回 false。</p>
+							<p>isNaN() 函数通常用于检测 parseFloat() 和 parseInt() 的结果，以判断它们表示的是否是合法的数字。当然也可以用 isNaN() 函数来检测算数错误，比如用 0 作除数的情况。</p>
+						</li>
+						<li>......</li>
+					</ul>
+				</li>
+			</ul>
+	</details><br><br> 
+	<details>
+			<summary>变量的作用范围</summary>
+			<ul>
+				<li>作用域是指有效范围，JS变量的作用域有全局和局部之分</li>
+				<li>"全局变量"：申明在函数之外的变量</li>
+				<li>"局部变量"：申明在函数体中的变量，并且只能在当前函数体内访问</li>
+				<li>如果函数内部有定义变量，即使在定义之前输出但会先执行后面定义语句，然后判断输出结果</li>
+				<li>
+					<p>全局变量的优点：可以减少变量的个数，减少由于实际参数和形式参数的数据传递带来的时间消耗。</p>
+					<p>全局变量缺点:使函数的代码可读性降低。由于多个函数都可能使用全局变量，函数执行时全局变量的值可能随时发生变化，对于程序的查错和调试都非常不利。</p>
+				</li>
+			</ul>
+	</details><br><br> 
+	<details style="color: orange">
+			<summary>结束语</summary>
+			<ul>
+				<li>在本套课程中详细讲解了JavaScript的基础知识，还有如下内容没有讲解道：
+                    <ul>
+                    	<li>函数的高级部分</li>
+                    	<li>cookie对象与存储</li>
+                    	<li>Ajax应用</li>
+                    	<li>JS面向对象</li>
+                    	<li>JQ框架的使用</li>
+                    	<li>......</li>
+                    </ul>
+				</li>
+				<li>
+					<p>
+						在您学习到这节课的时候，我想我们的第二套课程《HTML5进阶课程第一季》也已经快要与大家见面了，在进阶课程中我们会进一步的为大家详解JS的其他知识。
+					</p>
+				</li>
+			</ul>
+	</details><br><br> 
+
+
+
+
+
+	
+
+	
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

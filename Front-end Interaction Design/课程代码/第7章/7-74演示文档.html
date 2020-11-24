@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>7-74 课堂演示</title>
+	<style type="text/css">
+		div{
+			background: green;
+			width: 200px;
+			height: 200px;
+			left: 15px;
+			color: red;
+		}
+		input{
+			width: 200px;
+			height: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1"></div>
+	<input id="inp" type="text" size="40" onkeypress="myFunction(event)">
+	<script>
+	var inp=document.getElementById('inp')
+	var div1=document.getElementById('div1');
+	function myFun1(event){
+			if(event.ctrlKey==1){
+				div1.style.background='orange'
+				div1.innerHTML=('您按下了ctrl键')
+			}else{
+				div1.style.background='blue'
+				div1.innerHTML=('您按下的不是ctrl键')
+			}
+		}
+	//document.onkeydown=myFun1
+	function myFun2(event)
+		  {
+		    if (event.button==0){
+		      alert("您点击了左键")
+		    }
+		    else if(event.button==2){
+		      alert("您点击了右键")
+		    }else{
+		    	alert("您点击了中键，也就是鼠标的滚轮")
+		    }
+		  }
+		  // document.onmousedown=myFun2
+		  document.onclick=myFun2
+	 function myFunction(){
+	 	event.preventDefault()
+		alert('123')
+	}
+	document.oncontextmenu=myFunction
+	
+	</script>
+	
+</body>
+</html>

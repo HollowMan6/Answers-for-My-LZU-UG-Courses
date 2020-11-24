@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>7-81 课堂演示</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<script>  
+		// var str1='100px'
+		// var str1='px100'
+		// var s=parseInt(str1)
+		//alert(s)
+		//alert(isNaN(s))
+		// alert(isNaN(0));
+		//alert(isNaN("8"));
+		//alert(isNaN("hello"))
+		//alert(isNaN(undefined))
+
+		 var a =1; 
+		 function test(){
+		 	//alert(a); //a为undefined! 这个a并不是全局变量
+
+		 	a=4 
+
+		 // alert(a); //a为4, 这里的a是局部变量
+		 	var a;
+		 //alert(a);
+		 alert(window.a); ////a为1,这里的a是全局变量
+
+		 }
+
+		 test()
+		 //alert(a); //a为1,这里的a是全局变量
+
+	</script> 
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>7-47 课堂演示</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>	
+	<script>
+		// document.write('浏览器宽度：'+window.innerWidth+'<br>')
+		// document.write('浏览器高度：'+window.innerHeight+'<br>')
+	</script>
+	<script>
+		function btnforward(){
+			// history.forward();
+			 history.go(1)
+		}
+		// alert(history.length)
+	</script>
+	<a href="cs.html" target="_self">访问测试页面</a><br>
+	<input type="button" value="下一页" onclick="btnforward()">
+</body>
+</html>

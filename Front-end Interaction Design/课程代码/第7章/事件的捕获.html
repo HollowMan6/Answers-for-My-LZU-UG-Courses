@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>事件捕获</title>
+	<style type="text/css">
+		div{
+			background: green;
+			padding: 50px;
+			float: left;
+		}
+		#div2{
+			background: blue;
+			float: left;
+		}
+		#div3{
+			background: red;
+			width: 200px;
+			height: 200px
+		}
+	</style>
+</head>
+<body>
+	<div id="div1">
+		<div id="div2" >
+			<div id="div3"></div>
+		</div>
+	</div>
+	<script>
+		function myFun1(){
+			alert('green')
+			// event.stopPropagation()
+		}
+
+		function myFun2(){
+			alert('blue')
+			// return false;
+			// event.stopPropagation()
+		}
+		function myFun3(){
+			alert('red')
+			// event.stopPropagation()
+		}
+		var div1=document.getElementById('div1')
+		var div2=document.getElementById('div2')
+		var div3=document.getElementById('div3')
+		div1.addEventListener('click',myFun1,true)
+		div2.addEventListener('click',myFun2,true)
+		div3.addEventListener('click',myFun3,true)
+	</script>
+</body>
+</html>

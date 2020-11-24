@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>7-63 课堂演示</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>	
+	<ul id="ul1">
+		<li>列表项1</li>
+		<li>列表项2</li>
+		<li>列表项3</li>
+		<li>列表项4</li>
+	</ul>
+	<input type="text" id="input1" value='测试文本框'>
+
+	<div id="div1">测试文本<em>倾斜效果</em>结束啦</div>
+
+	<hr>
+	<input type="button" value="myFun1" onclick="myFun1()">
+	<input type="button" value="myFun2" onclick="myFun2()">
+	<input type="button" value="myFun3" onclick="myFun3()">
+	<input type="button" value="myFun4"  onclick="myFun4()"> 
+	<input type="button" value="myFun5"  onclick="myFun5()"> 
+	<script>
+		var div1=document.getElementById('div1')
+		var input1=document.getElementById('input1')
+		var ul1=document.getElementById('ul1')
+		function myFun1(){
+			 ul1.firstElementChild.style.background='red'
+			 ul1.lastElementChild.style.background='green'
+		}
+		function myFun2(){
+			 // ul1.firstElementChild.nextElementSibling.style.background='red'
+			 // ul1.lastElementChild.previousElementSibling.style.background='green'
+			  if(ul1.firstElementChild){
+			 	ul1.firstElementChild.nextElementSibling.style.background='red'
+			 }else{
+			 	ul1.firstChild.nextSibling.style.background='red'
+			 }
+			
+		}
+
+		function myFun3(){
+			alert(input1.attributes[0].nodeName)
+			alert(input1.attributes[1].nodeName)
+			alert(input1.attributes[2].nodeName)
+		}
+
+		function myFun4(){
+			var li5=document.createElement('li')
+				li5.innerHTML="列表元素insert"
+			// ul1.appendChild(li5)
+			ul1.insertBefore(li5,ul1.children[1])
+		}
+		function myFun5(){
+			var li5=document.createElement('li')
+				li5.innerHTML="列表元素insert"
+			ul1.replaceChild(li5,ul1.children[1])
+		}
+	</script>
+</body>
+</html>

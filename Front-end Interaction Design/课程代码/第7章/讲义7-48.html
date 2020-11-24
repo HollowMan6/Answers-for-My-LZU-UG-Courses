@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>7-48 浏览器对象(BOM)</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+		p{color: blue; font-size: 20px;margin-left: 4em}
+		li{
+			margin-left: 2em;
+			line-height: 2em;
+		}
+		details>details{
+			text-indent: 2em;
+			line-height: 2em;
+		}
+		b{
+			color: red
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第七章 零基础精讲JavaScript</h1>
+	<h1 align="center" style="font-size:1.5em;">7-48 浏览器对象(BOM)</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>掌握常用的浏览器对象操作方法</li>
+	</ul> <hr>
+</header>
+	<p></p>
+	<details style="color: orange">
+			<summary>基本概念</summary>
+		<ol>
+			<li>BOM是Browser Object Model的缩写，简称浏览器对象模型</li>
+			<li>BOM由一系列相关的对象构成，并且每个对象都提供了很多方法与属性</li>
+			<li>基本的BOM体系结构图<br><img src="../img/BOM.png" alt=""></li>
+			<li>能利用BOM做什么？<p>BOM提供了一些访问窗口对象的一些方法，我们可以用它来移动窗口位置，改变窗口大小，打开新窗口和关闭窗口，弹出对话框，进行导航以及获取客户的一些信息如：浏览器品牌版本，屏幕分辨率。但BOM最强大的功能是它提供了一个访问HTML页面的一入口——document对象，以使得我们可以通过这个入口来使用DOM的强大功能！！！</p></li>
+		</ol>
+	</details><br><br> 
+		
+	<details>
+			<summary>window对象的方法和属性</summary>
+			<p>window对象是浏览器窗口对文档提供的一个现实的容器，代表打开的浏览器窗口，是每一个加载文档的父对象</p>
+			<p>window的属性和方法调用方法:window.属性，window.方法<br>也可以直接调用省略 window.</p>
+			<ul>
+				<li>
+					<h4>对话框</h4>
+					<ol>
+						<li>alert()		显示带有一段消息和一个确认按钮的警告框。</li>
+						<li>confirm()	显示可提示用户输入的对话框。返回值为布尔值</li>
+						<li>prompt()	显示带有一段消息以及确认按钮和取消按钮的对话框。<br>第一个参数是提示,第二个参数是默认值;<br>返回值为输入的值，取消返回null</li>
+					</ol>
+				</li>
+				<li>
+					<h4>窗体控制</h4>
+					<ol>
+						<li>open()	打开一个新的浏览器窗口或查找一个已命名的窗口。
+							<ol>
+								<li>URL:声明了要在新窗口中显示的文档的 URL。</li>
+								<li>name:声明了新窗口的名称或者窗口目标。</li>
+								<li>features:声明了新窗口要显示的标准浏览器的特征。</li>
+								<li>
+									<details>
+										<summary>窗口的属性：</summary>
+										<ol>
+											<li>常用：
+							                    <ul>
+							                    	<li>width:新建窗口宽度</li>
+							                    	<li>heigth:新建窗口高度</li>
+							                    	<li>top:左上角垂直坐标</li>
+							                    	<li>left:左上角水平坐标</li>	
+							                    </ul>
+											</li>
+											<li>其他不太常用的属性：
+												<ul>
+													<li>toolbar：指定窗口是否有标准工具栏。当该选项的值为1或yes时，表示有标准工具栏，当该选项的值为0或no时，表示没有标准工具栏； </li>
+													<li>resizable：指定窗口是否可改变大小，选项的值及含义与toolbar相同；</li>
+							                    	<li>ocation：指定窗口是否有地址工具栏，选项的值及含义与toolbar相同；</li>
+							                    	<li>directories：指定窗口是否有链接工具栏，选项的值及含义与toolbar相同；</li>
+							                    	<li>status：指定窗口是否有状态栏，选项的值及含义与toolbar相同；</li>
+							                    	<li>menubar：指定窗口是否有菜单，选项的值及含义与toolbar相同；</li>
+							                    	<li>scrollbar：指定当前窗口文档大于窗口时是否有滚动条，选项的值及含义与 toolbar相同； </li>
+							                    	<li>........</li>
+												</ul>
+											</li>
+											
+										</ol>
+								</details>
+								</li>
+							</ol>
+						</li>
+						<li>close()	关闭浏览器窗口。</li>	
+					</ol>
+				</li>
+				<li>
+					<h4>定时器</h4>
+					<ol>
+						<li>setInterval()	按照指定的周期（以毫秒计）来调用函数或计算表达式。</li>
+						<li>setTimeout()	在指定的毫秒数后调用函数或计算表达式。</li>
+						<li>clearInterval()	取消由 setInterval() 设置的 timeout。</li>
+						<li>clearTimeout()	取消由 setTimeout() 方法设置的 timeout。</li>
+					</ol>
+				</li>
+				
+				<li>
+					<h4>其他方法</h4>
+					<ol>
+						<li>print()	打印当前窗口的内容。</li>
+						<li>blur()	把键盘焦点从顶层窗口移开。</li>
+						<li>createPopup()	创建一个 pop-up 窗口。</li>
+						<li>focus()	把键盘焦点给予一个窗口。</li>
+						<li>moveBy()	可相对窗口的当前坐标把它移动指定的像素。</li>
+						<li>moveTo()	把窗口的左上角移动到一个指定的坐标。</li>
+						<li>resizeBy()	按照指定的像素调整窗口的大小。</li>
+						<li>resizeTo()	把窗口的大小调整到指定的宽度和高度。</li>
+						<li>scrollBy()	按照指定的像素值来滚动内容。</li>
+						<li>scrollTo()	把内容滚动到指定的坐标。</li>
+					</ol>
+				</li>		
+			</ul>
+		<details>
+			<summary>Window 对象属性</summary>
+			<ul>
+				<li>
+					<h4>掌握部分</h4>
+					<ul>
+						<li>innerWidth	返回窗口的文档显示区的宽度。</li>
+						<li>innerHeight	返回窗口的文档显示区的高度。</li>
+					</ul>
+				</li>
+				<li>
+					<h4>了解部分</h4>
+					<ul>
+						<li>name	设置或返回窗口的名称。</li>
+						<li>opener	返回对创建此窗口的窗口的引用。</li>
+						<li>closed 返回窗口是否已被关闭。</li>
+						<li>self	返回对当前窗口的引用。</li>
+						<li>top	返回最顶层的先辈窗口。</li>
+						<li>outerheight	返回窗口的外部高度。</li>
+						<li>outerwidth	返回窗口的外部宽度。</li>
+						<li>status	设置窗口状态栏的文本。</li>
+						<li>......</li>
+					</ul>
+				</li>
+				
+			</ul>
+	</details><br><br> 
+	</details><br><br> 
+
+
+	<details>
+			<summary>History对象的常用方法</summary>
+			<p>history对象有back和forward两个方法，它可以跳转到当前页的上一页和下一页，可以用length属性查看客户端浏览器的历史列表中访问的网页个数</p>
+			<ul>
+				<li>back()	加载 history 列表中的前一个 URL。</li>
+				<li>forward()	加载 history 列表中的下一个 URL。</li>
+				<li>go()	加载 history 列表中的某个具体页面。</li>
+			</ul>
+	</details><br><br> 
+
+	<details>
+			<summary>Location 对象</summary>
+			<ul>
+				<li>
+					<h5>Location 对象的属性</h5>
+					<ul>
+						<li>href	设置或返回完整的 URL。</li>
+						<li>host	设置或返回主机名和当前 URL 的端口号。</li>
+						<li>hash	设置或返回从井号 (#) 开始的 URL（锚）。</li>
+						<li>hostname	设置或返回当前 URL 的主机名。</li>
+						<li>pathname	设置或返回当前 URL 的路径部分。</li>
+						<li>port	设置或返回当前 URL 的端口号。</li>
+						<li>protocol	设置或返回当前 URL 的协议。</li>
+						<li>search	设置或返回从问号 (?) 开始的 URL（查询部分）。</li>
+					</ul>
+				</li>
+				<li>
+					<h5>Location 对象的方法</h5>
+					<ul>
+						<li>assign()	加载新的文档。</li>
+						<li>reload()	重新加载当前文档。
+							<p>如果该方法没有规定参数，或者参数是 false，它就会用 HTTP 头 If-Modified-Since 来检测服务器上的文档是否已改变。如果文档已改变，reload() 会再次下载该文档。如果文档未改变，则该方法将从缓存中装载文档。这与用户单击浏览器的刷新按钮的效果是完全一样的。</p>
+							<p>如果把该方法的参数设置为 true，那么无论文档的最后修改日期是什么，它都会绕过缓存，从服务器上重新下载该文档。这与用户在单击浏览器的刷新按钮时按住 Shift 健的效果是完全一样。</p>
+						</li>
+						<li>replace()	用新的文档替换当前文档。
+							<p>replace() 方法不会在 History 对象中生成一个新的记录。当使用该方法时，新的 URL 将覆盖 History 对象中的当前记录。</p>
+						</li>
+					</ul>
+				</li>
+			</ul>
+	</details><br><br> 
+
+
+	<details>
+			<summary>Screen 对象</summary>
+			<ul>
+				<li>availHeight	返回显示屏幕的高度 (除 Windows 任务栏之外)。</li>
+				<li>availWidth	返回显示屏幕的宽度 (除 Windows 任务栏之外)。</li>
+				<li>height	返回显示屏幕的高度。</li>
+				<li>width	返回显示器屏幕的宽度。</li>
+				<li>bufferDepth	设置或返回调色板的比特深度。</li>
+				<li>......</li>
+			</ul>
+	</details><br><br> 
+
+	<details>
+			<summary>Navigator 对象属性</summary>
+			<ul>
+				<li>appCodeName	返回浏览器的代码名。</li>
+				<li>appMinorVersion	返回浏览器的次级版本。</li>
+				<li>appName	返回浏览器的名称。</li>
+				<li>appVersion	返回浏览器的平台和版本信息。</li>
+				<li>cookieEnabled	返回指明浏览器中是否启用 cookie 的布尔值。</li>
+				<li>userAgent	返回由客户机发送服务器的 user-agent 头部的值</li>
+				<li>onLine	返回指明系统是否处于脱机模式的布尔值。</li>
+				<li>......</li>
+			</ul>
+	</details><br><br> 
+
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

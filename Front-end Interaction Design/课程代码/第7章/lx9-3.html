@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>lx9-3 </title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		input{
+			width: 30px;
+			height: 30px;
+			border-radius: 20px;
+			margin: 2px;
+			outline: none;
+		}
+		.div{
+			width: 120px;
+			height: 150px;
+			padding: 10px;
+			text-align: center;
+			background: rgba(180,90,30,0.3);
+			border:2px solid orange;
+		}
+		.inp{
+			width: 130px;
+			height: 20px;
+		}
+		.clear,.new{
+			width: 60px;
+			font-size: 12px;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" class="inp" id="txt"><br>
+	<input type="button" class="clear" value="清楚" onclick="clearnum()">
+	<input type="button" class="new" value="重置键盘" onclick="cz()">
+	<div id="div1" class="div"></div>
+	<script>
+	var txt=document.getElementById('txt')
+	var div1=document.getElementById('div1')
+		//生成随机数
+		
+		function getRandom(){
+			var num=[0,1,2,3,4,5,6,7,8,9]
+			var Rans=[]
+			for(var i=0;i<10;i++){
+				var n=Math.floor(Math.random()*(10-i));
+				Rans.push(num[n])
+				num.splice(n,1) //删除num数组中下标为n的元素，保证不会出现重复数字
+			}
+			return Rans;
+		}
+		// 测试函数是否正确 alert(getRandom())
+
+		//创建随机按钮
+		function creatKey(){
+			var ranArr=getRandom();
+			var btnArr=[];
+			for(var i=0;i<ranArr.length;i++){
+				var btn=document.createElement('input');
+				btn.setAttribute('type','button')
+				btn.value=ranArr[i];
+				btn.onclick=btnClick;
+				btnArr.push(btn)
+				div1.appendChild(btn)
+			}
+		
+		}
+		creatKey()
+		
+		function btnClick(){
+			txt.value+=this.value
+		}
+
+		function clearnum(){
+			txt.value='';
+		}
+
+		function cz(){
+			window.location.reload();
+		}
+	</script>
+</body>
+</html>

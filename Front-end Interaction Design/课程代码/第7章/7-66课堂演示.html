@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>7-66 课堂演示</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+	img{
+			border-style: groove;
+			border-width: 5px;
+			border-color: orange;
+			display:none;
+		}
+		input[type='button']{
+			width: 60px;
+			height: 60px;
+			border-radius: 30px;
+			outline: none;
+		}
+	</style>
+</head>
+<body>
+	<input type="text" id="imgUrl" value=""> <br>
+	<input type="button" value="播放" onclick="autoPlay()">
+	<input type="button" value="添加图片" onclick="addImage()"><br>
+	<img src="" alt=""  height="300" id="img"><br>
+	<script>
+		var imageArr=new Array('../img/sc1.png','../img/sc6.png');
+		var index=0;
+		function autoPlay(){
+			var imgObj=document.getElementById('img');
+			imgObj.style.display='inline';
+			if(imageArr.length<=0){
+				imgObj.setAttribute('alt','图片木有了，请添加')
+			}else{
+				index=(index+1)%imageArr.length;
+				var imgId=imageArr[index]
+				imgObj.setAttribute('src',imgId)
+			}
+			setTimeout('autoPlay()',1000)
+		}
+
+		function addImage(){
+			var imgUrl=document.getElementById('imgUrl').value;
+			imageArr.push(imgUrl)
+		}
+	</script>
+</body>
+</html>
+
+

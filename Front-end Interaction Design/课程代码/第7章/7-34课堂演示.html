@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>7-34 课堂演示</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+	<script>
+		// var harr=new Array();
+		// function hws(){
+		// 	for(var i=1000;i<=9999;i++){
+		// 		var gw=i%10;
+		// 		var sw=Math.floor((i/10)%10);
+		// 		var bw=Math.floor((i/100)%10);
+		// 		var qw=Math.floor((i/1000)%10);
+		// 		if(gw==qw&&sw==bw){
+		// 			harr.push(i)
+		// 		}
+		// 	}
+		// }
+		// hws()
+		// //alert(harr.length)
+		// // var index;
+		// // for(index in harr){
+		// // 	document.write(harr[index]+'<br>')
+		// // }
+		// var harr1=harr.slice(10,20)
+		// document.write(harr1+'<br>')
+	</script>
+	<script>
+		// 	*
+		//    ***
+		//   *****
+		//  *******
+		// *********
+	 //   ***********
+		var h=30;
+		for(var i=1;i<=h-1;i++){
+			for(var j=h-1;j>=i;j--){
+				document.write("&nbsp;")
+			}
+			for(var n=1;n<=2*i-1;n++){
+					document.write("*")
+			}
+			document.write('<br>')
+		}
+	</script>
+</body>
+</html>

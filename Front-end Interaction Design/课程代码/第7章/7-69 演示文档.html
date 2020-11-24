@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>7-69 课堂演示</title>
+	<style type="text/css">
+		#div1{
+			background: green;
+			width: 150px;
+			height: 150px;
+			left: 15px;
+			position: relative;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1"></div><hr>
+	<input type="button" id="btn1" value="myFun1" onclick="myFun1(),myFun2()">
+	<input type="button" id="btn2" value="myFun2">
+	<input type="button" id="btn3" value="myFun3">
+	<script>
+		var div1=document.getElementById('div1');
+		var btn2=document.getElementById('btn2');
+		var btn3=document.getElementById('btn3');
+
+		function myFun1() {
+			div1.innerHTML='单击事件'
+		}
+		function myFun2() {
+			div1.style.background='red'
+		}
+
+		//DOM0级事件处理
+		btn2.onclick=myFun1; //此处不可以写成myFun1();
+		btn2.onclick=myFun2;
+
+		//DOM2级事件处理
+		// btn3.addEventListener('click',myFun2)
+		// btn3.addEventListener('click',myFun1)
+		// btn3.removeEventListener('click',myFun1)
+		// btn3.removeEventListener('click',myFun2)
+		
+     	//IE9以前的版本需要用 btn3.attachEvent('onckick',myFun1)
+     	//btn3.attachEvent('onclick',myFun2)
+
+     	if (btn3.addEventListener) {
+			btn3.addEventListener('click',myFun2)
+		}else if(btn3.attachEvent){
+			btn3.attachEvent('onclick',myFun2)//注意这里是 onclick
+		}else{
+			btn1.onclick=myFun2()
+		}
+
+	</script>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>7-62 课堂演示</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>	
+	<ul id="ul1">
+		<li>列表项1</li>
+		<li>列表项2</li>
+		<li>列表项3</li>
+		<li>列表项4</li>
+	</ul>
+
+<!-- 	<ul id="ul2"><li>列表项1</li><li>列表项2</li><li>列表项3</li></ul> -->
+
+	<input type="text" id="input1" value='测试文本框'>
+
+	<div id="div1">测试文本<em>倾斜效果</em>结束啦</div>
+
+	<hr>
+	<input type="button" value="myFun1" onclick="myFun1()">
+	<input type="button" value="myFun2" onclick="myFun2()">
+	<input type="button" value="myFun3" onclick="myFun3()">
+	<input type="button" value="myFun4"  onclick="myFun4()"> 
+	<input type="button" value="myFun5"  onclick="myFun5()">
+	<input type="button" value="myFun6"  onclick="myFun6()">
+	<script>
+		var div1=document.getElementById('div1')
+		var input1=document.getElementById('input1')
+		var ul1=document.getElementById('ul1')
+		function myFun1(){
+			var ch1=ul1.childNodes
+			var ch2=ul1.children
+			// alert(ch1.length)
+			// alert(ch2.length)
+			 ch2[0].style.background='red'
+		}
+
+		function myFun2(){
+			//var ll=ul1.firstChild
+			//var ll2=ul1.firstElementChild //IE6，7，8不支持
+			
+			if(ul1.firstElementChild){
+				ll2=ul1.firstElementChild
+			}else{
+				ll2=ul1.firstChild
+			}
+			alert(ll2.nodeName)	
+		}
+		function myFun3(){
+			 ul1.firstElementChild.style.background='red'
+			 ul1.lastElementChild.style.background='green'
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>7-68 JavaScript 事件</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		h4{
+			text-indent: 4em
+		}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+		p{color: blue; font-size: 20px;margin-left: 4em}
+		li{
+			margin-left: 2em;
+			line-height: 2em;
+		}
+		details>details{
+			text-indent: 2em;
+			line-height: 2em;
+		}
+		b{
+			color: red
+
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第七章 零基础精讲JavaScript</h1>
+	<h1 align="center" style="font-size:1.5em;">7-68 JavaScript 事件</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>掌握常用的javaScript事件</li>
+	</ul> <hr>
+</header>
+	<p></p>
+	<details style="color: orange">
+			<summary>基本概念</summary>
+			<ul>
+				<li>事件是一些特定动作发生时所发出的信号,JavaScript中的事件是可以被 JavaScript 侦测到的行为。</li>
+				<li>网页中的每个元素都可以产生某些事件。比方说，我们可以在用户点击某按钮时产生一个 onClick 事件来触发某个函数。</li>
+			</ul>
+	</details><br><br> 
+	<details>
+			<summary>事件处理(添加事件)</summary>
+			<ul>
+				<li>(HTML事件处理)内联方式添加事件将事件看做标签的一个属性，与HTML混写，代码多时不容易管理</li>
+				<li>(DOM0级事件处理)脚本方式添加事件，实现了HTML和JS的分离</li>
+				<li>DOM2级事件处理
+					<ul>
+						<li>ele.addEventListener()</li>
+						<li>ele.removeEventListener()</li>
+						<li>IE8及其以下需要使用IE事件处理程序attachEvent/detachEvent</li>
+					</ul>
+				</li>
+			</ul>
+	</details><br><br> 
+	<details>
+			<summary>常用的事件类型(事件处理函数)</summary>
+			<h4>鼠标事件</h4>
+			<ul>
+				<li>onclick	鼠标点击某个对象</li>
+				<li>ondblclick	当用户双击某个对象时调用的事件句柄。</li>
+				<li>onmousedown	鼠标按钮被按下。</li>
+				<li>onmousemove	鼠标被移动。</li>
+				<li>onmouseout	鼠标从某元素移开。</li>
+				<li>onmouseover	鼠标移到某元素之上。</li>
+				<li>onmouseup	鼠标按键被松开。</li>
+				<li>......</li>
+			</ul>
+			<h4>键盘事件</h4>
+			<ul>
+				<li>onkeydown	某个键盘按键被按下。</li>
+				<li>onkeyup	某个键盘按键被松开。</li>
+				<li>onkeypress	某个键盘按键被按下并松开。<p></p></li>
+				<li>onkeydown与onkeypress的区别
+					<ul>
+						<li>一个放开一个没有放开，onkeydown 先于 onkeypress 发生。</li>
+						<li>onkeypress 事件不是适用于系统按钮(如： ALT, CTRL, SHIFT, ESC)。</li>
+						<li>onkeydown 是在用户按下任何键盘键时发生。 监听一个用户是否按下按键请使用 onkeydown 事件,所有浏览器都支持 onkeydown 事件。</li>
+					</ul>
+				</li>
+				<li>......</li>
+			</ul>
+			<h4>其他事件</h4>
+			<ul>
+				<li>onload	一个页面或一幅图像完成加载</li>
+				<li>onunload	用户退出页面。</li>
+				<li>onabort	图像的加载被中断</li>
+				<li>onblur	元素失去焦点。</li>
+				<li>onchange	域的内容被改变。</li>
+				<li>onerror	在加载文档或图像时发生错误。</li>
+				<li>onfocus	元素获得焦点。</li>
+				<li>onselect 文本被选中。</li>
+				<li>onreset	重置按钮被点击。</li>
+				<li>onscroll	当文档被滚动时发生的事件。</li>
+				<li>......</li>
+			</ul>
+	</details><br><br> 
+	<details>
+				<summary>事件的冒泡和捕获</summary>
+				<ul>
+					<li>事件的冒泡：事件按照从最特定的事件目标到最不特定的事件目标的顺序触发。
+						<p>事件冒泡可以形象地比喻为把一颗石头投入水中，泡泡会一直从水底冒出水面。也就是说，事件会从最内层的元素开始发生，一直向上传播，直到document对象。</p>
+					</li>
+					<li>事件的捕获：与事件冒泡相反，事件会从最外层开始发生，直到最具体的元素。<p>事件捕获时，父级元素先触发，子级元素后触发</p></li>
+					<li>可以自己选择绑定事件时采用事件捕获还是事件冒泡，方法就是绑定事件时通过addEventListener函数，它有三个参数，第三个参数若是true，则表示采用事件捕获，若是false，则表示采用事件冒泡。</li>
+					<li><p>IE9以前的版本只支持事件冒泡，不支持事件捕获，它也不支持addEventListener函数，不会用第三个参数来表示是冒泡还是捕获，它提供了另一个函数attachEvent。</p></li>
+					<li>不是所有的事件都能冒泡，例如：blur、focus、load、unload</li>
+					<li>stopPropagation():阻止事件冒泡</li>
+					<li>preventDefault():阻止事件的默认行为</li>
+				</ul>
+
+	</details><br><br> 
+	<details>
+			<summary>事件的对象</summary>
+			<p>在触发某个事件时，会产生一个事件对象event。这个对象中包含着所有与事件有关的信息。包括导致事件的元素，事件的类型以及其他与特定事件相关的信息。</p>
+			<ul>
+				<li>type:获取事件类型</li>
+				<li>target:获取事件目标</li>
+				<li>clientX	返回当事件被触发时，鼠标指针的水平坐标。</li>
+				<li>clientY	返回当事件被触发时，鼠标指针的垂直坐标。</li>
+				<li>screenX	返回当某个事件被触发时，鼠标指针的水平坐标。</li>
+				<li>screenY	返回当某个事件被触发时，鼠标指针的垂直坐标。</li>
+				<li>......</li>
+			</ul>
+	</details><br><br> 
+	<details>
+			<summary>事件的绑定</summary>
+			<h4></h4>
+			<ul>
+				<li>ele.addEventListener()</li>
+				<li>ele.removeEventListener()</li>
+			</ul>
+	</details><br><br> 
+	
+
+
+
+
+	
+
+	
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

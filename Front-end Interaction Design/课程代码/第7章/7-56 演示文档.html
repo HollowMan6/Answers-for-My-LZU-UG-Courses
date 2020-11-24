@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>7-56 课堂演示</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+	
+	</style>
+</head>
+<body>	
+	<h4 id="bt" class="bt">学生信息</h4>
+	<a id="aid"  href="http://www.baidu.com" target="_self" title=" ">百度</a> <br>
+	学号：<input type="text" id="xh" class="xh" value="123456"> <br>
+	姓名：<input type="text" id="xm" class="xingm" value="熊二"> <br>
+	英语：<input type="text" id="yucj" class="yucj" name="fs" value="60"> <br>
+	数学：<input type="text" id="sxcj" name="fs" > <hr>
+
+	<input type="button" value="myFun1" onclick="myFun1()">
+	<input type="button" value="myFun2" onclick="myFun2()">
+	<script>
+		var Bt=document.getElementById('bt')
+		var Fs=document.getElementsByName('fs')
+		var Inp=document.getElementsByTagName('input')
+		var a1=document.getElementById('aid')
+		Bt.innerHTML='学生信息<em>查询</em>'
+		function myFun1(){
+			a1.innerHTML='163'
+			a1.target='_blank'
+			a1.href='http://www.163.com'
+		}
+		function myFun2(){
+			Inp[0].value='654321'
+			Inp[1].value='熊大'
+			Fs[0].value='90'
+			Fs[1].value='80'
+			Inp[0].background='red'
+
+		}
+	</script>
+</body>
+</html>

@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="UTF-8">
+	<title>第七章 零基础精讲JavaScript</title>
+	<style type="text/css">
+		body{background:#f8f8f8;font-size: 28px;}
+		h1{text-shadow: #A9A9A9 5px 5px 3px;font-family: cszt}
+		h4{
+			text-indent: 4em
+		}
+		header{background: #f5f5f5}
+		table{font-size: 22px;}
+		tr{background: #BC8F8F;}
+		p{color: blue; font-size: 20px;margin-left: 4em}
+		li{
+			margin-left: 2em;
+			line-height: 2em;
+		}
+		details>details{
+			text-indent: 2em;
+			line-height: 2em;
+		}
+		b{
+			color: red
+
+		}
+	</style>
+</head>
+<body>
+<header>
+	<h1><img src="../img/HTML5LOGO.png" alt="" width="80PX">第七章 零基础精讲JavaScript</h1>
+	<h1 align="center" style="font-size:1.5em;">7-79 HTML5新增的JS选择器</h1>
+	<h3 align="right">主讲老师：吉延鹏</h3>
+	<h3>学习要点</h3>
+	<ul>
+		<li>HTML5新增的JS选择器</li>
+	</ul> <hr>
+</header>
+<p>
+	在传统的 JavaScript 开发中，原生的 JavaScript 所提供的 DOM 选择方法并不多，仅仅局限于通过 tag, name, id 等方式来查找，这显然是远远不够的，如果想要进行更为精确的选择不得不使用看起来非常繁琐的正则表达式，或者使用某个库。<br>
+	querySelector 和 querySelectorAll 方法是 W3C Selectors API 规范中定义的。他们的作用是根据 CSS 选择器规范，便捷定位文档中指定元素。
+	现在所有的浏览器厂商都提供了 querySelector 和 querySelectorAll 这两个方法的支持,使用它们，你可以像使用 CSS 选择器一样快速地查找到你需要的节点。
+</p>
+	<details style="color: orange">
+			<summary>HTML5新增的JS选择器</summary>
+			<p>
+			querySelector 和 querySelectorAll 方法是 W3C Selectors API 规范中定义的。他们的作用是根据 CSS 选择器规范，便捷定位文档中指定元素。功能类似于jQuery的选择器。这使得在编写原生JavaScript代码时方便了许多。
+			</p>
+			<ol>
+				<li>document.querySelector('selectors');
+					<p>
+						该方法返回满足条件的单个元素。按照深度优先和先序遍历的原则使用参数提供的CSS选择器在DOM进行查找，返回第一个满足条件的元素
+					</p>
+				</li>
+				<li>document.querySelectorAll('selectors');
+					<p>
+						该方法返回所有满足条件的元素，结果是个nodeList集合。查找规则与前面所述一样。
+					</p>
+				</li>
+				<li>
+					注意事项
+						<p>参数selectors 可以包含多个CSS选择器，用逗号隔开:element = document.querySelector('selector1,selector2,...');br>elementList = document.querySelectorAll('selector1,selector2,...');
+						</p>
+						<p>这种方法查找元素是非实时的，即不支持有动态添加元素情况下的查找</p>
+				</li>
+				<li>document.getElementsByClassName("selector");返回文档中所有指定类名的元素集合，作为 NodeList 对象。
+					<p>
+						IE8以下的浏览器中，无法通过Class标签getElementsByClassName函数获取元素。ie9以上及主流浏览器均支持通过Class获取元素，ie8及以下的解决办法：
+					</p>
+					<p>
+						可以用jQuery代替 引用jQuery后，使用$(".ClassName")等方法获取元素。
+					</p>
+					<p>
+						自己写getElementsByClassName函数方法
+					</p>
+				</li>
+			</ol>
+			<ul>
+	<h3>浏览器兼容性</h3>
+	<li>版本较低的浏览器有会存在兼容性问题。</li>
+	<li>很多框架中封装了解决浏览器兼容性的问题的方法，比如JQ;使用合适的框架不但可以解决兼容性还可以节省很多时间，效率更高</li>
+	<li>在不用框架的情况下可以自己编写一个解决兼容性的函数，或者直接引用一个解决兼容问题的函数</li>
+	<li>相信随着浏览器的更新和语言的规范这些目前的兼容性问题未来很可能就不存在了</li>
+</ul>
+	</details><br><br> 
+<!-- 	<details style="color: orange">
+			<summary>理解全局对象Global</summary>
+			<ul>
+				<li>全局属性和函数可用于所有内建的 JavaScript 对象。全局对象是所有全局方法的拥有者，用来同意管理全局方法，全局方法也就是全局函数。
+					<ul>
+						<li>parseInt() 函数可解析一个字符串，并返回一个整数。</li>
+						<li>parseFloat()	解析一个字符串并返回一个浮点数。
+							<p>注意:可以将数字开头的字符串转换成数值，但是不可以转换非数字开头的字符串</p>
+						</li>
+						<li>isNaN(x)函数用于检查其参数是否是非数字值。
+							<p>可用于判断其参数是否是 NaN，该值表示一个非法的数字（比如被 0 除后得到的结果）。</p>
+							<p>如果 x 是特殊的非数字值 NaN（或者能被转换为这样的值），返回的值就是 true。如果 x 是其他值,则返回 false。</p>
+							<p>isNaN() 函数通常用于检测 parseFloat() 和 parseInt() 的结果，以判断它们表示的是否是合法的数字。当然也可以用 isNaN() 函数来检测算数错误，比如用 0 作除数的情况。</p>
+						</li>
+						<li>......</li>
+					</ul>
+				</li>
+			</ul>
+	</details><br><br> 
+	<details>
+			<summary>变量的作用范围</summary>
+			<ul>
+				<li>作用域是指有效范围，JS变量的作用域有全局和局部之分</li>
+				<li>"全局变量"：申明在函数之外的变量</li>
+				<li>"局部变量"：申明在函数体中的变量，并且只能在当前函数体内访问</li>
+				<li>如果函数内部有定义变量，即使在定义之前输出但会先执行后面定义语句，然后判断输出结果</li>
+				<li>
+					<p>全局变量的优点：可以减少变量的个数，减少由于实际参数和形式参数的数据传递带来的时间消耗。</p>
+					<p>全局变量缺点:使函数的代码可读性降低。由于多个函数都可能使用全局变量，函数执行时全局变量的值可能随时发生变化，对于程序的查错和调试都非常不利。</p>
+				</li>
+			</ul>
+	</details><br><br> 
+	<details style="color: orange">
+			<summary>结束语</summary>
+			<ul>
+				<li>在本套课程中详细讲解了JavaScript的基础知识，还有如下内容没有讲解道：
+                    <ul>
+                    	<li>函数的高级复杂部分</li>
+                    	<li>cookie对象与存储</li>
+                    	<li>Ajax应用</li>
+                    	<li>JS面向对象</li>
+                    	<li>JQ框架的使用</li>
+                    	<li>......</li>
+                    </ul>
+				</li>
+				<li>
+					<p>
+						在您学习到这节课的时候，我想我们的第二套课程《HTML5进阶课程第一季---JavaScript入门到精通》《HTML5进阶课程第二季---CSS3实战技巧案例专题》也已经快要与大家见面了，在进阶课程中我们会进一步的为大家详解JS的其他知识。
+					</p>
+				</li>
+			</ul>
+	</details><br><br>  -->
+
+
+
+
+
+	
+
+	
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+</body>
+</html>

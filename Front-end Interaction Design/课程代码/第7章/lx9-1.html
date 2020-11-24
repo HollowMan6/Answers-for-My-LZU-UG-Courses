@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>9-1 课堂演示</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<style type="text/css">
+		#div1{
+			margin: 15px auto;
+			background: orange;
+			width: 200px;
+			height: 200px;
+			padding: 15px;
+			border-radius: 200px;
+		}
+	</style>
+</head>
+<body>
+	<div id="div1"></div>
+	<script>
+	//9-1
+
+		var div1=document.getElementById('div1')
+		div1.onclick=myFun1
+		function myFun1(){
+			div1.style.background='red';
+			// div1.onclick=myFun2
+			setTimeout('myFun2()',500)
+		}
+		function myFun2(){
+			div1.style.background='orange';
+			// div1.onclick=myFun3
+			setTimeout('myFun3()',500)
+		}
+		function myFun3(){
+			div1.style.background='green';
+			// div1.onclick=myFun1
+			setTimeout('myFun1()',500)
+		}
+
+//9-2
+	</script>
+</body>
+</html>

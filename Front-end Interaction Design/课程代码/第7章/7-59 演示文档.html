@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<meta charset="utf-8">
+	<title>7-59 课堂演示</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+
+</head>
+<body>	
+
+	<div id="div1"></div>
+	<a id="aid"  href="http://www.baidu.com" target="_self">百度</a> <br>
+	<hr>
+	<input type="button" value="myFun1" onclick="myFun1()">
+	<input type="button" value="myFun2" onclick="myFun2()">
+	<input type="button" value="myFun3" onclick="myFun3()">
+	<script>
+	var div1=document.getElementById('div1')
+	function myFun3(){
+
+		ul1.removeChild(li3)
+
+	}
+
+	
+	function myFun2()
+		{
+			var ul1=document.createElement('ul')
+			var li1=document.createElement('li')
+				li1.innerHTML="列表元素1"
+			var li2=document.createElement('li')
+				li2.innerHTML="列表元素2"
+			var li3=document.createElement('li')
+				li3.innerHTML="列表元素3"
+			  ul1.appendChild(li1)
+			  ul1.appendChild(li2)
+			  ul1.appendChild(li3)
+			  div1.appendChild(ul1)
+		}
+	function myFun1()
+		{
+			var img1=document.createElement('img')
+				img1.src='../img/sc17.png'
+				div1.appendChild(img1)
+		}
+
+	
+	</script>
+
+	
+</body>
+</html>
