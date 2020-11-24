@@ -22,3 +22,4 @@ function check_log_in()
 		$conn->close();
 	}
 }
+

@@ -46,8 +46,23 @@ function do_html_url($url, $text)
     <p><a href="<?php echo $url ?>"><?php echo $text ?></a></p>
 <?php
 }
-function do_log_in($username)
+function do_log_info($content)
 {
-    echo "<p>You are logged in as: " . $username . "</p>";
-    echo "<p><a href='logout.php'>Log Out</a></p>";
+    if (isset($_SESSION['valid_user'])) {
+        echo "<p>You are logged in as: " . $_SESSION['valid_user'] . "</p>";
+        echo "<p><a href='logout.php'>Log Out</a></p>";
+        if ($content == "members") {
+            echo "Members Only Page........<br/>";
+            include "welcome.php";
+        }
+    } else {
+        if ($content == "members") {
+            echo "<p>You are not logged in, couldn't visit this page.</p>";
+        } else if (isset($_POST['userid'])) {
+            echo "<p>Could not log you in.</p>";
+        } else {
+            echo "<p>You are not logged in.</p>";
+        }
+        display_login_form();
+    }
 }
