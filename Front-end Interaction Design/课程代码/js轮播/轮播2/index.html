@@ -1,0 +1,136 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>网络建站公司官网首页常用全屏焦点轮播大图带功能菜单介绍jQuery特效代码</title>
+<meta name="keywords" content="网络建站,公司官网,首页,常用,全屏焦点,轮播大图,功能菜单,jQuery,特效代码" />
+<meta name="description" content="网络建站公司官网首页常用全屏焦点轮播大图带功能菜单介绍jQuery特效代码。" /> 
+<meta name="author" content="js代码" />
+<meta name="Copyright" content="js代码" />
+<link href="css/global.css" rel="stylesheet" type="text/css">
+<link rel="stylesheet" type="text/css" href="css/style.css">
+<script type="text/javascript" src="js/jquery-1.8.3.min.js"></script>
+<script type="text/javascript" src="js/banner.js"></script>
+<script type="text/javascript">
+$(document).ready(function(){
+	
+	$(".index_btn li").hover(function(){
+		$(this).find("div").stop(true).animate({top:-280},300);	 
+	},function(){
+		$(this).find("div").stop(true).animate({top:-0},300);
+	});
+	
+});
+</script>
+</head>
+
+<body>
+<div class="bannerbox">
+
+	<div class="Homebanner">
+		<ul>
+			<li class="Load cur" style="z-index:99">
+				<img src="images/banner2016.jpg" alt="">
+				<div class="Homebannertext">
+					<img src="images/banner2016.png" class="bannereffect bannertime bigimg">
+					<dl class="bannerone clearfix">
+						<dt class="bannereffect bannertime1">
+							 网站建设<b>第一品牌</b>·互联网整合专家
+						</dt>
+						<dd class="bannereffect bannertime2">
+							 为梦想者创造梦想品牌
+						</dd>
+					</dl>
+				</div>
+			</li>
+			<li class="Load">
+				<img src="images/banner02.jpg" alt="">
+				<div class="Homebannertext">
+					<img src="images/02.png" class="bannereffect bannertime bigimg">
+					<dl class="bannertwo clearfix">
+						<dt class="bannereffect bannertime1">
+							 <h3>专业的O2O商城系统</h3>
+							 <p>微信商城、手机商城、网上商城一体化的商城系统！</p>
+						</dt>
+					</dl>
+				</div>
+			</li>
+			<li class="Load"><img src="images/03.jpg" alt="">
+				<div class="Homebannertext">
+					<dl class="bannerthree clearfix">
+						<dt class="bannereffect bannertime"><img src="images/03-1.png" alt=""></dt>
+						<dd class="bannereffect bannertime1">
+							 <img src="images/03-2.png" alt="">
+							 <h3>持续追求更高品质</h3>
+							 <p>我们服务了超过1500家企业，其中300家为上市公司，集团企业及政府机构，让我们的专业帮助您的品牌更有效率的传播！</p>
+						</dd>
+					</dl>
+				</div>
+			</li>
+		</ul>
+		<div class="Homeleft"><</div>
+		<div class="Homeright">></div>
+		<div class="Homedot"><a href="javascript:;" class="cur">1</a><a href="javascript:;">2</a><a href="javascript:;">3</a></div>
+	</div>
+  
+    
+	<div class="index_btn">
+		<ul>
+			 <li><span><a href="#"><em class="btn">成功案例</em></a></span>
+			 <div class="index_btnbox index_btnanli" style="top: 0px;">
+				<img src="images/menu_pic1.jpg" alt="成功案例" width="258" height="112">
+				<p class="clearfix">
+					<a href="#">知名客户</a>
+					<a href="#">网站案例</a>
+					<a href="#">客户评价</a>
+					<a href="#">客户列表</a>
+				</p>
+			 </div>
+			 </li>
+			 <li><span><a href="#"><em class="btn1">微信营销</em></a></span>
+			 <div class="index_btnbox">
+				<img src="images/menu_pic2.jpg" alt="微信营销" width="258" height="112">
+				<p class="clearfix">
+					<a href="#">微信商城O2O整合</a>
+					<a href="#">手机网站案例</a>
+					<a href="#">微信活动微场景</a>
+					<a href="#">手机网站建设</a>
+					<a href="#">微官网</a>
+					<a href="#">手机解决方案</a>
+					<a href="#">苹果手机应用</a>
+					<a href="#">安卓手机应用</a>
+				</p>
+			 </div>
+			 </li>
+			 <li><span><a href="#"><em class="btn2">网站建设</em></a></span>
+			 <div class="index_btnbox">
+				<img src="images/menu_pic3.jpg" alt="网站建设" width="258" height="112">
+				<p class="clearfix">
+					<a href="#" title="品牌创意网站建设">品牌创意网站建设</a>
+					<a href="#" title="企业官方网站建设">企业官方网站建设</a>
+					<a href="#" title="上市公司网站建设">上市公司网站建设</a>
+					<a href="#" title="B2C电子商务网站建设">B2C电子商务网站建设</a>
+					<a href="#" title="大型门户类网站建设">大型门户类网站建设</a>
+					<a href="#" title="专题活动网站（MINISITE）">专题活动网站</a>
+					<a href="#" title="全方位网站运营代理">全方位网站运营代理</a>
+				</p>
+			 </div>
+			 </li>
+			 <li><span><a href="#" class="cur"><em class="btn3">我们的实力</em></a></span>
+			 <div class="index_btnbox">
+				<img src="images/menu_pic4.jpg" alt="我们的实力" width="258" height="112">
+				<p class="clearfix">
+				   <a href="#" title="关于沙漠风">关于沙漠风</a>
+				   <a href="#" title="实力认可">实力认可</a>
+				   <a href="#" title="沙漠风与众不同">沙漠风与众不同</a>
+				   <a href="#" title="理念与信仰">理念与信仰</a>
+				</p>
+			 </div>
+			 </li>
+		</ul>
+	</div>
+    
+</div>
+
+</body>
+</html>

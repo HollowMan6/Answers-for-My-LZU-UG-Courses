@@ -1,0 +1,46 @@
+@charset "utf-8";div,form,img,ul,ol,li,dl,dt,dd,p,tr,td,body,strong,span,pre,input{margin:0;padding:0;border:0;background-repeat:no-repeat;}
+h1,h2,h3,h4,h5,h6,p{ margin:0;padding:0;font-weight:normal;}
+body{font-family:"寰蒋闆呴粦";font-size:12px;margin:0px;padding:0px;color:#333;line-height:24px;height:auto;clear:both;min-width:1200px;}
+img{border:0px;}
+ul,li{ list-style:none;}
+em,i{ font-style:normal;}
+a{ text-decoration:none;color:#333;outline:none;}
+a:hover{ background-repeat:no-repeat;color:#03a5e3;}
+.clear{ clear:both;line-height:0;height:0;font-size:0;}
+a,area{blr:expression(this.onFocus=this.blur())}
+/*banner*/
+#banner-box{margin:0px auto;height:500px;overflow:hidden;position:relative;padding-top:-40px;}
+.banner-inner{height:65px;margin:0px auto}
+.banner-nav-abs{position:absolute;left:0px;bottom:0px;z-index:3;min-width:1200px;}
+.banner-nav-abs-opac{position:absolute;width:100%;height:78px;left:0px;bottom:-22px;z-index:2}
+.banner-nav-fix{position:fixed;left:0px;top:82px;z-index:3}
+.banner-nav{width:100%}
+.banner-nav ul {width:1200px;margin:0px auto}
+.banner-nav li {float:left;display:inline;width:112px;height:65px;font-size:14px;padding:5px 43px 0px 43px;cursor:pointer;position:relative;margin:0px 1px}
+.banner-nav li div{width:110px;height:65px;padding:5px 43px 0px 43px;position:absolute;left:0px;top:0px;z-index:5;background:#fff;filter:alpha(opacity=20);-moz-opacity:0.2;-khtml-opacity:0.2;opacity:0.2}
+.banner-nav li a span{display:block;height:36px;width:60px;margin:3px auto 0px auto;background:url(../img/icon-banner.png) no-repeat;}
+.banner-nav li a.bg1 span{background-position:15px 2px}
+.banner-nav li a.bg2 span{background-position:-53px 2px}
+.banner-nav li a.bg3 span{background-position:-110px 2px}
+.banner-nav li a.bg4 span{background-position:-174px 2px}
+.banner-nav li a.bg5 span{background-position:-235px 2px}
+.banner-nav li a.bg6 span{background-position:-297px 2px}
+.banner-nav li a{display:block;float:left;position:absolute;left:0px;top:0px;color:#fff;z-index:6;padding:5px 43px 0px 43px;display:inline;width:110px;height:65px;padding-top:5px;text-align:center}
+.banner-nav li.current{cursor:default}
+.banner-nav li.current div{width:95px;height:95px;background:none;}
+.banner-nav li.current a{color:#333;cursor:default;background:#eee;}
+.banner-nav li.current a.bg1 span{background-position:15px -32px}
+.banner-nav li.current a.bg2 span{background-position:-53px -32px}
+.banner-nav li.current a.bg3 span{background-position:-110px -32px}
+.banner-nav li.current a.bg4 span{background-position:-174px -32px}
+.banner-nav li.current a.bg5 span{background-position:-235px -32px}
+.banner-nav li.current a.bg6 span{background-position:-297px -32px}
+.banner-list{position:absolute;height:500px;position:absolute;z-index:2;overflow:hidden;width:100%}
+.banner-list li{width:100%;height:500px;text-align:center;float:left;display:inline-block}
+.banner-list li .animate-box {width:1200px;margin:0px auto;position:relative}
+.banner-list li .animate-box .t-d{position:absolute;width:400px;left:20px;top:100px}
+.banner-list li .animate-box .t-d h2 {display:block;margin:0px;padding:0px;font-size:30px;text-align:left;color:#fff}
+.banner-list li .animate-box .t-d p{color:#fff;padding:10px 0px 0 0;line-height:32px;left:20px;text-align:left}
+.banner-list li .animate-box .animate-img{position:absolute;top:50px;right:0px}
+.slider-btn{width:100px;height:30px;background:#fff;border-radius:4px;-moz-border-radius:4px;line-height:30px;text-align:center;font-size:12px;color:#444;display:block ;font-family:"宋体";}
+.slider-btn:hover{color:#fff;background:#c80106;}
