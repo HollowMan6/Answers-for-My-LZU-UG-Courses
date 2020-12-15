@@ -13,6 +13,10 @@
 
 此仓库是我的兰州大学“Web数据库技术”的课程作业。
 
+* [期末项目 兰大点餐平台](https://github.com/LZU-Food-Ordering)
+
 # Answers for my Web Database Technology Course
 
 This repository is my coursework for the LZU Web Database Technology Course.
+
+* [Final Project `LZU Food Ordering Platform`](https://github.com/LZU-Food-Ordering)
