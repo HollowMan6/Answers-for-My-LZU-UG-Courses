@@ -19,19 +19,20 @@ canvas {
 	width: 348px;
 	height: 70px;
 	float: left;
-	margin-left: 700px;
+	margin-left: 300px;
 }
 
 .top_nav li {
 	width: 58px;
 	height: 21px;
 	float: left;
+	margin-top: 15px;
 	list-style-type: none;
 }
 
 .top_nav li a,
 a:visited {
-	font-size: 11px;
+	font-size: 15px;
 	font-family: "微软雅黑";
 	line-height: 66px;
 	text-decoration: none;
@@ -40,10 +41,11 @@ a:visited {
 }
 
 .top_nav li a:hover {
-	color: #e54ba0;
+	color: #02aaf1;
 }
 
 .top_logo {
+	font-size: 80px;
 	margin-left: 120px;
 	float: left;
 	transition: all 0.5s ease 0s;
@@ -53,20 +55,71 @@ a:visited {
 	transform: rotateY(359deg);
 }
 
-.top_middle {
-	width: 980px;
-	height: 60px;
-	border:50px dotted rgba(200,60,30,0.5);
-	background: green;
-	background-origin:padding-box;
-}
-
 .top_tab {
 	margin-top: 100px;
 	margin-left: 230px;
 }
 
+.top_middle {
+	margin-left: 10px;
+	margin-top: 10px;
+	background-color: #eeeeee;
+	width: 1300px;
+	height: 230px;
+}
+
+.top_next {
+	margin-left: 10px;
+	margin-top: 10px;
+	background-color: #dddddd;
+	width: 1300px;
+	height: 250px;
+}
+
+.content {
+	float: left;
+}
+
+.content ul li{
+	margin-left: 80px;
+	margin-top: 15px;
+	list-style-type: circle;
+}
+
+.content a{
+	margin-left: 30px;
+	transition: all 0.5s ease 0s;
+}
+
+.content a:hover{
+	font-size: larger;
+	color: #02aaf1;
+}
+
+.content-2 {
+	margin-left: 680px;
+}
+
+.content-2 ul li{
+	margin-left: 80px;
+	margin-top: 15px;
+	list-style-type: circle;
+}
+
+.content-2 a{
+	transition: all 0.5s ease 0s;
+}
+
+.content-2 a:hover{
+	font-size: larger;
+	color: #02aaf1;
+}
+
 .top_bottom {
-	width: 980px;
-	height: 485px;
+	width: 1200px;
+	height: 60px;
+	color: white;
+	border:50px dotted rgba(200,60,30,0.5);
+	background: green;
+	background-origin:padding-box;
 }
