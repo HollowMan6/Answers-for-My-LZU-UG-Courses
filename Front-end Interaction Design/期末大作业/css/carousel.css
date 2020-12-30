@@ -23,6 +23,7 @@ body {
     z-index: 1;
     width: 9100px;
     height: 350px;
+    transition: ease-in-out 0.5s;
 }
 
 #list img {

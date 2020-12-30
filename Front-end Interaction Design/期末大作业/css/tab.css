@@ -29,6 +29,19 @@ h2 {
 .show {
     clear: left;
     display: block;
+    animation: hideIndex 0.3s;
+}
+
+@keyframes hideIndex {
+    0% {
+        opacity: 0;
+        transform: translate(100px, 0)
+    }
+
+    100% {
+        opacity: 1;
+        transform: translate(0, 0)
+    }
 }
 
 .hidden {
