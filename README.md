@@ -133,7 +133,7 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
     * 总学时 Total school hours：72.0
 
 * [概率论与数理统计(Probability and Mathematical Statistics)](Probability%20and%20Mathematical%20Statistics)
-    * 课程号 Course No.：2043060
+    * 课程号 Course No.：2043060/1401222
     * 学分 Credit：3.0
     * 总学时 Total school hours：54.0
 
@@ -160,6 +160,16 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
 * [数字逻辑实验(Digital Logic Experiment)](Digital%20logic/实验)
     * 课程号 Course No.：4043011
     * 学分 Credit：1.0
+    * 总学时 Total school hours：36.0
+
+* [数值分析(Numerical Analysis)](数值分析要点提要.pdf)
+    * 课程号 Course No.：2043063
+    * 学分 Credit：3.0
+    * 总学时 Total school hours：54.0
+
+* [	习近平新时代中国特色社会主义思想概论(Introduction to Xi Jinping’s Thought on Socialism with Chinese Characteristics in the New Age)](习思想要点提要.pdf)
+    * 课程号 Course No.：1309090
+    * 学分 Credit：2.0
     * 总学时 Total school hours：36.0
 
 **网络共享选修课 Electives MOOC**:
