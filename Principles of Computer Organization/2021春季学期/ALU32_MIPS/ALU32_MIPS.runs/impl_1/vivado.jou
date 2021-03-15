@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Mon Mar 15 21:09:00 2021
+# Process ID: 13436
+# Current directory: C:/Users/j8843/ALU32_MIPS/ALU32_MIPS.runs/impl_1
+# Command line: vivado.exe -log ALU32.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source ALU32.tcl -notrace
+# Log file: C:/Users/j8843/ALU32_MIPS/ALU32_MIPS.runs/impl_1/ALU32.vdi
+# Journal file: C:/Users/j8843/ALU32_MIPS/ALU32_MIPS.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source ALU32.tcl -notrace

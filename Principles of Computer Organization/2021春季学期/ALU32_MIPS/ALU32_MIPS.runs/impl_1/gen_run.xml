@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="impl_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1615813731">
+  <File Type="BITSTR-BMM" Name="ALU32_bd.bmm"/>
+  <File Type="OPT-METHODOLOGY-DRC" Name="ALU32_methodology_drc_opted.rpt"/>
+  <File Type="INIT-TIMING" Name="ALU32_timing_summary_init.rpt"/>
+  <File Type="ROUTE-PWR" Name="ALU32_power_routed.rpt"/>
+  <File Type="PA-TCL" Name="ALU32.tcl"/>
+  <File Type="OPT-TIMING" Name="ALU32_timing_summary_opted.rpt"/>
+  <File Type="OPT-DCP" Name="ALU32_opt.dcp"/>
+  <File Type="ROUTE-PWR-SUM" Name="ALU32_power_summary_routed.pb"/>
+  <File Type="REPORTS-TCL" Name="ALU32_reports.tcl"/>
+  <File Type="OPT-DRC" Name="ALU32_drc_opted.rpt"/>
+  <File Type="OPT-HWDEF" Name="ALU32.hwdef"/>
+  <File Type="PWROPT-DCP" Name="ALU32_pwropt.dcp"/>
+  <File Type="PWROPT-DRC" Name="ALU32_drc_pwropted.rpt"/>
+  <File Type="PWROPT-TIMING" Name="ALU32_timing_summary_pwropted.rpt"/>
+  <File Type="PLACE-DCP" Name="ALU32_placed.dcp"/>
+  <File Type="PLACE-IO" Name="ALU32_io_placed.rpt"/>
+  <File Type="PLACE-CLK" Name="ALU32_clock_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL" Name="ALU32_utilization_placed.rpt"/>
+  <File Type="PLACE-UTIL-PB" Name="ALU32_utilization_placed.pb"/>
+  <File Type="PLACE-CTRL" Name="ALU32_control_sets_placed.rpt"/>
+  <File Type="PLACE-SIMILARITY" Name="ALU32_incremental_reuse_placed.rpt"/>
+  <File Type="PLACE-PRE-SIMILARITY" Name="ALU32_incremental_reuse_pre_placed.rpt"/>
+  <File Type="PLACE-TIMING" Name="ALU32_timing_summary_placed.rpt"/>
+  <File Type="POSTPLACE-PWROPT-DCP" Name="ALU32_postplace_pwropt.dcp"/>
+  <File Type="BG-BIN" Name="ALU32.bin"/>
+  <File Type="POSTPLACE-PWROPT-TIMING" Name="ALU32_timing_summary_postplace_pwropted.rpt"/>
+  <File Type="PHYSOPT-DCP" Name="ALU32_physopt.dcp"/>
+  <File Type="PHYSOPT-DRC" Name="ALU32_drc_physopted.rpt"/>
+  <File Type="BITSTR-MSK" Name="ALU32.msk"/>
+  <File Type="PHYSOPT-TIMING" Name="ALU32_timing_summary_physopted.rpt"/>
+  <File Type="ROUTE-ERROR-DCP" Name="ALU32_routed_error.dcp"/>
+  <File Type="ROUTE-DCP" Name="ALU32_routed.dcp"/>
+  <File Type="ROUTE-BLACKBOX-DCP" Name="ALU32_routed_bb.dcp"/>
+  <File Type="ROUTE-DRC" Name="ALU32_drc_routed.rpt"/>
+  <File Type="ROUTE-DRC-PB" Name="ALU32_drc_routed.pb"/>
+  <File Type="ROUTE-DRC-RPX" Name="ALU32_drc_routed.rpx"/>
+  <File Type="BITSTR-MMI" Name="ALU32.mmi"/>
+  <File Type="ROUTE-METHODOLOGY-DRC" Name="ALU32_methodology_drc_routed.rpt"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-RPX" Name="ALU32_methodology_drc_routed.rpx"/>
+  <File Type="ROUTE-METHODOLOGY-DRC-PB" Name="ALU32_methodology_drc_routed.pb"/>
+  <File Type="ROUTE-PWR-RPX" Name="ALU32_power_routed.rpx"/>
+  <File Type="ROUTE-STATUS" Name="ALU32_route_status.rpt"/>
+  <File Type="ROUTE-STATUS-PB" Name="ALU32_route_status.pb"/>
+  <File Type="ROUTE-TIMINGSUMMARY" Name="ALU32_timing_summary_routed.rpt"/>
+  <File Type="ROUTE-TIMING-PB" Name="ALU32_timing_summary_routed.pb"/>
+  <File Type="ROUTE-TIMING-RPX" Name="ALU32_timing_summary_routed.rpx"/>
+  <File Type="ROUTE-SIMILARITY" Name="ALU32_incremental_reuse_routed.rpt"/>
+  <File Type="ROUTE-CLK" Name="ALU32_clock_utilization_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW" Name="ALU32_bus_skew_routed.rpt"/>
+  <File Type="ROUTE-BUS-SKEW-PB" Name="ALU32_bus_skew_routed.pb"/>
+  <File Type="ROUTE-BUS-SKEW-RPX" Name="ALU32_bus_skew_routed.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-DCP" Name="ALU32_postroute_physopt.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-BLACKBOX-DCP" Name="ALU32_postroute_physopt_bb.dcp"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING" Name="ALU32_timing_summary_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-PB" Name="ALU32_timing_summary_postroute_physopted.pb"/>
+  <File Type="POSTROUTE-PHYSOPT-TIMING-RPX" Name="ALU32_timing_summary_postroute_physopted.rpx"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW" Name="ALU32_bus_skew_postroute_physopted.rpt"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-PB" Name="ALU32_bus_skew_postroute_physopted.pb"/>
+  <File Type="BG-BIT" Name="ALU32.bit"/>
+  <File Type="POSTROUTE-PHYSOPT-BUS-SKEW-RPX" Name="ALU32_bus_skew_postroute_physopted.rpx"/>
+  <File Type="BITSTR-RBT" Name="ALU32.rbt"/>
+  <File Type="BITSTR-NKY" Name="ALU32.nky"/>
+  <File Type="PDI-FILE" Name="ALU32.pdi"/>
+  <File Type="RCFI_FILE" Name="ALU32.rcfi"/>
+  <File Type="CFI_FILE" Name="ALU32.cfi"/>
+  <File Type="RNPI_FILE" Name="ALU32.rnpi"/>
+  <File Type="NPI_FILE" Name="ALU32.npi"/>
+  <File Type="RBD_FILE" Name="ALU32.rbd"/>
+  <File Type="BITSTR-LTX" Name="debug_nets.ltx"/>
+  <File Type="BITSTR-LTX" Name="ALU32.ltx"/>
+  <File Type="BITSTR-SYSDEF" Name="ALU32.sysdef"/>
+  <File Type="BG-BGN" Name="ALU32.bgn"/>
+  <File Type="BG-DRC" Name="ALU32.drc"/>
+  <File Type="RDI-RDI" Name="ALU32.vdi"/>
+  <File Type="WBT-USG" Name="usage_statistics_webtalk.html"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/ALU32.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="ALU32"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
+      <Desc>Default settings for Implementation.</Desc>
+    </StratHandle>
+    <Step Id="init_design"/>
+    <Step Id="opt_design"/>
+    <Step Id="power_opt_design"/>
+    <Step Id="place_design"/>
+    <Step Id="post_place_power_opt_design"/>
+    <Step Id="phys_opt_design"/>
+    <Step Id="route_design"/>
+    <Step Id="post_route_phys_opt_design"/>
+    <Step Id="write_bitstream"/>
+  </Strategy>
+</GenRun>
