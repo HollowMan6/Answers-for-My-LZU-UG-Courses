@@ -1,4 +1,4 @@
-# 操作系统 课程作业
+# 操作系统 实验+课程作业
 
 [![last-commit](https://img.shields.io/github/last-commit/HollowMan6/Answers-for-My-LZU-UG-Courses)](../../../graphs/commit-activity)
 
@@ -13,6 +13,10 @@
 
 此仓库是我的兰州大学“操作系统”的课程作业。
 
+[这里](实验)是我的兰州大学“操作系统课程设计”的实验报告。
+
 # Answers for my Operating System Courses
 
 This repository is my coursework for the LZU Operating System Course.
+
+[Here](实验) are my reports for the LZU OS Lab Class.
