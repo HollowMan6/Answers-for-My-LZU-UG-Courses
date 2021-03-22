@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="impl_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1615813731">
+<GenRun Id="impl_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1616386922">
   <File Type="BITSTR-BMM" Name="ALU32_bd.bmm"/>
   <File Type="OPT-METHODOLOGY-DRC" Name="ALU32_methodology_drc_opted.rpt"/>
   <File Type="INIT-TIMING" Name="ALU32_timing_summary_init.rpt"/>
@@ -103,9 +103,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-      <Desc>Default settings for Implementation.</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
     <Step Id="init_design"/>
     <Step Id="opt_design"/>
     <Step Id="power_opt_design"/>

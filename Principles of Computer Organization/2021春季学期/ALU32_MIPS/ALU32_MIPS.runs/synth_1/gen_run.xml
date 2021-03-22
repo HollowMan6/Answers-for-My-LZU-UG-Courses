@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1615813646">
+<GenRun Id="synth_1" LaunchPart="xc7k70tfbv676-1" LaunchTime="1616386829">
   <File Type="PA-TCL" Name="ALU32.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="ALU32_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="ALU32_reports.tcl"/>
@@ -37,9 +37,7 @@
     </Config>
   </FileSet>
   <Strategy Version="1" Minor="2">
-    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-      <Desc>Vivado Synthesis Defaults</Desc>
-    </StratHandle>
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
     <Step Id="synth_design"/>
   </Strategy>
 </GenRun>

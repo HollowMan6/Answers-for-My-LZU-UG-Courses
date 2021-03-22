@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Mon Mar 15 21:07:35 2021
-# Process ID: 11532
+# Start of session at: Mon Mar 22 12:20:34 2021
+# Process ID: 8304
 # Current directory: C:/Users/j8843/ALU32_MIPS/ALU32_MIPS.runs/synth_1
 # Command line: vivado.exe -log ALU32.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source ALU32.tcl
 # Log file: C:/Users/j8843/ALU32_MIPS/ALU32_MIPS.runs/synth_1/ALU32.vds

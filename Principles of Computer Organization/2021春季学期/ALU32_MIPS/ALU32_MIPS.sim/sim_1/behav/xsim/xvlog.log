@@ -2,5 +2,3 @@ INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/j8843/ALU32_MIPS/ALU32_MIP
 INFO: [VRFC 10-311] analyzing module ALU32
 INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/j8843/ALU32_MIPS/ALU32_MIPS.srcs/sim_1/new/ALU_sim.v" into library xil_defaultlib
 INFO: [VRFC 10-311] analyzing module ALU_sim
-INFO: [VRFC 10-2263] Analyzing Verilog file "C:/Users/j8843/ALU32_MIPS/ALU32_MIPS.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
