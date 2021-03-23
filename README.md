@@ -177,6 +177,11 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
     * 学分 Credit：1.0
     * 总学时 Total school hours：36.0
 
+* [编译原理课程设计(Course Exercise for Compiling Principles)](Compiling%20Principles)
+    * 课程号 Course No.：4043013
+    * 学分 Credit：1.0
+    * 总学时 Total school hours：36.0
+
 **网络共享选修课 Electives MOOC**:
 
 * 《人生悟理——透过物理看人生》《网络共享课》(Life Understanding-Seeing Life through Physics)
