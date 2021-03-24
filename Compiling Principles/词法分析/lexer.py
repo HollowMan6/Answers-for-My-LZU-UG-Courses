@@ -3,7 +3,7 @@ keywords = ["if", "else", "while", "break", "continue", "for", "double", "int", 
 operators = ["+", "++", "-", "--", "+=", "-=", "*", "*=", "%", "%=", "->", "|", "||", "|=",
             "/", "/=", ">", "<", ">=", "<=", "=", "==", "!=", "!",]
 symbols = ["{", "}", "[", "]", "(", ")", "~", ",", ";", ".", "?", ":"]
-# Types=["Identifier","Integer","Symbol","Keyword","Operator","EOF"]
+# Types=["Identifier","Integer","Symbol","String","Keyword","Operator","EOF"]
 
 
 def NextToken(code, line, pointer):
@@ -83,6 +83,39 @@ def NextToken(code, line, pointer):
         if not(code[line][pointer] == ' ' or code[line][pointer] == '\t' or code[line][pointer] == '\\'):
             break
     # begin getting a Token
+    # String with "
+    if pointer < len(code[line]) and code[line][pointer] == '"':
+        pointer += 1
+        while pointer < len(code[line]):
+            if code[line][pointer] == '"' and code[line][pointer-1] != '\\':
+                pointer += 1
+                if pointer >= len(code[line]):
+                    pointer = 0
+                    line += 1
+                return (lexem, "String"), line, pointer
+            else:
+                lexem += code[line][pointer]
+                pointer += 1
+        # Check if the string ends with "
+        raise Exception("Lexical", line+1,
+                        code[line][pointer-1], 'a string ended without "')
+    # String with '
+    if pointer < len(code[line]) and code[line][pointer] == "'":
+        pointer += 1
+        while pointer < len(code[line]):
+            if code[line][pointer] == "'" and code[line][pointer-1] != '\\':
+                pointer += 1
+                if pointer >= len(code[line]):
+                    pointer = 0
+                    line += 1
+                return (lexem, "String"), line, pointer
+            else:
+                lexem += code[line][pointer]
+                pointer += 1
+        # Check if the string ends with "
+        raise Exception("Lexical", line+1,
+                        code[line][pointer-1], 'a string ended without \'')
+    # Others
     while pointer < len(code[line]) and code[line][pointer] != ' ':
         # raise error if there exists special symbols
         if not (code[line][pointer].isalnum() or code[line][pointer] == '_' or code[line][pointer] in operators or code[line][pointer] in symbols):
@@ -90,6 +123,11 @@ def NextToken(code, line, pointer):
                             code[line][pointer], 'unrecognised symbol')
         lexem += code[line][pointer]
         # To identify symbols
+        if len(code[line]) > pointer+1:
+            if code[line][pointer]+code[line][pointer+1] in operators:
+                lexem += code[line][pointer+1]
+                pointer += 2
+                return (lexem, "Operator"), line, pointer
         if code[line][pointer] in operators:
             pointer += 1
             return (lexem, "Operator"), line, pointer
