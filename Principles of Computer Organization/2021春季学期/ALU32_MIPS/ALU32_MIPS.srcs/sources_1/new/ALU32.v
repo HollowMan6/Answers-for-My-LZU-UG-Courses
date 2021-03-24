@@ -119,23 +119,23 @@ always@(*)
             //sll
             11'b00000000000:
                 begin
-                    {carryout,out}=in0<<32'd2;
+                    {carryout,out}=in0<<in1;
                     overflow=0;
                     zero=(out==0)?1:0;
                 end
             //srl
             11'b00000000010:
                 begin
-                    out=in0>>32'd2;
-                    carryout=in0[32'd1];
+                    out=in0>>in1;
+                    carryout=in0[in1-1];
                     overflow=0;
                     zero=(out==0)?1:0;
                 end
             //sra
             11'b00000000011:
                 begin
-                    out=($signed(in0))>>>32'd2;
-                    carryout=in0[32'd1];
+                    out=($signed(in0))>>>in1;
+                    carryout=in0[in1-1];
                     overflow=0;
                     zero=(out==0)?1:0;
                 end
