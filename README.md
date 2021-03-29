@@ -219,6 +219,11 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
     * 学分 Credit：2.0
     * 总学时 Total school hours：36.0
 
+* Blockly创意趣味编程（网络共享课）(Blockly Creative Programming)
+    * 课程号 Course No.：2043801
+    * 学分 Credit：2.0
+    * 总学时 Total school hours：36.0
+
 * [人生悟理——透过物理看人生（网络共享课）](人生悟理-透过物理看人生（网络共享课）)
   * [绪论](人生悟理-透过物理看人生（网络共享课）/绪论.pdf)
   * [第一章测试](人生悟理-透过物理看人生（网络共享课）/第一章测试.pdf)
@@ -609,3 +614,11 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
   * [10.4.2使用石器的万能博士—“能人”](./地球历史及其生命的奥秘（网络共享课）/10.4.2使用石器的万能博士—“能人”.pdf)
   * [10.4.3人模人样的“直立人”](./地球历史及其生命的奥秘（网络共享课）/10.4.3人模人样的“直立人”.pdf)
   * [10.4.4身材样貌和我们无分轩轾的“智人](./地球历史及其生命的奥秘（网络共享课）/10.4.4身材样貌和我们无分轩轾的“智人.pdf)
+
+* [Blockly创意趣味编程（网络共享课）](./Blockly创意趣味编程（网络共享课）)
+  * [1.1信息](./Blockly创意趣味编程（网络共享课）/1.1信息.pdf)
+  * [1.2信息技术](./Blockly创意趣味编程（网络共享课）/1.2信息技术.pdf)
+  * [1.3什么是Blockly](./Blockly创意趣味编程（网络共享课）/1.3什么是Blockly.pdf)
+  * [1.4Blockly编程环境](./Blockly创意趣味编程（网络共享课）/1.4Blockly编程环境.pdf)
+  * [1.5Blockly模块功能介绍](./Blockly创意趣味编程（网络共享课）/1.5Blockly模块功能介绍.pdf)
+  * [1.6章节测验](./Blockly创意趣味编程（网络共享课）/1.6章节测验.pdf)
