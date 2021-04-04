@@ -20,7 +20,7 @@
 //////////////////////////////////////////////////////////////////////////////////
 
 
-module ALU(in0,in1,op,out,overflow,zero,carryout);
+module ALU(op,in0,in1,out,overflow,zero,carryout);
     
     input [31:0] in0;
     input [31:0] in1;
@@ -36,19 +36,14 @@ module ALU(in0,in1,op,out,overflow,zero,carryout);
     
     wire [31:0]in0;
     wire [31:0]in1;
-    //wire [31:0]add_out_com;
-    //wire [31:0]sub_out_com;
-    //reg [31:0]add_out;
-    //reg [31:0]sub_out;
     wire [31:0] sub_in1;
     wire [31:0]add_out;
     wire [31:0]sub_out;
     wire [31:0]shift_out;
     wire add_carryout;
     wire sub_carryout;
-
     parameter cin=0;
-    
+
     assign  sub_in1=(~in1+1);
     adder_32 add(
                 .cin(cin),
@@ -69,15 +64,7 @@ module ALU(in0,in1,op,out,overflow,zero,carryout);
                 .c(op[1]),
                 .out(shift_out)
      );
-    /*
-    sub_32 sub(
-                .cin(cin),
-                .in0(in0),
-                .in1(in1),
-                .carryout(sub_carryout),
-                .out(sub_out)
-                );
-    */
+
     always @(*)
     begin 
         case(op)
@@ -85,7 +72,6 @@ module ALU(in0,in1,op,out,overflow,zero,carryout);
         11'b00000100000:
             begin
                 out=add_out;
-                //add_out=add_out_com;
                 overflow=((in0[31]==in1[31])&&(~out[31]==in0[31]))?1:0;
                 zero=(out==0)?1:0;
                 carryout=0; //有符号加法最高位是符号位，故考虑溢出即可，进位赋值0
@@ -93,7 +79,6 @@ module ALU(in0,in1,op,out,overflow,zero,carryout);
         //addu
         11'b00000100001:
             begin
-                //{carryout,out}=in0+in1;
                 carryout=add_carryout;
                 out=add_out;
                 zero=(out==0)?1:0;
@@ -103,7 +88,6 @@ module ALU(in0,in1,op,out,overflow,zero,carryout);
         11'b00000100010:
             begin
                 out=sub_out;
-                //overflow=(in1[31]!=in0[31]&&out[31]!=in1[31])?1:0;
                 overflow=((in0[31]==sub_in1[31])&&(~out[31]==in0[31]))?1:0;
                 zero=(out==0)?1:0;
                 carryout=0;
@@ -111,7 +95,6 @@ module ALU(in0,in1,op,out,overflow,zero,carryout);
         //subu
         11'b00000100011:    
             begin
-                //{carryout,out}=in1-in0;
                 carryout=~sub_carryout;
                 out=sub_out;
                 zero=(out==0)?1:0;
@@ -173,16 +156,14 @@ module ALU(in0,in1,op,out,overflow,zero,carryout);
         //sll
             11'b00000000000:
             begin
-            //out=in0<<2;
             out=shift_out;
             carryout=0;
-            overflow=0;
+            overflow=in0[31]^in0[29];
             zero=(out==0)?1:0;
             end
         //srl
         11'b00000000010:
             begin
-            //out=in0>>2;
             out=shift_out;
             carryout=0;
             overflow=0;
@@ -201,7 +182,7 @@ module ALU(in0,in1,op,out,overflow,zero,carryout);
             begin
             out=in0<<in1;
             carryout=0;
-            overflow=0;
+            overflow=in0[31]^in0[31-in1];
             zero=(out==0)?1:0;
             end
         //srlv
@@ -222,5 +203,4 @@ module ALU(in0,in1,op,out,overflow,zero,carryout);
             end
         endcase
     end
-
 endmodule
