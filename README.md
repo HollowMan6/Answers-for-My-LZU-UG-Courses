@@ -622,3 +622,8 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
   * [1.4Blockly编程环境](./Blockly创意趣味编程（网络共享课）/1.4Blockly编程环境.pdf)
   * [1.5Blockly模块功能介绍](./Blockly创意趣味编程（网络共享课）/1.5Blockly模块功能介绍.pdf)
   * [1.6章节测验](./Blockly创意趣味编程（网络共享课）/1.6章节测验.pdf)
+  * [2.1数据的概念](./Blockly创意趣味编程（网络共享课）/2.1数据的概念.pdf)
+  * [2.2数据类型](./Blockly创意趣味编程（网络共享课）/2.2数据类型.pdf)
+  * [2.3变量](./Blockly创意趣味编程（网络共享课）/2.3变量.pdf)
+  * [2.4运算符](./Blockly创意趣味编程（网络共享课）/2.4运算符.pdf)
+  * [2.5章节测验](./Blockly创意趣味编程（网络共享课）/2.5章节测验.pdf)
