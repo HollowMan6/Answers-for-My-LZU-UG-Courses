@@ -632,3 +632,6 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
   * [2.3变量](./Blockly创意趣味编程（网络共享课）/2.3变量.pdf)
   * [2.4运算符](./Blockly创意趣味编程（网络共享课）/2.4运算符.pdf)
   * [2.5章节测验](./Blockly创意趣味编程（网络共享课）/2.5章节测验.pdf)
+  * [3.1程序与算法](./Blockly创意趣味编程（网络共享课）/3.1程序与算法.pdf)
+  * [3.2用顺序结构设计程序](./Blockly创意趣味编程（网络共享课）/3.2用顺序结构设计程序.pdf)
+  * [3.3章节测验](./Blockly创意趣味编程（网络共享课）/3.3章节测验.pdf)
