@@ -177,6 +177,11 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
     * 学分 Credit：1.0
     * 总学时 Total school hours：36.0
 
+* [编译原理(Compiling Principles)](Compiling%20Principles)
+    * 课程号 Course No.：2043122
+    * 学分 Credit：3.0
+    * 总学时 Total school hours：54.0
+
 * [编译原理课程设计(Course Exercise for Compiling Principles)](Compiling%20Principles)
     * 课程号 Course No.：4043013
     * 学分 Credit：1.0

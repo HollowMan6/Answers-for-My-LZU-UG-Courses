@@ -1,4 +1,4 @@
-# 编译原理 课程设计
+# 编译原理 课程设计 与 作业
 
 [![last-commit](https://img.shields.io/github/last-commit/HollowMan6/Answers-for-My-LZU-UG-Courses)](../../../graphs/commit-activity)
 
@@ -11,7 +11,7 @@
 [![GPL Licence](https://badges.frapsoft.com/os/gpl/gpl.svg?v=103)](https://opensource.org/licenses/GPL-3.0/)
 [![Repo-Size](https://img.shields.io/github/repo-size/HollowMan6/Answers-for-My-LZU-UG-Courses.svg)](../../../archive/master.zip)
 
-这个仓库是我的兰州大学“编译原理课程设计”实验课的作业答案。
+这个仓库是我的兰州大学“编译原理课程设计”实验课与“编译原理”的作业答案。
 
 # Answers for my Course Exercise for Compiling Principles
 
