@@ -640,3 +640,7 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
   * [3.1程序与算法](./Blockly创意趣味编程（网络共享课）/3.1程序与算法.pdf)
   * [3.2用顺序结构设计程序](./Blockly创意趣味编程（网络共享课）/3.2用顺序结构设计程序.pdf)
   * [3.3章节测验](./Blockly创意趣味编程（网络共享课）/3.3章节测验.pdf)
+  * [4.1用选择结构设计程序](./Blockly创意趣味编程（网络共享课）/4.1用选择结构设计程序.pdf)
+  * [4.2单分支选择结构](./Blockly创意趣味编程（网络共享课）/4.2单分支选择结构.pdf)
+  * [4.3双分支选择结构](./Blockly创意趣味编程（网络共享课）/4.3双分支选择结构.pdf)
+  * [4.6章节测验](./Blockly创意趣味编程（网络共享课）/4.6章节测验.pdf)
