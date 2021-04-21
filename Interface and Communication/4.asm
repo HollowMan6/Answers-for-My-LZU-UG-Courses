@@ -1,0 +1,109 @@
+DATA SEGMENT
+MESS1 DB 'Left loop press 1',0DH,0AH
+DB 'Right loop press 2',0DH,0AH
+DB 'Interval light press 3',0DH,0AH
+DB 'Quit press 4',0DH,0AH,0DH,0AH,'$'
+MESS2 DB 'Invalid, continue selecting:',0DH,0AH,'$'
+MESS3 DB 'Press any key to return to main menu',0DH,0AH,'$'
+DATA ENDS
+STACK SEGMENT
+STA DB 20 DUP(?)
+TOP EQU LENGTH STA
+STACK ENDS
+CODE SEGMENT
+ASSUME CS:CODE,DS:DATA,SS:STACK,ES:DATA
+START: MOV AX,DATA
+    MOV DS,AX
+    MOV AX,STACK
+    MOV SS,AX
+    MOV SP,TOP
+    MOV SP,AX
+    MOV DX,28BH
+    MOV AL,80H
+    OUT DX,AL
+BG: LEA DX,MESS1
+    MOV AH,09H
+    INT 21H
+    MOV AH,08H
+    INT 21H
+    PUSH AX
+    LEA DX,MESS3
+    MOV AH,09H
+    INT 21H
+    POP AX
+    MOV AH,AL
+    CMP AL,'1'
+    JZ ZXH
+    MOV AL,AH
+    CMP AL,'2'
+    JZ YXH
+    MOV AL,AH
+    CMP AL,'3'
+    JZ JGS
+    MOV AL,AH
+    CMP AL,'4'
+    JNZ WX
+    JMP QIT
+WX: LEA DX,MESS2
+    MOV AH,09H
+    INT 21H
+    JMP BG
+ZXH:MOV DX,28AH
+    MOV AL,01H
+BB: OUT DX,AL
+    MOV CX,0FFFFH
+WAIT1:MOV BX,80H
+L1: DEC BX
+    JNZ L1
+    LOOP WAIT1
+    ROL AL,1
+    PUSH AX
+    PUSH DX
+    MOV DL,0FFH
+    MOV AH,06H
+    INT 21H
+    JNZ BG
+    POP DX
+    POP AX
+    JMP BB
+YXH:MOV DX,28AH
+    MOV AL,01H
+EE: OUT DX,AL
+    MOV CX,0FFFFH
+WAIT2:MOV BX,80H
+L2: DEC BX
+    JNZ L2
+    LOOP WAIT2
+    ROR AL,1
+    PUSH AX
+    PUSH DX
+    MOV DL,0FFH
+    MOV AH,06H
+    INT 21H
+    JNZ BG
+    POP DX
+    POP AX
+    JMP EE
+JGS:MOV DX,28AH
+    MOV AL,55H
+HH: OUT DX,AL
+    MOV CX,0FFFFH
+WAIT3:MOV BX,80H
+L3: DEC BX
+    JNZ L3
+    LOOP WAIT3
+    NOT AL
+    PUSH AX
+    PUSH DX
+    MOV DL,0FFH
+    MOV AH,06H
+    INT 21H
+    JNZ BG1
+    POP DX
+    POP AX
+    JMP HH
+BG1:JMP BG
+QIT:MOV AX,4C00H
+    INT 21H
+CODE ENDS
+END START
