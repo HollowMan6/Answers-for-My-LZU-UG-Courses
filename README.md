@@ -644,3 +644,4 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
   * [4.2单分支选择结构](./Blockly创意趣味编程（网络共享课）/4.2单分支选择结构.pdf)
   * [4.3双分支选择结构](./Blockly创意趣味编程（网络共享课）/4.3双分支选择结构.pdf)
   * [4.6章节测验](./Blockly创意趣味编程（网络共享课）/4.6章节测验.pdf)
+  * [5.8章节测验](./Blockly创意趣味编程（网络共享课）/5.8章节测验.pdf)
