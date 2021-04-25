@@ -1,0 +1,423 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<block>
+<functionDeclar>
+<terminal> (&apos;int&apos;, &apos;Type&apos;) </terminal>
+<terminal> (&apos;main&apos;, &apos;Identifier&apos;) </terminal>
+<terminal> (&apos;(&apos;, &apos;Symbol&apos;) </terminal>
+<paramList>
+</paramList>
+<terminal> (&apos;)&apos;, &apos;Symbol&apos;) </terminal>
+<terminal> (&apos;{&apos;, &apos;Symbol&apos;) </terminal>
+<statement>
+<varDeclarStatement>
+<terminal> (&apos;int&apos;, &apos;Type&apos;) </terminal>
+<paramList>
+<terminal> (&apos;i&apos;, &apos;Identifier&apos;) </terminal>
+<terminal> (&apos;,&apos;, &apos;Symbol&apos;) </terminal>
+<terminal> (&apos;j&apos;, &apos;Identifier&apos;) </terminal>
+<terminal> (&apos;,&apos;, &apos;Symbol&apos;) </terminal>
+<terminal> (&apos;k&apos;, &apos;Identifier&apos;) </terminal>
+<terminal> (&apos;,&apos;, &apos;Symbol&apos;) </terminal>
+<terminal> (&apos;TLen&apos;, &apos;Identifier&apos;) </terminal>
+<terminal> (&apos;,&apos;, &apos;Symbol&apos;) </terminal>
+<terminal> (&apos;PLen&apos;, &apos;Identifier&apos;) </terminal>
+<terminal> (&apos;,&apos;, &apos;Symbol&apos;) </terminal>
+<terminal> (&apos;count&apos;, &apos;Identifier&apos;) </terminal>
+</paramList>
+<terminal> (&apos;=&apos;, &apos;Operator&apos;) </terminal>
+<expression>
+<relationalExpression>
+<arithmeticExpression>
+<term>
+<factor>
+<terminal> (0, &apos;Integer&apos;) </terminal>
+</factor>
+</term>
+</arithmeticExpression>
+</relationalExpression>
+</expression>
+<terminal> (&apos;;&apos;, &apos;Symbol&apos;) </terminal>
+</varDeclarStatement>
+</statement>
+<statement>
+<varDeclarStatement>
+<terminal> (&apos;char&apos;, &apos;Type&apos;) </terminal>
+<paramList>
+<terminal> (&apos;T&apos;, &apos;Identifier&apos;) </terminal>
+<terminal> (&apos;[&apos;, &apos;Symbol&apos;) </terminal>
+<expression>
+<relationalExpression>
+<arithmeticExpression>
+<term>
+<factor>
+<terminal> (50, &apos;Integer&apos;) </terminal>
+</factor>
+</term>
+</arithmeticExpression>
+</relationalExpression>
+</expression>
+<terminal> (&apos;]&apos;, &apos;Symbol&apos;) </terminal>
+<terminal> (&apos;,&apos;, &apos;Symbol&apos;) </terminal>
+<terminal> (&apos;P&apos;, &apos;Identifier&apos;) </terminal>
+<terminal> (&apos;[&apos;, &apos;Symbol&apos;) </terminal>
+<expression>
+<relationalExpression>
+<arithmeticExpression>
+<term>
+<factor>
+<terminal> (10, &apos;Integer&apos;) </terminal>
+</factor>
+</term>
+</arithmeticExpression>
+</relationalExpression>
+</expression>
+<terminal> (&apos;]&apos;, &apos;Symbol&apos;) </terminal>
+</paramList>
+<terminal> (&apos;;&apos;, &apos;Symbol&apos;) </terminal>
+</varDeclarStatement>
+</statement>
+<statement>
+<assignStatement>
+<terminal> (&apos;TLen&apos;, &apos;Identifier&apos;) </terminal>
+<terminal> (&apos;=&apos;, &apos;Operator&apos;) </terminal>
+<expression>
+<relationalExpression>
+<arithmeticExpression>
+<term>
+<factor>
+<terminal> (&apos;T&apos;, &apos;Identifier&apos;) </terminal>
+</factor>
+</term>
+</arithmeticExpression>
+</relationalExpression>
+</expression>
+<terminal> (&apos;;&apos;, &apos;Symbol&apos;) </terminal>
+</assignStatement>
+</statement>
+<statement>
+<varDeclarStatement>
+<terminal> (&apos;int&apos;, &apos;Type&apos;) </terminal>
+<paramList>
+<terminal> (&apos;a&apos;, &apos;Identifier&apos;) </terminal>
+</paramList>
+<terminal> (&apos;;&apos;, &apos;Symbol&apos;) </terminal>
+</varDeclarStatement>
+</statement>
+<statement>
+<varDeclarStatement>
+<terminal> (&apos;int&apos;, &apos;Type&apos;) </terminal>
+<paramList>
+<terminal> (&apos;b&apos;, &apos;Identifier&apos;) </terminal>
+</paramList>
+<terminal> (&apos;;&apos;, &apos;Symbol&apos;) </terminal>
+</varDeclarStatement>
+</statement>
+<statement>
+<varDeclarStatement>
+<terminal> (&apos;char&apos;, &apos;Type&apos;) </terminal>
+<paramList>
+<terminal> (&apos;k&apos;, &apos;Identifier&apos;) </terminal>
+<terminal> (&apos;[&apos;, &apos;Symbol&apos;) </terminal>
+<expression>
+<relationalExpression>
+<arithmeticExpression>
+<term>
+<factor>
+<terminal> (3, &apos;Integer&apos;) </terminal>
+</factor>
+</term>
+</arithmeticExpression>
+</relationalExpression>
+</expression>
+<terminal> (&apos;]&apos;, &apos;Symbol&apos;) </terminal>
+</paramList>
+<terminal> (&apos;=&apos;, &apos;Operator&apos;) </terminal>
+<expression>
+<relationalExpression>
+<arithmeticExpression>
+<term>
+<factor>
+<terminal> (&apos;a\\"bc&apos;, &apos;String&apos;) </terminal>
+</factor>
+</term>
+</arithmeticExpression>
+</relationalExpression>
+</expression>
+<terminal> (&apos;;&apos;, &apos;Symbol&apos;) </terminal>
+</varDeclarStatement>
+</statement>
+<statement>
+<assignStatement>
+<terminal> (&apos;a&apos;, &apos;Identifier&apos;) </terminal>
+<terminal> (&apos;=&apos;, &apos;Operator&apos;) </terminal>
+<expression>
+<relationalExpression>
+<arithmeticExpression>
+<term>
+<factor>
+<terminal> (1, &apos;Integer&apos;) </terminal>
+</factor>
+</term>
+</arithmeticExpression>
+</relationalExpression>
+</expression>
+<terminal> (&apos;;&apos;, &apos;Symbol&apos;) </terminal>
+</assignStatement>
+</statement>
+<statement>
+<assignStatement>
+<terminal> (&apos;a&apos;, &apos;Identifier&apos;) </terminal>
+<terminal> (&apos;=&apos;, &apos;Operator&apos;) </terminal>
+<expression>
+<relationalExpression>
+<arithmeticExpression>
+<term>
+<factor>
+<terminal> (&apos;a&apos;, &apos;Identifier&apos;) </terminal>
+</factor>
+</term>
+<terminal> (&apos;+&apos;, &apos;Operator&apos;) </terminal>
+<term>
+<factor>
+<terminal> (1, &apos;Integer&apos;) </terminal>
+</factor>
+</term>
+</arithmeticExpression>
+</relationalExpression>
+</expression>
+<terminal> (&apos;;&apos;, &apos;Symbol&apos;) </terminal>
+</assignStatement>
+</statement>
+<statement>
+<assignStatement>
+<terminal> (&apos;b&apos;, &apos;Identifier&apos;) </terminal>
+<terminal> (&apos;=&apos;, &apos;Operator&apos;) </terminal>
+<expression>
+<relationalExpression>
+<arithmeticExpression>
+<term>
+<factor>
+<terminal> (&apos;a&apos;, &apos;Identifier&apos;) </terminal>
+</factor>
+</term>
+<terminal> (&apos;+&apos;, &apos;Operator&apos;) </terminal>
+<term>
+<factor>
+<terminal> (2, &apos;Integer&apos;) </terminal>
+</factor>
+</term>
+</arithmeticExpression>
+</relationalExpression>
+</expression>
+<terminal> (&apos;;&apos;, &apos;Symbol&apos;) </terminal>
+</assignStatement>
+</statement>
+<statement>
+<assignStatement>
+<terminal> (&apos;PLen&apos;, &apos;Identifier&apos;) </terminal>
+<terminal> (&apos;=&apos;, &apos;Operator&apos;) </terminal>
+<expression>
+<relationalExpression>
+<arithmeticExpression>
+<term>
+<factor>
+<terminal> (&apos;P&apos;, &apos;Identifier&apos;) </terminal>
+</factor>
+</term>
+</arithmeticExpression>
+</relationalExpression>
+</expression>
+<terminal> (&apos;;&apos;, &apos;Symbol&apos;) </terminal>
+</assignStatement>
+</statement>
+<statement>
+<whileStatement>
+<terminal> (&apos;while&apos;, &apos;Keyword&apos;) </terminal>
+<terminal> (&apos;(&apos;, &apos;Symbol&apos;) </terminal>
+<expression>
+<relationalExpression>
+<arithmeticExpression>
+<term>
+<factor>
+<terminal> (&apos;i&apos;, &apos;Identifier&apos;) </terminal>
+</factor>
+</term>
+</arithmeticExpression>
+<terminal> (&apos;&lt;&apos;, &apos;Operator&apos;) </terminal>
+<arithmeticExpression>
+<term>
+<factor>
+<terminal> (&apos;TLen&apos;, &apos;Identifier&apos;) </terminal>
+</factor>
+</term>
+<terminal> (&apos;-&apos;, &apos;Operator&apos;) </terminal>
+<term>
+<factor>
+<terminal> (&apos;PLen&apos;, &apos;Identifier&apos;) </terminal>
+</factor>
+</term>
+</arithmeticExpression>
+</relationalExpression>
+</expression>
+<terminal> (&apos;)&apos;, &apos;Symbol&apos;) </terminal>
+<terminal> (&apos;{&apos;, &apos;Symbol&apos;) </terminal>
+<statement>
+<ifStatement>
+<terminal> (&apos;if&apos;, &apos;Keyword&apos;) </terminal>
+<terminal> (&apos;(&apos;, &apos;Symbol&apos;) </terminal>
+<expression>
+<relationalExpression>
+<arithmeticExpression>
+<term>
+<factor>
+<terminal> (&apos;a&apos;, &apos;Identifier&apos;) </terminal>
+</factor>
+</term>
+</arithmeticExpression>
+</relationalExpression>
+<terminal> (&apos;&amp;&apos;, &apos;Symbol&apos;) </terminal>
+<relationalExpression>
+<arithmeticExpression>
+<term>
+<factor>
+<terminal> (&apos;b&apos;, &apos;Identifier&apos;) </terminal>
+</factor>
+</term>
+</arithmeticExpression>
+</relationalExpression>
+</expression>
+<terminal> (&apos;)&apos;, &apos;Symbol&apos;) </terminal>
+<terminal> (&apos;{&apos;, &apos;Symbol&apos;) </terminal>
+<statement>
+<assignStatement>
+<terminal> (&apos;i&apos;, &apos;Identifier&apos;) </terminal>
+<terminal> (&apos;=&apos;, &apos;Operator&apos;) </terminal>
+<expression>
+<relationalExpression>
+<arithmeticExpression>
+<term>
+<factor>
+<terminal> (&apos;i&apos;, &apos;Identifier&apos;) </terminal>
+</factor>
+</term>
+<terminal> (&apos;+&apos;, &apos;Operator&apos;) </terminal>
+<term>
+<factor>
+<terminal> (1, &apos;Integer&apos;) </terminal>
+</factor>
+</term>
+</arithmeticExpression>
+</relationalExpression>
+</expression>
+<terminal> (&apos;;&apos;, &apos;Symbol&apos;) </terminal>
+</assignStatement>
+</statement>
+<terminal> (&apos;}&apos;, &apos;Symbol&apos;) </terminal>
+<terminal> (&apos;else&apos;, &apos;Keyword&apos;) </terminal>
+<terminal> (&apos;{&apos;, &apos;Symbol&apos;) </terminal>
+<statement>
+<assignStatement>
+<terminal> (&apos;b&apos;, &apos;Identifier&apos;) </terminal>
+<terminal> (&apos;=&apos;, &apos;Operator&apos;) </terminal>
+<expression>
+<relationalExpression>
+<arithmeticExpression>
+<term>
+<factor>
+<terminal> (&apos;a&apos;, &apos;Identifier&apos;) </terminal>
+</factor>
+</term>
+</arithmeticExpression>
+</relationalExpression>
+</expression>
+<terminal> (&apos;;&apos;, &apos;Symbol&apos;) </terminal>
+</assignStatement>
+</statement>
+<terminal> (&apos;}&apos;, &apos;Symbol&apos;) </terminal>
+</ifStatement>
+</statement>
+<statement>
+<ifStatement>
+<terminal> (&apos;if&apos;, &apos;Keyword&apos;) </terminal>
+<terminal> (&apos;(&apos;, &apos;Symbol&apos;) </terminal>
+<expression>
+<relationalExpression>
+<arithmeticExpression>
+<term>
+<factor>
+<terminal> (&apos;b&apos;, &apos;Identifier&apos;) </terminal>
+</factor>
+</term>
+</arithmeticExpression>
+</relationalExpression>
+</expression>
+<terminal> (&apos;)&apos;, &apos;Symbol&apos;) </terminal>
+<terminal> (&apos;{&apos;, &apos;Symbol&apos;) </terminal>
+<statement>
+<assignStatement>
+<terminal> (&apos;i&apos;, &apos;Identifier&apos;) </terminal>
+<terminal> (&apos;=&apos;, &apos;Operator&apos;) </terminal>
+<expression>
+<relationalExpression>
+<arithmeticExpression>
+<term>
+<factor>
+<terminal> (&apos;(&apos;, &apos;Symbol&apos;) </terminal>
+<expressionList>
+<expression>
+<relationalExpression>
+<arithmeticExpression>
+<term>
+<factor>
+<terminal> (&apos;i&apos;, &apos;Identifier&apos;) </terminal>
+</factor>
+</term>
+<terminal> (&apos;+&apos;, &apos;Operator&apos;) </terminal>
+<term>
+<factor>
+<terminal> (1, &apos;Integer&apos;) </terminal>
+</factor>
+</term>
+</arithmeticExpression>
+</relationalExpression>
+</expression>
+</expressionList>
+<terminal> (&apos;)&apos;, &apos;Symbol&apos;) </terminal>
+</factor>
+<terminal> (&apos;*&apos;, &apos;Operator&apos;) </terminal>
+<factor>
+<terminal> (2, &apos;Integer&apos;) </terminal>
+</factor>
+</term>
+</arithmeticExpression>
+</relationalExpression>
+</expression>
+<terminal> (&apos;;&apos;, &apos;Symbol&apos;) </terminal>
+</assignStatement>
+</statement>
+<terminal> (&apos;}&apos;, &apos;Symbol&apos;) </terminal>
+</ifStatement>
+</statement>
+<terminal> (&apos;}&apos;, &apos;Symbol&apos;) </terminal>
+</whileStatement>
+</statement>
+<statement>
+<returnStatement>
+<terminal> (&apos;return&apos;, &apos;Keyword&apos;) </terminal>
+<expression>
+<relationalExpression>
+<arithmeticExpression>
+<term>
+<factor>
+<terminal> (0, &apos;Integer&apos;) </terminal>
+</factor>
+</term>
+</arithmeticExpression>
+</relationalExpression>
+</expression>
+<terminal> (&apos;;&apos;, &apos;Symbol&apos;) </terminal>
+</returnStatement>
+</statement>
+<terminal> (&apos;}&apos;, &apos;Symbol&apos;) </terminal>
+</functionDeclar>
+</block>
