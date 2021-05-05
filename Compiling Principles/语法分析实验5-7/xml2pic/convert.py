@@ -86,7 +86,7 @@ class Xml2Obj:
 
     def toDot(self, file):
         self.tree.to_graphviz(file)
-        # In https://github.com/caesar0301/treelib/pull/180 :
+        # In https://github.com/caesar0301/treelib/pull/179 :
         # self.tree.to_graphviz(file, sorting=False)
 
     def Parse(self, filename):
