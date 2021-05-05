@@ -1,229 +1,245 @@
 block
 └── functionDeclar
+    ├── terminal ('int', 'Type') 
+    ├── terminal ('main', 'Identifier') 
+    ├── terminal ('(', 'Symbol') 
     ├── paramList
+    ├── terminal (')', 'Symbol') 
+    ├── terminal ('{', 'Symbol') 
     ├── statement
     │   └── varDeclarStatement
+    │       ├── terminal ('int', 'Type') 
+    │       ├── paramList
+    │       │   ├── terminal ('i', 'Identifier') 
+    │       │   ├── terminal (',', 'Symbol') 
+    │       │   ├── terminal ('j', 'Identifier') 
+    │       │   ├── terminal (',', 'Symbol') 
+    │       │   ├── terminal ('k', 'Identifier') 
+    │       │   ├── terminal (',', 'Symbol') 
+    │       │   ├── terminal ('TLen', 'Identifier') 
+    │       │   ├── terminal (',', 'Symbol') 
+    │       │   ├── terminal ('PLen', 'Identifier') 
+    │       │   ├── terminal (',', 'Symbol') 
+    │       │   └── terminal ('count', 'Identifier') 
+    │       ├── terminal ('=', 'Operator') 
     │       ├── expression
     │       │   └── relationalExpression
     │       │       └── arithmeticExpression
     │       │           └── term
     │       │               └── factor
     │       │                   └── terminal (0, 'Integer') 
-    │       ├── paramList
-    │       │   ├── terminal (',', 'Symbol') 
-    │       │   ├── terminal (',', 'Symbol') 
-    │       │   ├── terminal (',', 'Symbol') 
-    │       │   ├── terminal (',', 'Symbol') 
-    │       │   ├── terminal (',', 'Symbol') 
-    │       │   ├── terminal ('PLen', 'Identifier') 
-    │       │   ├── terminal ('TLen', 'Identifier') 
-    │       │   ├── terminal ('count', 'Identifier') 
-    │       │   ├── terminal ('i', 'Identifier') 
-    │       │   ├── terminal ('j', 'Identifier') 
-    │       │   └── terminal ('k', 'Identifier') 
-    │       ├── terminal (';', 'Symbol') 
-    │       ├── terminal ('=', 'Operator') 
-    │       └── terminal ('int', 'Type') 
+    │       └── terminal (';', 'Symbol') 
     ├── statement
     │   └── varDeclarStatement
+    │       ├── terminal ('char', 'Type') 
     │       ├── paramList
+    │       │   ├── terminal ('T', 'Identifier') 
+    │       │   ├── terminal ('[', 'Symbol') 
     │       │   ├── expression
     │       │   │   └── relationalExpression
     │       │   │       └── arithmeticExpression
     │       │   │           └── term
     │       │   │               └── factor
     │       │   │                   └── terminal (50, 'Integer') 
+    │       │   ├── terminal (']', 'Symbol') 
+    │       │   ├── terminal (',', 'Symbol') 
+    │       │   ├── terminal ('P', 'Identifier') 
+    │       │   ├── terminal ('[', 'Symbol') 
     │       │   ├── expression
     │       │   │   └── relationalExpression
     │       │   │       └── arithmeticExpression
     │       │   │           └── term
     │       │   │               └── factor
     │       │   │                   └── terminal (10, 'Integer') 
-    │       │   ├── terminal (',', 'Symbol') 
-    │       │   ├── terminal ('P', 'Identifier') 
-    │       │   ├── terminal ('T', 'Identifier') 
-    │       │   ├── terminal ('[', 'Symbol') 
-    │       │   ├── terminal ('[', 'Symbol') 
-    │       │   ├── terminal (']', 'Symbol') 
     │       │   └── terminal (']', 'Symbol') 
-    │       ├── terminal (';', 'Symbol') 
-    │       └── terminal ('char', 'Type') 
+    │       └── terminal (';', 'Symbol') 
     ├── statement
     │   └── assignStatement
+    │       ├── terminal ('TLen', 'Identifier') 
+    │       ├── terminal ('=', 'Operator') 
     │       ├── expression
     │       │   └── relationalExpression
     │       │       └── arithmeticExpression
     │       │           └── term
     │       │               └── factor
     │       │                   └── terminal ('T', 'Identifier') 
-    │       ├── terminal (';', 'Symbol') 
-    │       ├── terminal ('=', 'Operator') 
-    │       └── terminal ('TLen', 'Identifier') 
+    │       └── terminal (';', 'Symbol') 
     ├── statement
     │   └── varDeclarStatement
+    │       ├── terminal ('int', 'Type') 
     │       ├── paramList
     │       │   └── terminal ('a', 'Identifier') 
-    │       ├── terminal (';', 'Symbol') 
-    │       └── terminal ('int', 'Type') 
+    │       └── terminal (';', 'Symbol') 
     ├── statement
     │   └── varDeclarStatement
+    │       ├── terminal ('int', 'Type') 
     │       ├── paramList
     │       │   └── terminal ('b', 'Identifier') 
-    │       ├── terminal (';', 'Symbol') 
-    │       └── terminal ('int', 'Type') 
+    │       └── terminal (';', 'Symbol') 
     ├── statement
     │   └── varDeclarStatement
-    │       ├── expression
-    │       │   └── relationalExpression
-    │       │       └── arithmeticExpression
-    │       │           └── term
-    │       │               └── factor
-    │       │                   └── terminal ('a\\"bc', 'String') 
+    │       ├── terminal ('char', 'Type') 
     │       ├── paramList
+    │       │   ├── terminal ('k', 'Identifier') 
+    │       │   ├── terminal ('[', 'Symbol') 
     │       │   ├── expression
     │       │   │   └── relationalExpression
     │       │   │       └── arithmeticExpression
     │       │   │           └── term
     │       │   │               └── factor
     │       │   │                   └── terminal (3, 'Integer') 
-    │       │   ├── terminal ('[', 'Symbol') 
-    │       │   ├── terminal (']', 'Symbol') 
-    │       │   └── terminal ('k', 'Identifier') 
-    │       ├── terminal (';', 'Symbol') 
+    │       │   └── terminal (']', 'Symbol') 
     │       ├── terminal ('=', 'Operator') 
-    │       └── terminal ('char', 'Type') 
+    │       ├── expression
+    │       │   └── relationalExpression
+    │       │       └── arithmeticExpression
+    │       │           └── term
+    │       │               └── factor
+    │       │                   └── terminal ('a\\"bc', 'String') 
+    │       └── terminal (';', 'Symbol') 
     ├── statement
     │   └── assignStatement
+    │       ├── terminal ('a', 'Identifier') 
+    │       ├── terminal ('=', 'Operator') 
     │       ├── expression
     │       │   └── relationalExpression
     │       │       └── arithmeticExpression
     │       │           └── term
     │       │               └── factor
     │       │                   └── terminal (1, 'Integer') 
-    │       ├── terminal (';', 'Symbol') 
-    │       ├── terminal ('=', 'Operator') 
-    │       └── terminal ('a', 'Identifier') 
+    │       └── terminal (';', 'Symbol') 
     ├── statement
     │   └── assignStatement
+    │       ├── terminal ('a', 'Identifier') 
+    │       ├── terminal ('=', 'Operator') 
     │       ├── expression
     │       │   └── relationalExpression
     │       │       └── arithmeticExpression
     │       │           ├── term
     │       │           │   └── factor
     │       │           │       └── terminal ('a', 'Identifier') 
-    │       │           ├── term
-    │       │           │   └── factor
-    │       │           │       └── terminal (1, 'Integer') 
-    │       │           └── terminal ('+', 'Operator') 
-    │       ├── terminal (';', 'Symbol') 
-    │       ├── terminal ('=', 'Operator') 
-    │       └── terminal ('a', 'Identifier') 
+    │       │           ├── terminal ('+', 'Operator') 
+    │       │           └── term
+    │       │               └── factor
+    │       │                   └── terminal (1, 'Integer') 
+    │       └── terminal (';', 'Symbol') 
     ├── statement
     │   └── assignStatement
+    │       ├── terminal ('b', 'Identifier') 
+    │       ├── terminal ('=', 'Operator') 
     │       ├── expression
     │       │   └── relationalExpression
     │       │       └── arithmeticExpression
     │       │           ├── term
     │       │           │   └── factor
     │       │           │       └── terminal ('a', 'Identifier') 
-    │       │           ├── term
-    │       │           │   └── factor
-    │       │           │       └── terminal (2, 'Integer') 
-    │       │           └── terminal ('+', 'Operator') 
-    │       ├── terminal (';', 'Symbol') 
-    │       ├── terminal ('=', 'Operator') 
-    │       └── terminal ('b', 'Identifier') 
+    │       │           ├── terminal ('+', 'Operator') 
+    │       │           └── term
+    │       │               └── factor
+    │       │                   └── terminal (2, 'Integer') 
+    │       └── terminal (';', 'Symbol') 
     ├── statement
     │   └── assignStatement
+    │       ├── terminal ('PLen', 'Identifier') 
+    │       ├── terminal ('=', 'Operator') 
     │       ├── expression
     │       │   └── relationalExpression
     │       │       └── arithmeticExpression
     │       │           └── term
     │       │               └── factor
     │       │                   └── terminal ('P', 'Identifier') 
-    │       ├── terminal (';', 'Symbol') 
-    │       ├── terminal ('=', 'Operator') 
-    │       └── terminal ('PLen', 'Identifier') 
+    │       └── terminal (';', 'Symbol') 
     ├── statement
     │   └── whileStatement
+    │       ├── terminal ('while', 'Keyword') 
+    │       ├── terminal ('(', 'Symbol') 
     │       ├── expression
     │       │   └── relationalExpression
     │       │       ├── arithmeticExpression
     │       │       │   └── term
     │       │       │       └── factor
     │       │       │           └── terminal ('i', 'Identifier') 
-    │       │       ├── arithmeticExpression
-    │       │       │   ├── term
-    │       │       │   │   └── factor
-    │       │       │   │       └── terminal ('TLen', 'Identifier') 
-    │       │       │   ├── term
-    │       │       │   │   └── factor
-    │       │       │   │       └── terminal ('PLen', 'Identifier') 
-    │       │       │   └── terminal ('-', 'Operator') 
-    │       │       └── terminal ('<', 'Operator') 
+    │       │       ├── terminal ('<', 'Operator') 
+    │       │       └── arithmeticExpression
+    │       │           ├── term
+    │       │           │   └── factor
+    │       │           │       └── terminal ('TLen', 'Identifier') 
+    │       │           ├── terminal ('-', 'Operator') 
+    │       │           └── term
+    │       │               └── factor
+    │       │                   └── terminal ('PLen', 'Identifier') 
+    │       ├── terminal (')', 'Symbol') 
+    │       ├── terminal ('{', 'Symbol') 
     │       ├── statement
     │       │   └── ifStatement
+    │       │       ├── terminal ('if', 'Keyword') 
+    │       │       ├── terminal ('(', 'Symbol') 
     │       │       ├── expression
     │       │       │   ├── relationalExpression
     │       │       │   │   └── arithmeticExpression
     │       │       │   │       └── term
     │       │       │   │           └── factor
     │       │       │   │               └── terminal ('a', 'Identifier') 
-    │       │       │   ├── relationalExpression
-    │       │       │   │   └── arithmeticExpression
-    │       │       │   │       └── term
-    │       │       │   │           └── factor
-    │       │       │   │               └── terminal ('b', 'Identifier') 
-    │       │       │   └── terminal ('&', 'Symbol') 
+    │       │       │   ├── terminal ('&', 'Symbol') 
+    │       │       │   └── relationalExpression
+    │       │       │       └── arithmeticExpression
+    │       │       │           └── term
+    │       │       │               └── factor
+    │       │       │                   └── terminal ('b', 'Identifier') 
+    │       │       ├── terminal (')', 'Symbol') 
+    │       │       ├── terminal ('{', 'Symbol') 
     │       │       ├── statement
     │       │       │   └── assignStatement
+    │       │       │       ├── terminal ('i', 'Identifier') 
+    │       │       │       ├── terminal ('=', 'Operator') 
     │       │       │       ├── expression
     │       │       │       │   └── relationalExpression
     │       │       │       │       └── arithmeticExpression
     │       │       │       │           ├── term
     │       │       │       │           │   └── factor
     │       │       │       │           │       └── terminal ('i', 'Identifier') 
-    │       │       │       │           ├── term
-    │       │       │       │           │   └── factor
-    │       │       │       │           │       └── terminal (1, 'Integer') 
-    │       │       │       │           └── terminal ('+', 'Operator') 
-    │       │       │       ├── terminal (';', 'Symbol') 
-    │       │       │       ├── terminal ('=', 'Operator') 
-    │       │       │       └── terminal ('i', 'Identifier') 
+    │       │       │       │           ├── terminal ('+', 'Operator') 
+    │       │       │       │           └── term
+    │       │       │       │               └── factor
+    │       │       │       │                   └── terminal (1, 'Integer') 
+    │       │       │       └── terminal (';', 'Symbol') 
+    │       │       ├── terminal ('}', 'Symbol') 
+    │       │       ├── terminal ('else', 'Keyword') 
+    │       │       ├── terminal ('{', 'Symbol') 
     │       │       ├── statement
     │       │       │   └── assignStatement
+    │       │       │       ├── terminal ('b', 'Identifier') 
+    │       │       │       ├── terminal ('=', 'Operator') 
     │       │       │       ├── expression
     │       │       │       │   └── relationalExpression
     │       │       │       │       └── arithmeticExpression
     │       │       │       │           └── term
     │       │       │       │               └── factor
     │       │       │       │                   └── terminal ('a', 'Identifier') 
-    │       │       │       ├── terminal (';', 'Symbol') 
-    │       │       │       ├── terminal ('=', 'Operator') 
-    │       │       │       └── terminal ('b', 'Identifier') 
-    │       │       ├── terminal ('(', 'Symbol') 
-    │       │       ├── terminal (')', 'Symbol') 
-    │       │       ├── terminal ('else', 'Keyword') 
-    │       │       ├── terminal ('if', 'Keyword') 
-    │       │       ├── terminal ('{', 'Symbol') 
-    │       │       ├── terminal ('{', 'Symbol') 
-    │       │       ├── terminal ('}', 'Symbol') 
+    │       │       │       └── terminal (';', 'Symbol') 
     │       │       └── terminal ('}', 'Symbol') 
     │       ├── statement
     │       │   └── ifStatement
+    │       │       ├── terminal ('if', 'Keyword') 
+    │       │       ├── terminal ('(', 'Symbol') 
     │       │       ├── expression
     │       │       │   └── relationalExpression
     │       │       │       └── arithmeticExpression
     │       │       │           └── term
     │       │       │               └── factor
     │       │       │                   └── terminal ('b', 'Identifier') 
+    │       │       ├── terminal (')', 'Symbol') 
+    │       │       ├── terminal ('{', 'Symbol') 
     │       │       ├── statement
     │       │       │   └── assignStatement
+    │       │       │       ├── terminal ('i', 'Identifier') 
+    │       │       │       ├── terminal ('=', 'Operator') 
     │       │       │       ├── expression
     │       │       │       │   └── relationalExpression
     │       │       │       │       └── arithmeticExpression
     │       │       │       │           └── term
     │       │       │       │               ├── factor
+    │       │       │       │               │   ├── terminal ('(', 'Symbol') 
     │       │       │       │               │   ├── expressionList
     │       │       │       │               │   │   └── expression
     │       │       │       │               │   │       └── relationalExpression
@@ -231,42 +247,25 @@ block
     │       │       │       │               │   │               ├── term
     │       │       │       │               │   │               │   └── factor
     │       │       │       │               │   │               │       └── terminal ('i', 'Identifier') 
-    │       │       │       │               │   │               ├── term
-    │       │       │       │               │   │               │   └── factor
-    │       │       │       │               │   │               │       └── terminal (1, 'Integer') 
-    │       │       │       │               │   │               └── terminal ('+', 'Operator') 
-    │       │       │       │               │   ├── terminal ('(', 'Symbol') 
+    │       │       │       │               │   │               ├── terminal ('+', 'Operator') 
+    │       │       │       │               │   │               └── term
+    │       │       │       │               │   │                   └── factor
+    │       │       │       │               │   │                       └── terminal (1, 'Integer') 
     │       │       │       │               │   └── terminal (')', 'Symbol') 
-    │       │       │       │               ├── factor
-    │       │       │       │               │   └── terminal (2, 'Integer') 
-    │       │       │       │               └── terminal ('*', 'Operator') 
-    │       │       │       ├── terminal (';', 'Symbol') 
-    │       │       │       ├── terminal ('=', 'Operator') 
-    │       │       │       └── terminal ('i', 'Identifier') 
-    │       │       ├── terminal ('(', 'Symbol') 
-    │       │       ├── terminal (')', 'Symbol') 
-    │       │       ├── terminal ('if', 'Keyword') 
-    │       │       ├── terminal ('{', 'Symbol') 
+    │       │       │       │               ├── terminal ('*', 'Operator') 
+    │       │       │       │               └── factor
+    │       │       │       │                   └── terminal (2, 'Integer') 
+    │       │       │       └── terminal (';', 'Symbol') 
     │       │       └── terminal ('}', 'Symbol') 
-    │       ├── terminal ('(', 'Symbol') 
-    │       ├── terminal (')', 'Symbol') 
-    │       ├── terminal ('while', 'Keyword') 
-    │       ├── terminal ('{', 'Symbol') 
     │       └── terminal ('}', 'Symbol') 
     ├── statement
     │   └── returnStatement
+    │       ├── terminal ('return', 'Keyword') 
     │       ├── expression
     │       │   └── relationalExpression
     │       │       └── arithmeticExpression
     │       │           └── term
     │       │               └── factor
     │       │                   └── terminal (0, 'Integer') 
-    │       ├── terminal (';', 'Symbol') 
-    │       └── terminal ('return', 'Keyword') 
-    ├── terminal ('(', 'Symbol') 
-    ├── terminal (')', 'Symbol') 
-    ├── terminal ('int', 'Type') 
-    ├── terminal ('main', 'Identifier') 
-    ├── terminal ('{', 'Symbol') 
+    │       └── terminal (';', 'Symbol') 
     └── terminal ('}', 'Symbol')
-

@@ -80,10 +80,14 @@ class Xml2Obj:
             element.cdata += data
 
     def showTree(self):
-        self.tree.show()
+        self.tree.show(key=lambda node:node.identifier)
+        # In https://github.com/caesar0301/treelib/pull/180 :
+        # self.tree.show(sorting=False)
 
     def toDot(self, file):
         self.tree.to_graphviz(file)
+        # In https://github.com/caesar0301/treelib/pull/180 :
+        # self.tree.to_graphviz(file, sorting=False)
 
     def Parse(self, filename):
         # create Expat analyzer
@@ -102,6 +106,7 @@ if __name__ == "__main__":
     parser.Parse('input.xml')
     parser.showTree()
     parser.toDot("output.dot")
+
     newContent = []
     toSort = {}
     with open("output.dot", "r") as f:
@@ -124,4 +129,5 @@ if __name__ == "__main__":
     newContent.insert(0, newHead)
     with open("output.dot", "w") as f:
         f.writelines(newContent)
+
     # dot -Tpng output.dot -o output.png
