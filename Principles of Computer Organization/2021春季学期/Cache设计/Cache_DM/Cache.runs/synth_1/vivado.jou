@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Jun  1 13:54:58 2021
+# Process ID: 15900
+# Current directory: C:/Users/j8843/Documents/Cache/Cache.runs/synth_1
+# Command line: vivado.exe -log DM_CACHE.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source DM_CACHE.tcl
+# Log file: C:/Users/j8843/Documents/Cache/Cache.runs/synth_1/DM_CACHE.vds
+# Journal file: C:/Users/j8843/Documents/Cache/Cache.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source DM_CACHE.tcl -notrace

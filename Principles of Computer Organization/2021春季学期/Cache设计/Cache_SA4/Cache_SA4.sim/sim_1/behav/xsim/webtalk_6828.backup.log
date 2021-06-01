@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Jun  1 20:46:00 2021
+# Process ID: 6828
+# Current directory: C:/Users/j8843/Documents/Cache_SA4/Cache_SA4.sim/sim_1/behav/xsim
+# Command line: wbtcv.exe -mode batch -source C:/Users/j8843/Documents/Cache_SA4/Cache_SA4.sim/sim_1/behav/xsim/xsim.dir/SA4_CACHE_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+# Log file: C:/Users/j8843/Documents/Cache_SA4/Cache_SA4.sim/sim_1/behav/xsim/webtalk.log
+# Journal file: C:/Users/j8843/Documents/Cache_SA4/Cache_SA4.sim/sim_1/behav/xsim\webtalk.jou
+#-----------------------------------------------------------
+source C:/Users/j8843/Documents/Cache_SA4/Cache_SA4.sim/sim_1/behav/xsim/xsim.dir/SA4_CACHE_tb_behav/webtalk/xsim_webtalk.tcl -notrace
+INFO: [Common 17-186] 'C:/Users/j8843/Documents/Cache_SA4/Cache_SA4.sim/sim_1/behav/xsim/xsim.dir/SA4_CACHE_tb_behav/webtalk/usage_statistics_ext_xsim.xml' has been successfully sent to Xilinx on Tue Jun  1 20:46:06 2021. For additional details about this file, please refer to the WebTalk help file at D:/Xilinx/Vivado/2020.2/doc/webtalk_introduction.html.
+INFO: [Common 17-206] Exiting Webtalk at Tue Jun  1 20:46:06 2021...

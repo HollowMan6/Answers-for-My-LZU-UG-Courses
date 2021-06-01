@@ -1,0 +1,62 @@
+Vivado Simulator 2020.2
+Time resolution is 1 ps
+ Block Memory Generator module loading initial data...
+ Block Memory Generator data initialization complete.
+Block Memory Generator module DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst  is using a behavioral model for simulation which will not precisely model memory collision behavior.
+blk_mem_gen_v8_4_4 collision detected at time: 30000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 40000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: ffd4, B  read address: ffd4
+blk_mem_gen_v8_4_4 collision detected at time: 50000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: ffd6, B  read address: ffd6
+blk_mem_gen_v8_4_4 collision detected at time: 60000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: ffe2, B  read address: ffe2
+blk_mem_gen_v8_4_4 collision detected at time: 100000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: ffea, B  read address: ffea
+blk_mem_gen_v8_4_4 collision detected at time: 110000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: ffec, B  read address: ffec
+blk_mem_gen_v8_4_4 collision detected at time: 120000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: ffee, B  read address: ffee
+blk_mem_gen_v8_4_4 collision detected at time: 160000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: fff6, B  read address: fff6
+blk_mem_gen_v8_4_4 collision detected at time: 170000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: fff8, B  read address: fff8
+blk_mem_gen_v8_4_4 collision detected at time: 180000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: fffa, B  read address: fffa
+blk_mem_gen_v8_4_4 collision detected at time: 210000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 0, B  read address: 0
+blk_mem_gen_v8_4_4 collision detected at time: 220000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 2, B  read address: 2
+blk_mem_gen_v8_4_4 collision detected at time: 230000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 4, B  read address: 4
+blk_mem_gen_v8_4_4 collision detected at time: 270000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: c, B  read address: c
+blk_mem_gen_v8_4_4 collision detected at time: 280000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: e, B  read address: e
+blk_mem_gen_v8_4_4 collision detected at time: 290000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 10, B  read address: 10
+blk_mem_gen_v8_4_4 collision detected at time: 330000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 18, B  read address: 18
+blk_mem_gen_v8_4_4 collision detected at time: 340000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 1a, B  read address: 1a
+blk_mem_gen_v8_4_4 collision detected at time: 350000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 1c, B  read address: 1c
+blk_mem_gen_v8_4_4 collision detected at time: 390000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 24, B  read address: 24
+blk_mem_gen_v8_4_4 collision detected at time: 400000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 26, B  read address: 26
+blk_mem_gen_v8_4_4 collision detected at time: 410000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 28, B  read address: 28
+blk_mem_gen_v8_4_4 collision detected at time: 450000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 30, B  read address: 30
+blk_mem_gen_v8_4_4 collision detected at time: 460000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 32, B  read address: 32
+blk_mem_gen_v8_4_4 collision detected at time: 470000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 34, B  read address: 34
+blk_mem_gen_v8_4_4 collision detected at time: 510000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 3c, B  read address: 3c
+blk_mem_gen_v8_4_4 collision detected at time: 520000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 3e, B  read address: 3e
+blk_mem_gen_v8_4_4 collision detected at time: 530000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: c7c4, B  read address: c7c4
+blk_mem_gen_v8_4_4 collision detected at time: 540000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 3658, B  read address: 3658
+blk_mem_gen_v8_4_4 collision detected at time: 550000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 365a, B  read address: 365a
+blk_mem_gen_v8_4_4 collision detected at time: 560000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 32a8, B  read address: 32a8
+blk_mem_gen_v8_4_4 collision detected at time: 590000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 2, B  read address: 2
+blk_mem_gen_v8_4_4 collision detected at time: 600000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 365c, B  read address: 365c
+blk_mem_gen_v8_4_4 collision detected at time: 610000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 3658, B  read address: 3658
+blk_mem_gen_v8_4_4 collision detected at time: 620000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 365a, B  read address: 365a
+blk_mem_gen_v8_4_4 collision detected at time: 650000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: ffd6, B  read address: ffd6
+blk_mem_gen_v8_4_4 collision detected at time: 670000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: ffda, B  read address: ffda
+blk_mem_gen_v8_4_4 collision detected at time: 680000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: ffda, B  read address: ffda
+blk_mem_gen_v8_4_4 collision detected at time: 690000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 3660, B  read address: 3660
+blk_mem_gen_v8_4_4 collision detected at time: 700000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 2, B  read address: 2
+blk_mem_gen_v8_4_4 collision detected at time: 710000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 365c, B  read address: 365c
+blk_mem_gen_v8_4_4 collision detected at time: 730000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 365a, B  read address: 365a
+blk_mem_gen_v8_4_4 collision detected at time: 760000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: ffd6, B  read address: ffd6
+blk_mem_gen_v8_4_4 collision detected at time: 780000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: ffd0, B  read address: ffd0
+blk_mem_gen_v8_4_4 collision detected at time: 800000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: ffd0, B  read address: ffd0
+blk_mem_gen_v8_4_4 collision detected at time: 820000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: ffd2, B  read address: ffd2
+blk_mem_gen_v8_4_4 collision detected at time: 830000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: d370, B  read address: d370
+blk_mem_gen_v8_4_4 collision detected at time: 840000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 9d12, B  read address: 9d12
+blk_mem_gen_v8_4_4 collision detected at time: 850000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: d36c, B  read address: d36c
+blk_mem_gen_v8_4_4 collision detected at time: 870000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: d36a, B  read address: d36a
+blk_mem_gen_v8_4_4 collision detected at time: 890000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 365e, B  read address: 365e
+blk_mem_gen_v8_4_4 collision detected at time: 900000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: ffda, B  read address: ffda
+blk_mem_gen_v8_4_4 collision detected at time: 910000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: 365e, B  read address: 365e
+blk_mem_gen_v8_4_4 collision detected at time: 920000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: ffde, B  read address: ffde
+blk_mem_gen_v8_4_4 collision detected at time: 930000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: ffde, B  read address: ffde
+blk_mem_gen_v8_4_4 collision detected at time: 940000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: ffde, B  read address: ffde
+blk_mem_gen_v8_4_4 collision detected at time: 950000, Instance: DM_CACHE_tb.DM_CACHE_test.ram_ip_test.inst.\native_mem_module.blk_mem_gen_v8_4_4_inst , A write address: ffde, B  read address: ffde

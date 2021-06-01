@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<GenRun Id="synth_1" LaunchPart="xczu7ev-ffvf1517-1LV-i" LaunchTime="1622553227">
+  <File Type="PA-TCL" Name="SA4_CACHE.tcl"/>
+  <File Type="RDS-PROPCONSTRS" Name="SA4_CACHE_drc_synth.rpt"/>
+  <File Type="REPORTS-TCL" Name="SA4_CACHE_reports.tcl"/>
+  <File Type="RDS-RDS" Name="SA4_CACHE.vds"/>
+  <File Type="RDS-UTIL" Name="SA4_CACHE_utilization_synth.rpt"/>
+  <File Type="RDS-UTIL-PB" Name="SA4_CACHE_utilization_synth.pb"/>
+  <File Type="RDS-DCP" Name="SA4_CACHE.dcp"/>
+  <File Type="VDS-TIMINGSUMMARY" Name="SA4_CACHE_timing_summary_synth.rpt"/>
+  <File Type="VDS-TIMING-PB" Name="SA4_CACHE_timing_summary_synth.pb"/>
+  <FileSet Name="sources" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1" RelGenDir="$PGENDIR/sources_1">
+    <Filter Type="Srcs"/>
+    <File Path="$PSRCDIR/sources_1/new/SA4_CACHE.v">
+      <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="implementation"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <Config>
+      <Option Name="DesignMode" Val="RTL"/>
+      <Option Name="TopModule" Val="SA4_CACHE"/>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="constrs_in" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
+    <Filter Type="Constrs"/>
+    <Config>
+      <Option Name="ConstrsType" Val="XDC"/>
+    </Config>
+  </FileSet>
+  <FileSet Name="utils" Type="Utils" RelSrcDir="$PSRCDIR/utils_1">
+    <Filter Type="Utils"/>
+    <Config>
+      <Option Name="TopAutoSet" Val="TRUE"/>
+    </Config>
+  </FileSet>
+  <Strategy Version="1" Minor="2">
+    <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
+      <Desc>Vivado Synthesis Defaults</Desc>
+    </StratHandle>
+    <Step Id="synth_design"/>
+  </Strategy>
+  <BlockFileSet Type="BlockSrcs" Name="blk_mem_gen_0"/>
+</GenRun>

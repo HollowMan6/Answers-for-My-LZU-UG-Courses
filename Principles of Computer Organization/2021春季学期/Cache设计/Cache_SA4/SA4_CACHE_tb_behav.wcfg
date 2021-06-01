@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="SA4_CACHE_tb_behav.wdb" id="1">
+         <top_modules>
+            <top_module name="SA4_CACHE_tb" />
+            <top_module name="glbl" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="321730fs"></ZoomStartTime>
+      <ZoomEndTime time="356781fs"></ZoomEndTime>
+      <Cursor1Time time="1000000fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="172"></NameColumnWidth>
+      <ValueColumnWidth column_width="82"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="12" />
+   <wvobject fp_name="/SA4_CACHE_tb/clk" type="logic">
+      <obj_property name="ElementShortName">clk</obj_property>
+      <obj_property name="ObjectShortName">clk</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SA4_CACHE_tb/rst" type="logic">
+      <obj_property name="ElementShortName">rst</obj_property>
+      <obj_property name="ObjectShortName">rst</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SA4_CACHE_tb/address" type="array">
+      <obj_property name="ElementShortName">address[31:0]</obj_property>
+      <obj_property name="ObjectShortName">address[31:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SA4_CACHE_tb/SA4_CACHE_test/least_set" type="array">
+      <obj_property name="ElementShortName">least_set[1:0]</obj_property>
+      <obj_property name="ObjectShortName">least_set[1:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SA4_CACHE_tb/SA4_CACHE_test/temp" type="array">
+      <obj_property name="ElementShortName">temp[7:0]</obj_property>
+      <obj_property name="ObjectShortName">temp[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SA4_CACHE_tb/SA4_CACHE_test/count" type="array">
+      <obj_property name="ElementShortName">count[7:0]</obj_property>
+      <obj_property name="ObjectShortName">count[7:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SA4_CACHE_tb/SA4_CACHE_test/miss" type="array">
+      <obj_property name="ElementShortName">miss[15:0]</obj_property>
+      <obj_property name="ObjectShortName">miss[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SA4_CACHE_tb/SA4_CACHE_test/hit" type="array">
+      <obj_property name="ElementShortName">hit[15:0]</obj_property>
+      <obj_property name="ObjectShortName">hit[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SA4_CACHE_tb/SA4_CACHE_test/w_addr" type="array">
+      <obj_property name="ElementShortName">w_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">w_addr[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SA4_CACHE_tb/SA4_CACHE_test/w_data" type="array">
+      <obj_property name="ElementShortName">w_data[91:0]</obj_property>
+      <obj_property name="ObjectShortName">w_data[91:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SA4_CACHE_tb/SA4_CACHE_test/r_addr" type="array">
+      <obj_property name="ElementShortName">r_addr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">r_addr[15:0]</obj_property>
+   </wvobject>
+   <wvobject fp_name="/SA4_CACHE_tb/SA4_CACHE_test/r_data" type="array">
+      <obj_property name="ElementShortName">r_data[91:0]</obj_property>
+      <obj_property name="ObjectShortName">r_data[91:0]</obj_property>
+   </wvobject>
+</wave_config>
