@@ -318,7 +318,7 @@ class CParser:
                 op = nextToken[0]
                 nextToken=self.token.GetNextToken()
                 self.relationalExpression()
-                self.generated += str(self.line) + ": " + str((op, "result1", "result2", None)) + "\n"
+                self.generated += str(self.line) + ": " + str((op, "result1", "result2", "result")) + "\n"
                 self.line += 1
                 nextToken=self.token.PeekNextToken()
         else:
@@ -336,7 +336,7 @@ class CParser:
                     nextToken=self.token.GetNextToken()
                     self.arithmeticExpression()
                     nextToken=self.token.PeekNextToken()
-                    self.generated += str(self.line) + ": " + str((op, "result1", "result2", None)) + "\n"
+                    self.generated += str(self.line) + ": " + str((op, "result1", "result2", "result")) + "\n"
                     self.line += 1
                 elif nextToken[0]=='>' or nextToken[0]=='<':
                     nextToken=self.token.GetNextToken()
@@ -346,7 +346,7 @@ class CParser:
                         nextToken=self.token.GetNextToken()
                     self.arithmeticExpression()
                     nextToken=self.token.PeekNextToken()
-                    self.generated += str(self.line) + ": " + str((op, "result1", "result2", None)) + "\n"
+                    self.generated += str(self.line) + ": " + str((op, "result1", "result2", "result")) + "\n"
                     self.line += 1
                 else:
                     break
@@ -362,7 +362,7 @@ class CParser:
                 nextToken=self.token.GetNextToken()
                 self.term()
                 nextToken=self.token.PeekNextToken()
-                self.generated += str(self.line) + ": " + str((op, "result1", "result2", None)) + "\n"
+                self.generated += str(self.line) + ": " + str((op, "result1", "result2", "result")) + "\n"
                 self.line += 1
         else:
             raise Exception('Syntax',self.token.line+1,self.token.code[self.token.line][self.token.pointer-1],"expect a term at this area")
@@ -376,7 +376,7 @@ class CParser:
                 nextToken=self.token.GetNextToken()
                 self.factor()
                 nextToken=self.token.PeekNextToken()
-                self.generated += str(self.line) + ": " + str((op, "result1", "result2", None)) + "\n"
+                self.generated += str(self.line) + ": " + str((op, "result1", "result2", "result")) + "\n"
                 self.line += 1
         else:
             raise Exception('Syntax',self.token.line+1,self.token.code[self.token.line][self.token.pointer-1],"expect a factor at this area")
