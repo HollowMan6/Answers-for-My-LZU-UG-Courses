@@ -392,6 +392,8 @@ class CParser:
             self.generated += str(self.line) + ": " + str(("=", nextToken[0], None, "result")) + "\n"
             self.line += 1
         elif nextToken[1]=='Identifier':
+            self.generated += str(self.line) + ": " + str(("=", nextToken[0], None, "result")) + "\n"
+            self.line += 1
             nextToken=self.token.PeekNextToken()
             if nextToken[0]=='.':
                 nextToken=self.token.GetNextToken()

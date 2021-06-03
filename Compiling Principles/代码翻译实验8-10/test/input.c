@@ -13,22 +13,7 @@ int main()
    */
 
 	a = 1;
-    a=a+1;
-	b = a + 2 ;
+	b = a;
     PLen=P;
-    while(i<TLen-PLen)
-    {
-        if(a&b){
-            i=i+1;
-        }  
-        else{
-        b=a;
-        }
-
-        if(b){
-            i=(i+1)*2;
-        }
-            
-    }
     return 0;
 }
