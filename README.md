@@ -648,3 +648,4 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
   * [6.4章节测验](./Blockly创意趣味编程（网络共享课）/6.4章节测验.pdf)
   * [7.5章节测验](./Blockly创意趣味编程（网络共享课）/7.5章节测验.pdf)
   * [8.7章节测验](./Blockly创意趣味编程（网络共享课）/8.7章节测验.pdf)
+  * [期末测试](./Blockly创意趣味编程（网络共享课）/期末测试.pdf)
