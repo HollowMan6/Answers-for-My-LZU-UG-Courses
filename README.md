@@ -192,6 +192,11 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
     * 学分 Credit：1.0
     * 总学时 Total school hours：36.0
 
+* [算法设计与分析(Algorithm Design and Analysis)](Algorithm%20Design%20and%20Analysis)
+    * 课程号 Course No.：2043023
+    * 学分 Credit：3.0
+    * 总学时 Total school hours：54.0
+
 **网络共享选修课 Electives MOOC**:
 
 * 《人生悟理——透过物理看人生》《网络共享课》(Life Understanding-Seeing Life through Physics)
