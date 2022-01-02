@@ -197,6 +197,11 @@ Please don't just copy the answers. Copying in Lanzhou University is a very seri
     * 学分 Credit：3.0
     * 总学时 Total school hours：54.0
 
+* [计算机体系结构(Computer Architecture)](Computer%20Architecture)
+    * 课程号 Course No.：2043061
+    * 学分 Credit：3.0
+    * 总学时 Total school hours：54.0
+
 **网络共享选修课 Electives MOOC**:
 
 * 《人生悟理——透过物理看人生》《网络共享课》(Life Understanding-Seeing Life through Physics)
